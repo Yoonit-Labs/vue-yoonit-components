@@ -1,10 +1,11 @@
-import Logo from /* webpackChunkName: "Logo" */'./Logo.vue'
-import Teste from /* webpackChunkName: "Teste" */'./Teste.vue'
+import Components from './components/index'
 
 const yooLibrary = {
-  install (Vue, options = {}) {
-    Vue.component(Logo.name, Logo)
-    Vue.component(Teste.name, Teste)
+  install (Vue, options) {
+    // Auto-register lib components
+    Object.entries(Components).forEach(name => {
+      Vue.component(name[0], name[1])
+    })
   }
 }
 
