@@ -2,7 +2,8 @@
   "name": "yoonit-components",
   "version": "0.1.0",
   "private": true,
-  "main": "build/yoonit-components.common.js",
+  "main": "dist/yoonit-components.common.js",
+  "unpkg": "dist/yoonit-components.min.js",
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "npm run build:lib & npm run build:wc",
