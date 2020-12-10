@@ -10,7 +10,7 @@
       :class="['yoo-btn__icon', takeIconStyle, takeIconName, ...takeModifierIcon]"
       :style="takeIconColor"
     )
-    p.yoo-btn__text {{takeText}}
+    p.yoo-btn__text {{ text }}
 
     i(
       v-if="icon.length && iconPosition === 'right'"
@@ -149,31 +149,17 @@ export default {
   destroyed () {},
   components: {},
   computed: {
-    takeText () {
-      return this.text
-    },
     takeIconColor () {
-      return {
-        color: `${this.iconCustomColor}`
-      }
+      return { color: `${this.iconCustomColor}` }
     },
     takeHover () {
-      if (this.hover) {
-        return 'hover'
-      }
-      return ''
+      return this.hover ? 'hover' : ''
     },
     takeActive () {
-      if (this.active) {
-        return 'active'
-      }
-      return ''
+      return this.active ? 'active' : ''
     },
     takeDisabled () {
-      if (this.disabled) {
-        return 'disabled'
-      }
-      return ''
+      return this.disabled ? 'disabled' : ''
     },
     takeModifierIcon () {
       const block = 'yoo-btn__icon'
@@ -197,7 +183,6 @@ export default {
     takeModifier () {
       const block = 'yoo-btn'
       const classList = []
-
       if (this.fill) {
         classList
           .push(
@@ -228,28 +213,24 @@ export default {
             `${block}--${this.variation}`
           )
       }
-
       if (this.format && (this.format !== 'block')) {
         classList
           .push(
             `${block}--${this.format}`
           )
       }
-
       if (this.size && (this.size !== 'normal')) {
         classList
           .push(
             `${block}--${this.size}`
           )
       }
-
       if (this.buttonSize && (this.buttonSize !== 'normal')) {
         classList
           .push(
             `${block}--${this.buttonSize}`
           )
       }
-
       if (this.animation && (this.animation !== 'none')) {
         classList
           .push(
