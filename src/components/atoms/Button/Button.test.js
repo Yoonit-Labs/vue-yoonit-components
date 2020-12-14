@@ -112,6 +112,13 @@ describe('Button Component', () => {
       })
     })
 
+    describe('iconCustomColor', () => {
+      it('Includes iconCustomColor style color', async () => {
+        await wrapper.setProps({ icon: 'icon-value', iconCustomColor: '#d2d2d2' })
+        expect(wrapper.find('.yoo-btn__icon').attributes().style).toBe('color: rgb(210, 210, 210);')
+      })
+    })
+
     describe('animation', () => {
       PropsConfig.animation.options.forEach(animation => {
         it(`Include animation class: .${classBlock}--animation-${animation}`, async () => {
