@@ -49,7 +49,7 @@ export default {
     },
     iconCustomColor: {
       control: {
-        type: 'color'
+        type: 'text'
       }
     }
   }

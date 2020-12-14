@@ -176,18 +176,6 @@ export default {
             `${block}--${this.variation}`
           )
       }
-      if (this.format && (this.format !== 'block')) {
-        classList
-          .push(
-            `${block}--${this.format}`
-          )
-      }
-      if (this.size && (this.size !== 'normal')) {
-        classList
-          .push(
-            `${block}--${this.size}`
-          )
-      }
       if (this.buttonSize && (this.buttonSize !== 'normal')) {
         classList
           .push(
