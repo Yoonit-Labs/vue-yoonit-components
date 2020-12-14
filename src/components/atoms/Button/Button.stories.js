@@ -1,4 +1,5 @@
 import yooButton from './Button.vue'
+import PropsConfig from '@/config/Props.config'
 
 export default {
   title: 'Yoonit/Button',
@@ -7,67 +8,43 @@ export default {
     variation: {
       control: {
         type: 'select',
-        options: [
-          'base',
-          'outline',
-          'clear'
-        ]
+        options: PropsConfig.variation.options
       }
     },
     buttonSize: {
       control: {
         type: 'select',
-        options: [
-          'normal',
-          'short',
-          'large'
-        ]
+        options: PropsConfig.buttonSize.options
       }
     },
     fill: {
       control: {
         type: 'select',
-        options: [
-          'primary',
-          'danger'
-        ]
+        options: PropsConfig.fill.options
       }
     },
     iconPosition: {
       control: {
         type: 'select',
-        options: [
-          'left',
-          'right'
-        ]
+        options: PropsConfig.iconPosition.options
       }
     },
     iconSize: {
       control: {
         type: 'select',
-        options: [
-          'large',
-          'normal',
-          'small'
-        ]
+        options: PropsConfig.iconSize.options
       }
     },
     iconStyle: {
       control: {
         type: 'select',
-        options: [
-          'solid',
-          'regular'
-        ]
+        options: PropsConfig.iconStyle.options
       }
     },
     animation: {
       control: {
         type: 'select',
-        options: [
-          'none',
-          'pulse'
-        ]
+        options: PropsConfig.animation.options
       }
     },
     iconCustomColor: {

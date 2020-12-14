@@ -19,6 +19,7 @@
     )
 </template>
 <script>
+import PropsConfig from '@/config/Props.config'
 
 export default {
   name: 'Button',
@@ -27,36 +28,19 @@ export default {
       type: String,
       default: 'base',
       required: false,
-      validator: value =>
-        [
-          'base',
-          'outline',
-          'clear'
-        ]
-          .includes(value)
+      validator: value => PropsConfig.variation.options.includes(value)
     },
     buttonSize: {
       type: String,
       default: 'normal',
       required: false,
-      validator: value =>
-        [
-          'normal',
-          'short',
-          'large'
-        ]
-          .includes(value)
+      validator: value => PropsConfig.buttonSize.options.includes(value)
     },
     fill: {
       type: String,
       default: 'primary',
       required: false,
-      validator: value =>
-        [
-          'primary',
-          'danger'
-        ]
-          .includes(value)
+      validator: value => PropsConfig.fill.options.includes(value)
     },
     icon: {
       type: String,
@@ -67,46 +51,25 @@ export default {
       type: String,
       required: false,
       default: 'left',
-      validator: value =>
-        [
-          'left',
-          'right'
-        ]
-          .includes(value)
+      validator: value => PropsConfig.iconPosition.options.includes(value)
     },
     iconSize: {
       type: String,
       required: false,
       default: 'normal',
-      validator: value =>
-        [
-          'large',
-          'normal',
-          'small'
-        ]
-          .includes(value)
+      validator: value => PropsConfig.iconSize.options.includes(value)
     },
     iconStyle: {
       type: String,
       required: false,
       default: 'solid',
-      validator: value =>
-        [
-          'solid',
-          'regular'
-        ]
-          .includes(value)
+      validator: value => PropsConfig.iconStyle.options.includes(value)
     },
     animation: {
       type: String,
       required: false,
       default: 'none',
-      validator: value =>
-        [
-          'none',
-          'pulse'
-        ]
-          .includes(value)
+      validator: value => PropsConfig.animation.options.includes(value)
     },
     disabled: {
       type: Boolean,
