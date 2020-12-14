@@ -1,4 +1,4 @@
-import { mount } from '@vue/test-utils'
+import { shallowMount } from '@vue/test-utils'
 import Button from '@/components/atoms/Button/Button.vue'
 import PropsConfig from '@/config/Props.config'
 
@@ -6,7 +6,7 @@ const classBlock = 'yoo-btn'
 const SlotText = 'Default Slot Text'
 
 const mountButton = () => {
-  return mount(Button, {
+  return shallowMount(Button, {
     slots: { default: SlotText }
   })
 }
@@ -15,7 +15,6 @@ describe('Button Component', () => {
   let wrapper
   beforeEach(() => {
     wrapper = mountButton()
-    // console.log('wrapper', wrapper)
   })
 
   it('Matches Snapshot', () => {
@@ -30,7 +29,7 @@ describe('Button Component', () => {
   describe('Props', () => {
     describe('variation', () => {
       PropsConfig.variation.options.forEach(variation => {
-        it(`Accept prop variation: ${variation}`, async () => {
+        it(`Includes variation class: .${classBlock}--${variation}`, async () => {
           await wrapper.setProps({ variation })
           if (variation !== 'base') {
             expect(wrapper.find(`.${classBlock}--${variation}`).exists()).toBe(true)
@@ -41,7 +40,7 @@ describe('Button Component', () => {
 
     describe('buttonSize', () => {
       PropsConfig.buttonSize.options.forEach(buttonSize => {
-        it(`Accept prop buttonSize: ${buttonSize}`, async () => {
+        it(`Includes buttonSize class: .${classBlock}--${buttonSize}`, async () => {
           await wrapper.setProps({ buttonSize })
           if (buttonSize !== 'normal') {
             expect(wrapper.find(`.${classBlock}--${buttonSize}`).exists()).toBe(true)
@@ -52,17 +51,43 @@ describe('Button Component', () => {
 
     describe('fill', () => {
       PropsConfig.fill.options.forEach(fill => {
-        it(`Accept prop fill: ${fill}`, async () => {
+        it(`Includes fill class: .${classBlock}__fill--${fill}`, async () => {
           await wrapper.setProps({ fill })
           expect(wrapper.find(`.${classBlock}__fill--${fill}`).exists()).toBe(true)
         })
       })
     })
 
+    describe('disabled', () => {
+      PropsConfig.fill.options.forEach(fill => {
+        it(`Includes disabled class: .${classBlock}--disabled`, async () => {
+          await wrapper.setProps({ fill, disabled: true })
+          expect(wrapper.find(`.${classBlock}--disabled`).exists()).toBe(true)
+        })
+      })
+    })
+
+    describe('active', () => {
+      PropsConfig.fill.options.forEach(fill => {
+        it(`Includes active class: .${classBlock}--active`, async () => {
+          await wrapper.setProps({ active: true, fill, disabled: false })
+          expect(wrapper.find(`.${classBlock}--active`).exists()).toBe(true)
+        })
+      })
+    })
+
+    describe('hover', () => {
+      PropsConfig.fill.options.forEach(fill => {
+        it(`Includes hover class: .${classBlock}--hover`, async () => {
+          await wrapper.setProps({ hover: true, fill, disabled: false })
+          expect(wrapper.find(`.${classBlock}--hover`).exists()).toBe(true)
+        })
+      })
+    })
+
     describe('iconPosition', () => {
       PropsConfig.iconPosition.options.forEach(iconPosition => {
-        // @TODO MULTIPLE PROPS NEEDED
-        it(`Accept prop iconPosition: ${iconPosition}`, async () => {
+        it(`Includes iconPosition class: .${classBlock}__icon--${iconPosition}`, async () => {
           await wrapper.setProps({ text: 'default text', icon: 'icon-value', iconPosition: iconPosition })
           expect(wrapper.find(`.${classBlock}__icon--${iconPosition}`).exists()).toBe(true)
         })
@@ -71,8 +96,7 @@ describe('Button Component', () => {
 
     describe('iconSize', () => {
       PropsConfig.iconSize.options.forEach(iconSize => {
-        // @TODO MULTIPLE PROPS NEEDED
-        it(`Accept prop iconSize: ${iconSize}`, async () => {
+        it(`Includes iconSize class: .${classBlock}__icon--${iconSize}`, async () => {
           await wrapper.setProps({ icon: 'icon-value', iconSize })
           expect(wrapper.find(`.${classBlock}__icon--${iconSize}`).exists()).toBe(true)
         })
@@ -81,8 +105,7 @@ describe('Button Component', () => {
 
     describe('iconStyle', () => {
       PropsConfig.iconStyle.options.forEach(iconStyle => {
-        // @TODO MULTIPLE PROPS NEEDED
-        it(`Accept prop iconStyle: ${iconStyle}`, async () => {
+        it(`Includes iconStyle class: .${iconStyle === 'solid' ? 'fas' : 'far'}`, async () => {
           await wrapper.setProps({ icon: 'icon-value', iconStyle })
           expect(wrapper.find('.yoo-btn__icon').classes().includes(`${iconStyle === 'solid' ? 'fas' : 'far'}`)).toBe(true)
         })
@@ -91,7 +114,7 @@ describe('Button Component', () => {
 
     describe('animation', () => {
       PropsConfig.animation.options.forEach(animation => {
-        it(`Accept prop animation: ${animation}`, async () => {
+        it(`Include animation class: .${classBlock}--animation-${animation}`, async () => {
           await wrapper.setProps({ animation })
           if (animation !== 'none') {
             expect(wrapper.find(`.${classBlock}`).classes().includes(`${classBlock}--animation-${animation}`)).toBe(true)
@@ -100,4 +123,13 @@ describe('Button Component', () => {
       })
     })
   }) // describe Props
+
+  describe('Events', () => {
+    describe('Click', () => {
+      it('Emits Click Event', async () => {
+        wrapper.find('button').trigger('click')
+        expect(wrapper.emitted()).toHaveProperty('onClick')
+      })
+    })
+  }) // describe Events
 })
