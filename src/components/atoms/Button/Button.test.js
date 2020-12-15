@@ -59,11 +59,13 @@ describe('Button Component', () => {
     })
 
     describe('disabled', () => {
-      PropsConfig.fill.options.forEach(fill => {
-        it(`Includes disabled class: .${classBlock}--disabled`, async () => {
-          await wrapper.setProps({ fill, disabled: true })
-          expect(wrapper.find(`.${classBlock}--disabled`).exists()).toBe(true)
-        })
+      it(`Includes disabled class: .${classBlock}--disabled`, async () => {
+        await wrapper.setProps({ disabled: true })
+        expect(wrapper.find(`.${classBlock}--disabled`).exists()).toBe(true)
+      })
+      it(`Does not include disabled class: .${classBlock}--disabled`, async () => {
+        await wrapper.setProps({ disabled: false })
+        expect(wrapper.find(`.${classBlock}--disabled`).exists()).toBe(false)
       })
     })
 
@@ -116,6 +118,11 @@ describe('Button Component', () => {
       it('Includes iconCustomColor style color', async () => {
         await wrapper.setProps({ icon: 'icon-value', iconCustomColor: '#d2d2d2' })
         expect(wrapper.find('.yoo-btn__icon').attributes().style).toBe('color: rgb(210, 210, 210);')
+      })
+      it('Includes iconCustomColor style color', async () => {
+        await wrapper.setProps({ icon: 'icon-value', iconCustomColor: '#d2d2d2' })
+        expect(Button.props.iconCustomColor.validator('#d2d2d2')[0]).toBe('#d2d2d2')
+        expect(Button.props.iconCustomColor.validator('#d2d2d2')[1]).toBe('d2d2d2')
       })
     })
 

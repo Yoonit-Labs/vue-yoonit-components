@@ -3,7 +3,7 @@
   button(
     :class="['yoo-btn', ...takeModifier]"
     :disabled="disabled"
-    @click="doClick"
+    @click="$emit('onClick')"
   )
     i(
       v-if="icon.length && iconPosition === 'left'"
@@ -199,13 +199,7 @@ export default {
         : 'far' // fontawesome regular
     }
   },
-  methods: {
-    doClick (event) {
-      if (event) {
-        this.$emit('onClick', event)
-      }
-    }
-  },
+  methods: {},
   filters: {},
   watch: {}
 }
