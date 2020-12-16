@@ -31,9 +31,7 @@ describe('Button Component', () => {
       PropsConfig.variation.options.forEach(variation => {
         it(`Includes variation class: .${classBlock}--${variation}`, async () => {
           await wrapper.setProps({ variation })
-          if (variation !== 'base') {
-            expect(wrapper.find(`.${classBlock}--${variation}`).exists()).toBe(true)
-          }
+          expect(wrapper.find(`.${classBlock}--${variation}`).exists()).toBe(true)
         })
       })
     })
@@ -42,9 +40,7 @@ describe('Button Component', () => {
       PropsConfig.buttonSize.options.forEach(buttonSize => {
         it(`Includes buttonSize class: .${classBlock}--${buttonSize}`, async () => {
           await wrapper.setProps({ buttonSize })
-          if (buttonSize !== 'normal') {
-            expect(wrapper.find(`.${classBlock}--${buttonSize}`).exists()).toBe(true)
-          }
+          expect(wrapper.find(`.${classBlock}--${buttonSize}`).exists()).toBe(true)
         })
       })
     })
@@ -70,20 +66,16 @@ describe('Button Component', () => {
     })
 
     describe('active', () => {
-      PropsConfig.fill.options.forEach(fill => {
-        it(`Includes active class: .${classBlock}--active`, async () => {
-          await wrapper.setProps({ active: true, fill, disabled: false })
-          expect(wrapper.find(`.${classBlock}--active`).exists()).toBe(true)
-        })
+      it(`Includes active class: .${classBlock}--active`, async () => {
+        await wrapper.setProps({ active: true, disabled: false })
+        expect(wrapper.find(`.${classBlock}--active`).exists()).toBe(true)
       })
     })
 
     describe('hover', () => {
-      PropsConfig.fill.options.forEach(fill => {
-        it(`Includes hover class: .${classBlock}--hover`, async () => {
-          await wrapper.setProps({ hover: true, fill, disabled: false })
-          expect(wrapper.find(`.${classBlock}--hover`).exists()).toBe(true)
-        })
+      it(`Includes hover class: .${classBlock}--hover`, async () => {
+        await wrapper.setProps({ hover: true, disabled: false })
+        expect(wrapper.find(`.${classBlock}--hover`).exists()).toBe(true)
       })
     })
 
@@ -119,7 +111,7 @@ describe('Button Component', () => {
         await wrapper.setProps({ icon: 'icon-value', iconCustomColor: '#d2d2d2' })
         expect(wrapper.find('.yoo-btn__icon').attributes().style).toBe('color: rgb(210, 210, 210);')
       })
-      it('Includes iconCustomColor style color', async () => {
+      it('Validator iconCustomColor returns validation object', async () => {
         await wrapper.setProps({ icon: 'icon-value', iconCustomColor: '#d2d2d2' })
         expect(Button.props.iconCustomColor.validator('#d2d2d2')[0]).toBe('#d2d2d2')
         expect(Button.props.iconCustomColor.validator('#d2d2d2')[1]).toBe('d2d2d2')
@@ -130,9 +122,7 @@ describe('Button Component', () => {
       PropsConfig.animation.options.forEach(animation => {
         it(`Include animation class: .${classBlock}--animation-${animation}`, async () => {
           await wrapper.setProps({ animation })
-          if (animation !== 'none') {
-            expect(wrapper.find(`.${classBlock}`).classes().includes(`${classBlock}--animation-${animation}`)).toBe(true)
-          }
+          expect(wrapper.find(`.${classBlock}`).classes().includes(`${classBlock}--animation-${animation}`)).toBe(true)
         })
       })
     })

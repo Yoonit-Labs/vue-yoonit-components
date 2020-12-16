@@ -62,5 +62,8 @@ const Template = (args, { argTypes }) => ({
     '<yoo-button v-bind="$props"></yoo-button>'
 })
 
-export const Default = Template.bind({})
-Default.args = { text: 'Yoo Button' }
+export const Custom = Template.bind({})
+Custom.args = { text: 'Yoo Button' }
+
+export const Outline = Template.bind({})
+Outline.args = { text: 'Yoo Button', variation: 'outline' }

@@ -108,85 +108,35 @@ export default {
   created () {},
   mounted () {},
   updated () {},
-  beforeDestroy () {},
-  destroyed () {},
   components: {},
   computed: {
     takeIconColor () {
       return { color: `${this.iconCustomColor}` }
     },
-    takeHover () {
-      return this.hover ? 'hover' : ''
-    },
-    takeActive () {
-      return this.active ? 'active' : ''
-    },
-    takeDisabled () {
-      return this.disabled ? 'disabled' : ''
-    },
     takeModifierIcon () {
       const block = 'yoo-btn__icon'
       const classList = []
-      if (this.icon) {
-        if (this.iconSize) {
-          classList
-            .push(
-              `${block}--${this.iconSize}`
-            )
-        }
-        if (this.iconPosition && this.text) {
-          classList
-            .push(
-              `${block}--${this.iconPosition}`
-            )
-        }
+      classList.push(`${block}--${this.iconSize}`)
+      if (this.iconPosition && this.text) {
+        classList.push(`${block}--${this.iconPosition}`)
       }
       return classList
     },
     takeModifier () {
       const block = 'yoo-btn'
       const classList = []
-      if (this.fill) {
-        classList
-          .push(
-            `${block}__fill--${this.fill}`
-          )
-      }
+      classList.push(`${block}__fill--${this.fill}`)
+      classList.push(`${block}--${this.variation}`)
+      classList.push(`${block}--${this.buttonSize}`)
+      classList.push(`${block}--animation-${this.animation}`)
       if (this.fill && this.hover && !this.disabled) {
-        classList
-          .push(
-            `${block}--${this.takeHover}`
-          )
+        classList.push(`${block}--hover`)
       }
       if (this.fill && this.active && !this.disabled) {
-        classList
-          .push(
-            `${block}--${this.takeActive}`
-          )
+        classList.push(`${block}--active`)
       }
       if (this.fill && this.disabled) {
-        classList
-          .push(
-            `${block}--${this.takeDisabled}`
-          )
-      }
-      if (this.variation && (this.variation !== 'base')) {
-        classList
-          .push(
-            `${block}--${this.variation}`
-          )
-      }
-      if (this.buttonSize && (this.buttonSize !== 'normal')) {
-        classList
-          .push(
-            `${block}--${this.buttonSize}`
-          )
-      }
-      if (this.animation && (this.animation !== 'none')) {
-        classList
-          .push(
-            `${block}--animation-${this.animation}`
-          )
+        classList.push(`${block}--disabled`)
       }
       return classList
     },
