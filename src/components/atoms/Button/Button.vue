@@ -20,75 +20,62 @@
 </template>
 <script>
 import PropsConfig from '@/config/Props.config'
-
 export default {
   name: 'Button',
   props: {
     variation: {
       type: String,
       default: 'base',
-      required: false,
       validator: value => PropsConfig.variation.options.includes(value)
     },
     buttonSize: {
       type: String,
       default: 'normal',
-      required: false,
       validator: value => PropsConfig.buttonSize.options.includes(value)
     },
     fill: {
       type: String,
       default: 'primary',
-      required: false,
       validator: value => PropsConfig.fill.options.includes(value)
     },
     icon: {
       type: String,
-      required: false,
       default: ''
     },
     iconPosition: {
       type: String,
-      required: false,
       default: 'left',
       validator: value => PropsConfig.iconPosition.options.includes(value)
     },
     iconSize: {
       type: String,
-      required: false,
       default: 'normal',
       validator: value => PropsConfig.iconSize.options.includes(value)
     },
     iconStyle: {
       type: String,
-      required: false,
       default: 'solid',
       validator: value => PropsConfig.iconStyle.options.includes(value)
     },
     animation: {
       type: String,
-      required: false,
       default: 'none',
       validator: value => PropsConfig.animation.options.includes(value)
     },
     disabled: {
       type: Boolean,
-      required: false,
       default: false
     },
     text: {
       type: String,
-      required: false,
       default: ''
     },
     hover: {
       type: Boolean,
-      required: false,
       default: false
     },
     active: {
       type: Boolean,
-      required: false,
       default: false
     },
     iconCustomColor: {
