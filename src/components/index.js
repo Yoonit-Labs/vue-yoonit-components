@@ -1,10 +1,7 @@
-import yooLogo from './components/atoms/Logo.vue'
-import yooLogo from './components/atoms/Logo.vue'
-import yooTest from './components/atoms/Test.vue'
+import yooButton from './components/atoms/Button.vue'
 
 const yooComponents = {
-  yooLogo,
-  yooTest
+  yooButton
 }
 
 export default yooComponents
