@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`YooSeparator Component Matches Snapshot 1`] = `
+<div>
+  <div class="separator separator--fill-default">
+    <p class="separator__label m__l--l m__t--none m__b--none m__r--none" style="display: none;"></p>
+  </div>
+</div>
+`;

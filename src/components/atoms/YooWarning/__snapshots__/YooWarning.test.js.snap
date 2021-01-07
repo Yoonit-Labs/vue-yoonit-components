@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`YooWarning Component Matches Snapshot 1`] = `
+<div class="warning p__t--l p__b--l m__b--xl warning--default">
+  <div class="warning__icon m__l--l"><i class="yoo-warning__icon fas fa-cog"></i></div>
+  <div class="warning__body">
+    <p class="warning__title m__t--none m__b--xs m__l--l m__r--l" style="display: none;"></p>
+    <p class="warning__text m__t--none m__b--none m__l--l m__r--l"></p>
+  </div>
+</div>
+`;

@@ -1,4 +1,4 @@
-import yooButton from './components/atoms/Button.vue'
+import yooButton from './atoms/Button/Button.vue'
 
 const yooComponents = {
   yooButton
