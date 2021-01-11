@@ -1,6 +1,6 @@
 import { shallowMount } from '@vue/test-utils'
 import Button from '@/components/atoms/Button/Button.vue'
-import PropsConfig from './Button.config'
+import PropsConfig from '@/components/atoms/Button/Button.config'
 
 const classBlock = 'yoo-btn'
 const SlotText = 'Default Slot Text'
