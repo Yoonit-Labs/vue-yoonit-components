@@ -27,7 +27,6 @@ export default {
   props: {
     counterType: {
       type: String,
-      required: true,
       default: 'dot',
       validator (value) {
         return [
@@ -38,12 +37,10 @@ export default {
     },
     totalSteps: {
       type: Number,
-      required: true,
       default: 1
     },
     currentStep: {
       type: Number,
-      required: true,
       default: 0
     }
   },

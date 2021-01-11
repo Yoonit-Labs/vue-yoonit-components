@@ -1,5 +1,5 @@
 import yooStepper from './YooStepper.vue'
-import PropsConfig from './Props.config'
+import PropsConfig from './YooStepper.config'
 
 export default {
   title: 'Yoonit/Stepper',
@@ -22,7 +22,7 @@ const Template = (args, { argTypes }) => ({
 })
 
 export const Custom = Template.bind({})
-Custom.args = { totalSteps: 5 }
+Custom.args = { totalSteps: 5, counterType: 'number' }
 
 export const Dots = Template.bind({})
 Dots.args = { totalSteps: 5, counterType: 'dot' }

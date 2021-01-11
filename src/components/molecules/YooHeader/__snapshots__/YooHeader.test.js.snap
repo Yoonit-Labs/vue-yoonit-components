@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`YooHeader Component Matches Snapshot 1`] = `
+<div class="yoo-header">
+  <yooflexlayout-stub flexdirection="row" flexwrap="nowrap" justifycontent="space-between" alignitems="center" aligncontent="center" gap="0">
+    <div></div>
+    <div></div>
+    <div></div>
+  </yooflexlayout-stub>
+</div>
+`;

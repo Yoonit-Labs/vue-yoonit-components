@@ -1,4 +1,4 @@
-import YooFlexLayout from './YooFlexLayout/YooFlexLayout.vue'
+import YooFlexLayout from '@/components/quarks/YooFlexLayout/YooFlexLayout.vue'
 
 const yooComponents = {
   YooFlexLayout
