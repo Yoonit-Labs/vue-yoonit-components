@@ -1,6 +1,6 @@
 import { shallowMount } from '@vue/test-utils'
 import YooStepper from '@/components/atoms/YooStepper/YooStepper.vue'
-import PropsConfig from '@/components/atoms/YooStepper/Props.config'
+import PropsConfig from '@/components/atoms/YooStepper/YooStepper.config'
 
 const classBlock = 'yoo-stepper'
 const SlotText = 'Default Slot Text'
