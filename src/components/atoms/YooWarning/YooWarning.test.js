@@ -1,6 +1,6 @@
 import { shallowMount } from '@vue/test-utils'
 import YooWarning from '@/components/atoms/YooWarning/YooWarning.vue'
-import PropsConfig from '@/components/atoms/YooWarning/Props.config'
+import PropsConfig from './YooWarning.config'
 
 const classBlock = 'warning'
 const SlotText = 'Default Slot Text'

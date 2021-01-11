@@ -1,5 +1,5 @@
 import yooWarning from './YooWarning.vue'
-import PropsConfig from './YooWarning.config'
+import PropsConfig from './Props.config'
 
 export default {
   title: 'Yoonit/Warning',

@@ -1,4 +1,0 @@
-{"total": {"lines":{"total":36,"covered":36,"skipped":0,"pct":100},"statements":{"total":36,"covered":36,"skipped":0,"pct":100},"functions":{"total":17,"covered":17,"skipped":0,"pct":100},"branches":{"total":22,"covered":22,"skipped":0,"pct":100}}
-,"/Users/gab/Desktop/CodePlay/yoonit-components/src/components/atoms/Button/Button.vue": {"lines":{"total":35,"covered":35,"skipped":0,"pct":100},"functions":{"total":17,"covered":17,"skipped":0,"pct":100},"statements":{"total":35,"covered":35,"skipped":0,"pct":100},"branches":{"total":22,"covered":22,"skipped":0,"pct":100}}
-,"/Users/gab/Desktop/CodePlay/yoonit-components/src/config/Props.config.js": {"lines":{"total":1,"covered":1,"skipped":0,"pct":100},"functions":{"total":0,"covered":0,"skipped":0,"pct":100},"statements":{"total":1,"covered":1,"skipped":0,"pct":100},"branches":{"total":0,"covered":0,"skipped":0,"pct":100}}
-}

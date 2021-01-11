@@ -43,9 +43,11 @@ export default {
   destroyed () {},
   components: {},
   computed: {
-    takeText () {
-      return this.text
-    },
+    /**
+    * @description Print classes based on the chosen props
+    * @computed takeModifier
+    * @returns {array}
+    */
     takeModifier () {
       const block = 'separator'
       const classList = []
