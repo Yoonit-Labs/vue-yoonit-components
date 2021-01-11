@@ -1,0 +1,3 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`YooAvatar Component Matches Snapshot 1`] = `<div class="yoo-avatar yoo-avatar--medium yoo-avatar--neutral"><img class="yoo-avatar yoo-avatar--medium"></div>`;
