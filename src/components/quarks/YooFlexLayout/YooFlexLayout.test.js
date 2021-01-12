@@ -1,6 +1,6 @@
 import { shallowMount } from '@vue/test-utils'
 import YooFlexLayout from '@/components/quarks/YooFlexLayout/YooFlexLayout.vue'
-import PropsConfig from '@/components/quarks/YooFlexLayout/Props.config'
+import PropsConfig from '@/components/quarks/YooFlexLayout/YooFlexLayout.config'
 
 const classBlock = 'yoo-flex-layout'
 const SlotText = 'Default Slot Text'

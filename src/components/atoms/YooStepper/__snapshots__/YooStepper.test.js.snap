@@ -1,8 +1,8 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`YooStepper Component Matches Snapshot 1`] = `
-<div flexdirection="row" justifycontent="space-around" alignitems="center" class="yoo-stepper">
+<yooflexlayout-stub flexdirection="row" flexwrap="nowrap" justifycontent="space-around" alignitems="center" aligncontent="stretch" gap="0" class="yoo-stepper">
   <!---->
   <div class="yoo-stepper__dot m__r--l yoo-stepper__dot--active"></div>
-</div>
+</yooflexlayout-stub>
 `;

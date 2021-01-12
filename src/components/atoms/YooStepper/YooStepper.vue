@@ -1,5 +1,5 @@
 <template lang="pug">
-.yoo-stepper(
+YooFlexLayout.yoo-stepper(
   flexDirection="row"
   justifyContent="space-around"
   alignItems="center"
@@ -21,9 +21,13 @@
 
 <script>
 
+import YooFlexLayout from '@/components/quarks/YooFlexLayout/YooFlexLayout.vue'
+
 export default {
   name: 'YooStepper',
-  components: {},
+  components: {
+    YooFlexLayout
+  },
   props: {
     counterType: {
       type: String,
