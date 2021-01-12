@@ -1,7 +1,6 @@
 import { shallowMount } from '@vue/test-utils'
 import YooCheckButton from '@/components/atoms/YooCheckButton/YooCheckButton.vue'
 import PropsConfig from './Props.config'
-import Vue from 'vue'
 
 const classBlock = 'yoo-check'
 const SlotText = 'Default Slot Text'
@@ -18,7 +17,8 @@ describe('YooCheckButton Component', () => {
     wrapper = mountComponent()
   })
 
-  it('Matches Snapshot', () => {
+  it('Matches Snapshot', async () => {
+    await wrapper.setData({ timeId: 'custom-time-id' })
     expect(wrapper).toMatchSnapshot()
   })
 
@@ -52,19 +52,13 @@ describe('YooCheckButton Component', () => {
     })
 
     describe('initialValue', () => {
-      it('Has a valid default value', () => {
-        expect(YooCheckButton.props.initialValue.default).toBe(false)
-      })
       it('Includes initialValue class: .yoo-check--checked when initialValue', async () => {
-        await wrapper.setProps({ initialValue: true })
-        await Vue.nextTick()
-        console.log(wrapper.classes())
+        wrapper = shallowMount(YooCheckButton, { propsData: { initialValue: true } })
+        await wrapper.vm.$nextTick()
         expect(wrapper.find(`.${classBlock}--checked`).exists()).toBe(true)
       })
       it('Does not include initialValue class: .yoo-check--checked when not initialValue', async () => {
         await wrapper.setProps({ initialValue: false })
-        await Vue.nextTick()
-        console.log(wrapper.classes())
         expect(wrapper.find(`.${classBlock}--checked`).exists()).toBe(false)
       })
     })
