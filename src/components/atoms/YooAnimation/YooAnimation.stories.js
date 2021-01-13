@@ -1,4 +1,5 @@
 import YooAnimation from './YooAnimation.vue'
+import * as animationData from '@/assets/animations/loading.json'
 
 export default {
   title: 'Yoonit/YooAnimation',
@@ -9,8 +10,8 @@ const Template = (args, { argTypes }) => ({
   props: Object.keys(argTypes),
   components: { YooAnimation },
   template:
-    '<yoo-icon v-bind="$props"></yoo-avatar>'
+    '<yoo-animation v-bind="$props"></yoo-animation>'
 })
 
 export const Custom = Template.bind({})
-Custom.args = { height: '50', width: '50' }
+Custom.args = { active: true, options: { animationData: animationData.default } }
