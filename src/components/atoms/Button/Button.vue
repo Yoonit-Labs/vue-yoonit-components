@@ -19,7 +19,7 @@
     )
 </template>
 <script>
-import PropsConfig from '@/config/Props.config'
+import PropsConfig from '@/components/atoms/Button/Button.config'
 export default {
   name: 'Button',
   props: {

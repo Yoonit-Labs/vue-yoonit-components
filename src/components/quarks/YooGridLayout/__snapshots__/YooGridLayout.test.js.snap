@@ -1,0 +1,3 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`YooGridLayout Component Matches Snapshot 1`] = `<div class="yoo-grid-layout yoo-grid-layout--h-stretch yoo-grid-layout--v-stretch" style="grid-template-columns: auto; grid-template-rows: auto;">Default Slot Text</div>`;

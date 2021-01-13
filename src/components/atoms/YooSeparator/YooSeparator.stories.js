@@ -1,5 +1,5 @@
 import yooSeparator from './YooSeparator.vue'
-import PropsConfig from './Props.config'
+import PropsConfig from './YooSeparator.config'
 
 export default {
   title: 'Yoonit/Separator',

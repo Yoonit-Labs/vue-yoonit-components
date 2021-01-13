@@ -1,6 +1,6 @@
 import { shallowMount } from '@vue/test-utils'
 import YooSeparator from '@/components/atoms/YooSeparator/YooSeparator.vue'
-import PropsConfig from '@/components/atoms/YooSeparator/Props.config'
+import PropsConfig from '@/components/atoms/YooSeparator/YooSeparator.config'
 
 const classBlock = 'separator'
 const SlotText = 'Default Slot Text'

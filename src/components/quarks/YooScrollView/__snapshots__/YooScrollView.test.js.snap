@@ -1,0 +1,3 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`YooIndicator Component Matches Snapshot 1`] = `<div class="yoo-scroll-view yoo-scroll-view--vertical">Default Slot Text</div>`;

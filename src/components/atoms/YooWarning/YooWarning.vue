@@ -10,8 +10,8 @@
     .warning__body
       p.warning__title.m__t--none.m__b--xs.m__l--l.m__r--l(
         v-show="title"
-      ) {{takeTitle}}
-      p.warning__text.m__t--none.m__b--none.m__l--l.m__r--l {{takeText}}
+      ) {{title}}
+      p.warning__text.m__t--none.m__b--none.m__l--l.m__r--l {{text}}
 </template>
 
 <script>
@@ -66,30 +66,30 @@ export default {
     }
   },
   components: {},
-  data: () => ({}),
-  beforeCreate () {},
-  created () {},
-  beforeMount () {},
-  mounted () {},
-  beforeUpdate () {},
-  updated () {},
-  beforeDestroy () {},
-  destroyed () {},
   computed: {
-    takeTitle () {
-      return this.title
-    },
-    takeText () {
-      return this.text
-    },
+    /**
+    * @description Returns formatted icon name
+    * @computed takeIconName
+    * @returns {string}
+    */
     takeIconName () {
       return `fa-${this.icon}`
     },
+    /**
+    * @description Returns icon style based on iconStyle prop
+    * @computed takeIconStyle
+    * @returns {string}
+    */
     takeIconStyle () {
       return this.iconStyle === 'solid'
-        ? 'fas' // fontawesome solid
-        : 'far' // fontawesome regular
+        ? 'fas'
+        : 'far'
     },
+    /**
+    * @description Print classes based on the chosen props
+    * @computed takeModifier
+    * @returns {array}
+    */
     takeModifier () {
       const block = 'warning'
       const classList = []
