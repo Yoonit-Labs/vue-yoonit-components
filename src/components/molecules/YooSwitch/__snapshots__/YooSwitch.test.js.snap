@@ -1,0 +1,3 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`YooSwitch Component Matches Snapshot 1`] = `<div class="yoo-switch-container m__t--xl m__b--xl m__r--xs m__l--xs"><input type="checkbox" class="yoo-switch yoo-switch--medium" id="custom-time-id"><label class="yoo-switch__label" for="custom-time-id"></label></div>`;

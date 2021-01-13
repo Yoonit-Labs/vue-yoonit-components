@@ -6,6 +6,8 @@
 
 <script>
 
+import PropsConfig from '@/components/quarks/YooIndicator/YooIndicator.config'
+
 export default {
   name: 'YooIndicator',
   props: {
@@ -13,28 +15,13 @@ export default {
       type: String,
       required: false,
       default: 'danger',
-      validator: value =>
-        [
-          'primary',
-          'danger',
-          'light',
-          'dark',
-          'neutral'
-        ]
-          .includes(value)
+      validator: value => PropsConfig.fill.options.includes(value)
     },
     size: {
       type: String,
       required: false,
       default: 'normal',
-      validator: value =>
-        [
-          'small',
-          'medium',
-          'normal',
-          'large'
-        ]
-          .includes(value)
+      validator: value => PropsConfig.size.options.includes(value)
     },
     animation: {
       type: Boolean,

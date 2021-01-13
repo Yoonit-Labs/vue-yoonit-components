@@ -22,6 +22,7 @@ YooFlexLayout.yoo-stepper(
 <script>
 
 import YooFlexLayout from '@/components/quarks/YooFlexLayout/YooFlexLayout.vue'
+import PropsConfig from '@/components/atoms/YooStepper/YooStepper.config'
 
 export default {
   name: 'YooStepper',
@@ -32,12 +33,7 @@ export default {
     counterType: {
       type: String,
       default: 'dot',
-      validator (value) {
-        return [
-          'dot',
-          'number'
-        ].indexOf(value) !== -1
-      }
+      validator: value => PropsConfig.counterType.options.includes(value)
     },
     totalSteps: {
       type: Number,
