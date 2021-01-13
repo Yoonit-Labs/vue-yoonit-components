@@ -62,6 +62,7 @@ export default {
   props: {
     totalPages: {
       type: Number,
+      required: true,
       validator (value) { return value > 0 }
     },
     currentPage: {

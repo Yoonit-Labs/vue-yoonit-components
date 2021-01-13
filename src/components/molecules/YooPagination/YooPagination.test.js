@@ -6,7 +6,10 @@ const SlotText = 'Default Slot Text'
 
 const mountComponent = () => {
   return shallowMount(yooPagination, {
-    slots: { default: SlotText }
+    slots: { default: SlotText },
+    propsData: {
+      totalPages: 5
+    }
   })
 }
 
@@ -21,6 +24,7 @@ describe('YooPagination Component', () => {
   })
 
   it('Loads the Component HTML', () => {
+    // @TODO - testar os elementos obrigatorios a serem carregados no componente (ex: botao esquerda, dotter, botao direita...)
     expect(wrapper.classes('yoo__container--yooPagination')).toBe(true)
     expect(wrapper.find('yooPagination.yoo-btn').exists()).toBe(true)
   })
@@ -42,6 +46,7 @@ describe('YooPagination Component', () => {
   describe('Events', () => {
     describe('Click', () => {
       it('Emits Click Event', async () => {
+        // @TODO - Incluir trigger do emit antes de testar se a propierdade foi emitida (ex: wrapper.find('button-left').trigger('click'))
         expect(wrapper.emitted()).toHaveProperty('last')
         expect(wrapper.emitted()).toHaveProperty('tapPage')
       })
@@ -51,6 +56,7 @@ describe('YooPagination Component', () => {
   describe('Events', () => {
     describe('Click', () => {
       it('Emits Click Event', async () => {
+        // @TODO - Incluir trigger do emit antes de testar se a propierdade foi emitida (ex: wrapper.find('button-left').trigger('click'))
         expect(wrapper.emitted()).toHaveProperty('tapPage')
       })
     })
