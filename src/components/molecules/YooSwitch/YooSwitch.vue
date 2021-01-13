@@ -68,6 +68,11 @@ export default {
   beforeDestroy () {},
   destroyed () {},
   computed: {
+    /**
+    * @description Print classes based on the chosen props
+    * @computed takeModifier
+    * @returns {array}
+    */
     takeModifier () {
       const block = 'yoo-switch'
       const classList = []
@@ -97,6 +102,10 @@ export default {
     }
   },
   methods: {
+    /**
+    * @description Emit response in click item
+    * @method doCheck
+    */
     doCheck (e) {
       this.$emit('response', this.checkedField)
     }
