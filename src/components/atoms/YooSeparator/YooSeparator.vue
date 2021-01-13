@@ -11,19 +11,16 @@ div
 </template>
 
 <script>
+
+import PropsConfig from '@/components/atoms/YooSeparator/YooSeparator.config'
+
 export default {
   name: 'YooSeparator',
   props: {
     fill: {
       type: String,
       default: 'default',
-      validator (value) {
-        return [
-          'default',
-          'primary',
-          'danger'
-        ].indexOf(value) !== -1
-      }
+      validator: value => PropsConfig.fill.options.includes(value)
     },
     text: {
       type: String,

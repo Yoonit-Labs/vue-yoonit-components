@@ -7,6 +7,8 @@
 
 <script>
 
+import PropsConfig from '@/components/quarks/YooScrollView/YooScrollView.config'
+
 export default {
   name: 'YooScrollView',
   props: {
@@ -14,11 +16,7 @@ export default {
       type: String,
       required: false,
       default: 'vertical',
-      validator: value => [
-        'vertical',
-        'horizontal'
-      ]
-        .includes(value)
+      validator: value => PropsConfig.orientation.options.includes(value)
     }
   },
   components: {},

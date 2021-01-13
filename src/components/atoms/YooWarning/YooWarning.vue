@@ -16,6 +16,8 @@
 
 <script>
 
+import PropsConfig from '@/components/atoms/YooWarning/YooWarning.config'
+
 export default {
   name: 'YooWarning',
   props: {
@@ -46,23 +48,12 @@ export default {
     iconStyle: {
       type: String,
       default: 'solid',
-      validator (value) {
-        return [
-          'solid',
-          'regular'
-        ].indexOf(value) !== -1
-      }
+      validator: value => PropsConfig.iconStyle.options.includes(value)
     },
     variation: {
       type: String,
       default: 'default',
-      validator (value) {
-        return [
-          'default',
-          'clear',
-          'danger'
-        ].indexOf(value) !== -1
-      }
+      validator: value => PropsConfig.variation.options.includes(value)
     }
   },
   components: {},

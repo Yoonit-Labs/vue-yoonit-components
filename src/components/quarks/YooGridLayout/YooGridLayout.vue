@@ -8,6 +8,8 @@
 
 <script>
 
+import PropsConfig from '@/components/quarks/YooGridLayout/YooGridLayout.config'
+
 export default {
   name: 'YooGridLayout',
   props: {
@@ -40,32 +42,12 @@ export default {
     horizontalAlign: {
       type: String,
       default: 'stretch',
-      validator (value) {
-        return [
-          'start',
-          'end',
-          'center',
-          'stretch',
-          'space-around',
-          'space-between',
-          'space-evenly'
-        ].indexOf(value) !== -1
-      }
+      validator: value => PropsConfig.horizontalAlign.options.includes(value)
     },
     verticalAlign: {
       type: String,
       default: 'stretch',
-      validator (value) {
-        return [
-          'start',
-          'end',
-          'center',
-          'stretch',
-          'space-around',
-          'space-between',
-          'space-evenly'
-        ].indexOf(value) !== -1
-      }
+      validator: value => PropsConfig.verticalAlign.options.includes(value)
     }
   },
   components: {},
