@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`YooPagination Component Matches Snapshot 1`] = `
+<yooflexlayout-stub flexdirection="row" flexwrap="nowrap" justifycontent="space-between" alignitems="stretch" aligncontent="stretch" gap="0">
+  <yoobutton-stub variation="outline" buttonsize="normal" fill="primary" icon="arrow-left" iconposition="left" iconsize="normal" iconstyle="solid" animation="none" text="" iconcustomcolor="" class="button__container--back"></yoobutton-stub>
+  <yoostepper-stub countertype="dot" totalsteps="1" currentstep="0"></yoostepper-stub>
+  <yoobutton-stub variation="base" buttonsize="normal" fill="primary" icon="arrow-right" iconposition="left" iconsize="normal" iconstyle="solid" animation="none" text="" iconcustomcolor=""></yoobutton-stub>
+  <yoobutton-stub variation="base" buttonsize="normal" fill="primary" icon="arrow-right" iconposition="right" iconsize="normal" iconstyle="solid" animation="none" text="" iconcustomcolor="" flexgrow="1" style="display: none;"></yoobutton-stub>
+  <yoobutton-stub variation="base" buttonsize="normal" fill="primary" icon="arrow-right" iconposition="right" iconsize="normal" iconstyle="solid" animation="none" text="" iconcustomcolor="" flexgrow="1" style="display: none;"></yoobutton-stub>
+</yooflexlayout-stub>
+`;
