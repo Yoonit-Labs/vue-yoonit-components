@@ -61,5 +61,5 @@ describe('YooAvatar Component', () => {
         })
       })
     })
-  }) 
+  })
 })
