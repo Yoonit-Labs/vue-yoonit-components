@@ -1,20 +1,20 @@
-import YooAvatar from './YooAvatar.vue'
-import PropsConfig from '@/config/Props.config'
+import YooIcon from './YooIcon.vue'
+import PropsConfig from './YooIcon.config'
 
 export default {
-  title: 'Yoonit/YooAvatar',
-  component: YooAvatar,
+  title: 'Yoonit/YooIcon',
+  component: YooIcon,
   argTypes: {
-    variation: {
+    iconStyle: {
       control: {
         type: 'select',
-        options: PropsConfig.variation.options
+        options: PropsConfig.iconStyle.options
       }
     },
-    buttonSize: {
+    size: {
       control: {
         type: 'select',
-        options: PropsConfig.buttonSize.options
+        options: PropsConfig.size.options
       }
     },
     fill: {
@@ -22,48 +22,31 @@ export default {
         type: 'select',
         options: PropsConfig.fill.options
       }
-    },
-    iconPosition: {
-      control: {
-        type: 'select',
-        options: PropsConfig.iconPosition.options
-      }
-    },
-    iconSize: {
-      control: {
-        type: 'select',
-        options: PropsConfig.iconSize.options
-      }
-    },
-    iconStyle: {
-      control: {
-        type: 'select',
-        options: PropsConfig.iconStyle.options
-      }
-    },
-    animation: {
-      control: {
-        type: 'select',
-        options: PropsConfig.animation.options
-      }
-    },
-    iconCustomColor: {
-      control: {
-        type: 'text'
-      }
     }
   }
 }
 
 const Template = (args, { argTypes }) => ({
   props: Object.keys(argTypes),
-  components: { YooAvatar },
+  components: { YooIcon },
   template:
-    '<yoo-avatar v-bind="$props"></yoo-avatar>'
+    '<yoo-icon v-bind="$props"></yoo-avatar>'
 })
 
 export const Custom = Template.bind({})
-Custom.args = { text: 'Yoo Avatar' }
+Custom.args = { icon: 'cog' }
 
-export const Outline = Template.bind({})
-Outline.args = { text: 'Yoo Avatar', variation: 'outline' }
+export const Primary = Template.bind({})
+Primary.args = { icon: 'cog', fill: 'primary' }
+
+export const Danger = Template.bind({})
+Danger.args = { icon: 'cog', fill: 'danger' }
+
+export const Light = Template.bind({})
+Light.args = { icon: 'cog', fill: 'light' }
+
+export const Dark = Template.bind({})
+Dark.args = { icon: 'cog', fill: 'dark' }
+
+export const Neutral = Template.bind({})
+Neutral.args = { icon: 'cog', fill: 'neutral' }

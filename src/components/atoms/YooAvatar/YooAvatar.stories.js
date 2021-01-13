@@ -1,20 +1,14 @@
 import YooAvatar from './YooAvatar.vue'
-import PropsConfig from '@/config/Props.config'
+import PropsConfig from './YooAvatar.config'
 
 export default {
   title: 'Yoonit/YooAvatar',
   component: YooAvatar,
   argTypes: {
-    variation: {
+    size: {
       control: {
         type: 'select',
-        options: PropsConfig.variation.options
-      }
-    },
-    buttonSize: {
-      control: {
-        type: 'select',
-        options: PropsConfig.buttonSize.options
+        options: PropsConfig.size.options
       }
     },
     fill: {
@@ -23,33 +17,10 @@ export default {
         options: PropsConfig.fill.options
       }
     },
-    iconPosition: {
+    textColor: {
       control: {
         type: 'select',
-        options: PropsConfig.iconPosition.options
-      }
-    },
-    iconSize: {
-      control: {
-        type: 'select',
-        options: PropsConfig.iconSize.options
-      }
-    },
-    iconStyle: {
-      control: {
-        type: 'select',
-        options: PropsConfig.iconStyle.options
-      }
-    },
-    animation: {
-      control: {
-        type: 'select',
-        options: PropsConfig.animation.options
-      }
-    },
-    iconCustomColor: {
-      control: {
-        type: 'text'
+        options: PropsConfig.textColor.options
       }
     }
   }
@@ -65,5 +36,17 @@ const Template = (args, { argTypes }) => ({
 export const Custom = Template.bind({})
 Custom.args = { text: 'Yoo Avatar' }
 
-export const Outline = Template.bind({})
-Outline.args = { text: 'Yoo Avatar', variation: 'outline' }
+export const Primary = Template.bind({})
+Primary.args = { text: 'Yoo Avatar', fill: 'primary' }
+
+export const Danger = Template.bind({})
+Danger.args = { text: 'Yoo Avatar', fill: 'danger' }
+
+export const Light = Template.bind({})
+Light.args = { text: 'Yoo Avatar', fill: 'light' }
+
+export const Dark = Template.bind({})
+Dark.args = { text: 'Yoo Avatar', fill: 'dark' }
+
+export const Neutral = Template.bind({})
+Neutral.args = { text: 'Yoo Avatar', fill: 'neutral' }
