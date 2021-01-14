@@ -1,0 +1,7 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`YooSwitchCard Component Matches Snapshot 1`] = `
+<yooflexlayout-stub flexdirection="row" flexwrap="nowrap" justifycontent="center" alignitems="stretch" aligncontent="stretch" gap="16px" class="m__t--s m__b--s m__r--l m__l--l p__t--l p__r--l p__b--l p__l--l yoo-switch-card">
+  <yoocheckbutton-stub text="Default Slot Text" size="medium" textposition="right" switchcard="true" class="yoo-switch-card__checkbox"></yoocheckbutton-stub>
+</yooflexlayout-stub>
+`;
