@@ -49,7 +49,7 @@ describe('YooPagination Component', () => {
         // @TODO - Incluir trigger do emit antes de testar se a propierdade foi emitida (ex: wrapper.find('button-left').trigger('click'))
         // para emitir um custom event de um custom component, vc precisa utilizar o metodo de emit, pois ao usar o trigger vc está apenas clicando no elemento raiz do custom component, e não no elemento que dispara o custom event.
         await wrapper.find('.button__container--back').vm.$emit('onClick')
-        expect(wrapper.emitted()).toHaveProperty('last')
+        expect(wrapper.emitted()).toHaveProperty('tapPage')
       })
     })
   })
