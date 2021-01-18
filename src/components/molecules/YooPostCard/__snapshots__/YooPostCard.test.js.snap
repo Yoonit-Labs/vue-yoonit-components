@@ -1,0 +1,12 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`YooPostCard Component Matches Snapshot 1`] = `
+<div class="yoo-post-card yoo-post-card--fill-white">
+  <yooflexlayout-stub flexdirection="row" flexwrap="nowrap" justifycontent="space-between" alignitems="stretch" aligncontent="stretch" gap="0" row="1" col="1" width="100%">
+    <yooicon-stub icon="" iconstyle="solid" event="" size="md" fill="neutral" class="yoo-post-card__icon"></yooicon-stub>
+    <!---->
+  </yooflexlayout-stub>
+  <h3 row="2" col="1" class="yoo-post-card__title"></h3>
+  <p row="3" col="1" class="yoo-post-card__subtitle"></p>
+</div>
+`;
