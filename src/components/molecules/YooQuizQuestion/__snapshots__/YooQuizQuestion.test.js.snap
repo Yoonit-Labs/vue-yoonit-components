@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`YooQuizQuestion Component Matches Snapshot 1`] = `
+<yoogridlayout-stub rows="*" cols="auto,auto" gap="0" horizontalalign="stretch" verticalalign="stretch" class="yoo-quiz">
+  <p row="1" col="1" class="yoo-quiz__question">Marque os sintomas sentidos nas últimas horas
+    <!---->
+  </p>
+  <yooswitchcard-stub text="Cansaço" textposition="right" size="medium" row="2" col="1" class="yoo-quiz__switch-card"></yooswitchcard-stub>
+  <yooswitchcard-stub text="Corrimento Nasal (Coriza)" textposition="right" size="medium" row="3" col="1" class="yoo-quiz__switch-card" checked="true"></yooswitchcard-stub>
+</yoogridlayout-stub>
+`;
