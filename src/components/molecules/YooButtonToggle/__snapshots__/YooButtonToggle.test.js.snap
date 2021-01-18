@@ -1,0 +1,10 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`YooButtonToggle Component Matches Snapshot 1`] = `
+<yooflexlayout-stub flexdirection="column" flexwrap="nowrap" justifycontent="center" alignitems="stretch" aligncontent="stretch" gap="0" class="yoo-button-toggle">
+  <yooflexlayout-stub flexdirection="row" flexwrap="nowrap" justifycontent="center" alignitems="center" aligncontent="center" gap="0" class="yoo-button-toggle__container">
+    <yoobutton-stub variation="base" buttonsize="normal" fill="primary" icon="" iconposition="left" iconsize="normal" iconstyle="solid" animation="none" text="Yoo Button Toggle" iconcustomcolor="" size="normal" style="width: 100%;"></yoobutton-stub>
+    <yoobutton-stub variation="clear" buttonsize="normal" fill="default" icon="" iconposition="left" iconsize="normal" iconstyle="solid" animation="none" text="Yoo Button Toggle 1" iconcustomcolor="" size="normal" style="width: 100%;"></yoobutton-stub>
+  </yooflexlayout-stub>
+</yooflexlayout-stub>
+`;
