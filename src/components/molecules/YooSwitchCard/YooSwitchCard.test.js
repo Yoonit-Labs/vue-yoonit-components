@@ -1,6 +1,7 @@
 import { shallowMount } from '@vue/test-utils'
 import YooSwitchCard from './YooSwitchCard.vue'
-// import PropsConfig from './YooSwitchCard.config'
+import PropsConfig from './YooSwitchCard.config'
+import YooCheckButton from '@/components/atoms/YooCheckButton/YooCheckButton.vue'
 
 const classBlock = 'yoo-switch-card'
 const SlotText = 'Default Slot Text'
@@ -38,26 +39,38 @@ describe('YooSwitchCard Component', () => {
         await wrapper.setProps({ checked: true })
         expect(wrapper.find(`.${classBlock}--active`).exists()).toBe(true)
       })
-      it(`Does not include checked class:.${classBlock}--active when not checked`, async () => {
+      it(`Does not include checked class: .${classBlock}--active when not checked`, async () => {
         await wrapper.setProps({ checked: false })
         expect(wrapper.find(`.${classBlock}--active`).exists()).toBe(false)
       })
     })
-  }) // describe Props
 
-  /* describe('textPosition', () => {
+    describe('textPosition', () => {
       it('Has a valid default value', () => {
         expect(PropsConfig.textPosition.options.includes(YooSwitchCard.props.textPosition.default)).toBe(true)
       })
       PropsConfig.textPosition.options.forEach(textPosition => {
-        it('Includes checked class: yoo-check--text-right', async () => {
-          wrapper = shallowMount(YooSwitchCard, { propsData: { text: 'lala', textPosition } })
+        it('Loads the Component HTML', async () => {
+          wrapper = shallowMount(YooCheckButton, { propsData: { textPosition } })
           await wrapper.vm.$nextTick()
-          expect(wrapper.find('.yoo-check--text-right').exists()).toBe(true)
+          expect(wrapper.find(`.yoo-check--text-${textPosition}`).exists()).toBe(true)
         })
       })
     })
-  }) */
+
+    describe('size', () => {
+      it('Has a valid default value', () => {
+        expect(PropsConfig.size.options.includes(YooSwitchCard.props.size.default)).toBe(true)
+      })
+      PropsConfig.size.options.forEach(size => {
+        it('Loads the Component HTML', async () => {
+          wrapper = shallowMount(YooCheckButton, { propsData: { size } })
+          await wrapper.vm.$nextTick()
+          expect(wrapper.find(`.yoo-check--${size}`).exists()).toBe(true)
+        })
+      })
+    })
+  }) // describe Props
 
   describe('Events', () => {
     describe('doCheck', () => {
