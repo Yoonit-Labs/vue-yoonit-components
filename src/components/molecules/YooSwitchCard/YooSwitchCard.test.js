@@ -1,5 +1,6 @@
 import { shallowMount } from '@vue/test-utils'
 import YooSwitchCard from './YooSwitchCard.vue'
+// import PropsConfig from './YooSwitchCard.config'
 
 const classBlock = 'yoo-switch-card'
 const SlotText = 'Default Slot Text'
@@ -43,6 +44,20 @@ describe('YooSwitchCard Component', () => {
       })
     })
   }) // describe Props
+
+  /* describe('textPosition', () => {
+      it('Has a valid default value', () => {
+        expect(PropsConfig.textPosition.options.includes(YooSwitchCard.props.textPosition.default)).toBe(true)
+      })
+      PropsConfig.textPosition.options.forEach(textPosition => {
+        it('Includes checked class: yoo-check--text-right', async () => {
+          wrapper = shallowMount(YooSwitchCard, { propsData: { text: 'lala', textPosition } })
+          await wrapper.vm.$nextTick()
+          expect(wrapper.find('.yoo-check--text-right').exists()).toBe(true)
+        })
+      })
+    })
+  }) */
 
   describe('Events', () => {
     describe('doCheck', () => {
