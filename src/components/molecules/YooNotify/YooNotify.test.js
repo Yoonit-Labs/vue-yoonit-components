@@ -1,6 +1,8 @@
 import { shallowMount } from '@vue/test-utils'
 import YooNotify from '@/components/molecules/YooNotify/YooNotify.vue'
 import PropsConfig from './YooNotify.config'
+import YooButton from '@/components/atoms/Button/Button.vue'
+import YooIndicator from '@/components/quarks/YooIndicator/YooIndicator.vue'
 
 const classBlock = 'yoo-notify'
 const SlotText = 'Default Slot Text'
@@ -21,9 +23,17 @@ describe('YooNotify Component', () => {
     expect(wrapper).toMatchSnapshot()
   })
 
-  it('Loads the Component HTML', () => {
+  it('Loads the Component HTML', async () => {
     expect(wrapper.classes('yoo-notify')).toBe(true)
     expect(wrapper.find('.yoo-notify__text').exists()).toBe(true)
+    // Test check YooIndicator
+    wrapper = shallowMount(YooIndicator)
+    await wrapper.vm.$nextTick()
+    expect(wrapper.find('.yoo-indicator').exists()).toBe(true)
+    // Test check YooButton
+    wrapper = shallowMount(YooButton)
+    await wrapper.vm.$nextTick()
+    expect(wrapper.find('.yoo-btn').exists()).toBe(true)
   })
 
   describe('Props', () => {
