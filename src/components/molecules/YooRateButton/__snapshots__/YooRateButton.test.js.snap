@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`YooRateButton Component Matches Snapshot 1`] = `
+<yooflexlayout-stub flexdirection="row" flexwrap="nowrap" justifycontent="space-around" alignitems="center" aligncontent="stretch" gap="0" class="yoo-rate">
+  <yoobutton-stub variation="base" buttonsize="xs" fill="light" icon="" iconposition="left" iconsize="normal" iconstyle="solid" animation="none" text="1" iconcustomcolor=""></yoobutton-stub>
+  <yoobutton-stub variation="base" buttonsize="xs" fill="light" icon="" iconposition="left" iconsize="normal" iconstyle="solid" animation="none" text="2" iconcustomcolor=""></yoobutton-stub>
+  <yoobutton-stub variation="base" buttonsize="xs" fill="light" icon="" iconposition="left" iconsize="normal" iconstyle="solid" animation="none" text="3" iconcustomcolor=""></yoobutton-stub>
+</yooflexlayout-stub>
+`;

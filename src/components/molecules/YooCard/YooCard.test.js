@@ -21,7 +21,8 @@ describe('YooCard Component', () => {
     wrapper = mountComponent()
   })
 
-  it('Matches Snapshot', () => {
+  it('Matches Snapshot', async () => {
+    await wrapper.setProps({ privateKey: Date(2021, 1, 1) })
     expect(wrapper).toMatchSnapshot()
   })
 
