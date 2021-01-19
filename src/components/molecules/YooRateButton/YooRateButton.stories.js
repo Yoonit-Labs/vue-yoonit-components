@@ -1,17 +1,8 @@
 import YooRateButton from './YooRateButton.vue'
-import PropsConfig from './YooRateButton.config'
 
 export default {
   title: 'Yoonit/YooRateButton',
-  component: YooRateButton,
-  argTypes: {
-    size: {
-      control: {
-        type: 'select',
-        options: PropsConfig.size.options
-      }
-    }
-  }
+  component: YooRateButton
 }
 
 const Template = (args, { argTypes }) => ({
@@ -22,4 +13,19 @@ const Template = (args, { argTypes }) => ({
 })
 
 export const Custom = Template.bind({})
-Custom.args = { text: 'Yoo Switch' }
+Custom.args = {
+  rate: [
+    {
+      text: '1',
+      value: 1
+    },
+    {
+      text: '2',
+      value: 2
+    },
+    {
+      text: '3',
+      value: 3
+    }
+  ]
+}

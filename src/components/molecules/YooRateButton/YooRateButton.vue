@@ -57,4 +57,4 @@ export default {
 }
 </script>
 
-<style src="./YooCard.sass" lang="sass" scoped></style>
+<style src="./YooRateButton.sass" lang="sass" scoped></style>

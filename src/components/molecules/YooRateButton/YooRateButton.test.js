@@ -1,6 +1,5 @@
 import { mount } from '@vue/test-utils'
 import YooRateButton from '@/components/molecules/YooRateButton/YooRateButton.vue'
-import Button from '@/components/atoms/Button/Button.vue'
 
 const classBlock = 'yoo-rate'
 const SlotText = 'Default Slot Text'
