@@ -65,7 +65,6 @@ export default {
   computed: {},
   methods: {
     doEmitChoice (event, index) {
-      console.log('Event:', event.target.offsetLeft)
       this.selectedIndex = index
       this.$emit('tapChoice', index)
     }
