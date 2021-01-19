@@ -9,7 +9,7 @@ const Template = (args, { argTypes }) => ({
   props: Object.keys(argTypes),
   components: { YooRateButton },
   template:
-    '<yoo-rate v-bind="$props"></yoo-rate>'
+    '<yoo-rate-button v-bind="$props"></yoo-rate-button>'
 })
 
 export const Custom = Template.bind({})
