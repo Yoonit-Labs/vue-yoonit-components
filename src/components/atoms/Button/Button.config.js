@@ -10,13 +10,16 @@ module.exports = {
     options: [
       'normal',
       'short',
+      'xs',
       'large'
     ]
   },
   fill: {
     options: [
+      'default',
       'primary',
-      'danger'
+      'danger',
+      'light'
     ]
   },
   iconPosition: {

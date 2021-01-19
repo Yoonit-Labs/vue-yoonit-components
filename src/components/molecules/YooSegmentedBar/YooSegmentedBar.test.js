@@ -1,51 +1,44 @@
-import { shallowMount } from '@vue/test-utils'
-import YooSwitch from '@/components/molecules/YooSwitch/YooSwitch.vue'
-import PropsConfig from './YooSwitch.config'
+import { mount } from '@vue/test-utils'
+import YooSegmentedBar from '@/components/molecules/YooSegmentedBar/YooSegmentedBar.vue'
 
-const classBlock = 'yoo-switch'
 const SlotText = 'Default Slot Text'
 
 const mountComponent = () => {
-  return shallowMount(YooSwitch, {
-    slots: { default: SlotText }
+  return mount(YooSegmentedBar, {
+    slots: { default: SlotText },
+    propsData: {
+      list: [
+        { title: 'First' },
+        { title: 'Second' }
+      ]
+    },
+    data: () => ({
+      selectedIndex: 1
+    })
   })
 }
 
-describe('YooSwitch Component', () => {
+describe('YooSegmentedBar Component', () => {
   let wrapper
   beforeEach(() => {
     wrapper = mountComponent()
   })
 
   it('Matches Snapshot', async () => {
-    await wrapper.setData({ timeId: 'custom-time-id' })
     expect(wrapper).toMatchSnapshot()
   })
 
-  it('Loads the Component HTML', () => {
-    expect(wrapper.classes('yoo-switch-container')).toBe(true)
-    expect(wrapper.find('input.yoo-switch').exists()).toBe(true)
+  it('Loads the Component HTML', async () => {
+    expect(wrapper.classes('yoo-segmented-bar')).toBe(true)
+    expect(wrapper.find('.yoo-segmented-bar__item').exists()).toBe(true)
+    expect(wrapper.find('button.yoo-btn').exists()).toBe(true)
   })
 
-  describe('Props', () => {
-    describe('size', () => {
-      it('Has a valid default value', () => {
-        expect(PropsConfig.size.options.includes(YooSwitch.props.size.default)).toBe(true)
-      })
-      PropsConfig.size.options.forEach(size => {
-        it(`Includes size class: .${classBlock}--${size}`, async () => {
-          await wrapper.setProps({ size })
-          expect(wrapper.find(`.${classBlock}--${size}`).exists()).toBe(true)
-        })
-      })
-    })
-  }) // describe Props
-
   describe('Events', () => {
-    describe('doCheck', () => {
-      it('Emits doCheck Event', async () => {
-        wrapper.find('.yoo-switch').trigger('click')
-        expect(wrapper.emitted()).toHaveProperty('response')
+    describe('onSelectedIndexChange', () => {
+      it('Emits onSelectedIndexChange Event', async () => {
+        wrapper.find('button.yoo-btn').trigger('click')
+        expect(wrapper.emitted()).toHaveProperty('onClick')
       })
     })
   }) // describe Events
