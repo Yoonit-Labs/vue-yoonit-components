@@ -1,13 +1,12 @@
-import { shallowMount } from '@vue/test-utils'
+import { mount } from '@vue/test-utils'
 import YooSwitchCard from './YooSwitchCard.vue'
 import PropsConfig from './YooSwitchCard.config'
-import YooCheckButton from '@/components/atoms/YooCheckButton/YooCheckButton.vue'
 
 const classBlock = 'yoo-switch-card'
 const SlotText = 'Default Slot Text'
 
 const mountComponent = () => {
-  return shallowMount(YooSwitchCard, {
+  return mount(YooSwitchCard, {
     slots: { default: SlotText },
     propsData: {
       text: SlotText
@@ -51,8 +50,7 @@ describe('YooSwitchCard Component', () => {
       })
       PropsConfig.textPosition.options.forEach(textPosition => {
         it('Loads the Component HTML', async () => {
-          wrapper = shallowMount(YooCheckButton, { propsData: { textPosition } })
-          await wrapper.vm.$nextTick()
+          await wrapper.setProps({ textPosition })
           expect(wrapper.find(`.yoo-check--text-${textPosition}`).exists()).toBe(true)
         })
       })
@@ -64,8 +62,7 @@ describe('YooSwitchCard Component', () => {
       })
       PropsConfig.size.options.forEach(size => {
         it('Loads the Component HTML', async () => {
-          wrapper = shallowMount(YooCheckButton, { propsData: { size } })
-          await wrapper.vm.$nextTick()
+          await wrapper.setProps({ size })
           expect(wrapper.find(`.yoo-check--${size}`).exists()).toBe(true)
         })
       })

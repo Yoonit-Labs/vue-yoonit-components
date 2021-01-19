@@ -25,23 +25,19 @@ export default {
   props: {
     text: {
       type: String,
-      required: true,
       default: ''
     },
     textPosition: {
       type: String,
-      required: false,
       default: 'right',
       validator: value => PropsConfig.textPosition.options.includes(value)
     },
     checked: {
       type: Boolean,
-      required: false,
       default: false
     },
     size: {
       type: String,
-      required: false,
       default: 'medium',
       validator: value => PropsConfig.size.options.includes(value)
     }
