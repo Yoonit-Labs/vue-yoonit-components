@@ -1,6 +1,7 @@
 import { mount } from '@vue/test-utils'
 import YooSwitchCard from './YooSwitchCard.vue'
 import PropsConfig from './YooSwitchCard.config'
+import YooCheckButton from '@/components/atoms/YooCheckButton/YooCheckButton.vue'
 
 const classBlock = 'yoo-switch-card'
 const SlotText = 'Default Slot Text'
@@ -21,6 +22,7 @@ describe('YooSwitchCard Component', () => {
   })
 
   it('Matches Snapshot', async () => {
+    await wrapper.findComponent(YooCheckButton).setData({ timeId: 'custom-time-id' })
     expect(wrapper).toMatchSnapshot()
   })
 

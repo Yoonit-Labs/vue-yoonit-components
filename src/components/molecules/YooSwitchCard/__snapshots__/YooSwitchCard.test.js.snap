@@ -2,7 +2,7 @@
 
 exports[`YooSwitchCard Component Matches Snapshot 1`] = `
 <div class="yoo-flex-layout m__t--s m__b--s m__r--l m__l--l p__t--l p__r--l p__b--l p__l--l yoo-switch-card" style="flex-direction: row; flex-wrap: nowrap; justify-content: center; align-items: stretch; align-content: stretch; gap: 16px;">
-  <div class="yoo-checkbox yoo-checkbox--switch-card yoo-switch-card__checkbox"><input type="checkbox" id="ycid-6995402"><label class="yoo-check fas fa-check yoo-check--medium yoo-check--checked yoo-check--switch-card yoo-check--text-right" for="ycid-6995402">
+  <div class="yoo-checkbox yoo-checkbox--switch-card yoo-switch-card__checkbox"><input type="checkbox" id="custom-time-id"><label class="yoo-check fas fa-check yoo-check--medium yoo-check--checked yoo-check--switch-card yoo-check--text-right" for="custom-time-id">
       <p>Default Slot Text</p>
     </label></div>
 </div>
