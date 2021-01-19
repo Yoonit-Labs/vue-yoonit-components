@@ -49,12 +49,10 @@ export default {
   props: {
     title: {
       type: String,
-      required: false,
       default: ''
     },
     subtitle: {
       type: String,
-      required: false,
       default: ''
     },
     fill: {
@@ -64,23 +62,19 @@ export default {
     },
     showIndicator: {
       type: Boolean,
-      required: false,
       default: false
     },
     icon: {
       type: String,
-      required: false,
       default: ''
     },
     iconSize: {
       type: String,
-      required: false,
       default: 'md',
       validator: value => PropsConfig.iconSize.options.includes(value)
     },
     iconFill: {
       type: String,
-      required: false,
       default: 'neutral',
       validator: value => PropsConfig.iconFill.options.includes(value)
     },
@@ -91,7 +85,6 @@ export default {
     },
     appIndicatorFill: {
       type: String,
-      required: false,
       default: 'danger',
       validator: value => PropsConfig.appIndicatorFill.options.includes(value)
     }
@@ -111,6 +104,11 @@ export default {
   beforeDestroy () {},
   destroyed () {},
   computed: {
+    /**
+    * @description Print classes based on the chosen props
+    * @computed takeModifier
+    * @returns {array}
+    */
     takeModifier () {
       return `yoo-post-card--fill-${this.fill}`
     }
