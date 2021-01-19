@@ -21,7 +21,7 @@ describe('YooAnimation Component', () => {
   })
 
   it('Loads the Component HTML', () => {
-    expect(wrapper.find('.yoo-animation').exists()).toBe(true)
+    expect(wrapper.find(`.${classBlock}`).exists()).toBe(true)
   })
 
   describe('Props', () => {
