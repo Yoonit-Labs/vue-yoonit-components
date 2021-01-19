@@ -1,7 +1,6 @@
-import { shallowMount, mount } from '@vue/test-utils'
+import { mount } from '@vue/test-utils'
 import PropsConfig from './YooQuizQuestion.config'
 import YooQuizQuestion from './YooQuizQuestion.vue'
-import YooSwitchCard from '@/components/molecules/YooSwitchCard/YooSwitchCard.vue'
 
 const SlotText = 'Default Slot Text'
 const answers = [
@@ -33,7 +32,7 @@ const question = {
 }
 
 const mountComponent = () => {
-  return shallowMount(YooQuizQuestion, {
+  return mount(YooQuizQuestion, {
     slots: { default: SlotText },
     propsData: {
       question,
@@ -65,7 +64,7 @@ describe('YooQuizQuestion Component', () => {
       })
       PropsConfig.textPosition.options.forEach(textPosition => {
         it('Loads the Component HTML', async () => {
-          wrapper = mount(YooSwitchCard, { propsData: { textPosition, text: 'lala' } })
+          await wrapper.setProps({ textPosition })
           expect(wrapper.find(`.yoo-check--text-${textPosition}`).exists()).toBe(true)
         })
       })
