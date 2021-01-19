@@ -7,6 +7,8 @@
 
 <script>
 
+import PropsConfig from '@/components/quarks/YooFlexLayout/YooFlexLayout.config'
+
 export default {
   name: 'YooFlexLayout',
   props: {
@@ -14,64 +16,31 @@ export default {
       type: String,
       required: false,
       default: 'row',
-      validator: value => [
-        'row',
-        'row-reverse',
-        'column',
-        'column-reverse'
-      ]
-        .includes(value)
+      validator: value => PropsConfig.flexDirection.options.includes(value)
     },
     flexWrap: {
       type: String,
       required: false,
       default: 'nowrap',
-      validator: value => [
-        'nowrap',
-        'wrap',
-        'wrap-reverse'
-      ]
-        .includes(value)
+      validator: value => PropsConfig.flexWrap.options.includes(value)
     },
     justifyContent: {
       type: String,
       required: false,
       default: 'center',
-      validator: value => [
-        'flex-start',
-        'flex-end',
-        'center',
-        'space-between',
-        'space-around'
-      ]
-        .includes(value)
+      validator: value => PropsConfig.justifyContent.options.includes(value)
     },
     alignItems: {
       type: String,
       required: false,
       default: 'stretch',
-      validator: value => [
-        'flex-start',
-        'flex-end',
-        'center',
-        'baseline',
-        'stretch'
-      ]
-        .includes(value)
+      validator: value => PropsConfig.alignItems.options.includes(value)
     },
     alignContent: {
       type: String,
       required: false,
       default: 'stretch',
-      validator: value => [
-        'flex-start',
-        'flex-end',
-        'center',
-        'space-between',
-        'space-around',
-        'stretch'
-      ]
-        .includes(value)
+      validator: value => PropsConfig.alignContent.options.includes(value)
     },
     gap: {
       type: String,
