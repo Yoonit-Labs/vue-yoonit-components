@@ -44,13 +44,4 @@ describe('YooCard Component', () => {
       })
     })
   }) // describe Props
-
-  describe('Events', () => {
-    describe('doClick', () => {
-      it('Emits doClick Event', async () => {
-        wrapper.find(`.${classBlock}`).trigger('click')
-        expect(wrapper.emitted()).toHaveProperty('onClick')
-      })
-    })
-  }) // describe Events
 })

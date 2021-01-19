@@ -40,4 +40,13 @@ describe('YooSwitch Component', () => {
       })
     })
   }) // describe Props
-  })
+
+  describe('Events', () => {
+    describe('doCheck', () => {
+      it('Emits doCheck Event', async () => {
+        wrapper.find('.yoo-switch').trigger('click')
+        expect(wrapper.emitted()).toHaveProperty('response')
+      })
+    })
+  }) // describe Events
+})

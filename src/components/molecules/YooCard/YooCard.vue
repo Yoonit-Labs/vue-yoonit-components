@@ -113,6 +113,11 @@ export default {
     takeModifier () {
       return ''
     },
+    /**
+    * @description Print classes based on the chosen props
+    * @computed takeItemsModifier
+    * @returns {array}
+    */
     takeItemsModifier () {
       const blockItem = 'yoo-card__item'
       const classList = []
@@ -127,6 +132,11 @@ export default {
 
       return classList
     },
+    /**
+    * @description Changes item visibility
+    * @computed controlVisibility
+    * @returns {boolean}
+    */
     controlVisibility () {
       return !!this.$slots.control
     }
