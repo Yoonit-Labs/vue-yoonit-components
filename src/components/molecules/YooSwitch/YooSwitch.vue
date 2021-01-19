@@ -89,10 +89,6 @@ export default {
           classList
             .push(`${block}--${this.size}`)
           break
-        default:
-          classList
-            .push(`${block}--${this.size}`)
-          break
       }
       if (this.checkedField) {
         classList
