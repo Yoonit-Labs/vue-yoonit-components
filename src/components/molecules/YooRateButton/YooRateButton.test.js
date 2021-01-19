@@ -1,11 +1,12 @@
-import { shallowMount } from '@vue/test-utils'
+import { mount } from '@vue/test-utils'
 import YooRateButton from '@/components/molecules/YooRateButton/YooRateButton.vue'
+import Button from '@/components/atoms/Button/Button.vue'
 
 const classBlock = 'yoo-rate'
 const SlotText = 'Default Slot Text'
 
 const mountComponent = () => {
-  return shallowMount(YooRateButton, {
+  return mount(YooRateButton, {
     slots: { default: SlotText },
     propsData: {
       rate: [
@@ -22,7 +23,10 @@ const mountComponent = () => {
           value: 3
         }
       ]
-    }
+    },
+    data: () => ({
+      selectedIn: '1'
+    })
   })
 }
 
@@ -36,16 +40,16 @@ describe('YooRateButton Component', () => {
     expect(wrapper).toMatchSnapshot()
   })
 
-  it('Loads the Component HTML', () => {
+  it('Loads the Component HTML', async () => {
     expect(wrapper.classes('yoo-rate')).toBe(true)
     expect(wrapper.find('button.yoo-btn').exists()).toBe(true)
   })
 
   describe('Events', () => {
-    describe('doCheck', () => {
-      it('Emits doCheck Event', async () => {
-        wrapper.find('.yoo-rate').trigger('click')
-        expect(wrapper.emitted()).toHaveProperty('response')
+    describe('doClick', () => {
+      it('Emits doClick Event', async () => {
+        wrapper.find('button.yoo-btn').trigger('click')
+        expect(wrapper.emitted()).toHaveProperty('doClick')
       })
     })
   }) // describe Events

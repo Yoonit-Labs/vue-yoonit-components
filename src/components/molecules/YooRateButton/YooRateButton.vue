@@ -5,13 +5,13 @@
     alignItems="center"
   )
     YooButton(
-     v-for="(item, index) in rate"
-     :key="index"
-     :text="item.text"
-     :fill="selectedIn === index ? 'primary' : 'light'"
-     buttonSize="xs"
-     variation="base"
-     @onClick="doActive(index, item.value)"
+      v-for="(item, index) in rate"
+      :key="index"
+      :text="item.text"
+      :fill="selectedIn === index ? 'primary' : 'light'"
+      buttonSize="normal"
+      variation="base"
+      @onClick="doActive(index, item.value)"
     )
 
 </template>
@@ -20,7 +20,7 @@
 
 import YooFlexLayout from '@/components/quarks/YooFlexLayout/YooFlexLayout.vue'
 
-import YooButton from '@/components/atoms/YooButton/YooButton.vue'
+import YooButton from '@/components/atoms/Button/Button.vue'
 
 export default {
   name: 'YooRateButton',

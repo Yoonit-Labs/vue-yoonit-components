@@ -16,7 +16,8 @@ module.exports = {
   fill: {
     options: [
       'primary',
-      'danger'
+      'danger',
+      'light'
     ]
   },
   iconPosition: {
