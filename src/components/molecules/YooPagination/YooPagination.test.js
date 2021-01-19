@@ -1,11 +1,11 @@
-import { shallowMount } from '@vue/test-utils'
-import yooPagination from '@/components/molecules/YooPagination/YooPagination.vue'
-import PropsConfig from '@/components/molecules/YooPagination/YooPagination.config'
+import { mount } from '@vue/test-utils'
+import yooPagination from './YooPagination.vue'
+import PropsConfig from './YooPagination.config'
 
 const SlotText = 'Default Slot Text'
 
 const mountComponent = () => {
-  return shallowMount(yooPagination, {
+  return mount(yooPagination, {
     slots: { default: SlotText },
     propsData: {
       totalPages: 5,
@@ -25,39 +25,62 @@ describe('YooPagination Component', () => {
   })
 
   it('Loads the Component HTML', () => {
-    expect(wrapper.classes('yoo__container--yooPagination')).toBe(true)
-    expect(wrapper.find('yooPagination.yoo-btn').exists()).toBe(true)
+    expect(wrapper.classes('yoo-pagination')).toBe(true)
+    expect(wrapper.find('.yoo-stepper').exists()).toBe(true)
+    expect(wrapper.find('.yoo__container--button').exists()).toBe(true)
   })
 
-  /* describe('Props', () => {
-    describe('animation', () => {
+  describe('Props', () => {
+    describe('variationButtonNext', () => {
       it('Has a valid default value', () => {
-        expect(PropsConfig.animation.options.includes(yooPagination.props.animation.default)).toBe(true)
+        expect(PropsConfig.variationButtonNext.options.includes(yooPagination.props.variationButtonNext.default)).toBe(true)
       })
-      PropsConfig.animation.options.forEach(animation => {
-        it('Include animation class: ', async () => {
-          await wrapper.setProps({ animation })
-          expect(wrapper.find('').classes().includes(`--animation-${animation}`)).toBe(true)
+      PropsConfig.variationButtonNext.options.forEach(variation => {
+        it('Include variation class: ', async () => {
+          await wrapper.setProps({ variation })
+          expect(wrapper.find(`.yoo-btn--${variation}`).exists()).toBe(true)
         })
       })
     })
-  }) */ // describe Props
+
+    describe('counterType', () => {
+      it('Has a valid default value', () => {
+        expect(PropsConfig.counterType.options.includes(yooPagination.props.counterType.default)).toBe(true)
+      })
+      PropsConfig.counterType.options.forEach(counterType => {
+        it(`Include counterType class: .yoo-stepper__${counterType}`, async () => {
+          await wrapper.setProps({ counterType })
+          expect(wrapper.find(`.yoo-stepper__${counterType}`).exists()).toBe(true)
+        })
+      })
+    })
+  }) // describe Props
 
   describe('Events', () => {
     describe('Click', () => {
       it('Emits Click Event', async () => {
-        // @TODO - Incluir trigger do emit antes de testar se a propierdade foi emitida (ex: wrapper.find('button-left').trigger('click'))
-        // para emitir um custom event de um custom component, vc precisa utilizar o metodo de emit, pois ao usar o trigger vc está apenas clicando no elemento raiz do custom component, e não no elemento que dispara o custom event.
-        await wrapper.find('.button__container--back').vm.$emit('onClick')
+        await wrapper.find('.button__back').vm.$emit('onClick')
         expect(wrapper.emitted()).toHaveProperty('tapPage')
       })
     })
-  })
 
-  describe('Events', () => {
     describe('Click', () => {
       it('Emits Click Event', async () => {
-        wrapper.find('.button__container--back').trigger('click')
+        await wrapper.find('.button__last').vm.$emit('onClick')
+        expect(wrapper.emitted()).toHaveProperty('tapPage')
+      })
+    })
+
+    describe('Click', () => {
+      it('Emits Click Event', async () => {
+        await wrapper.find('.button__next').vm.$emit('onClick')
+        expect(wrapper.emitted()).toHaveProperty('tapPage')
+      })
+    })
+
+    describe('Click', () => {
+      it('Emits Click Event', async () => {
+        await wrapper.find('.button__next--grow').vm.$emit('onClick')
         expect(wrapper.emitted()).toHaveProperty('tapPage')
       })
     })

@@ -1,9 +1,9 @@
 <template lang="pug">
-  YooFlexLayout(
+  YooFlexLayout.yoo-pagination(
       flexDirection="row",
       justifyContent="space-between"
     )
-      YooButton.button__container--back(
+      YooButton.button__back(
         icon="arrow-left"
         iconStyle="solid"
         fill="primary"
@@ -18,14 +18,14 @@
         :currentStep="currentPage"
       )
 
-      YooButton(
+      YooButton.button__next(
         v-show="!nextButton ? !(lastButton && takeAtLastPage) : false"
         icon="arrow-right"
         iconStyle="solid"
         @onClick="doNext()",
         :disabled="takeNextBtnEnabled"
       )
-      YooButton(
+      YooButton.button__next--grow(
         v-show="nextButton && !takeAtLastPage",
         icon="arrow-right"
         iconPosition="right"
@@ -34,7 +34,7 @@
         :disabled="takeNextBtnEnabled"
         @onClick="doNext()"
       )
-      YooButton(
+      YooButton.button__last(
         v-show="lastButton && takeAtLastPage",
         icon="arrow-right"
         iconPosition="right"
@@ -67,12 +67,10 @@ export default {
     },
     currentPage: {
       type: Number,
-      required: true,
       default: 0
     },
     counterType: {
       type: String,
-      required: false,
       default: 'dot',
       validator: value => PropsConfig.counterType.options.includes(value)
     },
@@ -83,27 +81,22 @@ export default {
     },
     nextButton: {
       type: String,
-      required: false,
       default: ''
     },
     lastButton: {
       type: String,
-      required: false,
       default: ''
     },
     disableFirstAction: {
       type: Boolean,
-      required: false,
       default: false
     },
     disableNextAction: {
       type: Boolean,
-      required: false,
       default: false
     },
     disableLastAction: {
       type: Boolean,
-      required: false,
       default: false
     }
   },
@@ -115,23 +108,13 @@ export default {
       return this.currentPage === this.totalPages - 1
     },
     takeBackBtnEnabled () {
-      return this.disableFirstAction
-        ? this.currentPage === 0
-        : false
+      return (this.takeAtFirstPage && this.disableFirstAction)
     },
     takeNextBtnEnabled () {
-      let btnState = false
-      if (this.disableNextAction) {
-        btnState = this.disableNextAction
-      }
-      return btnState
+      return this.disableNextAction
     },
     takeLastBtnEnabled () {
-      let btnState = false
-      if (this.disableLastAction) {
-        btnState = !((this.currentPage + 1) <= (this.totalPages - 1))
-      }
-      return btnState
+      return this.disableLastAction
     }
   },
   methods: {
