@@ -1,21 +1,16 @@
 export const generateNameInitials = (name, defaultReturnValue) => {
   const DEFAULT_RETURN_VALUE = defaultReturnValue || ''
-  if (!name) {
-    return DEFAULT_RETURN_VALUE
-  }
-  const splittedName = name.split(' ')
-  if (!splittedName || !splittedName.length) {
-    return DEFAULT_RETURN_VALUE
-  }
-  if (splittedName.length === 1) {
-    const singleNameSplitted = splittedName[0].split('') || ['?', '?']
-    return `${singleNameSplitted[0]}${singleNameSplitted[1] || ''}`
-  }
-  if (splittedName.length > 1) {
+  if (name) {
+    const splittedName = name.split(' ')
+    if (splittedName.length === 1) {
+      const singleNameSplitted = splittedName[0].split('') || ['?', '?']
+      return `${singleNameSplitted[0]}${singleNameSplitted[1] || ''}`
+    }
     const firstName = splittedName[0].split('')[0] || ''
     const lastName = splittedName[splittedName.length - 1].split('')[0] || ''
     return `${firstName}${lastName}`
   }
+  console.log('caiu fora')
   return DEFAULT_RETURN_VALUE
 }
 export const formatCpf = (cpf) => {
@@ -34,9 +29,7 @@ export const formatPhone = (phone, location = 'br') => {
     console.warn('Pass a valid phone and location')
     return phone
   }
-  if (location === 'br') {
-    return phone.replace(/([+])?([0-9]{2})?([0-9]{2})([0-9]{1})?([0-9]{4})([0-9]{4})/g, '($3) $4$5-$6')
-  }
+  return phone.replace(/([+])?([0-9]{2})?([0-9]{2})([0-9]{1})?([0-9]{4})([0-9]{4})/g, '($3) $4$5-$6')
 }
 
 export const formatByType = (value, type) => {

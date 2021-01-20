@@ -6,12 +6,12 @@ exports[`YooQuizQuestion Component Matches Snapshot 1`] = `
     <!---->
   </p>
   <div class="yoo-flex-layout m__t--s m__b--s m__r--l m__l--l p__t--l p__r--l p__b--l p__l--l yoo-switch-card yoo-quiz__switch-card" style="flex-direction: row; flex-wrap: nowrap; justify-content: center; align-items: stretch; align-content: stretch; gap: 16px; grid-row: 2; grid-column: 1;" row="2" col="1">
-    <div class="yoo-checkbox yoo-checkbox--switch-card yoo-switch-card__checkbox"><input type="checkbox" id="ycid-0850351"><label class="yoo-check fas fa-check yoo-check--medium yoo-check--checked yoo-check--switch-card yoo-check--text-right" for="ycid-0850351">
+    <div class="yoo-checkbox yoo-checkbox--switch-card yoo-switch-card__checkbox"><input type="checkbox" id="ycid-2327545"><label class="yoo-check fas fa-check yoo-check--medium yoo-check--checked yoo-check--switch-card yoo-check--text-right" for="ycid-2327545">
         <p>Cansaço</p>
       </label></div>
   </div>
   <div class="yoo-flex-layout m__t--s m__b--s m__r--l m__l--l p__t--l p__r--l p__b--l p__l--l yoo-switch-card yoo-switch-card--active yoo-quiz__switch-card" style="flex-direction: row; flex-wrap: nowrap; justify-content: center; align-items: stretch; align-content: stretch; gap: 16px; grid-row: 3; grid-column: 1;" row="3" col="1">
-    <div class="yoo-checkbox yoo-checkbox--switch-card yoo-switch-card__checkbox"><input type="checkbox" id="ycid-6443617"><label class="yoo-check fas fa-check yoo-check--medium yoo-check--checked yoo-check--switch-card yoo-check--text-right" for="ycid-6443617">
+    <div class="yoo-checkbox yoo-checkbox--switch-card yoo-switch-card__checkbox"><input type="checkbox" id="ycid-2098891"><label class="yoo-check fas fa-check yoo-check--medium yoo-check--checked yoo-check--switch-card yoo-check--text-right" for="ycid-2098891">
         <p>Corrimento Nasal (Coriza)</p>
       </label></div>
   </div>

@@ -5,6 +5,8 @@ describe('StringParser Methods', () => {
   it('Generates Initials', () => {
     expect(StringParser.generateNameInitials('Default Name')).toBe('DN')
     expect(StringParser.generateNameInitials('Default')).toBe('De')
+    expect(StringParser.generateNameInitials()).toBe('')
+    expect(StringParser.generateNameInitials('Default Name Triple')).toBe('DT')
   })
 
   it('Formats CPF', () => {
@@ -23,9 +25,9 @@ describe('StringParser Methods', () => {
   })
 
   it('Buids query string', () => {
-    expect(StringParser.buildQueryString({ test: 123, testString: 'string', testnull: null }, 'testQuery', 'testResponse', 123)).toBe(`{
+    expect(StringParser.buildQueryString({ test: 123, testString: 'string', testnull: null }, 'testQuery', 'testResponse')).toBe(`{
     testQuery(
-      token: "123",test: 123,testString: "string",
+      test: 123,testString: "string",
     ) {
       testResponse
     }
