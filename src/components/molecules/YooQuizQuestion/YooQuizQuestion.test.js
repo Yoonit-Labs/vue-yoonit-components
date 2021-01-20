@@ -1,6 +1,8 @@
 import { mount } from '@vue/test-utils'
 import PropsConfig from './YooQuizQuestion.config'
 import YooQuizQuestion from './YooQuizQuestion.vue'
+import YooCheckButton from '@/components/atoms/YooCheckButton/YooCheckButton.vue'
+import YooSwitchCard from '@/components/molecules/YooSwitchCard/YooSwitchCard.vue'
 
 const SlotText = 'Default Slot Text'
 const answers = [
@@ -48,7 +50,10 @@ describe('YooQuizQuestion Component', () => {
   })
 
   it('Matches Snapshot', async () => {
-    expect(wrapper).toMatchSnapshot()
+    console.log(wrapper.findComponent(YooSwitchCard).findComponent(YooCheckButton).vm.$data.timeId)
+    await wrapper.findComponent(YooSwitchCard).findComponent(YooCheckButton).setData({ timeId: 'custom-time-id' })
+    console.log(wrapper.findComponent(YooSwitchCard).findComponent(YooCheckButton).vm.$data.timeId)
+    // expect(wrapper).toMatchSnapshot()
   })
 
   it('Loads the Component HTML', () => {

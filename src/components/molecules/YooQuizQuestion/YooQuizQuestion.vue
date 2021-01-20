@@ -27,8 +27,6 @@
 
 </template>
 
-import PropsConfig from '@/components/molecules/YooQuizQuestion/YooQuizQuestion.config'
-
 <script>
 
 import YooGridLayout from '@/components/quarks/YooGridLayout/YooGridLayout.vue'
@@ -101,22 +99,6 @@ export default {
       this.$set(this.localAnswers[answerId], 'status', event)
       return this.$emit('tapChoice', this.localAnswers)
     },
-    /* doTap (event, answerId, override, type) {
-      var answers = [...this.localAnswers]
-      if ((override && event) || type === 'radio') {
-        answers.map(answer => {
-          answer.status = false
-        })
-      } else {
-        answers.map(answer => {
-          if (answer.override) {
-            answer.status = false
-          }
-        })
-      }
-      this.localAnswers = answers
-      this.$emit('tapChoice', this.localAnswers)
-    }, */
     doTakeStatus (ans) {
       return this.localAnswers && this.localAnswers[ans]
         ? this.localAnswers[ans].status

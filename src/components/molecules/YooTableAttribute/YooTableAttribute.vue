@@ -1,0 +1,197 @@
+<template lang="pug">
+  YooFlexLayout(
+    justifyContent="space-between"
+    :alignItems="flexAlignItems"
+    :flexDirection="flexDirection"
+    width="100%"
+    :class="[ 'yoo-table-attribute', takeModifier ]"
+  )
+    p.m__t--l.m__r--l.m__b--l.m__l--l(
+      :class="[ 'yoo-table-attribute__title', takeTitleColorModifier, takeTitleWrapModifier ]"
+    )
+      YooIcon.m__t--l.m__r--l.m__b--l.m__l--l(
+        v-show="icon"
+        :icon="icon"
+        :iconStyle="iconStyle",
+        :fill="takeIconFillModifier"
+        size="lg"
+      )
+      | {{ title }}
+
+    YooButton(
+      v-if="actionable && actionableType === 'button'"
+      :text="detail"
+      variation="clear"
+      fill="primary"
+      icon="chevron-right"
+      iconPosition="right"
+      hover=true
+      active=true
+      :disabled="buttonDisable"
+      @doClick="doGetValue"
+    )
+
+    YooCheckButton.m__t--l.m__r--l.m__b--l.m__l--l(
+      v-else-if="actionable && actionableType === 'check'"
+      size="small"
+      :class="[ 'yoo-table-attribute__detail', takeDetailFillModifier ]"
+      :text="detail"
+      :textPosition="actionableTextPosition"
+      @response="doGetValue"
+    )
+
+    p(
+      v-else
+      :class="[ 'yoo-table-attribute__detail', takeDetailFillModifier, takeDetailWrapModifier ]"
+    )
+      | {{ detail }}
+
+      YooCheckButton(
+        v-if="actionable && actionableType === 'check'"
+        size="small"
+      )
+
+</template>
+
+<script>
+
+import PropsConfig from '@/components/molecules/YooTableAttribute/YooTableAttribute.config'
+import YooFlexLayout from '@/components/quarks/YooFlexLayout/YooFlexLayout.vue'
+import YooIcon from '@/components/atoms/YooIcon/YooIcon.vue'
+import YooButton from '@/components/atoms/Button/Button.vue'
+import YooCheckButton from '@/components/atoms/YooCheckButton/YooCheckButton.vue'
+
+export default {
+  name: 'YooTableAttribute',
+  props: {
+    title: {
+      type: String,
+      required: true
+    },
+    detail: {
+      type: String,
+      default: ''
+    },
+    detailFill: {
+      type: String,
+      default: 'neutral',
+      validator: value => PropsConfig.detailFill.options
+    },
+    titleFill: {
+      type: String,
+      default: 'neutral',
+      validator: value => PropsConfig.titleFill.options
+    },
+    iconFill: {
+      type: String,
+      default: 'neutral',
+      validator: value => PropsConfig.iconFill.options
+    },
+    actionable: {
+      type: Boolean,
+      default: false
+    },
+    buttonDisable: {
+      type: Boolean,
+      default: false
+    },
+    actionableType: {
+      type: String,
+      default: 'button',
+      validator: value => PropsConfig.actionableType.options
+    },
+    actionableTextPosition: {
+      type: String,
+      default: 'left',
+      validator: value => PropsConfig.actionableTextPosition.options
+    },
+    separator: {
+      type: Boolean,
+      default: false
+    },
+    icon: {
+      type: String,
+      default: ''
+    },
+    iconStyle: {
+      type: String,
+      default: 'solid',
+      validator: value => PropsConfig.iconStyle.options
+    },
+    wrap: {
+      type: Boolean,
+      default: false
+    }
+  },
+  components: {
+    YooFlexLayout,
+    YooIcon,
+    YooButton,
+    YooCheckButton
+  },
+  data: () => ({
+    flexAlignItems: 'center',
+    flexDirection: 'row'
+  }),
+  beforeCreate () {},
+  created () {
+    if (this.wrap) {
+      this.flexAlignItems = 'flex-start'
+      this.flexDirection = 'column'
+    }
+  },
+  beforeMount () {},
+  mounted () {},
+  beforeUpdate () {},
+  updated () {},
+  beforeDestroy () {},
+  destroyed () {},
+  computed: {
+    takeModifier () {
+      const block = 'yoo-table-attribute'
+      const classList = []
+      if (this.icon && this.icon.length > 2) {
+        classList
+          .push(
+            `${block}--tall`
+          )
+      }
+      if (this.separator) {
+        classList
+          .push(
+            `${block}--separated`
+          )
+      }
+      return classList
+    },
+    takeDetailFillModifier () {
+      return `yoo-table-attribute__detail--${this.detailFill}`
+    },
+    takeTitleColorModifier () {
+      return `yoo-table-attribute__title--${this.titleFill}`
+    },
+    takeTitleWrapModifier () {
+      return this.wrap
+        ? 'yoo-table-attribute__title--wrap'
+        : ''
+    },
+    takeDetailWrapModifier () {
+      return this.wrap
+        ? 'yoo-table-attribute__detail--wrap'
+        : ''
+    },
+    takeIconFillModifier () {
+      return this.iconFill
+    }
+  },
+  methods: {
+    doGetValue (e) {
+      this.$emit('response', e)
+    }
+  },
+  filters: {},
+  watch: {}
+}
+</script>
+
+<style src="./YooTableAttribute.sass" lang="sass" scoped></style>
