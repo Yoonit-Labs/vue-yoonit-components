@@ -1,5 +1,6 @@
 import yooHeader from './YooHeader.vue'
 import yooButton from '@/components/atoms/Button/Button.vue'
+import logo from '@/assets/yoonit-logo.jpg'
 
 export default {
   title: 'Yoonit/Header',
@@ -16,7 +17,7 @@ const Template = (args, { argTypes }) => ({
       </template>
 
       <template v-slot:header-center>
-        <img src="https://user-images.githubusercontent.com/7132697/104505155-408e0e00-55c2-11eb-9571-65e1377d7560.png" style="display:flex; margin: 0 auto;" width="40%" alt="" />
+        <img src="${logo}" style="display:flex; margin: 0 auto;" width="40%" alt="" />
       </template>
 
       <template v-slot:header-right>

@@ -3,9 +3,15 @@
 exports[`YooHeader Component Matches Snapshot 1`] = `
 <div class="yoo-header">
   <yooflexlayout-stub flexdirection="row" flexwrap="nowrap" justifycontent="space-between" alignitems="center" aligncontent="center" gap="0">
-    <div></div>
-    <div></div>
-    <div></div>
+    <div>
+      <p>Slot left</p>
+    </div>
+    <div>
+      <p>Slot center</p>
+    </div>
+    <div>
+      <p>Slot right</p>
+    </div>
   </yooflexlayout-stub>
 </div>
 `;
