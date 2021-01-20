@@ -1,11 +1,14 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`YooNotify Component Matches Snapshot 1`] = `
-<yoogridlayout-stub rows="*" cols="takeCols" gap="0" width="100%" height="auto" horizontalalign="space-between" verticalalign="center" class="p__t--xs p__b--xs p__r--s p__l--s yoo-notify yoo-notify--light">
-  <yooflexlayout-stub flexdirection="row" flexwrap="nowrap" justifycontent="space-between" alignitems="center" aligncontent="stretch" gap="0">
-    <yooindicator-stub fill="danger" size="normal" animation="true" text=""></yooindicator-stub>
+<div class="yoo-grid-layout p__t--xs p__b--xs p__r--s p__l--s yoo-grid-layout--h-space-between yoo-grid-layout--v-center yoo-notify yoo-notify--light" style="grid-template-columns: takeCols; grid-template-rows: auto; width: 100%; height: auto;">
+  <div class="yoo-flex-layout" style="flex-direction: row; flex-wrap: nowrap; justify-content: space-between; align-items: center; align-content: stretch; gap: 0;">
+    <div class="yoo-indicator yoo-indicator--normal yoo-indicator--danger yoo-indicator--pulse"></div>
     <p class="m__r--l m__l--l yoo-notify__text yoo-notify__text--dark yoo-notify__text--xs">Yoo-Notify</p>
-    <yoobutton-stub variation="clear" buttonsize="normal" fill="primary" icon="times" iconposition="left" iconsize="normal" iconstyle="solid" animation="none" text="" iconcustomcolor=""></yoobutton-stub>
-  </yooflexlayout-stub>
-</yoogridlayout-stub>
+    <div class="yoo__container--button"><button class="yoo-btn yoo-btn__fill--primary yoo-btn--clear yoo-btn--normal yoo-btn--animation-none"><i class="yoo-btn__icon fas fa-times yoo-btn__icon--normal"></i>
+        <p class="yoo-btn__text"></p>
+        <!---->
+      </button></div>
+  </div>
+</div>
 `;

@@ -89,15 +89,6 @@ export default {
       default: true
     }
   },
-  data: () => ({}),
-  beforeCreate () {},
-  created () {},
-  beforeMount () {},
-  mounted () {},
-  beforeUpdate () {},
-  updated () {},
-  beforeDestroy () {},
-  destroyed () {},
   computed: {
     /**
     * @description Print classes based on the chosen prop notifyFill
