@@ -81,5 +81,15 @@ describe('YooFlexLayout Component', () => {
         })
       })
     })
+
+    describe('Childs', () => {
+      it('Check mount childs', async () => {
+        const wrapper = shallowMount(YooFlexLayout, {
+          slots: { default: '<div height="100px" width="100px" order="1" flexGrow="1" flexShrink="0" alignSelf="flex-end" backgroundColor="#FFF">Slot content</div>' }
+        })
+
+        expect(wrapper.html()).toContain('Slot content')
+      })
+    })
   }) // describe Props
 })
