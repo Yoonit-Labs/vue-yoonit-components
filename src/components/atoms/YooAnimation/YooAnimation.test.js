@@ -1,12 +1,14 @@
 import { shallowMount } from '@vue/test-utils'
 import YooAnimation from '@/components/atoms/YooAnimation/YooAnimation.vue'
+import * as animationData from '@/assets/animations/loading.json'
 
 const classBlock = 'yoo-animation'
 const SlotText = 'Default Slot Text'
 
 const mountComponent = () => {
   return shallowMount(YooAnimation, {
-    slots: { default: SlotText }
+    slots: { default: SlotText },
+    propsData: { options: { animationData: animationData.default } }
   })
 }
 
