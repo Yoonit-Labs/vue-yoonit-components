@@ -1,8 +1,8 @@
 <template lang="pug">
   YooGridLayout.p__t--xs.p__b--xs.p__r--s.p__l--s(
     :class="['yoo-notify', ...takeModifier]"
+    :cols="takeCols"
     rows="*"
-    cols="takeCols"
     horizontalAlign="space-between"
     verticalAlign="center"
     width="100%"
@@ -129,7 +129,7 @@ export default {
     * @returns {string}
     */
     takeCols () {
-      if (this.showIndicator && this.showCloseButton) {
+      if (this.showIndicator && this.showButton) {
         return '30px, *, 30px'
       }
       return '*'
