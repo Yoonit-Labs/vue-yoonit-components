@@ -64,6 +64,9 @@ const Template = (args, { argTypes }) => ({
 export const Custom = Template.bind({})
 Custom.args = { title: 'YooTableAttribute', detail: 'detail' }
 
+export const Icon = Template.bind({})
+Icon.args = { title: 'YooTableAttribute', detail: 'detail', icon: 'cog' }
+
 export const Actionable = Template.bind({})
 Actionable.args = { title: 'YooTableAttribute', detail: 'detail', actionable: true, titleFill: 'danger' }
 

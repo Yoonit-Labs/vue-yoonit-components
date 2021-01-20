@@ -147,6 +147,11 @@ export default {
   beforeDestroy () {},
   destroyed () {},
   computed: {
+    /**
+    * @description Returns classes based on the chosen props
+    * @computed takeModifier
+    * @returns {array}
+    */
     takeModifier () {
       const block = 'yoo-table-attribute'
       const classList = []
@@ -164,27 +169,56 @@ export default {
       }
       return classList
     },
+    /**
+    * @description Returns class based on the detailFill prop
+    * @computed takeDetailFillModifier
+    * @returns {string}
+    */
     takeDetailFillModifier () {
       return `yoo-table-attribute__detail--${this.detailFill}`
     },
+    /**
+    * @description Returns class based on the titleFill prop
+    * @computed takeTitleColorModifier
+    * @returns {string}
+    */
     takeTitleColorModifier () {
       return `yoo-table-attribute__title--${this.titleFill}`
     },
+    /**
+    * @description Returns class based on the wrap prop
+    * @computed takeTitleWrapModifier
+    * @returns {string}
+    */
     takeTitleWrapModifier () {
       return this.wrap
         ? 'yoo-table-attribute__title--wrap'
         : ''
     },
+    /**
+    * @description Returns class based on the wrap prop
+    * @computed takeDetailWrapModifier
+    * @returns {string}
+    */
     takeDetailWrapModifier () {
       return this.wrap
         ? 'yoo-table-attribute__detail--wrap'
         : ''
     },
+    /**
+    * @description Returns icon color based on the iconFill prop
+    * @computed takeIconFillModifier
+    * @returns {string}
+    */
     takeIconFillModifier () {
       return this.iconFill
     }
   },
   methods: {
+    /**
+    * @description Emits value reciveid
+    * @method doGetValue
+    */
     doGetValue (e) {
       this.$emit('response', e)
     }
