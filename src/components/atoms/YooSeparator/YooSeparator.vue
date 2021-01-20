@@ -24,21 +24,12 @@ export default {
     },
     text: {
       type: String,
-      required: false,
       validator: (value) => {
         return typeof value === 'string'
       },
       default: ''
     }
   },
-  data: () => ({
-  }),
-  created () {},
-  mounted () {},
-  updated () {},
-  beforeDestroy () {},
-  destroyed () {},
-  components: {},
   computed: {
     /**
     * @description Print classes based on the chosen props
@@ -49,19 +40,14 @@ export default {
       const block = 'separator'
       const classList = []
 
-      if (this.fill) {
-        classList
-          .push(
-            `${block}--fill-${this.fill}`
-          )
-      }
+      classList
+        .push(
+          `${block}--fill-${this.fill}`
+        )
 
       return classList
     }
-  },
-  methods: {},
-  filters: {},
-  watch: {}
+  }
 }
 </script>
 

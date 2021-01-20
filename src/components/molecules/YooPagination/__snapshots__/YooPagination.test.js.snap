@@ -1,11 +1,30 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`YooPagination Component Matches Snapshot 1`] = `
-<yooflexlayout-stub flexdirection="row" flexwrap="nowrap" justifycontent="space-between" alignitems="stretch" aligncontent="stretch" gap="0">
-  <yoobutton-stub variation="outline" buttonsize="normal" fill="primary" icon="arrow-left" iconposition="left" iconsize="normal" iconstyle="solid" animation="none" text="" iconcustomcolor="" class="button__container--back"></yoobutton-stub>
-  <yoostepper-stub countertype="dot" totalsteps="5" currentstep="0"></yoostepper-stub>
-  <yoobutton-stub variation="base" buttonsize="normal" fill="primary" icon="arrow-right" iconposition="left" iconsize="normal" iconstyle="solid" animation="none" text="" iconcustomcolor=""></yoobutton-stub>
-  <yoobutton-stub variation="base" buttonsize="normal" fill="primary" icon="arrow-right" iconposition="right" iconsize="normal" iconstyle="solid" animation="none" text="" iconcustomcolor="" flexgrow="1" style="display: none;"></yoobutton-stub>
-  <yoobutton-stub variation="base" buttonsize="normal" fill="primary" icon="arrow-right" iconposition="right" iconsize="normal" iconstyle="solid" animation="none" text="" iconcustomcolor="" flexgrow="1" style="display: none;"></yoobutton-stub>
-</yooflexlayout-stub>
+<div class="yoo-flex-layout yoo-pagination" style="flex-direction: row; flex-wrap: nowrap; justify-content: space-between; align-items: stretch; align-content: stretch; gap: 0;">
+  <div class="yoo__container--button button__back"><button class="yoo-btn yoo-btn__fill--primary yoo-btn--outline yoo-btn--normal yoo-btn--animation-none"><i class="yoo-btn__icon fas fa-arrow-left yoo-btn__icon--normal"></i>
+      <p class="yoo-btn__text"></p>
+      <!---->
+    </button></div>
+  <div class="yoo-flex-layout yoo-stepper" style="flex-direction: row; flex-wrap: nowrap; justify-content: space-around; align-items: center; align-content: stretch; gap: 0;">
+    <!---->
+    <div class="yoo-stepper__dot m__r--l"></div>
+    <div class="yoo-stepper__dot m__r--l yoo-stepper__dot--active"></div>
+    <div class="yoo-stepper__dot m__r--l"></div>
+    <div class="yoo-stepper__dot m__r--l"></div>
+    <div class="yoo-stepper__dot m__r--l"></div>
+  </div>
+  <div class="yoo__container--button button__next"><button class="yoo-btn yoo-btn__fill--primary yoo-btn--base yoo-btn--normal yoo-btn--animation-none"><i class="yoo-btn__icon fas fa-arrow-right yoo-btn__icon--normal"></i>
+      <p class="yoo-btn__text"></p>
+      <!---->
+    </button></div>
+  <div class="yoo__container--button button__next--grow" flexgrow="1" style="display: none; flex-grow: 1;"><button class="yoo-btn yoo-btn__fill--primary yoo-btn--base yoo-btn--normal yoo-btn--animation-none">
+      <!---->
+      <p class="yoo-btn__text"></p><i class="yoo-btn__icon fas fa-arrow-right yoo-btn__icon--normal"></i>
+    </button></div>
+  <div class="yoo__container--button button__last" flexgrow="1" style="display: none; flex-grow: 1;"><button class="yoo-btn yoo-btn__fill--primary yoo-btn--base yoo-btn--normal yoo-btn--animation-none">
+      <!---->
+      <p class="yoo-btn__text"></p><i class="yoo-btn__icon fas fa-arrow-right yoo-btn__icon--normal"></i>
+    </button></div>
+</div>
 `;

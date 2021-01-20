@@ -26,7 +26,7 @@
 </template>
 
 <script>
-import YooButton from '@/components/atoms/Button/Button.vue'
+import YooButton from '@/components/atoms/YooButton/YooButton.vue'
 
 import YooFlexLayout from '@/components/quarks/YooFlexLayout/YooFlexLayout.vue'
 
@@ -52,25 +52,15 @@ export default {
   data: () => ({
     selectedIndex: 0
   }),
-  beforeCreate () {},
-  created () {},
-  beforeMount () {},
   mounted () {
     this.selectedIndex = this.current
   },
-  beforeUpdate () {},
-  updated () {},
-  beforeDestroy () {},
-  destroyed () {},
-  computed: {},
   methods: {
     doEmitChoice (event, index) {
       this.selectedIndex = index
       this.$emit('tapChoice', index)
     }
-  },
-  filters: {},
-  watch: {}
+  }
 }
 </script>
 

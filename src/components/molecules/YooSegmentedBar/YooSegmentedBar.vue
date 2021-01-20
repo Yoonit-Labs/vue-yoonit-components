@@ -27,7 +27,7 @@
 
 import YooFlexLayout from '@/components/quarks/YooFlexLayout/YooFlexLayout.vue'
 
-import YooButton from '@/components/atoms/Button/Button.vue'
+import YooButton from '@/components/atoms/YooButton/YooButton.vue'
 
 export default {
   name: 'YooSegmentedBar',

@@ -29,29 +29,24 @@ export default {
   props: {
     text: {
       type: String,
-      required: false,
       default: ''
     },
     size: {
       type: String,
-      required: false,
       default: 'medium',
       validator: value => PropsConfig.size.options.includes(value)
     },
     initialValue: {
       type: Boolean,
-      required: false,
       default: false
     },
     textPosition: {
       type: String,
-      required: false,
       default: 'right',
       validator: value => PropsConfig.textPosition.options.includes(value)
     },
     switchCard: {
       type: Boolean,
-      required: false,
       default: false
     }
   },
@@ -59,18 +54,16 @@ export default {
     checkedField: false,
     timeId: null
   }),
-  beforeCreated () {},
-  created () {},
-  beforeMount () {},
   mounted () {
     this.checkedField = this.initialValue
     this.timeId = `ycid-${Math.random().toString().substr(-7)}`
   },
-  updated () {},
-  beforeDestroy () {},
-  destroyed () {},
-  components: {},
   computed: {
+    /**
+    * @description Prints classes based on the chosen props
+    * @computed takeModifierCheck
+    * @returns {array}
+    */
     takeModifierCheck () {
       const block = 'yoo-check'
       const classList = []
@@ -102,24 +95,29 @@ export default {
 
       return classList
     },
+    /**
+    * @description Prints classes based on the chosen props
+    * @computed takeModifierCheck
+    * @returns {array}
+    */
     takeModifier () {
       const block = 'yoo-checkbox'
       const classList = []
-      if (this.switchCard) {
-        classList
-          .push(`${block}--switch-card`)
-      }
+      classList
+        .push(`${block}--switch-card`)
 
       return classList
     }
   },
   methods: {
+    /**
+    * @description Emit response in click item
+    * @method doCheck
+    */
     doCheck (e) {
       this.$emit('response', this.checkedField)
     }
-  },
-  filters: {},
-  watch: {}
+  }
 }
 </script>
 
