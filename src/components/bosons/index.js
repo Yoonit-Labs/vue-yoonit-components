@@ -1,4 +1,4 @@
-import * as StringParser from './StringParser'
+import * as StringParser from './StringParser/StringParser'
 
 export {
   StringParser
