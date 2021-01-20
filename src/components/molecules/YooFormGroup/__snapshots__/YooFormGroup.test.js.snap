@@ -1,0 +1,3 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`YooFormGroup Component Matches Snapshot 1`] = `<div class="yoo-input-group" placeholder="Placeholder"><label class="yoo-input yoo-input--success"><input placeholder="Placeholder" class="yoo-input__field"><span class="yoo-input__label">Label<i class="fa"></i></span><span class="yoo-input__feedback" style="display: none;"></span></label></div>`;
