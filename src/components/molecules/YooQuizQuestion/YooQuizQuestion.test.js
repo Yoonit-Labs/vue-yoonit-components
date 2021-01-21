@@ -17,11 +17,12 @@ const answers = [
       ptBR: 'Corrimento Nasal (Coriza)'
     },
     weight: 3,
-    status: true
+    status: true,
+    override: true
   }
 ]
 
-const question = {
+const questionCheck = {
   id: 'covid-cl1',
   text: {
     ptBR: 'Marque os sintomas sentidos nas últimas horas'
@@ -31,12 +32,21 @@ const question = {
   answers
 }
 
+const questionRadio = {
+  id: 'covid-cl1',
+  text: {
+    ptBR: 'Marque os sintomas sentidos nas últimas horas'
+  },
+  visible: true,
+  type: 'radio',
+  answers
+}
+
 const mountComponent = () => {
   return mount(YooQuizQuestion, {
     slots: { default: SlotText },
     propsData: {
-      question,
-      answers
+      question: questionCheck
     }
   })
 }
@@ -80,7 +90,7 @@ describe('YooQuizQuestion Component', () => {
         expect(wrapper.text()).not.toMatch('*')
       })
       it('Show `*` if question required', async () => {
-        await wrapper.setProps({ question: { ...question, required: true } })
+        await wrapper.setProps({ question: { ...questionCheck, required: true } })
         expect(wrapper.text()).toMatch('*')
       })
     })
@@ -91,7 +101,6 @@ describe('YooQuizQuestion Component', () => {
       })
       it('Does not include class: .yoo-quiz__switch-card when array answers does not has lenght', async () => {
         await wrapper.setProps({
-          answers: [],
           question: {
             id: 'covid-cl1',
             text: {
@@ -110,6 +119,14 @@ describe('YooQuizQuestion Component', () => {
   describe('Events', () => {
     describe('Click', () => {
       it('Emits Click Event', async () => {
+        await wrapper.find('.yoo-quiz__switch-card').vm.$emit('response')
+        expect(wrapper.emitted()).toHaveProperty('tapChoice')
+      })
+    })
+
+    describe('Click', () => {
+      it('Emits Click Event', async () => {
+        await wrapper.setProps({ question: questionRadio })
         await wrapper.find('.yoo-quiz__switch-card').vm.$emit('response')
         expect(wrapper.emitted()).toHaveProperty('tapChoice')
       })
