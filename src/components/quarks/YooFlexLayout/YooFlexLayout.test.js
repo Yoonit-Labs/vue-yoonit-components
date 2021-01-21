@@ -42,6 +42,9 @@ describe('YooFlexLayout Component', () => {
         expect(PropsConfig.flexWrap.options.includes(YooFlexLayout.props.flexWrap.default)).toBe(true)
       })
       PropsConfig.flexWrap.options.forEach(flexWrap => {
+        it('Test prop validator', () => {
+          expect(YooFlexLayout.props.flexWrap.validator(flexWrap)).toBe(true)
+        })
         it(`Includes flexWrap style: ${flexWrap}`, async () => {
           await wrapper.setProps({ flexWrap })
           expect(wrapper.find(`.${classBlock}`).attributes().style).toContain(`flex-wrap: ${flexWrap}`)
@@ -79,6 +82,16 @@ describe('YooFlexLayout Component', () => {
           await wrapper.setProps({ alignContent })
           expect(wrapper.find(`.${classBlock}`).attributes().style).toContain(`align-content: ${alignContent}`)
         })
+      })
+    })
+
+    describe('Childs', () => {
+      it('Check mount childs', async () => {
+        const wrapper = shallowMount(YooFlexLayout, {
+          slots: { default: '<div height="100px" width="100px" order="1" flexGrow="1" flexShrink="0" alignSelf="flex-end" backgroundColor="#FFF">Slot content</div>' }
+        })
+
+        expect(wrapper.html()).toContain('Slot content')
       })
     })
   }) // describe Props

@@ -1,4 +1,4 @@
-import MyButton from './Button.vue';
+import MyButton from './YooButton.vue';
 
 export default {
   title: 'Example/Button',

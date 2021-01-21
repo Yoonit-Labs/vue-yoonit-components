@@ -1,8 +1,13 @@
 <template lang="pug">
   YooGridLayout.p__t--xs.p__b--xs.p__r--s.p__l--s(
     :class="['yoo-notify', ...takeModifier]"
+<<<<<<< HEAD
     :cols="takeCols"
     rows="*"
+=======
+    rows="*"
+    cols="takeCols"
+>>>>>>> feature/new-components
     horizontalAlign="space-between"
     verticalAlign="center"
     width="100%"
@@ -33,7 +38,7 @@
 
 <script>
 
-import YooButton from '@/components/atoms/Button/Button.vue'
+import YooButton from '@/components/atoms/YooButton/YooButton.vue'
 import YooFlexLayout from '@/components/quarks/YooFlexLayout/YooFlexLayout.vue'
 import YooIndicator from '@/components/quarks/YooIndicator/YooIndicator.vue'
 import YooGridLayout from '@/components/quarks/YooGridLayout/YooGridLayout.vue'
@@ -125,10 +130,7 @@ export default {
       }
       return '*'
     }
-  },
-  methods: {},
-  filters: {},
-  watch: {}
+  }
 }
 </script>
 

@@ -1,0 +1,37 @@
+import { shallowMount } from '@vue/test-utils'
+import YooHeader from '@/components/molecules/YooHeader/YooHeader.vue'
+
+const mountComponent = () => {
+  return shallowMount(YooHeader, {
+    slots: {
+      'header-left': '<p>Slot left</p>',
+      'header-center': '<p>Slot center</p>',
+      'header-right': '<p>Slot right</p>'
+    }
+  })
+}
+
+describe('YooHeader Component', () => {
+  let wrapper
+  beforeEach(() => {
+    wrapper = mountComponent()
+  })
+
+  it('Matches Snapshot', () => {
+    expect(wrapper).toMatchSnapshot()
+  })
+
+  it('Loads the Component HTML', () => {
+    expect(wrapper.find('.yoo-header').exists()).toBe(true)
+  })
+
+  it('Loads the Slots HTML', () => {
+    expect(wrapper.html()).toContain('Slot left')
+    expect(wrapper.html()).toContain('Slot center')
+    expect(wrapper.html()).toContain('Slot right')
+  })
+<<<<<<< HEAD
+})
+=======
+})
+>>>>>>> a0e1b578264e31dc18dcdd379833b5f25aa25892
