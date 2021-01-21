@@ -31,7 +31,7 @@
 
 <script>
 import './header.css';
-import MyButton from './YooButton.vue';
+import MyButton from '@/components/atoms/YooButton/YooButton.vue';
 
 export default {
   name: 'my-header',
