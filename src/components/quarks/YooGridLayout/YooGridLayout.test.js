@@ -52,5 +52,117 @@ describe('YooGridLayout Component', () => {
         })
       })
     })
+
+    describe('width', () => {
+      it('Has a value', async () => {
+        await wrapper.setProps({ width: '100px' })
+
+        expect(wrapper.attributes().style).toContain('width: 100px')
+      })
+    })
+
+    describe('height', () => {
+      it('Has a value', async () => {
+        await wrapper.setProps({ height: '100px' })
+
+        expect(wrapper.attributes().style).toContain('height: 100px')
+      })
+    })
+
+    describe('Test gap', () => {
+      it('Has a value', async () => {
+        await wrapper.setProps({ gap: '10px' })
+
+        expect(wrapper.attributes().style).toContain('gap: 10px')
+      })
+    })
+
+    describe('Test grid-area', () => {
+      describe('Columns tests', () => {
+        it('Has columns size defined: 1fr 2fr 1fr', async () => {
+          const wrapper = shallowMount(YooGridLayout, {
+            slots: { default: '<div row="1" col="1">Slot content</div>' },
+            propsData: {
+              cols: '1fr, 2fr, 1fr',
+              rows: 'auto'
+            }
+          })
+          console.log(wrapper.attributes().style)
+
+          expect(wrapper.attributes().style).toContain('grid-template-columns: 1fr 2fr 1fr')
+        })
+        it('Has columns size only integer: 1 2 1', async () => {
+          const wrapper = shallowMount(YooGridLayout, {
+            slots: { default: '<div row="1" col="1">Slot content</div>' },
+            propsData: {
+              cols: '1, 2, 1',
+              rows: 'auto'
+            }
+          })
+          console.log(wrapper.attributes().style)
+
+          expect(wrapper.attributes().style).toContain('grid-template-columns: 1fr 2fr 1fr')
+        })
+      })
+
+      describe('Rows tests', () => {
+        it('Has rows size defined: 50vh, 50vh', async () => {
+          const wrapper = shallowMount(YooGridLayout, {
+            slots: { default: '<div row="1" col="1">Slot content</div>' },
+            propsData: {
+              cols: 'auto',
+              rows: '50vh, 50vh'
+            }
+          })
+          console.log(wrapper.attributes().style)
+
+          expect(wrapper.attributes().style).toContain('grid-template-rows: 50vh 50vh')
+        })
+
+        it('Has rows size only integer: 1 1', async () => {
+          const wrapper = shallowMount(YooGridLayout, {
+            slots: { default: '<div row="1" col="1">Slot content</div>' },
+            propsData: {
+              cols: 'auto',
+              rows: '1, 1'
+            }
+          })
+          console.log(wrapper.attributes().style)
+
+          expect(wrapper.attributes().style).toContain('grid-template-rows: 1fr 1fr')
+        })
+      })
+    })
+
+    describe('Childs', () => {
+      it('Check mount childs', () => {
+        const wrapper = shallowMount(YooGridLayout, {
+          slots: { default: '<div row="1" col="1">Slot content</div>' },
+          propsData: {
+            cols: 'auto',
+            rows: 'auto'
+          }
+        })
+
+        expect(wrapper.html()).toContain('Slot content')
+      })
+
+      it('Check mount Component childs', () => {
+        const slotComponent = {
+          name: 'yoo-component',
+          template: '<yoo-flex-layout col="1" row="1">Slot content</yoo-flex-layout>'
+        }
+
+        const wrapper = shallowMount(YooGridLayout, {
+          propsData: {
+            cols: 'auto',
+            rows: 'auto'
+          },
+          slots: { default: slotComponent }
+        })
+        console.log(wrapper.vm.$slots)
+        expect(wrapper.html()).toContain('Slot content')
+      })
+    })
   }) // describe Props
 })
