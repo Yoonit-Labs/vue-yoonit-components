@@ -94,15 +94,6 @@ export default {
     YooIndicator,
     YooIcon
   },
-  data: () => ({}),
-  beforeCreate () {},
-  created () {},
-  beforeMount () {},
-  mounted () {},
-  beforeUpdate () {},
-  updated () {},
-  beforeDestroy () {},
-  destroyed () {},
   computed: {
     /**
     * @description Print classes based on the chosen props
@@ -115,13 +106,9 @@ export default {
   },
   methods: {
     doClick (event) {
-      if (event) {
-        this.$emit('onClick', event)
-      }
+      this.$emit('onClick', event)
     }
-  },
-  filters: {},
-  watch: {}
+  }
 }
 </script>
 

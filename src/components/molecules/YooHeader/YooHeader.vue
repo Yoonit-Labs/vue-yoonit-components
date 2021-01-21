@@ -20,7 +20,10 @@
 </template>
 
 <script>
+<<<<<<< HEAD
+=======
 
+>>>>>>> a0e1b578264e31dc18dcdd379833b5f25aa25892
 import YooFlexLayout from '@/components/quarks/YooFlexLayout/YooFlexLayout.vue'
 
 export default {
@@ -41,4 +44,8 @@ export default {
 }
 </script>
 
+<<<<<<< HEAD
 <style src="./YooHeader.sass" lang="sass" scoped></style>
+=======
+<style src="./YooHeader.sass" lang="sass" scoped></style>
+>>>>>>> a0e1b578264e31dc18dcdd379833b5f25aa25892

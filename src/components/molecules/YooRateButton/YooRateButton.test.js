@@ -45,8 +45,8 @@ describe('YooRateButton Component', () => {
   })
 
   describe('Events', () => {
-    describe('doClick', () => {
-      it('Emits doClick Event', async () => {
+    describe('doActive', () => {
+      it('Emits doActive Event', async () => {
         wrapper.find('button.yoo-btn').trigger('click')
         expect(wrapper.emitted()).toHaveProperty('doClick')
       })

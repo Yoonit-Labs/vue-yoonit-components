@@ -1,6 +1,6 @@
 <template lang="pug">
   YooGridLayout(
-    :class="['yoo-card', ...takeModifier]"
+    :class="['yoo-card']"
     rows="auto"
     cols="*, auto"
     width="100%"
@@ -51,17 +51,14 @@ export default {
   props: {
     title: {
       type: String,
-      required: false,
       default: ''
     },
     subtitle: {
       type: String,
-      required: false,
       default: ''
     },
     justifySlotContent: {
       type: String,
-      required: false,
       default: 'center',
       validator: value => [
         'flex-start',
@@ -74,7 +71,6 @@ export default {
     },
     privateKey: {
       type: [Date, String, Number],
-      required: false,
       default: Date.now()
     },
     borderLeft: {
@@ -83,7 +79,6 @@ export default {
     },
     borderFill: {
       type: String,
-      required: false,
       default: 'neutral',
       validator: value => [
         'neutral',
@@ -100,19 +95,7 @@ export default {
     YooGridLayout,
     YooFlexLayout
   },
-  data: () => ({}),
-  beforeCreate () {},
-  created () {},
-  beforeMount () {},
-  mounted () {},
-  beforeUpdate () {},
-  updated () {},
-  beforeDestroy () {},
-  destroyed () {},
   computed: {
-    takeModifier () {
-      return ''
-    },
     /**
     * @description Print classes based on the chosen props
     * @computed takeItemsModifier
@@ -122,10 +105,8 @@ export default {
       const blockItem = 'yoo-card__item'
       const classList = []
 
-      if (this.borderLeft) {
-        classList
-          .push(`${blockItem}--border-left`)
-      }
+      classList
+        .push(`${blockItem}--border-left`)
 
       classList
         .push(`${blockItem}--border-fill-${this.borderFill}`)
@@ -140,10 +121,7 @@ export default {
     controlVisibility () {
       return !!this.$slots.control
     }
-  },
-  methods: {},
-  filters: {},
-  watch: {}
+  }
 }
 </script>
 

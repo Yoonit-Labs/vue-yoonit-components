@@ -27,7 +27,7 @@ export default {
     },
     gap: {
       type: String,
-      default: '0'
+      default: '0px'
     },
     width: {
       type: String,
@@ -94,7 +94,7 @@ export default {
       return `grid-template-columns: ${columns};`
     },
     takeGap () {
-      if (this.gap !== 0) {
+      if (this.gap !== '0px') {
         return `grid-gap: ${this.gap};`
       } else {
         return ''

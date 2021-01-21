@@ -21,14 +21,20 @@ export default {
       type: Boolean,
       default: false
     },
-    height: String,
-    width: String
+    height: {
+      type: String,
+      default: '100%'
+    },
+    width: {
+      type: String,
+      default: '100%'
+    }
   },
   data () {
     return {
       style: {
-        width: this.width ? `${this.width}px` : '100%',
-        height: this.height ? `${this.height}px` : '100%',
+        width: this.width,
+        height: this.height,
         overflow: 'hidden',
         margin: '0 auto'
       }

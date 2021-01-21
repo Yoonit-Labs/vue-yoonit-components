@@ -4,12 +4,12 @@
   )
     p(
       :class="['yoo-avatar__text', ...takeTextColor]"
-      v-if="takeInitials && !takeImage"
+      v-if="takeInitials && !image"
     ) {{ takeInitials }}
 
     img(
       v-else
-      :src="takeImage"
+      :src="image"
       :class="['yoo-avatar', ...takeModifier]"
     )
 </template>
@@ -64,10 +64,12 @@ export default {
       required: false
     }
   },
-  data: () => ({
-  }),
-  created () {},
   computed: {
+    /**
+    * @description Prints classes based on the chosen props
+    * @computed takeModifier
+    * @returns {array}
+    */
     takeModifier () {
       const block = 'yoo-avatar'
       const classList = []
@@ -91,27 +93,26 @@ export default {
       }
       return classList
     },
+    /**
+    * @description Returns an array of the Fill prop
+    * @computed takeFill
+    * @returns {array}
+    */
     takeFill () {
       return [`yoo-avatar--${this.fill}`]
     },
     takeInitials () {
       return StringParser.generateNameInitials(this.text)
     },
+    /**
+    * @description Returns an array of the textColor prop
+    * @computed takeTextColor
+    * @returns {array}
+    */
     takeTextColor () {
       return [`yoo-avatar__text--${this.textColor}`]
-    },
-    takeImage () {
-      return this.image
     }
-  },
-  mounted () {},
-  updated () {},
-  beforeDestroy () {},
-  destroyed () {},
-  components: {},
-  methods: {},
-  filters: {},
-  watch: {}
+  }
 }
 </script>
 

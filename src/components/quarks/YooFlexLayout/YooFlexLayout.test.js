@@ -42,6 +42,9 @@ describe('YooFlexLayout Component', () => {
         expect(PropsConfig.flexWrap.options.includes(YooFlexLayout.props.flexWrap.default)).toBe(true)
       })
       PropsConfig.flexWrap.options.forEach(flexWrap => {
+        it('Test prop validator', () => {
+          expect(YooFlexLayout.props.flexWrap.validator(flexWrap)).toBe(true)
+        })
         it(`Includes flexWrap style: ${flexWrap}`, async () => {
           await wrapper.setProps({ flexWrap })
           expect(wrapper.find(`.${classBlock}`).attributes().style).toContain(`flex-wrap: ${flexWrap}`)
