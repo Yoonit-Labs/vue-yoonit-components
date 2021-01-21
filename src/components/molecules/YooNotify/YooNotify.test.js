@@ -22,7 +22,7 @@ describe('YooNotify Component', () => {
   })
 
   it('Loads the Component HTML', async () => {
-    expect(wrapper.classes('yoo-notify')).toBe(true)
+    expect(wrapper.classes(`.${classBlock}`)).toBe(true)
     expect(wrapper.find('.yoo-notify__text').exists()).toBe(true)
     expect(wrapper.find('.yoo-indicator').exists()).toBe(true)
     expect(wrapper.find('.yoo-btn').exists()).toBe(true)
