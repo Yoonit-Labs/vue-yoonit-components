@@ -1,4 +1,4 @@
-import { shallowMount } from '@vue/test-utils'
+import { shallowMount, mount } from '@vue/test-utils'
 import YooFormGroup from '@/components/molecules/YooFormGroup/YooFormGroup.vue'
 
 const mountComponent = () => {
@@ -55,9 +55,31 @@ describe('YooFormGroup Component', () => {
 
     describe('Required Test', () => {
       it('If required and text is empty', async () => {
-        await wrapper.setProps({ validateOnDataInput: false, value: '' })
+        await mount(YooFormGroup, {
+          propsData: {
+            required: true,
+            label: 'Label',
+            value: '',
+            placeholder: 'Placeholder'
+          }
+        })
+        await wrapper.setProps({ validateOnDataInput: false, value: '', required: true })
         await wrapper.find('input').trigger('blur')
         expect(wrapper.find('label').classes().includes('yoo-input--error')).toBe(true)
+      })
+
+      it('If required false', async () => {
+        await mount(YooFormGroup, {
+          propsData: {
+            required: false,
+            label: 'Label',
+            value: '',
+            placeholder: 'Placeholder'
+          }
+        })
+        await wrapper.setProps({ validateOnDataInput: false, value: '', required: false })
+        await wrapper.find('input').trigger('blur')
+        expect(wrapper.find('label').classes().includes('yoo-input--error')).toBe(false)
       })
 
       it('If required and has text', async () => {
