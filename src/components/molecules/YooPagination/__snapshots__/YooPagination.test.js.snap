@@ -8,8 +8,8 @@ exports[`YooPagination Component Matches Snapshot 1`] = `
     </button></div>
   <div class="yoo-flex-layout yoo-stepper" style="flex-direction: row; flex-wrap: nowrap; justify-content: space-around; align-items: center; align-content: stretch;">
     <!---->
-    <div class="yoo-stepper__dot m__r--l"></div>
     <div class="yoo-stepper__dot m__r--l yoo-stepper__dot--active"></div>
+    <div class="yoo-stepper__dot m__r--l"></div>
     <div class="yoo-stepper__dot m__r--l"></div>
     <div class="yoo-stepper__dot m__r--l"></div>
     <div class="yoo-stepper__dot m__r--l"></div>

@@ -9,7 +9,7 @@ const mountComponent = () => {
     slots: { default: SlotText },
     propsData: {
       totalPages: 5,
-      currentPage: 1
+      currentPage: 0
     }
   })
 }
@@ -31,6 +31,12 @@ describe('YooPagination Component', () => {
   })
 
   describe('Props', () => {
+    describe('disableFirstAction', () => {
+      it('Include disableFirstAction class: .yoo-btn--disabled', async () => {
+        await wrapper.setProps({ disableFirstAction: true })
+        expect(wrapper.find('.yoo-btn--disabled').exists()).toBe(true)
+      })
+    })
     describe('variationButtonNext', () => {
       it('Has a valid default value', () => {
         expect(PropsConfig.variationButtonNext.options.includes(yooPagination.props.variationButtonNext.default)).toBe(true)
@@ -57,24 +63,34 @@ describe('YooPagination Component', () => {
   }) // describe Props
 
   describe('Events', () => {
-    describe('Click', () => {
-      it('Emits Click Event', async () => {
+    describe('Click in Back Button', () => {
+      it('Emits Click Back Button Event - Check First', async () => {
         await wrapper.find('.button__back').vm.$emit('onClick')
-        expect(wrapper.emitted()).toHaveProperty('tapPage')
+        expect(wrapper.emitted().tapPage[0]).toEqual(['first'])
+      })
+      it('Emits Click Back Button Event - Check Back', async () => {
+        await wrapper.setProps({ currentPage: 2 })
+        await wrapper.find('.button__back').vm.$emit('onClick')
+        expect(wrapper.emitted().tapPage[0]).toEqual(['back'])
       })
     })
 
-    describe('Click', () => {
-      it('Emits Click Event', async () => {
+    describe('Click in Last Button', () => {
+      it('Emits Click last Button Event', async () => {
         await wrapper.find('.button__last').vm.$emit('onClick')
         expect(wrapper.emitted()).toHaveProperty('tapPage')
       })
     })
 
-    describe('Click', () => {
-      it('Emits Click Event', async () => {
+    describe('Click in Next Button', () => {
+      it('Emits Click Next Button Event - Check Next step', async () => {
         await wrapper.find('.button__next').vm.$emit('onClick')
-        expect(wrapper.emitted()).toHaveProperty('tapPage')
+        expect(wrapper.emitted().tapPage[0]).toEqual(['next'])
+      })
+      it('Emits Click Next Button Event - Check Last Step', async () => {
+        await wrapper.setProps({ currentPage: 4 })
+        await wrapper.find('.button__next').vm.$emit('onClick')
+        expect(wrapper.emitted().tapPage[0]).toEqual(['last'])
       })
     })
 
