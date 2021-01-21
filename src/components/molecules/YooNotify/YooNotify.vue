@@ -1,13 +1,8 @@
 <template lang="pug">
   YooGridLayout.p__t--xs.p__b--xs.p__r--s.p__l--s(
     :class="['yoo-notify', ...takeModifier]"
-<<<<<<< HEAD
     :cols="takeCols"
     rows="*"
-=======
-    rows="*"
-    cols="takeCols"
->>>>>>> feature/new-components
     horizontalAlign="space-between"
     verticalAlign="center"
     width="100%"

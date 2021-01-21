@@ -10,7 +10,6 @@ export const generateNameInitials = (name, defaultReturnValue) => {
     const lastName = splittedName[splittedName.length - 1].split('')[0] || ''
     return `${firstName}${lastName}`
   }
-  console.log('caiu fora')
   return DEFAULT_RETURN_VALUE
 }
 export const formatCpf = (cpf) => {

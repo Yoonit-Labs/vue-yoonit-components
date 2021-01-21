@@ -30,8 +30,4 @@ describe('YooHeader Component', () => {
     expect(wrapper.html()).toContain('Slot center')
     expect(wrapper.html()).toContain('Slot right')
   })
-<<<<<<< HEAD
 })
-=======
-})
->>>>>>> a0e1b578264e31dc18dcdd379833b5f25aa25892
