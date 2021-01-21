@@ -1,4 +1,4 @@
-import { mount, shallowMount } from '@vue/test-utils'
+import { mount } from '@vue/test-utils'
 import PropsConfig from './YooQuizQuestion.config'
 import YooQuizQuestion from './YooQuizQuestion.vue'
 
@@ -100,17 +100,15 @@ describe('YooQuizQuestion Component', () => {
         expect(wrapper.find('.yoo-quiz__switch-card').exists()).toBe(true)
       })
       it('Does not include class: .yoo-quiz__switch-card when array answers does not has lenght', async () => {
-        wrapper = shallowMount(YooQuizQuestion, {
-          propsData: {
-            question: {
-              id: 'covid-cl1',
-              text: {
-                ptBR: 'Marque os sintomas sentidos nas últimas horas'
-              },
-              visible: true,
-              type: 'check',
-              answers: []
-            }
+        await wrapper.setProps({
+          question: {
+            id: 'covid-cl1',
+            text: {
+              ptBR: 'Marque os sintomas sentidos nas últimas horas'
+            },
+            visible: true,
+            type: 'check',
+            answers: []
           }
         })
         expect(wrapper.find('.yoo-quiz__switch-card').exists()).toBe(false)
@@ -121,11 +119,6 @@ describe('YooQuizQuestion Component', () => {
   describe('Events', () => {
     describe('Click', () => {
       it('Emits Click Event', async () => {
-        wrapper = shallowMount(YooQuizQuestion, {
-          propsData: {
-            question: questionCheck
-          }
-        })
         await wrapper.find('.yoo-quiz__switch-card').vm.$emit('response')
         expect(wrapper.emitted()).toHaveProperty('tapChoice')
       })
@@ -133,11 +126,7 @@ describe('YooQuizQuestion Component', () => {
 
     describe('Click', () => {
       it('Emits Click Event', async () => {
-        wrapper = shallowMount(YooQuizQuestion, {
-          propsData: {
-            question: questionRadio
-          }
-        })
+        await wrapper.setProps({ question: questionRadio })
         await wrapper.find('.yoo-quiz__switch-card').vm.$emit('response')
         expect(wrapper.emitted()).toHaveProperty('tapChoice')
       })
