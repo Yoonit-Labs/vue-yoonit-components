@@ -1,8 +1,13 @@
 <template lang="pug">
   YooGridLayout.p__t--xs.p__b--xs.p__r--s.p__l--s(
     :class="['yoo-notify', ...takeModifier]"
+<<<<<<< HEAD
+    :cols="takeCols"
+    rows="*"
+=======
     rows="*"
     cols="takeCols"
+>>>>>>> feature/new-components
     horizontalAlign="space-between"
     verticalAlign="center"
     width="100%"
@@ -89,15 +94,6 @@ export default {
       default: true
     }
   },
-  data: () => ({}),
-  beforeCreate () {},
-  created () {},
-  beforeMount () {},
-  mounted () {},
-  beforeUpdate () {},
-  updated () {},
-  beforeDestroy () {},
-  destroyed () {},
   computed: {
     /**
     * @description Print classes based on the chosen prop notifyFill
@@ -129,15 +125,12 @@ export default {
     * @returns {string}
     */
     takeCols () {
-      if (this.showIndicator && this.showCloseButton) {
+      if (this.showIndicator && this.showButton) {
         return '30px, *, 30px'
       }
       return '*'
     }
-  },
-  methods: {},
-  filters: {},
-  watch: {}
+  }
 }
 </script>
 
