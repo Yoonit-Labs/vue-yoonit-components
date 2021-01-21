@@ -1,4 +1,4 @@
-import yooButton from './YooButton.vue'
+import yooButton from '@/components/atoms/YooButton/YooButton.vue'
 import PropsConfig from '@/components/atoms/YooButton/YooButton.config'
 
 export default {

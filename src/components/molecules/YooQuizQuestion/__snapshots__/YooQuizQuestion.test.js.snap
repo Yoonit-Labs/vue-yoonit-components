@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`YooQuizQuestion Component Matches Snapshot 1`] = `
-<div class="yoo-grid-layout yoo-grid-layout--h-stretch yoo-grid-layout--v-stretch yoo-quiz" style="grid-template-columns: auto auto; grid-template-rows: auto;">
+<div class="yoo-grid-layout yoo-grid-layout--h-stretch yoo-grid-layout--v-stretch yoo-quiz" style="grid-template-rows: auto; grid-template-columns: auto auto;">
   <p row="1" col="1" class="yoo-quiz__question" style="grid-row: 1; grid-column: 1;">Marque os sintomas sentidos nas últimas horas
     <!---->
   </p>
