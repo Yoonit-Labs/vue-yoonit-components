@@ -4,5 +4,6 @@ module.exports = {
   coverageReporters: ['json-summary', 'text', 'lcov'],
   transform: {
     '\\.(pug)$': '<rootDir>/node_modules/pug-jest'
-  }
+  },
+  setupFilesAfterEnv: ['jest-canvas-mock']
 }

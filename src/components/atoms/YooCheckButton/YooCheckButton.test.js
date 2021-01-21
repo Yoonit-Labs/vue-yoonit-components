@@ -14,11 +14,15 @@ const mountComponent = () => {
 describe('YooCheckButton Component', () => {
   let wrapper
   beforeEach(() => {
+    jest.spyOn(global.Math, 'random').mockReturnValue(0.123456789)
     wrapper = mountComponent()
   })
 
+  afterEach(() => {
+    jest.spyOn(global.Math, 'random').mockRestore()
+  })
+
   it('Matches Snapshot', async () => {
-    await wrapper.setData({ timeId: 'custom-time-id' })
     expect(wrapper).toMatchSnapshot()
   })
 
