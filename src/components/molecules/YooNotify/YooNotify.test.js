@@ -29,6 +29,15 @@ describe('YooNotify Component', () => {
   })
 
   describe('Props', () => {
+    describe('showIndicator', () => {
+      it('Has a valid default value', () => {
+        expect(YooNotify.props.showIndicator.default).toBe(true)
+      })
+      it('Test prop showIndicator', async () => {
+        await wrapper.setProps({ showIndicator: false })
+        expect(wrapper.find(`.${classBlock}`).attributes().style).toContain('grid-template-columns: auto;')
+      })
+    })
     describe('notifyFill', () => {
       it('Has a valid default value', () => {
         expect(PropsConfig.notifyFill.options.includes(YooNotify.props.notifyFill.default)).toBe(true)
