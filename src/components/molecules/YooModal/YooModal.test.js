@@ -16,13 +16,14 @@ describe('YooModal Component', () => {
   })
 
   it('Loads the component HTML', () => {
+    expect(wrapper.find('.backdrop').exists()).toBe(true)
     expect(wrapper.find('.yoo-modal').exists()).toBe(true)
   })
 
   describe('Events', () => {
-    describe('Click', () => {
+    describe('Close Modal', () => {
       it('Emits Click Event', async () => {
-        wrapper.find('.backdrop').trigger('click')
+        await wrapper.trigger('click')
         expect(wrapper.emitted()).toHaveProperty('onClose')
       })
     })

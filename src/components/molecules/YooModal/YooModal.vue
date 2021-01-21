@@ -1,6 +1,6 @@
 <template lang="pug">
   .backdrop(
-    @click="doCloseModal"
+    @click.self.stop="doCloseModal"
   )
     YooFlexLayout.yoo-modal(
       flexDirection="column"
@@ -39,10 +39,7 @@ export default {
   computed: {},
   methods: {
     doCloseModal (event) {
-      const backdrop = document.querySelector('.backdrop')
-      if (event.target === backdrop || event.which === 27) {
-        this.$emit('onClose', event)
-      }
+      this.$emit('onClose', event)
     },
     onEscapeKeyUp (event) {
       if (event.which === 27) {
