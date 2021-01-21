@@ -87,7 +87,6 @@ describe('YooGridLayout Component', () => {
               rows: 'auto'
             }
           })
-          console.log(wrapper.attributes().style)
 
           expect(wrapper.attributes().style).toContain('grid-template-columns: 1fr 2fr 1fr')
         })
@@ -99,7 +98,6 @@ describe('YooGridLayout Component', () => {
               rows: 'auto'
             }
           })
-          console.log(wrapper.attributes().style)
 
           expect(wrapper.attributes().style).toContain('grid-template-columns: 1fr 2fr 1fr')
         })
@@ -114,7 +112,6 @@ describe('YooGridLayout Component', () => {
               rows: '50vh, 50vh'
             }
           })
-          console.log(wrapper.attributes().style)
 
           expect(wrapper.attributes().style).toContain('grid-template-rows: 50vh 50vh')
         })
@@ -127,7 +124,6 @@ describe('YooGridLayout Component', () => {
               rows: '1, 1'
             }
           })
-          console.log(wrapper.attributes().style)
 
           expect(wrapper.attributes().style).toContain('grid-template-rows: 1fr 1fr')
         })
@@ -149,7 +145,7 @@ describe('YooGridLayout Component', () => {
 
       it('Check mount Component childs', () => {
         const slotComponent = {
-          name: 'yoo-component',
+          name: 'yoo-flex-layout',
           template: '<yoo-flex-layout col="1" row="1">Slot content</yoo-flex-layout>'
         }
 
@@ -160,7 +156,7 @@ describe('YooGridLayout Component', () => {
           },
           slots: { default: slotComponent }
         })
-        console.log(wrapper.vm.$slots)
+
         expect(wrapper.html()).toContain('Slot content')
       })
     })
