@@ -48,7 +48,7 @@
 <script>
 import YooFlexLayout from '@/components/quarks/YooFlexLayout/YooFlexLayout.vue'
 import YooStepper from '@/components/atoms/YooStepper/YooStepper.vue'
-import YooButton from '@/components/atoms/Button/Button.vue'
+import YooButton from '@/components/atoms/YooButton/YooButton.vue'
 
 import PropsConfig from './YooPagination.config'
 

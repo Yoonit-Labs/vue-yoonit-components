@@ -34,31 +34,16 @@ export default {
       default: ''
     }
   },
-  components: {},
-  data: () => ({}),
-  beforeCreate () {},
-  created () {},
-  beforeMount () {},
-  mounted () {},
-  beforeUpdate () {},
-  updated () {},
-  beforeDestroy () {},
-  destroyed () {},
   computed: {
     takeModifier () {
       const classList = [`yoo-indicator--${this.size}`, `yoo-indicator--${this.fill}`]
 
-      if (this.animation) {
-        classList
-          .push('yoo-indicator--pulse')
-      }
+      classList
+        .push('yoo-indicator--pulse')
 
       return classList
     }
-  },
-  methods: {},
-  filters: {},
-  watch: {}
+  }
 }
 </script>
 

@@ -1,17 +1,17 @@
 import { shallowMount } from '@vue/test-utils'
-import Button from '@/components/atoms/Button/Button.vue'
-import PropsConfig from '@/components/atoms/Button/Button.config'
+import YooButton from '@/components/atoms/YooButton/YooButton.vue'
+import PropsConfig from '@/components/atoms/YooButton/YooButton.config'
 
 const classBlock = 'yoo-btn'
 const SlotText = 'Default Slot Text'
 
 const mountButton = () => {
-  return shallowMount(Button, {
+  return shallowMount(YooButton, {
     slots: { default: SlotText }
   })
 }
 
-describe('Button Component', () => {
+describe('YooButton Component', () => {
   let wrapper
   beforeEach(() => {
     wrapper = mountButton()
@@ -29,7 +29,7 @@ describe('Button Component', () => {
   describe('Props', () => {
     describe('variation', () => {
       it('Has a valid default value', () => {
-        expect(PropsConfig.variation.options.includes(Button.props.variation.default)).toBe(true)
+        expect(PropsConfig.variation.options.includes(YooButton.props.variation.default)).toBe(true)
       })
       PropsConfig.variation.options.forEach(variation => {
         it(`Includes variation class: .${classBlock}--${variation}`, async () => {
@@ -41,7 +41,7 @@ describe('Button Component', () => {
 
     describe('buttonSize', () => {
       it('Has a valid default value', () => {
-        expect(PropsConfig.buttonSize.options.includes(Button.props.buttonSize.default)).toBe(true)
+        expect(PropsConfig.buttonSize.options.includes(YooButton.props.buttonSize.default)).toBe(true)
       })
       PropsConfig.buttonSize.options.forEach(buttonSize => {
         it(`Includes buttonSize class: .${classBlock}--${buttonSize}`, async () => {
@@ -53,7 +53,7 @@ describe('Button Component', () => {
 
     describe('fill', () => {
       it('Has a valid default value', () => {
-        expect(PropsConfig.fill.options.includes(Button.props.fill.default)).toBe(true)
+        expect(PropsConfig.fill.options.includes(YooButton.props.fill.default)).toBe(true)
       })
       PropsConfig.fill.options.forEach(fill => {
         it(`Includes fill class: .${classBlock}__fill--${fill}`, async () => {
@@ -65,7 +65,7 @@ describe('Button Component', () => {
 
     describe('disabled', () => {
       it('Has a valid default value', () => {
-        expect(Button.props.disabled.default).toBe(false)
+        expect(YooButton.props.disabled.default).toBe(false)
       })
       it(`Includes disabled class: .${classBlock}--disabled when disabled`, async () => {
         await wrapper.setProps({ disabled: true })
@@ -79,7 +79,7 @@ describe('Button Component', () => {
 
     describe('active', () => {
       it('Has a valid default value', () => {
-        expect(Button.props.active.default).toBe(false)
+        expect(YooButton.props.active.default).toBe(false)
       })
       it(`Includes active class: .${classBlock}--active`, async () => {
         await wrapper.setProps({ active: true, disabled: false })
@@ -89,7 +89,7 @@ describe('Button Component', () => {
 
     describe('hover', () => {
       it('Has a valid default value', () => {
-        expect(Button.props.hover.default).toBe(false)
+        expect(YooButton.props.hover.default).toBe(false)
       })
       it(`Includes hover class: .${classBlock}--hover`, async () => {
         await wrapper.setProps({ hover: true, disabled: false })
@@ -99,7 +99,7 @@ describe('Button Component', () => {
 
     describe('iconPosition', () => {
       it('Has a valid default value', () => {
-        expect(PropsConfig.iconPosition.options.includes(Button.props.iconPosition.default)).toBe(true)
+        expect(PropsConfig.iconPosition.options.includes(YooButton.props.iconPosition.default)).toBe(true)
       })
       PropsConfig.iconPosition.options.forEach(iconPosition => {
         it(`Includes iconPosition class: .${classBlock}__icon--${iconPosition}`, async () => {
@@ -111,7 +111,7 @@ describe('Button Component', () => {
 
     describe('iconSize', () => {
       it('Has a valid default value', () => {
-        expect(PropsConfig.iconSize.options.includes(Button.props.iconSize.default)).toBe(true)
+        expect(PropsConfig.iconSize.options.includes(YooButton.props.iconSize.default)).toBe(true)
       })
       PropsConfig.iconSize.options.forEach(iconSize => {
         it(`Includes iconSize class: .${classBlock}__icon--${iconSize}`, async () => {
@@ -123,7 +123,7 @@ describe('Button Component', () => {
 
     describe('iconStyle', () => {
       it('Has a valid default value', () => {
-        expect(PropsConfig.iconStyle.options.includes(Button.props.iconStyle.default)).toBe(true)
+        expect(PropsConfig.iconStyle.options.includes(YooButton.props.iconStyle.default)).toBe(true)
       })
       PropsConfig.iconStyle.options.forEach(iconStyle => {
         it(`Includes iconStyle class: .${iconStyle === 'solid' ? 'fas' : 'far'}`, async () => {
@@ -140,14 +140,14 @@ describe('Button Component', () => {
       })
       it('Validator iconCustomColor returns validation object', async () => {
         // await wrapper.setProps({ icon: 'icon-value', iconCustomColor: '#d2d2d2' })
-        expect(Button.props.iconCustomColor.validator('#d2d2d2')[0]).toBe('#d2d2d2')
-        expect(Button.props.iconCustomColor.validator('#d2d2d2')[1]).toBe('d2d2d2')
+        expect(YooButton.props.iconCustomColor.validator('#d2d2d2')[0]).toBe('#d2d2d2')
+        expect(YooButton.props.iconCustomColor.validator('#d2d2d2')[1]).toBe('d2d2d2')
       })
     })
 
     describe('animation', () => {
       it('Has a valid default value', () => {
-        expect(PropsConfig.animation.options.includes(Button.props.animation.default)).toBe(true)
+        expect(PropsConfig.animation.options.includes(YooButton.props.animation.default)).toBe(true)
       })
       PropsConfig.animation.options.forEach(animation => {
         it(`Include animation class: .${classBlock}--animation-${animation}`, async () => {

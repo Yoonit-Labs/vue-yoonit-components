@@ -1,28 +1,28 @@
 <template lang="pug">
   YooGridLayout(
     rows="*"
-    :cols="doSetRows(takeAnswers)"
+    :cols="takeRows"
     :class="['yoo-quiz']"
   )
     p(
       row="1"
       col="1"
       :class="['yoo-quiz__question']"
-    ) {{ takeQuestion.text.ptBR }}
+    ) {{ question.text.ptBR }}
       span(
-        v-if="takeQuestion.required"
+        v-if="question.required"
       ) *
 
     YooSwitchCard(
-      v-for="(ans, index) in takeQuestion.answers"
-      :key="'radio-' + takeQuestion.id + '-' + ans.id + '-' + index"
+      v-for="(ans, index) in question.answers"
+      :key="'radio-' + question.id + '-' + ans.id + '-' + index"
       :row="index+2"
       :col="1"
       :class="['yoo-quiz__switch-card']"
       :textPosition="textPosition"
       :text="ans.text.ptBR"
       :checked="doTakeStatus(index)"
-      @response='doTap($event, takeQuestion.id, index, ans.override, takeQuestion.type)'
+      @response='doTap($event, index, ans.override, question.type)'
     )
 
 </template>
@@ -43,50 +43,39 @@ export default {
     },
     question: {
       type: Object,
-      required: true
-    },
-    answers: {
-      type: Array,
-      required: true
+      required: true,
+      validator: value => Object.prototype.hasOwnProperty.call(value, 'answers')
     }
   },
   components: {
     YooGridLayout,
     YooSwitchCard
   },
-  data: function () {
-    return {
-      localAnswers: []
-    }
-  },
+  data: () => ({
+    localAnswers: []
+  }),
   beforeCreate () {},
   created () {},
   beforeMount () {},
   mounted () {
-    this.localAnswers = this.answers
+    this.localAnswers = this.question.answers
   },
   beforeUpdate () {},
   updated () {},
   beforeDestroy () {},
   destroyed () {},
   computed: {
-    takeQuestion () {
-      return this.question
-    },
-    takeAnswers () {
-      return this.question.answers || []
+    takeRows () {
+      return this.localAnswers
+        .map(elm => 'auto')
+        .join(',')
     }
   },
   methods: {
-    doSetRows (answers) {
-      return answers
-        .map(elm => 'auto')
-        .join(',')
-    },
-    doTap (event, questionId, answerId, override, type) {
-      if ((override && event) || type === 'radio') {
+    doTap (event, answerId, override, type) {
+      if (override || type === 'radio') {
         for (var answer in this.localAnswers) {
-          this.$set(this.localAnswers[answer], 'status', false)
+          this.localAnswers[answer].status = false
         }
       } else {
         for (var otherAnswer in this.localAnswers) {
@@ -95,9 +84,8 @@ export default {
           }
         }
       }
-
       this.$set(this.localAnswers[answerId], 'status', event)
-      return this.$emit('tapChoice', this.localAnswers)
+      this.$emit('tapChoice', this.localAnswers)
     },
     doTakeStatus (ans) {
       return this.localAnswers && this.localAnswers[ans]

@@ -1,11 +1,19 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`YooQuizQuestion Component Matches Snapshot 1`] = `
-<yoogridlayout-stub rows="*" cols="auto,auto" gap="0" horizontalalign="stretch" verticalalign="stretch" class="yoo-quiz">
-  <p row="1" col="1" class="yoo-quiz__question">Marque os sintomas sentidos nas últimas horas
+<div class="yoo-grid-layout yoo-grid-layout--h-stretch yoo-grid-layout--v-stretch yoo-quiz" style="grid-template-rows: auto; grid-template-columns: auto auto;">
+  <p row="1" col="1" class="yoo-quiz__question" style="grid-row: 1; grid-column: 1;">Marque os sintomas sentidos nas últimas horas
     <!---->
   </p>
-  <yooswitchcard-stub text="Cansaço" textposition="right" size="medium" row="2" col="1" class="yoo-quiz__switch-card"></yooswitchcard-stub>
-  <yooswitchcard-stub text="Corrimento Nasal (Coriza)" textposition="right" size="medium" row="3" col="1" class="yoo-quiz__switch-card" checked="true"></yooswitchcard-stub>
-</yoogridlayout-stub>
+  <div class="yoo-flex-layout m__t--s m__b--s m__r--l m__l--l p__t--l p__r--l p__b--l p__l--l yoo-switch-card yoo-quiz__switch-card" style="flex-direction: row; flex-wrap: nowrap; justify-content: center; align-items: stretch; align-content: stretch; gap: 16px; grid-row: 2; grid-column: 1;" row="2" col="1">
+    <div class="yoo-checkbox yoo-checkbox--switch-card yoo-switch-card__checkbox"><input type="checkbox" id="ycid-3456789"><label class="yoo-check fas fa-check yoo-check--medium yoo-check--checked yoo-check--switch-card yoo-check--text-right" for="ycid-3456789">
+        <p>Cansaço</p>
+      </label></div>
+  </div>
+  <div class="yoo-flex-layout m__t--s m__b--s m__r--l m__l--l p__t--l p__r--l p__b--l p__l--l yoo-switch-card yoo-switch-card--active yoo-quiz__switch-card" style="flex-direction: row; flex-wrap: nowrap; justify-content: center; align-items: stretch; align-content: stretch; gap: 16px; grid-row: 3; grid-column: 1;" row="3" col="1">
+    <div class="yoo-checkbox yoo-checkbox--switch-card yoo-switch-card__checkbox"><input type="checkbox" id="ycid-3456789"><label class="yoo-check fas fa-check yoo-check--medium yoo-check--checked yoo-check--switch-card yoo-check--text-right" for="ycid-3456789">
+        <p>Corrimento Nasal (Coriza)</p>
+      </label></div>
+  </div>
+</div>
 `;

@@ -25,7 +25,6 @@ export default {
     },
     event: {
       type: String,
-      required: false,
       default: ''
     },
     size: {
@@ -60,45 +59,46 @@ export default {
           .includes(value)
     }
   },
-  data: () => ({}),
-  created () {},
-  mounted () {},
-  updated () {},
-  beforeDestroy () {},
-  destroyed () {},
-  components: {},
   computed: {
+    /**
+    * @description Prints formatted class based on Icon prop
+    * @computed takeIconName
+    * @returns {array}
+    */
     takeIconName () {
       return `fa-${this.icon}`
     },
+    /**
+    * @description Returns class based on IconStyle prop
+    * @computed takeIconStyle
+    * @returns {array}
+    */
     takeIconStyle () {
       return this.iconStyle === 'solid'
         ? 'fas' // fontawesome solid
         : 'far' // fontawesome regular
     },
+    /**
+    * @description Prints classes based on the chosen props
+    * @computed takeModifier
+    * @returns {array}
+    */
     takeModifier () {
       const block = 'yoo-icon'
       const classList = []
 
-      if (this.size) {
-        classList
-          .push(
-            `${block}__size--${this.size}`
-          )
-      }
+      classList
+        .push(
+          `${block}__size--${this.size}`
+        )
+      classList
+        .push(
+          `${block}__fill--${this.fill}`
+        )
 
-      if (this.fill) {
-        classList
-          .push(
-            `${block}__fill--${this.fill}`
-          )
-      }
       return classList
     }
-  },
-  methods: {},
-  filters: {},
-  watch: {}
+  }
 }
 </script>
 

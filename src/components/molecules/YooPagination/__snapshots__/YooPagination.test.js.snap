@@ -1,15 +1,15 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`YooPagination Component Matches Snapshot 1`] = `
-<div class="yoo-flex-layout yoo-pagination" style="flex-direction: row; flex-wrap: nowrap; justify-content: space-between; align-items: stretch; align-content: stretch; gap: 0;">
+<div class="yoo-flex-layout yoo-pagination" style="flex-direction: row; flex-wrap: nowrap; justify-content: space-between; align-items: stretch; align-content: stretch;">
   <div class="yoo__container--button button__back"><button class="yoo-btn yoo-btn__fill--primary yoo-btn--outline yoo-btn--normal yoo-btn--animation-none"><i class="yoo-btn__icon fas fa-arrow-left yoo-btn__icon--normal"></i>
       <p class="yoo-btn__text"></p>
       <!---->
     </button></div>
-  <div class="yoo-flex-layout yoo-stepper" style="flex-direction: row; flex-wrap: nowrap; justify-content: space-around; align-items: center; align-content: stretch; gap: 0;">
+  <div class="yoo-flex-layout yoo-stepper" style="flex-direction: row; flex-wrap: nowrap; justify-content: space-around; align-items: center; align-content: stretch;">
     <!---->
-    <div class="yoo-stepper__dot m__r--l"></div>
     <div class="yoo-stepper__dot m__r--l yoo-stepper__dot--active"></div>
+    <div class="yoo-stepper__dot m__r--l"></div>
     <div class="yoo-stepper__dot m__r--l"></div>
     <div class="yoo-stepper__dot m__r--l"></div>
     <div class="yoo-stepper__dot m__r--l"></div>

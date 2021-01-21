@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Button Component Matches Snapshot 1`] = `
+exports[`YooButton Component Matches Snapshot 1`] = `
 <div class="yoo__container--button"><button class="yoo-btn yoo-btn__fill--primary yoo-btn--base yoo-btn--normal yoo-btn--animation-none">
     <!---->
     <p class="yoo-btn__text"></p>

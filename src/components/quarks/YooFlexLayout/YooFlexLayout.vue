@@ -62,42 +62,22 @@ export default {
   destroyed () {},
   computed: {
     takeFlexDirection () {
-      if (this.flexDirection) {
-        return `flex-direction: ${this.flexDirection};`
-      } else {
-        return ''
-      }
+      return `flex-direction: ${this.flexDirection};`
     },
     takeFlexWrap () {
-      if (this.flexWrap) {
-        return `flex-wrap: ${this.flexWrap};`
-      } else {
-        return ''
-      }
+      return `flex-wrap: ${this.flexWrap};`
     },
     takeJustifyContent () {
-      if (this.justifyContent) {
-        return `justify-content: ${this.justifyContent};`
-      } else {
-        return ''
-      }
+      return `justify-content: ${this.justifyContent};`
     },
     takeAlignItems () {
-      if (this.alignItems) {
-        return `align-items: ${this.alignItems};`
-      } else {
-        return ''
-      }
+      return `align-items: ${this.alignItems};`
     },
     takeAlignContent () {
-      if (this.alignContent) {
-        return `align-content: ${this.alignContent};`
-      } else {
-        return ''
-      }
+      return `align-content: ${this.alignContent};`
     },
     takeGap () {
-      if (this.gap !== 0) {
+      if (this.gap !== '0') {
         return `gap: ${this.gap};`
       } else {
         return ''
@@ -105,7 +85,6 @@ export default {
     }
   },
   methods: {
-    isInt: (n) => { return /^[+-]?\d+$/.test(n) },
     doGetChildProps () {
       const child = this.$slots.default
 
