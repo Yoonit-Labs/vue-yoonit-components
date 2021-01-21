@@ -17,7 +17,12 @@ const mountComponent = () => {
 describe('YooTableAttribute Component', () => {
   let wrapper
   beforeEach(() => {
+    jest.spyOn(global.Math, 'random').mockReturnValue(0.123456789)
     wrapper = mountComponent()
+  })
+
+  afterEach(() => {
+    jest.spyOn(global.Math, 'random').mockRestore()
   })
 
   it('Matches Snapshot', async () => {
@@ -151,6 +156,10 @@ describe('YooTableAttribute Component', () => {
       it('Has a valid default value', () => {
         expect(YooTableAttribute.props.wrap.default).toBe(false)
       })
+      it('Does not includes wrap class', async () => {
+        expect(wrapper.vm.flexAlignItems).toBe('center')
+        expect(wrapper.vm.flexDirection).toBe('row')
+      })
       it('Includes wrap style', async () => {
         wrapper = shallowMount(YooTableAttribute, {
           propsData: {
@@ -161,17 +170,6 @@ describe('YooTableAttribute Component', () => {
         await wrapper.vm.$nextTick()
         expect(wrapper.vm.flexAlignItems).toBe('flex-start')
         expect(wrapper.vm.flexDirection).toBe('column')
-      })
-      it('Does not includes wrap class', async () => {
-        wrapper = shallowMount(YooTableAttribute, {
-          propsData: {
-            title: 'wrap',
-            wrap: false
-          }
-        })
-        await wrapper.vm.$nextTick()
-        expect(wrapper.vm.flexAlignItems).toBe('center')
-        expect(wrapper.vm.flexDirection).toBe('row')
       })
     })
   }) // describe Props

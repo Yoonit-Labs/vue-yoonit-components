@@ -58,7 +58,7 @@
 import PropsConfig from '@/components/molecules/YooTableAttribute/YooTableAttribute.config'
 import YooFlexLayout from '@/components/quarks/YooFlexLayout/YooFlexLayout.vue'
 import YooIcon from '@/components/atoms/YooIcon/YooIcon.vue'
-import YooButton from '@/components/atoms/Button/Button.vue'
+import YooButton from '@/components/atoms/YooButton/YooButton.vue'
 import YooCheckButton from '@/components/atoms/YooCheckButton/YooCheckButton.vue'
 
 export default {
