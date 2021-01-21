@@ -85,19 +85,14 @@ export default {
       const block = 'warning'
       const classList = []
 
-      if (this.variation) {
-        classList
-          .push(
-            `${block}--${this.variation}`
-          )
-      }
+      classList
+        .push(
+          `${block}--${this.variation}`
+        )
 
       return classList
     }
-  },
-  methods: {},
-  filters: {},
-  watch: {}
+  }
 }
 </script>
 

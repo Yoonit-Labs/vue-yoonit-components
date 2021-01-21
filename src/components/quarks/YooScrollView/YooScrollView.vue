@@ -24,9 +24,6 @@ export default {
     takeOrientation () {
       return `yoo-scroll-view--${this.orientation}`
     }
-  },
-  methods: {},
-  filters: {},
-  watch: {}
+  }
 }
 </script>

@@ -20,7 +20,7 @@
 
 import YooFlexLayout from '@/components/quarks/YooFlexLayout/YooFlexLayout.vue'
 
-import YooButton from '@/components/atoms/Button/Button.vue'
+import YooButton from '@/components/atoms/YooButton/YooButton.vue'
 
 export default {
   name: 'YooRateButton',
@@ -37,23 +37,13 @@ export default {
   data: () => ({
     selectedIn: ''
   }),
-  beforeCreate () {},
-  created () {},
-  beforeMount () {},
-  mounted () {},
-  beforeUpdate () {},
-  updated () {},
-  beforeDestroy () {},
-  destroyed () {},
   computed: {},
   methods: {
     doActive (index, valor) {
       this.$emit('doClick', valor)
       this.selectedIn = index
     }
-  },
-  filters: {},
-  watch: {}
+  }
 }
 </script>
 

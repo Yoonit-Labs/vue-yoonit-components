@@ -1,5 +1,5 @@
-import yooButton from './Button.vue'
-import PropsConfig from '@/components/atoms/Button/Button.config'
+import yooButton from './YooButton.vue'
+import PropsConfig from '@/components/atoms/YooButton/YooButton.config'
 
 export default {
   title: 'Yoonit/Button',
