@@ -3,9 +3,12 @@ import * as StringParser from './StringParser'
 describe('StringParser Methods', () => {
 
   it('Generates Initials', () => {
-    expect(StringParser.generateNameInitials('Default Name')).toBe('DN')
-    expect(StringParser.generateNameInitials('Default')).toBe('De')
     expect(StringParser.generateNameInitials()).toBe('')
+    expect(StringParser.generateNameInitials('')).toBe('')
+    expect(StringParser.generateNameInitials('', '??')).toBe('??')
+    expect(StringParser.generateNameInitials('Default', '??')).toBe('D')
+    expect(StringParser.generateNameInitials('Default')).toBe('D')
+    expect(StringParser.generateNameInitials('Default Name')).toBe('DN')
     expect(StringParser.generateNameInitials('Default Name Triple')).toBe('DT')
   })
 
