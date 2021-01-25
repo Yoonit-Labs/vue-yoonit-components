@@ -1,9 +1,13 @@
+<<<<<<< HEAD
 import yooButton from '@/components/atoms/YooButton/YooButton.vue'
+=======
+import YooButton from './YooButton.vue'
+>>>>>>> e99c16a75dc334004f22bdfb7ca1bea550c7c474
 import PropsConfig from '@/components/atoms/YooButton/YooButton.config'
 
 export default {
   title: 'Yoonit/Button',
-  component: yooButton,
+  component: YooButton,
   argTypes: {
     variation: {
       control: {
@@ -57,7 +61,7 @@ export default {
 
 const Template = (args, { argTypes }) => ({
   props: Object.keys(argTypes),
-  components: { yooButton },
+  components: { YooButton },
   template:
     '<yoo-button v-bind="$props"></yoo-button>'
 })

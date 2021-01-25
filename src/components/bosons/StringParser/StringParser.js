@@ -1,20 +1,14 @@
 export const generateNameInitials = (name, defaultReturnValue) => {
-  const DEFAULT_RETURN_VALUE = defaultReturnValue || ''
   if (name) {
-    const splittedName = name.split(' ')
-    if (splittedName.length === 1) {
-      const singleNameSplitted = splittedName[0].split('') || ['?', '?']
-      return `${singleNameSplitted[0]}${singleNameSplitted[1] || ''}`
-    }
-    const firstName = splittedName[0].split('')[0] || ''
-    const lastName = splittedName[splittedName.length - 1].split('')[0] || ''
-    return `${firstName}${lastName}`
+    const rgx = new RegExp(/(\p{L}{1})\p{L}+/, 'gu')
+    let initials = [...name.matchAll(rgx)]
+    initials = ((initials.shift()?.[1]) + (initials.pop()?.[1] || '')).toUpperCase()
+    return initials
   }
-  return DEFAULT_RETURN_VALUE
+  return defaultReturnValue || ''
 }
 export const formatCpf = (cpf) => {
   if (!cpf || typeof cpf !== 'string') {
-    console.warn('Pass a valid value, not null')
     return ''
   }
   const localCpf = cpf
@@ -25,7 +19,6 @@ export const formatCpf = (cpf) => {
 // Only for Brazil phone numbers
 export const formatPhone = (phone, location = 'br') => {
   if (!phone || typeof phone !== 'string') {
-    console.warn('Pass a valid phone and location')
     return phone
   }
   return phone.replace(/([+])?([0-9]{2})?([0-9]{2})([0-9]{1})?([0-9]{4})([0-9]{4})/g, '($3) $4$5-$6')
@@ -43,7 +36,6 @@ export const buildQueryString = (obj, query, responseFields, token) => {
     appToken = `token: "${token}",`
   }
   if (obj.constructor !== Object) {
-    console.warn('First parameter is not a Object')
     return false
   }
   let fields = ''
