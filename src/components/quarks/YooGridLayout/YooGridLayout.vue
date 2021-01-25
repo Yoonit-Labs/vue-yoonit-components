@@ -27,7 +27,7 @@ export default {
     },
     gap: {
       type: String,
-      default: '0px'
+      default: '0'
     },
     width: {
       type: String,
@@ -94,8 +94,8 @@ export default {
       return `grid-template-columns: ${columns};`
     },
     takeGap () {
-      if (this.gap !== '0px') {
-        return `grid-gap: ${this.gap};`
+      if (this.gap !== '0') {
+        return `gap: ${this.gap};`
       } else {
         return ''
       }
@@ -103,19 +103,15 @@ export default {
     takeAlign () {
       const classList = []
 
-      if (this.horizontalAlign) {
-        classList
-          .push(
-            `yoo-grid-layout--h-${this.horizontalAlign}`
-          )
-      }
+      classList
+        .push(
+          `yoo-grid-layout--h-${this.horizontalAlign}`
+        )
 
-      if (this.verticalAlign) {
-        classList
-          .push(
-            `yoo-grid-layout--v-${this.verticalAlign}`
-          )
-      }
+      classList
+        .push(
+          `yoo-grid-layout--v-${this.verticalAlign}`
+        )
 
       return classList
     },
