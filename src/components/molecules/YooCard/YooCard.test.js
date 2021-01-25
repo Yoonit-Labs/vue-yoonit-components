@@ -22,7 +22,6 @@ describe('YooCard Component', () => {
   })
 
   it('Matches Snapshot', async () => {
-    await wrapper.setProps({ privateKey: new Date(2021, 1, 1) })
     expect(wrapper).toMatchSnapshot()
   })
 

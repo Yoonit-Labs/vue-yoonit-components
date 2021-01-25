@@ -4,7 +4,7 @@ exports[`YooCard Component Matches Snapshot 1`] = `
 <yoogridlayout-stub rows="auto" cols="*, auto" gap="0" width="100%" horizontalalign="stretch" verticalalign="stretch" class="yoo-card">
   <yooflexlayout-stub flexdirection="column" flexwrap="wrap" justifycontent="center" alignitems="stretch" aligncontent="stretch" gap="0" col="1" row="1" class="yoo-card__item yoo-card__item--border-left yoo-card__item--border-fill-neutral">
     <h3 class="yoo-card__title">Default Title</h3>
-    <h3 class="yoo-card__title" style="display: none;">Mon Feb 01 2021 00:00:00 GMT-0300 (Brasilia Standard Time)</h3>
+    <h3 class="yoo-card__title" style="display: none;">Mon Feb 01 2021 00:00:00 GMT-0300 (GMT-03:00)</h3>
     <p width="100%" class="yoo-card__subtitle">Default Subtitle</p>
   </yooflexlayout-stub>
   <!---->
