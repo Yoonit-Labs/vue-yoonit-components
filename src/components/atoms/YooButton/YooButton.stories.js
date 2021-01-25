@@ -1,8 +1,4 @@
-<<<<<<< HEAD
-import yooButton from '@/components/atoms/YooButton/YooButton.vue'
-=======
 import YooButton from './YooButton.vue'
->>>>>>> e99c16a75dc334004f22bdfb7ca1bea550c7c474
 import PropsConfig from '@/components/atoms/YooButton/YooButton.config'
 
 export default {
