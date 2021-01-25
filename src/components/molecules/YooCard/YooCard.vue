@@ -17,11 +17,6 @@
         class="yoo-card__title"
       ) {{title}}
 
-      h3(
-        class="yoo-card__title"
-        v-show="false"
-      ) {{privateKey}}
-
       p(
         v-show="subtitle",
         class="yoo-card__subtitle"
@@ -68,10 +63,6 @@ export default {
         'space-around'
       ]
         .includes(value)
-    },
-    privateKey: {
-      type: [Date, String, Number],
-      default: Date.now()
     },
     borderLeft: {
       type: Boolean,
