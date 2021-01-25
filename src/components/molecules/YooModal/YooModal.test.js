@@ -26,6 +26,31 @@ describe('YooModal Component', () => {
         await wrapper.trigger('click')
         expect(wrapper.emitted()).toHaveProperty('onClose')
       })
+      it('doCloseModal function emits onClose', async () => {
+        await wrapper.vm.doCloseModal()
+        expect(wrapper.emitted()).toHaveProperty('onClose')
+      })
+      it('Click runs doCloseModal method', async () => {
+        const logger = jest.spyOn(wrapper.vm, 'doCloseModal')
+        await wrapper.trigger('click')
+        expect(logger).toHaveBeenCalled()
+      })
+      it('Emits onClose on ESC keyup', async () => {
+        var event = new KeyboardEvent('keyup', { which: 27 })
+        window.dispatchEvent(event)
+        expect(wrapper.emitted('onClose')).toBeTruthy()
+      })
+      it('Does not emit on other key codes', async () => {
+        var event = new KeyboardEvent('keyup', { which: 13 })
+        window.dispatchEvent(event)
+        expect(wrapper.emitted('onClose')).toBeFalsy()
+      })
+      it('Does not emit after destroy component', async () => {
+        var event = new KeyboardEvent('keyup', { which: 27 })
+        wrapper.destroy()
+        window.dispatchEvent(event)
+        expect(wrapper.emitted('onClose')).toBeFalsy()
+      })
     })
   })
 })
