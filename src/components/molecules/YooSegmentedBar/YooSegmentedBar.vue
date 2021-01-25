@@ -48,16 +48,9 @@ export default {
   data: () => ({
     selectedIndex: 0
   }),
-  beforeCreate () {},
-  created () {},
-  beforeMount () {},
   mounted () {
     this.selectedIndex = this.currentIndex
   },
-  beforeUpdate () {},
-  updated () {},
-  beforeDestroy () {},
-  destroyed () {},
   computed: {
     takeLastItem () {
       return this.list.length - 1
@@ -68,9 +61,7 @@ export default {
       this.selectedIndex = index
       this.$emit('onClick', index)
     }
-  },
-  filters: {},
-  watch: {}
+  }
 }
 </script>
 

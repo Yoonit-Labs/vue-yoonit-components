@@ -25,18 +25,9 @@ import YooFlexLayout from '@/components/quarks/YooFlexLayout/YooFlexLayout.vue'
 export default {
   name: 'YooHeader',
   data: () => ({}),
-  created () {},
-  mounted () {},
-  updated () {},
-  beforeDestroy () {},
-  destroyed () {},
   components: {
     YooFlexLayout
-  },
-  computed: {},
-  methods: {},
-  filters: {},
-  watch: {}
+  }
 }
 </script>
 

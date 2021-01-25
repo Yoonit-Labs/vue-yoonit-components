@@ -52,14 +52,10 @@ export default {
       default: false
     }
   },
-  components: {},
   data: () => ({
     isValid: '',
     invalidMessage: ''
   }),
-  beforeCreate () {},
-  created () {},
-  beforeMount () {},
   mounted () {
     if (this.disabled) this.$refs.textField.disabled = true
 
@@ -69,10 +65,6 @@ export default {
         : this.isValid = true
     }
   },
-  beforeUpdate () {},
-  updated () {},
-  beforeDestroy () {},
-  destroyed () {},
   computed: {
     listeners () {
       const {
@@ -125,9 +117,7 @@ export default {
       }
       this.$emit('update:isValid', this.isValid)
     }
-  },
-  filters: {},
-  watch: {}
+  }
 }
 </script>
 

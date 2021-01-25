@@ -50,18 +50,10 @@ export default {
       validator: value => PropsConfig.verticalAlign.options.includes(value)
     }
   },
-  components: {},
   data: () => ({}),
-  beforeCreate () {},
-  created () {},
-  beforeMount () {},
   mounted () {
     this.doGetChildProps()
   },
-  beforeUpdate () {},
-  updated () {},
-  beforeDestroy () {},
-  destroyed () {},
   computed: {
     takeRows () {
       const rows = this.rows.split(',').map((elem) => {
@@ -152,8 +144,6 @@ export default {
         }
       })
     }
-  },
-  filters: {},
-  watch: {}
+  }
 }
 </script>

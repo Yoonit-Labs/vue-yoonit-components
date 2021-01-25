@@ -22,20 +22,13 @@ export default {
   components: {
     YooFlexLayout
   },
-  props: {},
   data: () => ({}),
-  beforeCreate () {},
-  created () {},
   beforeMount () {
     window.addEventListener('keyup', this.onEscapeKeyUp)
   },
-  mounted () {},
-  beforeUpdate () {},
-  updated () {},
   beforeDestroy () {
     window.removeEventListener('keyup', this.onEscapeKeyUp)
   },
-  destroyed () {},
   computed: {},
   methods: {
     doCloseModal (event) {
@@ -46,9 +39,7 @@ export default {
         this.doCloseModal(event)
       }
     }
-  },
-  filters: {},
-  watch: {}
+  }
 }
 </script>
 

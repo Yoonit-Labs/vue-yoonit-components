@@ -51,22 +51,14 @@ export default {
       required: false
     }
   },
-  components: {},
   data: () => ({
     checkedField: false,
     timeId: null
   }),
-  beforeCreate () {},
-  created () {},
-  beforeMount () {},
   mounted () {
     this.checkedField = this.initialValue
     this.timeId = `ycid-${Math.random().toString().substr(-7)}`
   },
-  beforeUpdate () {},
-  updated () {},
-  beforeDestroy () {},
-  destroyed () {},
   computed: {
     /**
     * @description Print classes based on the chosen props
@@ -105,9 +97,7 @@ export default {
     doCheck (e) {
       this.$emit('response', this.checkedField)
     }
-  },
-  filters: {},
-  watch: {}
+  }
 }
 </script>
 

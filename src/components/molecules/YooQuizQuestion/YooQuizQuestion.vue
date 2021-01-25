@@ -54,16 +54,9 @@ export default {
   data: () => ({
     localAnswers: []
   }),
-  beforeCreate () {},
-  created () {},
-  beforeMount () {},
   mounted () {
     this.localAnswers = this.question.answers
   },
-  beforeUpdate () {},
-  updated () {},
-  beforeDestroy () {},
-  destroyed () {},
   computed: {
     takeRows () {
       return this.localAnswers
@@ -92,9 +85,7 @@ export default {
         ? this.localAnswers[ans].status
         : false
     }
-  },
-  filters: {},
-  watch: {}
+  }
 }
 </script>
 
