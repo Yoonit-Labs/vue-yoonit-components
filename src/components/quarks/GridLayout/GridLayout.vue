@@ -147,3 +147,5 @@ export default {
   }
 }
 </script>
+
+<style src="./GridLayout.sass" lang="sass" scoped></style>
