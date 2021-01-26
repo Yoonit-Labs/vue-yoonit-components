@@ -1,36 +1,36 @@
-import YooAnimation from './atoms/YooAnimation/YooAnimation.vue'
-import YooAvatar from './atoms/YooAvatar/YooAvatar.vue'
-import YooButton from './atoms/YooButton/YooButton.vue'
-import YooCheckButton from './atoms/YooCheckButton/YooCheckButton.vue'
-import YooIcon from './atoms/YooIcon/YooIcon.vue'
-import YooSeparator from './atoms/YooSeparator/YooSeparator.vue'
-import YooStepper from './atoms/YooStepper/YooStepper.vue'
-import YooWarning from './atoms/YooWarning/YooWarning.vue'
+import YooAnimation from './atoms/Animation/Animation.vue'
+import YooAvatar from './atoms/Avatar/Avatar.vue'
+import YooButton from './atoms/Button/Button.vue'
+import YooCheckButton from './atoms/CheckButton/CheckButton.vue'
+import YooIcon from './atoms/Icon/Icon.vue'
+import YooSeparator from './atoms/Separator/Separator.vue'
+import YooStepper from './atoms/Stepper/Stepper.vue'
+import YooWarning from './atoms/Warning/Warning.vue'
+import YooSwitch from './atoms/Switch/Switch.vue'
 
-import YooButtonToggle from './molecules/YooButtonToggle/YooButtonToggle.vue'
-import YooCard from './molecules/YooCard/YooCard.vue'
-import YooFormGroup from './molecules/YooFormGroup/YooFormGroup.vue'
-import YooHeader from './molecules/YooHeader/YooHeader.vue'
-import YooModal from './molecules/YooModal/YooModal.vue'
-import YooNotify from './molecules/YooNotify/YooNotify.vue'
-import YooPagination from './molecules/YooPagination/YooPagination.vue'
-import YooPostCard from './molecules/YooPostCard/YooPostCard.vue'
-import YooQuizQuestion from './molecules/YooQuizQuestion/YooQuizQuestion.vue'
-import YooRateButton from './molecules/YooRateButton/YooRateButton.vue'
-import YooSegmentedBar from './molecules/YooSegmentedBar/YooSegmentedBar.vue'
-import YooSwitch from './molecules/YooSwitch/YooSwitch.vue'
-import YooSwitchCard from './molecules/YooSwitchCard/YooSwitchCard.vue'
-import YooTableAttribute from './molecules/YooTableAttribute/YooTableAttribute.vue'
+import YooButtonToggle from './molecules/ButtonToggle/ButtonToggle.vue'
+import YooCard from './molecules/Card/Card.vue'
+import YooFormGroup from './molecules/FormGroup/FormGroup.vue'
+import YooHeader from './molecules/Header/Header.vue'
+import YooModal from './molecules/Modal/Modal.vue'
+import YooNotify from './molecules/Notify/Notify.vue'
+import YooPagination from './molecules/Pagination/Pagination.vue'
+import YooPostCard from './molecules/PostCard/PostCard.vue'
+import YooQuizQuestion from './molecules/QuizQuestion/QuizQuestion.vue'
+import YooRateButton from './molecules/RateButton/RateButton.vue'
+import YooSegmentedBar from './molecules/SegmentedBar/SegmentedBar.vue'
+import YooSwitchCard from './molecules/SwitchCard/SwitchCard.vue'
+import YooTableAttribute from './molecules/TableAttribute/TableAttribute.vue'
 
-import YooFlexLayout from './quarks/YooFlexLayout/YooFlexLayout.vue'
-import YooGridLayout from './quarks/YooGridLayout/YooGridLayout.vue'
-import YooIndicator from './quarks/YooIndicator/YooIndicator.vue'
-import YooScrollView from './quarks/YooScrollView/YooScrollView.vue'
+import YooFlexLayout from './quarks/FlexLayout/FlexLayout.vue'
+import YooGridLayout from './quarks/GridLayout/GridLayout.vue'
+import YooIndicator from './quarks/Indicator/Indicator.vue'
+import YooScrollView from './quarks/ScrollView/ScrollView.vue'
 
 const yooComponents = {
-  YooButton,
   YooAnimation,
   YooAvatar,
+  YooButton,
   YooCheckButton,
   YooIcon,
   YooSeparator,
