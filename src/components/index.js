@@ -4,7 +4,7 @@ import YooButton from './atoms/YooButton/YooButton.vue'
 import YooCheckButton from './atoms/YooCheckButton/YooCheckButton.vue'
 import YooIcon from './atoms/YooIcon/YooIcon.vue'
 import YooSeparator from './atoms/YooSeparator/YooSeparator.vue'
-import YooStepper from './atoms/YooButton/YooStepper.vue'
+import YooStepper from './atoms/YooStepper/YooStepper.vue'
 import YooWarning from './atoms/YooWarning/YooWarning.vue'
 
 import YooButtonToggle from './molecules/YooButtonToggle/YooButtonToggle.vue'
@@ -24,7 +24,7 @@ import YooTableAttribute from './molecules/YooTableAttribute/YooTableAttribute.v
 
 import YooFlexLayout from './quarks/YooFlexLayout/YooFlexLayout.vue'
 import YooGridLayout from './quarks/YooGridLayout/YooGridLayout.vue'
-import YooIndicator from './quarks/YooFlexLayout/YooIndicator.vue'
+import YooIndicator from './quarks/YooIndicator/YooIndicator.vue'
 import YooScrollView from './quarks/YooScrollView/YooScrollView.vue'
 
 const yooComponents = {
