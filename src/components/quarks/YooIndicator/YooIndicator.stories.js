@@ -2,7 +2,7 @@ import yooIndicator from './YooIndicator.vue'
 import PropsConfig from './YooIndicator.config'
 
 export default {
-  title: 'Yoonit/Indicator',
+  title: 'Yoonit/YooIndicator',
   component: yooIndicator,
   argTypes: {
     fill: {

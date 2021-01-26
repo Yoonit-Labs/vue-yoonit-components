@@ -3,7 +3,7 @@ import yooButton from '@/components/atoms/YooButton/YooButton.vue'
 import logo from '@/assets/yoonit-logo.jpg'
 
 export default {
-  title: 'Yoonit/Header',
+  title: 'Yoonit/YooHeader',
   component: yooHeader
 }
 

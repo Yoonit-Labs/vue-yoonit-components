@@ -2,7 +2,7 @@ import yooPagination from './YooPagination.vue'
 import PropsConfig from './YooPagination.config'
 
 export default {
-  title: 'Yoonit/Pagination',
+  title: 'Yoonit/YooPagination',
   component: yooPagination,
   argTypes: {
     totalPages: {

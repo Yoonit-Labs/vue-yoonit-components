@@ -2,7 +2,7 @@ import yooWarning from './YooWarning.vue'
 import PropsConfig from './YooWarning.config'
 
 export default {
-  title: 'Yoonit/Warning',
+  title: 'Yoonit/YooWarning',
   component: yooWarning,
   argTypes: {
     variation: {

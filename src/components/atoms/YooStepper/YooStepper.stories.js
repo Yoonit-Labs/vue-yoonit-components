@@ -2,7 +2,7 @@ import yooStepper from './YooStepper.vue'
 import PropsConfig from './YooStepper.config'
 
 export default {
-  title: 'Yoonit/Stepper',
+  title: 'Yoonit/YooStepper',
   component: yooStepper,
   argTypes: {
     counterType: {

@@ -2,7 +2,7 @@ import YooButton from './YooButton.vue'
 import PropsConfig from '@/components/atoms/YooButton/YooButton.config'
 
 export default {
-  title: 'Yoonit/Button',
+  title: 'Yoonit/YooButton',
   component: YooButton,
   argTypes: {
     variation: {

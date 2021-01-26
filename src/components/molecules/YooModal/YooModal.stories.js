@@ -1,7 +1,7 @@
 import yooModal from './YooModal'
 
 export default {
-  title: 'Yoonit/Modal',
+  title: 'Yoonit/YooModal',
   component: yooModal
 }
 

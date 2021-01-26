@@ -2,7 +2,7 @@ import yooSeparator from './YooSeparator.vue'
 import PropsConfig from './YooSeparator.config'
 
 export default {
-  title: 'Yoonit/Separator',
+  title: 'Yoonit/YooSeparator',
   component: yooSeparator,
   argTypes: {
     fill: {

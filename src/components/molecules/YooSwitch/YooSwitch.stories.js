@@ -2,7 +2,7 @@ import yooSwitch from './YooSwitch.vue'
 import PropsConfig from './YooSwitch.config'
 
 export default {
-  title: 'Yoonit/Switch',
+  title: 'Yoonit/YooSwitch',
   component: yooSwitch,
   argTypes: {
     size: {

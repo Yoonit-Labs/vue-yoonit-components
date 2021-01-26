@@ -1,7 +1,7 @@
 import yooFormGroup from './YooFormGroup.vue'
 
 export default {
-  title: 'Yoonit/FormGroup',
+  title: 'Yoonit/YooFormGroup',
   component: yooFormGroup
 }
 

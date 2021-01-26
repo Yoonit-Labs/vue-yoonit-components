@@ -18,7 +18,7 @@
     "build-storybook": "build-storybook"
   },
   "dependencies": {
-    "@yoonit/style": "git+ssh://git@github.com:Yoonit-Labs/yoonit-style.git#feature/new-yoonit-3",
+    "@yoonit/style": "git+ssh://git@github.com:Yoonit-Labs/yoonit-style.git#development",
     "core-js": "^3.6.5",
     "vue": "^2.6.11",
     "lottie-web": "^5.7.4"

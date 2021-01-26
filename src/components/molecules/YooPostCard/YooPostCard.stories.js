@@ -2,7 +2,7 @@ import yooPostCard from './YooPostCard.vue'
 import PropsConfig from './YooPostCard.config'
 
 export default {
-  title: 'Yoonit/PostCard',
+  title: 'Yoonit/YooPostCard',
   component: yooPostCard,
   argTypes: {
     fill: {
