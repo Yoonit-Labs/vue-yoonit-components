@@ -1,5 +1,14 @@
 # yoonit-components
 
+<p align="center">
+  <a href="/coverage/icov-report/index.html"><img src="coverage/badge-branches.svg"></a>
+  <a href="/coverage/icov-report/index.html"><img src="coverage/badge-functions.svg"></a>
+  <a href="/coverage/icov-report/index.html"><img src="coverage/badge-lines.svg"></a>
+  <a href="/coverage/icov-report/index.html"><img src="coverage/badge-statements.svg"></a>
+</p>
+
+<br/>
+
 ## Project setup
 ```
 npm install
