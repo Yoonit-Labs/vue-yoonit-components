@@ -32,9 +32,21 @@ describe('YooSeparator Component', () => {
         expect(PropsConfig.fill.options.includes(YooSeparator.props.fill.default)).toBe(true)
       })
       PropsConfig.fill.options.forEach(fill => {
-        it(`Includes variation class: .${classBlock}--fill-${fill}`, async () => {
+        it(`Includes variation class: .${classBlock}__fill--${fill}`, async () => {
           await wrapper.setProps({ fill })
-          expect(wrapper.find(`.${classBlock}--fill-${fill}`).exists()).toBe(true)
+          expect(wrapper.find(`.${classBlock}__fill--${fill}`).exists()).toBe(true)
+        })
+      })
+    })
+
+    describe('fontSize', () => {
+      it('Has a valid default value', () => {
+        expect(PropsConfig.fontSize.options.includes(YooSeparator.props.fontSize.default)).toBe(true)
+      })
+      PropsConfig.fontSize.options.forEach(fontSize => {
+        it(`Includes variation class: .${classBlock}__font-size--${fontSize}`, async () => {
+          await wrapper.setProps({ fontSize })
+          expect(wrapper.find(`.${classBlock}__font-size--${fontSize}`).exists()).toBe(true)
         })
       })
     })

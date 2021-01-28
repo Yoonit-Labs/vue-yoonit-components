@@ -25,7 +25,9 @@ module.exports = {
       'danger',
       'neutral',
       'light',
-      'dark'
+      'dark',
+      'white',
+      'black'
     ]
   }
 }

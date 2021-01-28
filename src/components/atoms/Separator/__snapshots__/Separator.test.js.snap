@@ -2,8 +2,8 @@
 
 exports[`YooSeparator Component Matches Snapshot 1`] = `
 <div>
-  <div class="separator separator--fill-default">
-    <p class="separator__label m__l--l m__t--none m__b--none m__r--none" style="display: none;"></p>
+  <div class="separator separator__fill--default separator__font-size--md">
+    <p class="m__l--l m__t--none m__b--none m__r--none separator__label separator__fill--default separator__font-size--md" style="display: none;"></p>
   </div>
 </div>
 `;
