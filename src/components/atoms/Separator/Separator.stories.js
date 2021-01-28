@@ -10,6 +10,12 @@ export default {
         type: 'select',
         options: PropsConfig.fill.options
       }
+    },
+    fontSize: {
+      control: {
+        type: 'select',
+        options: PropsConfig.fontSize.options
+      }
     }
   }
 }
