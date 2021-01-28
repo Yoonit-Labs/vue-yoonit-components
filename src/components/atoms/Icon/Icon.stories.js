@@ -34,19 +34,19 @@ const Template = (args, { argTypes }) => ({
 })
 
 export const Custom = Template.bind({})
-Custom.args = { icon: 'cog' }
+Custom.args = { icon: 'angry' }
 
 export const Primary = Template.bind({})
-Primary.args = { icon: 'cog', fill: 'primary' }
+Primary.args = { icon: 'angry', fill: 'primary' }
 
 export const Danger = Template.bind({})
-Danger.args = { icon: 'cog', fill: 'danger' }
+Danger.args = { icon: 'angry', fill: 'danger' }
 
 export const Light = Template.bind({})
-Light.args = { icon: 'cog', fill: 'light' }
+Light.args = { icon: 'angry', fill: 'light' }
 
 export const Dark = Template.bind({})
-Dark.args = { icon: 'cog', fill: 'dark' }
+Dark.args = { icon: 'angry', fill: 'dark' }
 
 export const Neutral = Template.bind({})
-Neutral.args = { icon: 'cog', fill: 'neutral' }
+Neutral.args = { icon: 'angry', fill: 'neutral' }

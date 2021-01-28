@@ -19,10 +19,6 @@ export default {
       default: 'solid',
       validator: value => PropsConfig.iconStyle.options.includes(value)
     },
-    event: {
-      type: String,
-      default: ''
-    },
     size: {
       type: String,
       default: 'md',
