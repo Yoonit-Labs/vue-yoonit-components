@@ -5,6 +5,7 @@
 </template>
 
 <script>
+import PropsConfig from '@/components/atoms/Icon/Icon.config'
 
 export default {
   name: 'YooIcon',
@@ -16,12 +17,7 @@ export default {
     iconStyle: {
       type: String,
       default: 'solid',
-      validator: value =>
-        [
-          'solid',
-          'regular'
-        ]
-          .includes(value)
+      validator: value => PropsConfig.iconStyle.options.includes(value)
     },
     event: {
       type: String,
@@ -30,33 +26,12 @@ export default {
     size: {
       type: String,
       default: 'md',
-      validator: value =>
-        [
-          'xxxs',
-          'xxs',
-          'xs',
-          'sm',
-          'md',
-          'lg',
-          'xl',
-          'xxl',
-          'xxxl',
-          'display'
-        ]
-          .includes(value)
+      validator: value => PropsConfig.size.options.includes(value)
     },
     fill: {
       type: String,
       default: 'neutral',
-      validator: value =>
-        [
-          'primary',
-          'danger',
-          'neutral',
-          'light',
-          'dark'
-        ]
-          .includes(value)
+      validator: value => PropsConfig.fill.options.includes(value)
     }
   },
   computed: {
