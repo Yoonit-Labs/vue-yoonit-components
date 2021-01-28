@@ -6,7 +6,7 @@
     width="100%"
     :class="[ 'yoo-table-attribute', takeModifier ]"
   )
-    p.m__t--l.m__r--l.m__b--l.m__l--l(
+    p.m__t--l.m__r--l.m__b--l(
       :class="[ 'yoo-table-attribute__title', takeTitleColorModifier, takeTitleWrapModifier ]"
     )
       YooIcon.m__t--l.m__r--l.m__b--l.m__l--l(
