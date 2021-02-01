@@ -52,7 +52,7 @@ export default {
     },
     variation: {
       type: String,
-      default: 'default',
+      default: 'danger',
       validator: value => PropsConfig.variation.options.includes(value)
     }
   },

@@ -30,11 +30,8 @@ const Template = (args, { argTypes }) => ({
 export const Custom = Template.bind({})
 Custom.args = { text: 'Yoo Warning test component' }
 
-export const Default = Template.bind({})
-Default.args = { text: 'Yoo Warning test component', variation: 'default' }
+export const Danger = Template.bind({})
+Danger.args = { text: 'Yoo Warning test component', variation: 'danger' }
 
 export const Clear = Template.bind({})
 Clear.args = { text: 'Yoo Warning test component', variation: 'clear' }
-
-export const Danger = Template.bind({})
-Danger.args = { text: 'Yoo Warning test component', variation: 'danger' }
