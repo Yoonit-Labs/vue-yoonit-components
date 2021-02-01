@@ -17,7 +17,7 @@ import YooNotify from './molecules/Notify/Notify.vue'
 import YooPagination from './molecules/Pagination/Pagination.vue'
 import YooPostCard from './molecules/PostCard/PostCard.vue'
 import YooQuizQuestion from './molecules/QuizQuestion/QuizQuestion.vue'
-import YooRateButton from './molecules/RateButton/RateButton.vue'
+import YooSelectButton from './molecules/SelectButton/SelectButton.vue'
 import YooSegmentedBar from './molecules/SegmentedBar/SegmentedBar.vue'
 import YooSwitchCard from './molecules/SwitchCard/SwitchCard.vue'
 import YooTableAttribute from './molecules/TableAttribute/TableAttribute.vue'
@@ -45,7 +45,7 @@ const yooComponents = {
   YooPagination,
   YooPostCard,
   YooQuizQuestion,
-  YooRateButton,
+  YooSelectButton,
   YooSegmentedBar,
   YooSwitch,
   YooSwitchCard,
