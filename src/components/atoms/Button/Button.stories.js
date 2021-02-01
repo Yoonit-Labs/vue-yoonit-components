@@ -67,3 +67,9 @@ Custom.args = { text: 'Yoo Button' }
 
 export const Outline = Template.bind({})
 Outline.args = { text: 'Yoo Button', variation: 'outline' }
+
+export const Clear = Template.bind({})
+Clear.args = { text: 'Yoo Button', variation: 'clear' }
+
+export const Danger = Template.bind({})
+Danger.args = { text: 'Yoo Button', variation: 'base', fill: 'danger', icon: 'trash-alt', iconStyle: 'regular' }

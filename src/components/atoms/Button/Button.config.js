@@ -19,6 +19,7 @@ module.exports = {
       'default',
       'primary',
       'danger',
+      'dark',
       'light'
     ]
   },
