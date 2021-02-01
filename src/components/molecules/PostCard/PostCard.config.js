@@ -11,16 +11,13 @@ module.exports = {
   },
   iconSize: {
     options: [
-      'xxxs',
-      'xxs',
+      'tn',
       'xs',
       'sm',
       'md',
       'lg',
       'xl',
-      'xxl',
-      'xxxl',
-      'display'
+      'hg'
     ]
   },
   iconFill: {
