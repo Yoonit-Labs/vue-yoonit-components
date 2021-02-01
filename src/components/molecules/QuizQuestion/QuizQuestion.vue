@@ -38,7 +38,7 @@ export default {
   props: {
     textPosition: {
       type: String,
-      default: 'right',
+      default: 'left',
       validator: value => PropsConfig.textPosition.options.includes(value)
     },
     question: {

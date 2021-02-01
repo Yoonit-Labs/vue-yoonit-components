@@ -1,3 +1,3 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`YooCheckButton Component Matches Snapshot 1`] = `<div class="yoo-checkbox yoo-checkbox--switch-card"><input type="checkbox" id="ycid-3456789"><label class="yoo-check fas fa-check yoo-check--medium yoo-check--text-right" for="ycid-3456789"><span></span></label></div>`;
+exports[`YooCheckButton Component Matches Snapshot 1`] = `<div class="yoo-checkbox yoo-checkbox--switch-card"><input type="checkbox" id="ycid-3456789"><label class="yoo-check fas fa-check yoo-check--medium yoo-check--text-left" for="ycid-3456789"><span></span></label></div>`;
