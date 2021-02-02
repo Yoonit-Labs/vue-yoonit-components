@@ -37,9 +37,9 @@ describe('YooCard Component', () => {
         expect(PropsConfig.borderFill.options.includes(YooCard.props.borderFill.default)).toBe(true)
       })
       PropsConfig.borderFill.options.forEach(borderFill => {
-        it(`Includes borderFill class: .${classBlock}__item--border-fill-${borderFill}`, async () => {
+        it(`Includes borderFill class: .${classBlock}__fill--border-${borderFill}`, async () => {
           await wrapper.setProps({ borderFill })
-          expect(wrapper.find(`.${classBlock}__item--border-fill-${borderFill}`).exists()).toBe(true)
+          expect(wrapper.find(`.${classBlock}__fill--border-${borderFill}`).exists()).toBe(true)
         })
       })
     })

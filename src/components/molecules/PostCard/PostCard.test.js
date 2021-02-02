@@ -36,9 +36,9 @@ describe('YooPostCard Component', () => {
         expect(PropsConfig.fill.options.includes(YooPostCard.props.fill.default)).toBe(true)
       })
       PropsConfig.fill.options.forEach(fill => {
-        it(`Includes fill class: .${classBlock}--fill-${fill}`, async () => {
+        it(`Includes fill class: .${classBlock}__fill--${fill}`, async () => {
           await wrapper.setProps({ fill })
-          expect(wrapper.find(`.${classBlock}--fill-${fill}`).exists()).toBe(true)
+          expect(wrapper.find(`.${classBlock}__fill--${fill}`).exists()).toBe(true)
         })
       })
     })
