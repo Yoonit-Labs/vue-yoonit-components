@@ -7,16 +7,13 @@ module.exports = {
   },
   size: {
     options: [
-      'xxxs',
-      'xxs',
+      'tn',
       'xs',
       'sm',
       'md',
       'lg',
       'xl',
-      'xxl',
-      'xxxl',
-      'display'
+      'hg'
     ]
   },
   fill: {

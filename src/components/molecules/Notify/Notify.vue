@@ -65,7 +65,7 @@ export default {
     },
     notifyTextSize: {
       type: String,
-      default: 'xs',
+      default: 'md',
       validator: value => PropsConfig.notifyTextSize.options.includes(value)
     },
     indicatorSize: {

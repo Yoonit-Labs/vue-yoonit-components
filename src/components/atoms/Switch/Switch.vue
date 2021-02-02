@@ -36,19 +36,13 @@ import PropsConfig from '@/components/atoms/Switch/Switch.config'
 export default {
   name: 'YooSwitch',
   props: {
-    text: {
-      type: String,
-      required: false
-    },
     size: {
       type: String,
-      required: false,
       default: 'medium',
       validator: value => PropsConfig.size.options.includes(value)
     },
     initialValue: {
-      type: Boolean,
-      required: false
+      type: Boolean
     }
   },
   data: () => ({

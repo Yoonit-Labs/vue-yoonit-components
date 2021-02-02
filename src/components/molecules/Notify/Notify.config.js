@@ -15,16 +15,13 @@ module.exports = {
   },
   notifyTextSize: {
     options: [
-      'xxxs',
-      'xxs',
+      'tn',
       'xs',
       'sm',
       'md',
       'lg',
       'xl',
-      'xxl',
-      'xxxl',
-      'display'
+      'hg'
     ]
   }
 }
