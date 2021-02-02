@@ -15,5 +15,14 @@ const Template = (args, { argTypes }) => ({
 export const Custom = Template.bind({})
 Custom.args = { label: 'Label', placeholder: 'Placeholder', validateOnDataInput: true }
 
+export const Default = Template.bind({})
+Default.args = { label: 'Label', placeholder: 'Placeholder' }
+
 export const Disabled = Template.bind({})
 Disabled.args = { label: 'Label', placeholder: 'Placeholder', disabled: true }
+
+export const Invalid = Template.bind({})
+Invalid.args = { label: 'Label', placeholder: 'Placeholder', value: '', required: true }
+
+export const Valid = Template.bind({})
+Valid.args = { label: 'Label', placeholder: 'Placeholder', value: 'value', required: true }
