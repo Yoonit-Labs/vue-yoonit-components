@@ -8,7 +8,7 @@ exports[`YooButtonToggle Component Matches Snapshot 1`] = `
         <p class="yoo-btn__text">Yoo Button Toggle</p>
         <!---->
       </button></div>
-    <div class="yoo__container--button" size="normal" style="width: 100%;"><button class="yoo-btn yoo-btn__fill--default yoo-btn--clear yoo-btn--normal yoo-btn--animation-none">
+    <div class="yoo__container--button" size="normal" style="width: 100%;"><button class="yoo-btn yoo-btn__fill--light yoo-btn--clear yoo-btn--normal yoo-btn--animation-none">
         <!---->
         <p class="yoo-btn__text">Yoo Button Toggle 1</p>
         <!---->

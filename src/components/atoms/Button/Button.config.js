@@ -10,14 +10,14 @@ module.exports = {
     options: [
       'normal',
       'short',
-      'xs',
-      'large'
+      'xs'
     ]
   },
   fill: {
     options: [
       'primary',
       'danger',
+      'dark',
       'light'
     ]
   },
