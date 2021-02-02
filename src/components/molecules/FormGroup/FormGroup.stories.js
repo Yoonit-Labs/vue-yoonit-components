@@ -2,7 +2,14 @@ import yooFormGroup from './FormGroup.vue'
 
 export default {
   title: 'Yoonit/YooFormGroup',
-  component: yooFormGroup
+  component: yooFormGroup,
+  argTypes: {
+    value: {
+      control: {
+        type: 'text'
+      }
+    }
+  }
 }
 
 const Template = (args, { argTypes }) => ({
@@ -13,7 +20,7 @@ const Template = (args, { argTypes }) => ({
 })
 
 export const Custom = Template.bind({})
-Custom.args = { label: 'Label', placeholder: 'Placeholder', validateOnDataInput: true }
+Custom.args = { value: '', label: 'Label', placeholder: 'Placeholder', validateOnDataInput: true }
 
 export const Default = Template.bind({})
 Default.args = { label: 'Label', placeholder: 'Placeholder' }
