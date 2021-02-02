@@ -1,7 +1,7 @@
 <template lang="pug">
 div
   div(
-    :class="['separator', ...takeModifier]"
+    :class="['yoo-separator', ...takeModifier]"
   )
     p.m__l--l.m__t--none.m__b--none.m__r--none(
       v-show="text"
@@ -42,7 +42,7 @@ export default {
     * @returns {array}
     */
     takeModifier () {
-      const block = 'separator'
+      const block = 'yoo-separator'
       const classList = []
 
       classList
@@ -51,7 +51,7 @@ export default {
         )
       classList
         .push(
-          `${block}__font-size--${this.fontSize}`
+          `${block}__font--${this.fontSize}`
         )
 
       return classList
