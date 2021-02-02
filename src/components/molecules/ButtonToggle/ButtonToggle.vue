@@ -41,9 +41,6 @@ export default {
     current: {
       type: Number,
       default: 0
-    },
-    toggleInit: {
-      type: Number
     }
   },
   components: {
