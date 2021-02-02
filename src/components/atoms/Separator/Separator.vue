@@ -5,7 +5,7 @@ div
   )
     p.m__l--l.m__t--none.m__b--none.m__r--none(
       v-show="text"
-      :class="['separator__label',  ...takeModifier]"
+      :class="['yoo-separator__label',  ...takeModifier]"
     )
       | {{text}}
 </template>
