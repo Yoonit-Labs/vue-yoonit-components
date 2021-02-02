@@ -1,17 +1,17 @@
 <template lang="pug">
-  .warning.p__t--l.p__b--l.m__b--xl(
+  .yoo-warning.p__t--l.p__b--l.m__b--xl(
     :class="[takeModifier]"
   )
-    .warning__icon.m__l--l
+    .yoo-warning__icon.m__l--l
       i(
         :class="['yoo-warning__icon', takeIconStyle, takeIconName]"
       )
 
-    .warning__body
-      p.warning__title.m__t--none.m__b--xs.m__l--l.m__r--l(
+    .yoo-warning__body
+      p.yoo-warning__title.m__t--none.m__b--xs.m__l--l.m__r--l(
         v-show="title"
       ) {{title}}
-      p.warning__text.m__t--none.m__b--none.m__l--l.m__r--l {{text}}
+      p.yoo-warning__text.m__t--none.m__b--none.m__l--l.m__r--l {{text}}
 </template>
 
 <script>
@@ -82,12 +82,12 @@ export default {
     * @returns {array}
     */
     takeModifier () {
-      const block = 'warning'
+      const block = 'yoo-warning'
       const classList = []
 
       classList
         .push(
-          `${block}--${this.variation}`
+          `${block}__variation--${this.variation}`
         )
 
       return classList
