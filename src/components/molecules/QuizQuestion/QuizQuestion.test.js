@@ -68,8 +68,6 @@ describe('YooQuizQuestion Component', () => {
 
   it('Loads the Component HTML', () => {
     expect(wrapper.classes('yoo-quiz')).toBe(true)
-    expect(wrapper.find('.yoo-quiz__question').exists()).toBe(true)
-    expect(wrapper.find('.yoo-quiz__switch-card').exists()).toBe(true)
   })
 
   describe('Props', () => {
@@ -80,7 +78,7 @@ describe('YooQuizQuestion Component', () => {
       PropsConfig.textPosition.options.forEach(textPosition => {
         it('Loads the Component HTML', async () => {
           await wrapper.setProps({ textPosition })
-          expect(wrapper.find(`.yoo-check--text-${textPosition}`).exists()).toBe(true)
+          expect(wrapper.find(`.yoo-checkbox__text--${textPosition}`).exists()).toBe(true)
         })
       })
     })
@@ -97,9 +95,9 @@ describe('YooQuizQuestion Component', () => {
 
     describe('answers', () => {
       it('Includes class: .yoo-quiz__switch-card when array answers has lenght', async () => {
-        expect(wrapper.find('.yoo-quiz__switch-card').exists()).toBe(true)
+        expect(wrapper.find('.yoo-quiz__card').exists()).toBe(true)
       })
-      it('Does not include class: .yoo-quiz__switch-card when array answers does not has lenght', async () => {
+      it('Does not include class: .yoo-quiz__card when array answers does not has lenght', async () => {
         await wrapper.setProps({
           question: {
             id: 'covid-cl1',
@@ -111,7 +109,7 @@ describe('YooQuizQuestion Component', () => {
             answers: []
           }
         })
-        expect(wrapper.find('.yoo-quiz__switch-card').exists()).toBe(false)
+        expect(wrapper.find('.yoo-quiz__card').exists()).toBe(false)
       })
     })
   }) // describe Props
@@ -119,7 +117,7 @@ describe('YooQuizQuestion Component', () => {
   describe('Events', () => {
     describe('Click', () => {
       it('Emits Click Event', async () => {
-        await wrapper.find('.yoo-quiz__switch-card').vm.$emit('response')
+        await wrapper.find('.yoo-quiz__card').vm.$emit('response')
         expect(wrapper.emitted()).toHaveProperty('tapChoice')
       })
     })
@@ -127,7 +125,7 @@ describe('YooQuizQuestion Component', () => {
     describe('Click', () => {
       it('Emits Click Event', async () => {
         await wrapper.setProps({ question: questionRadio })
-        await wrapper.find('.yoo-quiz__switch-card').vm.$emit('response')
+        await wrapper.find('.yoo-quiz__card').vm.$emit('response')
         expect(wrapper.emitted()).toHaveProperty('tapChoice')
       })
     })

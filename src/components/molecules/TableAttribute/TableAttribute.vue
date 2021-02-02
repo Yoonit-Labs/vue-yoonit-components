@@ -102,7 +102,7 @@ export default {
     },
     actionableTextPosition: {
       type: String,
-      default: 'left',
+      default: 'right',
       validator: value => PropsConfig.actionableTextPosition.options
     },
     separator: {

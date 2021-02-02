@@ -83,7 +83,7 @@ describe('YooTableAttribute Component', () => {
       })
       it('Has a check button', async () => {
         await wrapper.setProps({ actionable: true, actionableType: 'check' })
-        expect(wrapper.find('.yoo-check').exists()).toBe(true)
+        expect(wrapper.find('.yoo-checkbox').exists()).toBe(true)
       })
     })
 
@@ -117,9 +117,9 @@ describe('YooTableAttribute Component', () => {
         expect(PropsConfig.actionableTextPosition.options.includes(YooTableAttribute.props.actionableTextPosition.default)).toBe(true)
       })
       PropsConfig.actionableTextPosition.options.forEach(actionableTextPosition => {
-        it(`Includes actionableTextPosition class: .yoo-check--text-${actionableTextPosition}`, async () => {
+        it(`Includes actionableTextPosition class: .yoo-checkbox__text--${actionableTextPosition}`, async () => {
           await wrapper.setProps({ actionable: true, actionableType: 'check', actionableTextPosition })
-          expect(wrapper.find(`.yoo-check--text-${actionableTextPosition}`).exists()).toBe(true)
+          expect(wrapper.find(`.yoo-checkbox__text--${actionableTextPosition}`).exists()).toBe(true)
         })
       })
     })

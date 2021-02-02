@@ -2,7 +2,7 @@ import { shallowMount } from '@vue/test-utils'
 import YooCheckButton from '@/components/atoms/CheckButton/CheckButton.vue'
 import PropsConfig from './CheckButton.config'
 
-const classBlock = 'yoo-check'
+const classBlock = 'yoo-checkbox'
 const SlotText = 'Default Slot Text'
 
 const mountComponent = () => {
@@ -48,36 +48,54 @@ describe('YooCheckButton Component', () => {
         expect(PropsConfig.textPosition.options.includes(YooCheckButton.props.textPosition.default)).toBe(true)
       })
       PropsConfig.textPosition.options.forEach(textPosition => {
-        it(`Includes textPosition class: .${classBlock}--text-${textPosition}`, async () => {
+        it(`Includes textPosition class: .${classBlock}__text--${textPosition}`, async () => {
           await wrapper.setProps({ textPosition })
-          expect(wrapper.find(`.${classBlock}--text-${textPosition}`).exists()).toBe(true)
+          expect(wrapper.find(`.${classBlock}__text--${textPosition}`).exists()).toBe(true)
         })
       })
     })
 
     describe('initialValue', () => {
-      it('Includes initialValue class: .yoo-check--checked when initialValue', async () => {
+      it(`Does not include initialValue class: .${classBlock}__check--active when not initialValue`, async () => {
+        expect(wrapper.find(`.${classBlock}__check--active`).exists()).toBe(false)
+      })
+      it(`Includes initialValue class: .${classBlock}__check--active when initialValue`, async () => {
         wrapper = shallowMount(YooCheckButton, { propsData: { initialValue: true } })
         await wrapper.vm.$nextTick()
-        expect(wrapper.find(`.${classBlock}--checked`).exists()).toBe(true)
+        expect(wrapper.find(`.${classBlock}__check--active`).exists()).toBe(true)
       })
-      it('Does not include initialValue class: .yoo-check--checked when not initialValue', async () => {
-        await wrapper.setProps({ initialValue: false })
-        expect(wrapper.find(`.${classBlock}--checked`).exists()).toBe(false)
+      it(`Includes card active class: .${classBlock}__card--active when card`, async () => {
+        wrapper = shallowMount(YooCheckButton, { propsData: { initialValue: true, card: true } })
+        await wrapper.vm.$nextTick()
+        expect(wrapper.find(`.${classBlock}__card--active`).exists()).toBe(true)
       })
     })
 
-    describe('switchCard', () => {
+    describe('disabled', () => {
+      it(`Does not include disabled class: .${classBlock}__check--disabled when not disabled`, async () => {
+        expect(wrapper.find(`.${classBlock}__check--disabled`).exists()).toBe(false)
+      })
+      it(`Includes disabled class: .${classBlock}__check--disabled when initialValue`, async () => {
+        await wrapper.setProps({ disabled: true })
+        expect(wrapper.find(`.${classBlock}__check--disabled`).exists()).toBe(true)
+      })
+    })
+
+    describe('card', () => {
       it('Has a valid default value', () => {
-        expect(YooCheckButton.props.switchCard.default).toBe(false)
+        expect(YooCheckButton.props.card.default).toBe(false)
       })
-      it(`Includes switch-card class: .${classBlock}--switch-card when switchCard`, async () => {
-        await wrapper.setProps({ switchCard: true })
-        expect(wrapper.find(`.${classBlock}--switch-card`).exists()).toBe(true)
+      it(`Does not include card class: .${classBlock}__card when not card`, async () => {
+        expect(wrapper.find(`.${classBlock}__card`).exists()).toBe(false)
       })
-      it(`Does not include switch-card class: .${classBlock}--switch-card when not switchCard`, async () => {
-        await wrapper.setProps({ switchCard: false })
-        expect(wrapper.find(`.${classBlock}--switch-card`).exists()).toBe(false)
+      it(`Includes card class: .${classBlock}__card when card`, async () => {
+        await wrapper.setProps({ card: true })
+        expect(wrapper.find(`.${classBlock}__card`).exists()).toBe(true)
+      })
+      it(`Includes card active class: .${classBlock}__card--active when card`, async () => {
+        wrapper = shallowMount(YooCheckButton, { propsData: { initialValue: true, card: true } })
+        await wrapper.vm.$nextTick()
+        expect(wrapper.find(`.${classBlock}__card--active`).exists()).toBe(true)
       })
     })
   }) // describe Props
@@ -87,6 +105,12 @@ describe('YooCheckButton Component', () => {
       it('Emits change Event', async () => {
         wrapper.find('input').trigger('click')
         expect(wrapper.emitted()).toHaveProperty('response')
+      })
+
+      it('Does not emits change Event', async () => {
+        await wrapper.setProps({ disabled: true })
+        wrapper.find('input').trigger('click')
+        expect(wrapper.emitted()).not.toHaveProperty('response')
       })
     })
   }) // describe Events
