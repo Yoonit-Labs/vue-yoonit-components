@@ -136,9 +136,7 @@ export default {
         this.$emit('response', this.checkedField)
       }
     }
-  },
-  filters: {},
-  watch: {}
+  }
 }
 </script>
 
