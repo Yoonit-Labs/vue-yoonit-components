@@ -2,7 +2,7 @@
   .yoo-warning.p__t--l.p__b--l.m__b--xl(
     :class="[takeModifier]"
   )
-    .yoo-warning__icon.m__l--l
+    .yoo-warning__item.m__l--l
       i(
         :class="['yoo-warning__icon', takeIconStyle, takeIconName]"
       )

@@ -2,7 +2,7 @@ import { shallowMount } from '@vue/test-utils'
 import YooWarning from '@/components/atoms/Warning/Warning.vue'
 import PropsConfig from './Warning.config'
 
-const classBlock = 'warning'
+const classBlock = 'yoo-warning'
 const SlotText = 'Default Slot Text'
 
 const mountComponent = () => {
@@ -22,8 +22,8 @@ describe('YooWarning Component', () => {
   })
 
   it('Loads the Component HTML', () => {
-    expect(wrapper.find('.warning__icon').exists()).toBe(true)
-    expect(wrapper.find('.warning__body').exists()).toBe(true)
+    expect(wrapper.find('.yoo-warning__icon').exists()).toBe(true)
+    expect(wrapper.find('.yoo-warning__body').exists()).toBe(true)
   })
 
   describe('Props', () => {
@@ -32,9 +32,9 @@ describe('YooWarning Component', () => {
         expect(PropsConfig.variation.options.includes(YooWarning.props.variation.default)).toBe(true)
       })
       PropsConfig.variation.options.forEach(variation => {
-        it(`Includes variation class: .${classBlock}--${variation}`, async () => {
+        it(`Includes variation class: .${classBlock}__variation--${variation}`, async () => {
           await wrapper.setProps({ variation })
-          expect(wrapper.find(`.${classBlock}--${variation}`).exists()).toBe(true)
+          expect(wrapper.find(`.${classBlock}__variation--${variation}`).exists()).toBe(true)
         })
       })
     })

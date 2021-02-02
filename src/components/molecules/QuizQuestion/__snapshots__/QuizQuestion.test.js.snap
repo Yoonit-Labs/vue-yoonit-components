@@ -5,15 +5,11 @@ exports[`YooQuizQuestion Component Matches Snapshot 1`] = `
   <p row="1" col="1" class="yoo-quiz__question" style="grid-row: 1; grid-column: 1;">Marque os sintomas sentidos nas últimas horas
     <!---->
   </p>
-  <div class="yoo-flex-layout m__t--s m__b--s m__r--l m__l--l p__t--l p__r--l p__b--l p__l--l yoo-switch-card yoo-quiz__switch-card" style="flex-direction: row; flex-wrap: nowrap; justify-content: center; align-items: stretch; align-content: stretch; gap: 16px; grid-row: 2; grid-column: 1;" row="2" col="1">
-    <div class="yoo-checkbox yoo-checkbox--switch-card yoo-switch-card__checkbox"><input type="checkbox" id="ycid-3456789"><label class="yoo-check fas fa-check yoo-check--medium yoo-check--checked yoo-check--switch-card yoo-check--text-right" for="ycid-3456789">
-        <p>Cansaço</p>
-      </label></div>
-  </div>
-  <div class="yoo-flex-layout m__t--s m__b--s m__r--l m__l--l p__t--l p__r--l p__b--l p__l--l yoo-switch-card yoo-switch-card--active yoo-quiz__switch-card" style="flex-direction: row; flex-wrap: nowrap; justify-content: center; align-items: stretch; align-content: stretch; gap: 16px; grid-row: 3; grid-column: 1;" row="3" col="1">
-    <div class="yoo-checkbox yoo-checkbox--switch-card yoo-switch-card__checkbox"><input type="checkbox" id="ycid-3456789"><label class="yoo-check fas fa-check yoo-check--medium yoo-check--checked yoo-check--switch-card yoo-check--text-right" for="ycid-3456789">
-        <p>Corrimento Nasal (Coriza)</p>
-      </label></div>
-  </div>
+  <div class="yoo-checkbox m__t--s m__b--s yoo-checkbox__card yoo-quiz__card" row="2" col="1" style="grid-row: 2; grid-column: 1;"><input type="checkbox" id="ycid-3456789"><label class="yoo-checkbox__check fas fa-check yoo-checkbox--medium p__t--l p__r--l p__b--l p__l--l yoo-checkbox__text--left" for="ycid-3456789">
+      <p class="yoo-checkbox__text yoo-checkbox--medium">Cansaço</p>
+    </label></div>
+  <div class="yoo-checkbox m__t--s m__b--s yoo-checkbox__card yoo-quiz__card" row="3" col="1" style="grid-row: 3; grid-column: 1;" checked="checked"><input type="checkbox" id="ycid-3456789"><label class="yoo-checkbox__check fas fa-check yoo-checkbox--medium p__t--l p__r--l p__b--l p__l--l yoo-checkbox__text--left" for="ycid-3456789">
+      <p class="yoo-checkbox__text yoo-checkbox--medium">Corrimento Nasal (Coriza)</p>
+    </label></div>
 </div>
 `;

@@ -85,12 +85,24 @@ describe('YooFlexLayout Component', () => {
       })
     })
 
+    describe('gap', () => {
+      it('Has a valid default value', () => {
+        expect(YooFlexLayout.props.gap.default).toBe('0')
+      })
+      it('Includes gap class when gap !== 0', async () => {
+        await wrapper.setProps({ gap: '1px' })
+        expect(wrapper.find(`.${classBlock}`).attributes().style).toContain('gap: 1px')
+      })
+      it('Does not includes gap class when gap === 0', () => {
+        expect(wrapper.find(`.${classBlock}`).attributes().style).not.toContain('gap: 0')
+      })
+    })
+
     describe('Childs', () => {
       it('Check mount childs', async () => {
         const wrapper = shallowMount(YooFlexLayout, {
           slots: { default: '<div height="100px" width="100px" order="1" flexGrow="1" flexShrink="0" alignSelf="flex-end" backgroundColor="#FFF">Slot content</div>' }
         })
-
         expect(wrapper.html()).toContain('Slot content')
       })
     })

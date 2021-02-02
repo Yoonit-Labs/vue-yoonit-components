@@ -1,24 +1,21 @@
 <template lang="pug">
-  div(
-    :class="['yoo-checkbox', takeModifier]"
+div.yoo-checkbox.m__t--s.m__b--s(
+  :class="[takeModifier]"
+)
+  input(
+    type="checkbox"
+    :id="timeId"
+    v-model="checkedField"
+    @change="doCheck($event)"
   )
-    input(
-      type="checkbox"
-      :id="timeId"
-      v-model="checkedField"
-      @change="doCheck($event)"
-    )
-    label(
-      :for="timeId"
-      :class="['yoo-check','fas fa-check', ...takeModifierCheck]"
-    )
-      p(
-        v-if="text !== ''"
-      ) {{ text }}
-
-      span(
-        v-else
-      ) {{ text }}
+  label(
+    :for="timeId"
+    :class="['yoo-checkbox__check', 'fas fa-check', takeModifierSize, ...takeModifierCheck]"
+  )
+    p(
+      :class="['yoo-checkbox__text', takeModifierSize]"
+      v-if="text !== ''"
+    ) {{ text }}
 
 </template>
 
@@ -44,11 +41,17 @@ export default {
     },
     textPosition: {
       type: String,
-      default: 'right',
+      default: 'left',
       validator: value => PropsConfig.textPosition.options.includes(value)
     },
-    switchCard: {
+    card: {
       type: Boolean,
+      required: false,
+      default: false
+    },
+    disabled: {
+      type: Boolean,
+      required: false,
       default: false
     }
   },
@@ -62,39 +65,15 @@ export default {
   },
   computed: {
     /**
-    * @description Prints classes based on the chosen props
-    * @computed takeModifierCheck
+    * @description Prints size classes based on the chosen prop
+    * @computed takeModifierSize
     * @returns {array}
     */
-    takeModifierCheck () {
-      const block = 'yoo-check'
+    takeModifierSize () {
+      const block = 'yoo-checkbox'
       const classList = []
-      switch (this.size) {
-        case 'small':
-          classList
-            .push(`${block}--${this.size}`)
-          break
-        case 'medium':
-          classList
-            .push(`${block}--${this.size}`)
-          break
-        case 'large':
-          classList
-            .push(`${block}--${this.size}`)
-          break
-      }
-      if (this.checkedField) {
-        classList
-          .push(`${block}--checked`)
-      }
-      if (this.switchCard) {
-        classList
-          .push(`${block}--switch-card`)
-      }
-
       classList
-        .push(`${block}--text-${this.textPosition}`)
-
+        .push(`${block}--${this.size}`)
       return classList
     },
     /**
@@ -102,22 +81,60 @@ export default {
     * @computed takeModifierCheck
     * @returns {array}
     */
+    takeModifierCheck () {
+      const block = 'yoo-checkbox'
+      const classList = []
+      if (!this.card && this.checkedField) {
+        classList
+          .push(`${block}__check--active`)
+      }
+
+      if (this.card) {
+        classList
+          .push('p__t--l', 'p__r--l', 'p__b--l', 'p__l--l')
+      }
+
+      if (this.card && this.checkedField && !this.disabled) {
+        classList
+          .push(`${block}__check--card-active`)
+      }
+
+      if (this.disabled) {
+        classList
+          .push(`${block}__check--disabled`)
+      }
+
+      classList
+        .push(`${block}__text--${this.textPosition}`)
+
+      return classList
+    },
+    /**
+    * @description Prints classes based on the chosen props
+    * @computed takeModifier
+    * @returns {array}
+    */
     takeModifier () {
       const block = 'yoo-checkbox'
       const classList = []
-      classList
-        .push(`${block}--switch-card`)
+
+      this.card
+        ? classList.push(`${block}__card`)
+        : classList.push(`${block}`)
+
+      if (this.card && this.checkedField && !this.disabled) {
+        classList
+          .push(`${block}__card--active`)
+      }
 
       return classList
     }
   },
   methods: {
-    /**
-    * @description Emit response in click item
-    * @method doCheck
-    */
     doCheck (e) {
-      this.$emit('response', this.checkedField)
+      if (!this.disabled) {
+        this.$emit('response', this.checkedField)
+      }
     }
   }
 }

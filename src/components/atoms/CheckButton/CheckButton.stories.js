@@ -35,5 +35,8 @@ const Template = (args, { argTypes }) => ({
 export const Custom = Template.bind({})
 Custom.args = { text: 'Yoo Checkbox' }
 
-export const Default = Template.bind({})
-Default.args = { text: 'Yoo Checkbox' }
+export const Card = Template.bind({})
+Card.args = { text: 'Yoo Checkbox', card: true }
+
+export const Disabled = Template.bind({})
+Disabled.args = { text: 'Yoo Checkbox', disabled: true }
