@@ -37,9 +37,10 @@ export default {
   computed: {
     takeModifier () {
       const classList = [`yoo-indicator--${this.size}`, `yoo-indicator--${this.fill}`]
-
-      classList
-        .push('yoo-indicator--pulse')
+      if (this.animation) {
+        classList
+          .push('yoo-indicator--pulse')
+      }
 
       return classList
     }

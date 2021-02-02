@@ -49,13 +49,13 @@ export const Custom = Template.bind({})
 Custom.args = { title: 'Yoo PostCard', subtitle: 'Test' }
 
 export const Danger = Template.bind({})
-Danger.args = { title: 'Yoo PostCard', subtitle: 'Test', fill: 'danger', showIndicator: true, icon: 'cog' }
+Danger.args = { title: 'Yoo PostCard', subtitle: 'Test', fill: 'danger', showIndicator: true, icon: 'cog', iconFill: 'white', iconSize: 'xl' }
 
 export const Neutral = Template.bind({})
-Neutral.args = { title: 'Yoo PostCard', subtitle: 'Test', fill: 'neutral', showIndicator: true, icon: 'cog' }
+Neutral.args = { title: 'Yoo PostCard', subtitle: 'Test', fill: 'neutral', showIndicator: true, icon: 'cog', iconFill: 'white', iconSize: 'xl' }
 
 export const Light = Template.bind({})
-Light.args = { title: 'Yoo PostCard', subtitle: 'Test', fill: 'light', showIndicator: true, icon: 'cog' }
+Light.args = { title: 'Yoo PostCard', subtitle: 'Test', fill: 'light', showIndicator: true, icon: 'cog', iconFill: 'neutral', iconSize: 'xl' }
 
 export const Dark = Template.bind({})
-Dark.args = { title: 'Yoo PostCard', subtitle: 'Test', fill: 'dark', showIndicator: true, icon: 'cog' }
+Dark.args = { title: 'Yoo PostCard', subtitle: 'Test', fill: 'dark', showIndicator: true, icon: 'cog', iconFill: 'white', iconSize: 'xl' }

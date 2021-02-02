@@ -1,17 +1,8 @@
 import yooButtonToggle from './ButtonToggle.vue'
-import PropsConfig from './ButtonToggle.config'
 
 export default {
   title: 'Yoonit/YooButtonToggle',
-  component: yooButtonToggle,
-  argTypes: {
-    size: {
-      control: {
-        type: 'select',
-        options: PropsConfig.size.options
-      }
-    }
-  }
+  component: yooButtonToggle
 }
 
 const Template = (args, { argTypes }) => ({

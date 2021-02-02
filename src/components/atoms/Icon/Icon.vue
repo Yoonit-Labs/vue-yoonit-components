@@ -21,7 +21,7 @@ export default {
     },
     size: {
       type: String,
-      default: 'md',
+      default: 'lg',
       validator: value => PropsConfig.size.options.includes(value)
     },
     fill: {
