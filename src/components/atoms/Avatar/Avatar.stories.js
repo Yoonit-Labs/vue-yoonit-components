@@ -1,5 +1,6 @@
-import YooAvatar from './Avatar.vue'
-import PropsConfig from './Avatar.config'
+import YooAvatar from '@/components/atoms/Avatar/Avatar.vue'
+import PropsConfig from '@/components/atoms/Avatar/Avatar.config'
+import logo from '@/assets/yoonit-logo.jpg'
 
 export default {
   title: 'Yoonit/YooAvatar',
@@ -36,6 +37,9 @@ const Template = (args, { argTypes }) => ({
 export const Custom = Template.bind({})
 Custom.args = { text: 'Yoo Avatar' }
 
+export const Image = Template.bind({})
+Image.args = { image: logo }
+
 export const Primary = Template.bind({})
 Primary.args = { text: 'Yoo Avatar', fill: 'primary' }
 
@@ -47,6 +51,3 @@ Light.args = { text: 'Yoo Avatar', fill: 'light' }
 
 export const Dark = Template.bind({})
 Dark.args = { text: 'Yoo Avatar', fill: 'dark' }
-
-export const Neutral = Template.bind({})
-Neutral.args = { text: 'Yoo Avatar', fill: 'neutral' }

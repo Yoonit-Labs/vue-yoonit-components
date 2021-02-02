@@ -1,21 +1,18 @@
 <template lang="pug">
   div(
     :class="['yoo-avatar', ...takeModifier, ...takeFill]"
+    :style="image ? `background: url('${image}')no-repeat center center / cover` : ''"
   )
     p(
       :class="['yoo-avatar__text', ...takeTextColor]"
       v-if="takeInitials && !image"
     ) {{ takeInitials }}
 
-    img(
-      v-else
-      :src="image"
-      :class="['yoo-avatar', ...takeModifier]"
-    )
 </template>
 
 <script>
-import { StringParser } from '../../bosons'
+
+import { StringParser } from '@/components/bosons'
 
 export default {
   name: 'YooAvatar',
@@ -34,14 +31,13 @@ export default {
     },
     fill: {
       type: String,
-      default: 'neutral',
+      default: 'primary',
       validator: value =>
         [
           'primary',
           'danger',
           'light',
-          'dark',
-          'neutral'
+          'dark'
         ]
           .includes(value)
     },

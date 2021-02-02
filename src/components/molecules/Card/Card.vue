@@ -5,7 +5,7 @@
     cols="*, auto"
     width="100%"
   )
-    YooFlexLayout(
+    YooFlexLayout.m__t--l.m__b--l.p__t--x.p__b--x.p__l--xl(
       flexDirection="column"
       col="1"
       row="1"

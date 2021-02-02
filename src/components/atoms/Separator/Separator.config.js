@@ -8,9 +8,13 @@ module.exports = {
   },
   fontSize: {
     options: [
+      'tn',
+      'xs',
       'sm',
       'md',
-      'lg'
+      'lg',
+      'xl',
+      'hg'
     ]
   }
 }
