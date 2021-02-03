@@ -22,7 +22,7 @@
       v-if="actionable && actionableType === 'button'"
       :text="detail"
       variation="clear"
-      fill="primary"
+      fill="light"
       icon="chevron-right"
       iconPosition="right"
       hover=true
