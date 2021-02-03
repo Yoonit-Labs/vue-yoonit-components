@@ -4,9 +4,34 @@ export default {
   title: 'Yoonit/YooFormGroup',
   component: yooFormGroup,
   argTypes: {
+    label: {
+      control: {
+        type: 'text'
+      }
+    },
+    placeholder: {
+      control: {
+        type: 'text'
+      }
+    },
     value: {
       control: {
         type: 'text'
+      }
+    },
+    required: {
+      control: {
+        type: 'boolean'
+      }
+    },
+    validateOnDataInput: {
+      control: {
+        type: 'boolean'
+      }
+    },
+    requiredRule: {
+      control: {
+        type: 'func'
       }
     }
   }
