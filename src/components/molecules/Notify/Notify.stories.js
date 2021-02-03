@@ -22,7 +22,19 @@ export default {
         type: 'select',
         options: PropsConfig.notifyTextSize.options
       }
-    }
+    },
+    iconColor: {
+      control: {
+        type: 'select',
+        options: PropsConfig.iconColor.options
+      }
+    },
+    textPosition: {
+      control: {
+        type: 'select',
+        options: PropsConfig.textPosition.options
+      }
+    },
   }
 }
 

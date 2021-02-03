@@ -1,4 +1,4 @@
-import { mount } from '@vue/test-utils'
+import { mount, shallowMount } from '@vue/test-utils'
 import YooNotify from '@/components/molecules/Notify/Notify.vue'
 import PropsConfig from './Notify.config'
 
@@ -38,6 +38,26 @@ describe('YooNotify Component', () => {
         expect(wrapper.find(`.${classBlock}`).attributes().style).toContain('grid-template-columns: auto;')
       })
     })
+    describe('showIcon', () => {
+      it('Has a valid default value', () => {
+        expect(YooNotify.props.showIcon.default).toBe(false)
+      })
+      it('Test prop showIndicator', async () => {
+        await wrapper.setProps({ showIndicator: false, showIcon: true, showButton: true })
+        expect(wrapper.find(`.${classBlock}__icon`).exists()).toBe(true)
+      })
+    })
+    describe('iconStyle', () => {
+      it('Has a valid default value', () => {
+        expect(PropsConfig.iconStyle.options.includes(YooNotify.props.iconStyle.default)).toBe(true)
+      })
+      PropsConfig.iconStyle.options.forEach(iconStyle => {
+        it(`Includes iconStyle class: .${iconStyle === 'solid' ? 'fas' : 'far'}`, async () => {
+          await wrapper.setProps({ showIndicator: false, showIcon: true, icon: 'cog', iconStyle })
+          expect(wrapper.find('.yoo-notify__icon').classes().includes(`${iconStyle === 'solid' ? 'fas' : 'far'}`)).toBe(true)
+        })
+      })
+    })
     describe('notifyFill', () => {
       it('Has a valid default value', () => {
         expect(PropsConfig.notifyFill.options.includes(YooNotify.props.notifyFill.default)).toBe(true)
@@ -69,6 +89,15 @@ describe('YooNotify Component', () => {
           await wrapper.setProps({ notifyTextSize })
           expect(wrapper.find(`.${classBlock}__text--${notifyTextSize}`).exists()).toBe(true)
         })
+      })
+    })
+    describe('showButton', () => {
+      it('Has a valid default value', () => {
+        expect(YooNotify.props.showButton.default).toBe(false)
+      })
+      it('Test prop showButton', async () => {
+        await wrapper.setProps({ showIndicator: false, showIcon: false, showButton: true })
+        expect(wrapper.find('.yoo__container--button').exists()).toBe(true)
       })
     })
   }) // describe Props

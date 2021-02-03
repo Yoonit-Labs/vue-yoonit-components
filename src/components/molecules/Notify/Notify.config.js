@@ -3,14 +3,21 @@ module.exports = {
     options: [
       'primary',
       'danger',
-      'light',
-      'dark'
+      'light'
     ]
   },
   notifyTextColor: {
     options: [
       'light',
-      'dark'
+      'dark',
+      'danger'
+    ]
+  },
+  textPosition: {
+    options: [
+      'left',
+      'center',
+      'right'
     ]
   },
   notifyTextSize: {
@@ -22,6 +29,18 @@ module.exports = {
       'lg',
       'xl',
       'hg'
+    ]
+  },
+  iconStyle: {
+    options: [
+      'solid',
+      'regular'
+    ]
+  },
+  iconColor: {
+    options: [
+      'light',
+      'dark'
     ]
   }
 }
