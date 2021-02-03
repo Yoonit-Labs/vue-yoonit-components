@@ -11,7 +11,6 @@ module.exports = {
     options: [
       'primary',
       'danger',
-      'neutral',
       'dark',
       'light'
     ]
@@ -22,7 +21,9 @@ module.exports = {
       'danger',
       'neutral',
       'dark',
-      'light'
+      'light',
+      'black',
+      'white'
     ]
   },
   actionableType: {

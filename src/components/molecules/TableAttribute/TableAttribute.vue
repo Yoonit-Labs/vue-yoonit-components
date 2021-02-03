@@ -31,21 +31,21 @@
       @doClick="$emit('response')"
     )
 
-    YooCheckButton.m__t--l.m__r--l.m__b--l.m__l--l(
+    YooCheckButton(
       v-else-if="actionable && actionableType === 'check'"
       size="small"
       :class="[ 'yoo-table-attribute__detail', takeDetailFillModifier ]"
       :text="detail"
       :textPosition="actionableCheckPosition"
-      @response="$emit('response')"
+      @response="$emit('response', $event)"
     )
 
-    YooSwitch.m__t--l.m__b--l.m__l--l(
+    YooSwitch(
       v-else-if="actionable && actionableType === 'switch'"
       size="small"
-      :class="[ 'yoo-table-attribute__detail', takeDetailFillModifier ]"
+      :class="[ 'yoo-table-attribute__detail' ]"
       :disabled="actionableDisable"
-      @response="$emit('response')"
+      @response="$emit('response', $event)"
     )
 
     p(
@@ -53,12 +53,6 @@
       :class="[ 'yoo-table-attribute__detail', takeDetailFillModifier, takeDetailWrapModifier ]"
     )
       | {{ detail }}
-
-      YooCheckButton(
-        v-if="actionable && actionableType === 'check'"
-        size="small"
-        :disabled="actionableDisable"
-      )
 
 </template>
 
@@ -89,7 +83,7 @@ export default {
     },
     titleFill: {
       type: String,
-      default: 'neutral',
+      default: 'dark',
       validator: value => PropsConfig.titleFill.options
     },
     iconFill: {
