@@ -3,7 +3,6 @@ module.exports = {
     options: [
       'primary',
       'danger',
-      'neutral',
       'dark',
       'light'
     ]
@@ -29,10 +28,11 @@ module.exports = {
   actionableType: {
     options: [
       'button',
-      'check'
+      'check',
+      'switch'
     ]
   },
-  actionableTextPosition: {
+  actionableCheckPosition: {
     options: [
       'left',
       'right'

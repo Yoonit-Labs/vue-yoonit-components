@@ -22,13 +22,13 @@
       v-if="actionable && actionableType === 'button'"
       :text="detail"
       variation="clear"
-      fill="light"
+      :fill="detailFill"
       icon="chevron-right"
       iconPosition="right"
       hover=true
       active=true
-      :disabled="buttonDisable"
-      @doClick="doGetValue"
+      :disabled="actionableDisable"
+      @doClick="$emit('response')"
     )
 
     YooCheckButton.m__t--l.m__r--l.m__b--l.m__l--l(
@@ -36,8 +36,16 @@
       size="small"
       :class="[ 'yoo-table-attribute__detail', takeDetailFillModifier ]"
       :text="detail"
-      :textPosition="actionableTextPosition"
-      @response="doGetValue"
+      :textPosition="actionableCheckPosition"
+      @response="$emit('response')"
+    )
+
+    YooSwitch.m__t--l.m__b--l.m__l--l(
+      v-else-if="actionable && actionableType === 'switch'"
+      size="small"
+      :class="[ 'yoo-table-attribute__detail', takeDetailFillModifier ]"
+      :disabled="actionableDisable"
+      @response="$emit('response')"
     )
 
     p(
@@ -49,6 +57,7 @@
       YooCheckButton(
         v-if="actionable && actionableType === 'check'"
         size="small"
+        :disabled="actionableDisable"
       )
 
 </template>
@@ -60,6 +69,7 @@ import YooFlexLayout from '@/components/quarks/FlexLayout/FlexLayout.vue'
 import YooIcon from '@/components/atoms/Icon/Icon.vue'
 import YooButton from '@/components/atoms/Button/Button.vue'
 import YooCheckButton from '@/components/atoms/CheckButton/CheckButton.vue'
+import YooSwitch from '@/components/atoms/Switch/Switch.vue'
 
 export default {
   name: 'YooTableAttribute',
@@ -74,7 +84,7 @@ export default {
     },
     detailFill: {
       type: String,
-      default: 'neutral',
+      default: 'light',
       validator: value => PropsConfig.detailFill.options
     },
     titleFill: {
@@ -91,7 +101,7 @@ export default {
       type: Boolean,
       default: false
     },
-    buttonDisable: {
+    actionableDisable: {
       type: Boolean,
       default: false
     },
@@ -100,10 +110,10 @@ export default {
       default: 'button',
       validator: value => PropsConfig.actionableType.options
     },
-    actionableTextPosition: {
+    actionableCheckPosition: {
       type: String,
       default: 'right',
-      validator: value => PropsConfig.actionableTextPosition.options
+      validator: value => PropsConfig.actionableCheckPosition.options
     },
     separator: {
       type: Boolean,
@@ -127,7 +137,8 @@ export default {
     YooFlexLayout,
     YooIcon,
     YooButton,
-    YooCheckButton
+    YooCheckButton,
+    YooSwitch
   },
   data: () => ({
     flexAlignItems: 'center',
@@ -205,15 +216,6 @@ export default {
     */
     takeIconFillModifier () {
       return this.iconFill
-    }
-  },
-  methods: {
-    /**
-    * @description Emits value reciveid
-    * @method doGetValue
-    */
-    doGetValue (e) {
-      this.$emit('response', e)
     }
   }
 }
