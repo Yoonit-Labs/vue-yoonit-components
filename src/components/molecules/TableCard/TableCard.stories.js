@@ -27,7 +27,7 @@ export default {
         type: 'text'
       }
     },
-    options: {
+    details: {
       control: {
         type: 'text'
       }
@@ -43,16 +43,14 @@ const Template = (args, { argTypes }) => ({
 })
 
 export const Custom = Template.bind({})
-Custom.args = { title: 'YooTableCard', subtitle: 'Admin', options: [{ text: 'Admin', status: true }, { text: 'Funcionários', status: false }, { text: 'Segurança', status: false }, { text: 'Manutenção' }, { text: 'Nome do Grupo' }, { text: 'Pagode da Firma' }] }
+Custom.args = { title: 'YooTableCard', subtitle: 'Admin', details: [{ text: 'Admin', status: true }, { text: 'Funcionários', status: false }, { text: 'Segurança', status: false }, { text: 'Manutenção' }, { text: 'Nome do Grupo' }, { text: 'Pagode da Firma' }] }
 
-export const Icon = Template.bind({})
-Icon.args = { title: 'YooTableCard', subtitle: 'Admin', options: [{ text: 'Admin' }, { text: 'Funcionários' }, { text: 'Segurança' }], icon: 'cog' }
 
 export const Actionable = Template.bind({})
-Actionable.args = { title: 'YooTableCard', subtitle: 'Admin', options: [{ text: 'Admin' }, { text: 'Funcionários' }, { text: 'Segurança' }], actionable: true, titleFill: 'danger' }
+Actionable.args = { title: 'YooTableCard', subtitle: 'Admin', details: [{ text: 'Admin' }, { text: 'Funcionários' }, { text: 'Segurança' }], actionable: true }
 
 export const Separator = Template.bind({})
-Separator.args = { title: 'YooTableCard', subtitle: 'Admin', actionable: true, separator: true, options: [] }
+Separator.args = { title: 'YooTableCard', subtitle: 'Admin', actionable: true, separator: true, details: [] }
 
 export const Wrap = Template.bind({})
-Wrap.args = { title: 'YooTableCard', subtitle: 'Admin', options: [{ text: 'Admin' }, { text: 'Funcionários' }, { text: 'Segurança' }], wrap: true, detailFill: 'danger' }
+Wrap.args = { title: 'YooTableCard', subtitle: 'Admin', details: [{ text: 'Admin' }, { text: 'Funcionários' }, { text: 'Segurança' }], wrap: true }

@@ -4,7 +4,7 @@
     alignItems="center"
     flexDirection="row"
     width="100%"
-    :class="[ 'yoo-table-attribute', takeModifier ]"
+    :class="[ 'yoo-table-card', takeModifier ]"
   )
     YooFlexLayout(
       justifyContent="space-between"
@@ -18,12 +18,12 @@
         flexDirection="row"
       )
         p(
-          :class="[ 'yoo-table-attribute__title', takeTitleColorModifier, takeTitleWrapModifier ]"
+          :class="[ 'yoo-table-card__title', takeTitleColorModifier, takeTitleWrapModifier ]"
         )
           | {{ title }}
 
         p(
-          :class="[ 'yoo-table-attribute__subtitle', takeTitleColorModifier, takeTitleWrapModifier ]"
+          :class="[ 'yoo-table-card__subtitle', takeTitleColorModifier, takeTitleWrapModifier ]"
         )
           | {{ `• ${subtitle}` }}
 
@@ -33,18 +33,18 @@
         alignItems="flex-start"
         flexDirection="row"
       )
-        p.yoo-table-attribute__no-detail(
-          v-if="!options.length"
+        p.yoo-table-card__no-detail(
+          v-if="!details.length"
           size="small"
         )
           | Não pertence a nenhum grupo
 
         p(
           v-else
-          v-for="(option, index) in options",
-          :class="option.status ? ['yoo-table-attribute__detail', 'yoo-table-attribute__detail--on'] : 'yoo-table-attribute__detail'"
+          v-for="(detail, index) in details",
+          :class="detail.status ? ['yoo-table-card__detail', 'yoo-table-card__detail--on'] : 'yoo-table-card__detail'"
         )
-          | {{ option.text }}
+          | {{ detail.text }}
 
     YooFlexLayout(
       justifyContent="space-between"
@@ -91,7 +91,7 @@ export default {
       type: String,
       default: ''
     },
-    options: {
+    details: {
       type: Array,
       required: true
     },
@@ -139,9 +139,7 @@ export default {
     }
   },
   beforeMount () {},
-  mounted () {
-    console.log(this.options)
-  },
+  mounted () {},
   beforeUpdate () {},
   updated () {},
   beforeDestroy () {},
@@ -153,7 +151,7 @@ export default {
     * @returns {array}
     */
     takeModifier () {
-      const block = 'yoo-table-attribute'
+      const block = 'yoo-table-card'
       const classList = []
       if (this.separator) {
         classList
@@ -170,7 +168,7 @@ export default {
     */
     takeTitleWrapModifier () {
       return this.wrap
-        ? 'yoo-table-attribute__title--wrap'
+        ? 'yoo-table-card__title--wrap'
         : ''
     },
     /**
@@ -180,7 +178,7 @@ export default {
     */
     takeDetailWrapModifier () {
       return this.wrap
-        ? 'yoo-table-attribute__detail--wrap'
+        ? 'yoo-table-card__detail--wrap'
         : ''
     }
   },
