@@ -112,14 +112,14 @@ describe('YooTableAttribute Component', () => {
       })
     })
 
-    describe('actionableTextPosition', () => {
+    describe('actionableCheckPosition', () => {
       it('Has a valid default value', () => {
-        expect(PropsConfig.actionableTextPosition.options.includes(YooTableAttribute.props.actionableTextPosition.default)).toBe(true)
+        expect(PropsConfig.actionableCheckPosition.options.includes(YooTableAttribute.props.actionableCheckPosition.default)).toBe(true)
       })
-      PropsConfig.actionableTextPosition.options.forEach(actionableTextPosition => {
-        it(`Includes actionableTextPosition class: .yoo-checkbox__text--${actionableTextPosition}`, async () => {
-          await wrapper.setProps({ actionable: true, actionableType: 'check', actionableTextPosition })
-          expect(wrapper.find(`.yoo-checkbox__text--${actionableTextPosition}`).exists()).toBe(true)
+      PropsConfig.actionableCheckPosition.options.forEach(actionableCheckPosition => {
+        it(`Includes actionableCheckPosition class: .yoo-checkbox__text--${actionableCheckPosition}`, async () => {
+          await wrapper.setProps({ actionable: true, actionableType: 'check', actionableCheckPosition })
+          expect(wrapper.find(`.yoo-checkbox__text--${actionableCheckPosition}`).exists()).toBe(true)
         })
       })
     })
@@ -138,16 +138,16 @@ describe('YooTableAttribute Component', () => {
       })
     })
 
-    describe('buttonDisable', () => {
+    describe('actionableDisable', () => {
       it('Has a valid default value', () => {
-        expect(YooTableAttribute.props.buttonDisable.default).toBe(false)
+        expect(YooTableAttribute.props.actionableDisable.default).toBe(false)
       })
       it('Has a button disabled', async () => {
-        await wrapper.setProps({ actionable: true, actionableType: 'button', buttonDisable: true })
+        await wrapper.setProps({ actionable: true, actionableType: 'button', actionableDisable: true })
         expect(wrapper.find('.yoo-btn--disabled').exists()).toBe(true)
       })
       it('Has not a button disabled', async () => {
-        await wrapper.setProps({ actionable: true, actionableType: 'button', buttonDisable: false })
+        await wrapper.setProps({ actionable: true, actionableType: 'button', actionableDisable: false })
         expect(wrapper.find('.yoo-btn--disabled').exists()).toBe(false)
       })
     })

@@ -3,7 +3,7 @@
 exports[`YooTableAttribute Component Matches Snapshot 1`] = `
 <div class="yoo-flex-layout yoo-table-attribute" style="flex-direction: row; flex-wrap: nowrap; justify-content: space-between; align-items: center; align-content: stretch;" width="100%">
   <p class="m__t--l m__r--l m__b--l yoo-table-attribute__title yoo-table-attribute__title--neutral"><i class="m__t--l m__r--l m__b--l m__l--l yoo-icon fas fa- yoo-icon__size--lg yoo-icon__fill--neutral" style="display: none;"></i>Title</p>
-  <p class="yoo-table-attribute__detail yoo-table-attribute__detail--neutral">
+  <p class="yoo-table-attribute__detail yoo-table-attribute__detail--light">
     <!---->
   </p>
 </div>
