@@ -130,7 +130,7 @@ describe('YooTableAttribute Component', () => {
       })
       PropsConfig.iconFill.options.forEach(iconFill => {
         it('Loads the Component HTML', async () => {
-          await wrapper.setProps({ iconFill })
+          await wrapper.setProps({ icon: 'icon-value', iconFill })
           expect(wrapper.find(`.yoo-icon__fill--${iconFill}`).exists()).toBe(true)
         })
       })

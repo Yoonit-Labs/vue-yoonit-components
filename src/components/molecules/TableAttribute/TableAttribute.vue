@@ -17,7 +17,7 @@ YooFlexLayout(
         flexDirection="row"
       )
         YooIcon.m__r--m(
-          v-show="icon"
+          v-if="icon"
           :icon="icon"
           :iconStyle="iconStyle",
           :fill="takeIconFillModifier"
