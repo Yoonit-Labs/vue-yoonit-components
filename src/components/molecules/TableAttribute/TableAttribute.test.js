@@ -47,6 +47,30 @@ describe('YooTableAttribute Component', () => {
       })
     })
 
+    describe('titleWeight', () => {
+      it('Has a valid default value', () => {
+        expect(PropsConfig.titleWeight.options.includes(YooTableAttribute.props.titleWeight.default)).toBe(true)
+      })
+      PropsConfig.titleWeight.options.forEach(titleWeight => {
+        it('Loads the Component HTML', async () => {
+          await wrapper.setProps({ titleWeight })
+          expect(wrapper.find(`.${classBlock}__title--${titleWeight}`).exists()).toBe(true)
+        })
+      })
+    })
+
+    describe('titleSize', () => {
+      it('Has a valid default value', () => {
+        expect(PropsConfig.titleSize.options.includes(YooTableAttribute.props.titleSize.default)).toBe(true)
+      })
+      PropsConfig.titleSize.options.forEach(titleSize => {
+        it('Loads the Component HTML', async () => {
+          await wrapper.setProps({ titleSize })
+          expect(wrapper.find(`.${classBlock}__title--${titleSize}`).exists()).toBe(true)
+        })
+      })
+    })
+
     describe('detailFill', () => {
       it('Has a valid default value', () => {
         expect(PropsConfig.detailFill.options.includes(YooTableAttribute.props.detailFill.default)).toBe(true)
@@ -108,18 +132,6 @@ describe('YooTableAttribute Component', () => {
         it('Loads the Component HTML', async () => {
           await wrapper.setProps({ iconFill })
           expect(wrapper.find(`.yoo-icon__fill--${iconFill}`).exists()).toBe(true)
-        })
-      })
-    })
-
-    describe('actionableCheckPosition', () => {
-      it('Has a valid default value', () => {
-        expect(PropsConfig.actionableCheckPosition.options.includes(YooTableAttribute.props.actionableCheckPosition.default)).toBe(true)
-      })
-      PropsConfig.actionableCheckPosition.options.forEach(actionableCheckPosition => {
-        it(`Includes actionableCheckPosition class: .yoo-checkbox__text--${actionableCheckPosition}`, async () => {
-          await wrapper.setProps({ actionable: true, actionableType: 'check', actionableCheckPosition })
-          expect(wrapper.find(`.yoo-checkbox__text--${actionableCheckPosition}`).exists()).toBe(true)
         })
       })
     })
