@@ -1,58 +1,77 @@
 <template lang="pug">
-  YooFlexLayout(
-    justifyContent="space-between"
-    :alignItems="flexAlignItems"
-    :flexDirection="flexDirection"
-    width="100%"
-    :class="[ 'yoo-table-attribute', takeModifier ]"
-  )
-    p.m__t--l.m__r--l.m__b--l(
-      :class="[ 'yoo-table-attribute__title', takeTitleColorModifier, takeTitleWrapModifier ]"
+YooFlexLayout(
+  justifyContent="space-between"
+  alignItems="center"
+  flexDirection="row"
+  width="100%"
+  :class="[ 'yoo-table-attribute', takeModifier ]"
+)
+    YooFlexLayout(
+      justifyContent="space-between"
+      :alignItems="flexAlignItems"
+      :flexDirection="flexDirection"
     )
-      YooIcon.m__t--l.m__r--l.m__b--l.m__l--l(
-        v-show="icon"
-        :icon="icon"
-        :iconStyle="iconStyle",
-        :fill="takeIconFillModifier"
-        size="lg"
+      YooFlexLayout(
+        justifyContent="center"
+        alignItems="flex-start"
+        flexDirection="row"
       )
-      | {{ title }}
+        YooIcon.m__r--m(
+          v-if="icon"
+          :icon="icon"
+          :iconStyle="iconStyle",
+          :fill="takeIconFillModifier"
+          size="lg"
+        )
 
-    YooButton(
-      v-if="actionable && actionableType === 'button'"
-      :text="detail"
-      variation="clear"
-      :fill="detailFill"
-      icon="chevron-right"
-      iconPosition="right"
-      hover=true
-      active=true
-      :disabled="actionableDisable"
-      @doClick="$emit('response')"
-    )
+        p.m__t--none.m__b--none(
+          :class="[ 'yoo-table-attribute__title', takeTitleModifier ]"
+        )
+          | {{ title }}
 
-    YooCheckButton(
-      v-else-if="actionable && actionableType === 'check'"
-      size="small"
-      :class="[ 'yoo-table-attribute__detail', takeDetailFillModifier ]"
-      :text="detail"
-      :textPosition="actionableCheckPosition"
-      @response="$emit('response', $event)"
-    )
+      p.m__t--s.m__b--none(
+        v-if="detail && wrap"
+        :class="[ 'yoo-table-attribute__detail', 'yoo-table-attribute__detail--wrap', takeDetailFillModifier ]"
+      )
+        | {{ detail }}
 
-    YooSwitch(
-      v-else-if="actionable && actionableType === 'switch'"
-      size="small"
-      :class="[ 'yoo-table-attribute__detail' ]"
-      :disabled="actionableDisable"
-      @response="$emit('response', $event)"
+    YooFlexLayout(
+      justifyContent="center"
+      alignItems="center"
+      flexDirection="row"
     )
+      p(
+        v-if="!wrap"
+        :class="[ 'yoo-table-attribute__detail', takeDetailFillModifier ]"
+      )
+        | {{ detail }}
 
-    p(
-      v-else
-      :class="[ 'yoo-table-attribute__detail', takeDetailFillModifier, takeDetailWrapModifier ]"
-    )
-      | {{ detail }}
+      YooButton.m__l--s(
+        v-if="actionable && actionableType === 'button'"
+        variation="clear"
+        :fill="detailFill"
+        icon="chevron-right"
+        iconPosition="right"
+        :hover="true"
+        :active="true"
+        :disabled="actionableDisable"
+        @doClick="$emit('response')"
+      )
+
+      YooCheckButton.m__l--s(
+        v-else-if="actionable && actionableType === 'check'"
+        size="small"
+        :class="[ 'yoo-table-attribute__detail', takeDetailFillModifier ]"
+        @response="$emit('response', $event)"
+      )
+
+      YooSwitch.m__l--m(
+        v-else-if="actionable && actionableType === 'switch'"
+        size="small"
+        :class="[ 'yoo-table-attribute__detail' ]"
+        :disabled="actionableDisable"
+        @response="$emit('response', $event)"
+      )
 
 </template>
 
@@ -71,6 +90,16 @@ export default {
     title: {
       type: String,
       required: true
+    },
+    titleWeight: {
+      type: String,
+      default: 'medium',
+      validator: value => PropsConfig.titleWeight.options
+    },
+    titleSize: {
+      type: String,
+      default: 'md',
+      validator: value => PropsConfig.titleSize.options
     },
     detail: {
       type: String,
@@ -103,11 +132,6 @@ export default {
       type: String,
       default: 'button',
       validator: value => PropsConfig.actionableType.options
-    },
-    actionableCheckPosition: {
-      type: String,
-      default: 'right',
-      validator: value => PropsConfig.actionableCheckPosition.options
     },
     separator: {
       type: Boolean,
@@ -176,32 +200,26 @@ export default {
       return `yoo-table-attribute__detail--${this.detailFill}`
     },
     /**
-    * @description Returns class based on the titleFill prop
-    * @computed takeTitleColorModifier
-    * @returns {string}
+    * @description Returns classes based on the chosen props
+    * @computed takeTitleModifier
+    * @returns {array}
     */
-    takeTitleColorModifier () {
-      return `yoo-table-attribute__title--${this.titleFill}`
-    },
-    /**
-    * @description Returns class based on the wrap prop
-    * @computed takeTitleWrapModifier
-    * @returns {string}
-    */
-    takeTitleWrapModifier () {
-      return this.wrap
-        ? 'yoo-table-attribute__title--wrap'
-        : ''
-    },
-    /**
-    * @description Returns class based on the wrap prop
-    * @computed takeDetailWrapModifier
-    * @returns {string}
-    */
-    takeDetailWrapModifier () {
-      return this.wrap
-        ? 'yoo-table-attribute__detail--wrap'
-        : ''
+    takeTitleModifier () {
+      const block = 'yoo-table-attribute'
+      const classList = []
+      classList
+        .push(
+          `${block}__title--${this.titleFill}`
+        )
+      classList
+        .push(
+          `yoo-table-attribute__title--${this.titleWeight}`
+        )
+      classList
+        .push(
+          `yoo-table-attribute__title--${this.titleSize}`
+        )
+      return classList
     },
     /**
     * @description Returns icon color based on the iconFill prop

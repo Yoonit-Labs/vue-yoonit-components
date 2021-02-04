@@ -74,6 +74,9 @@ export default {
     doGetChildProps () {
       const child = this.$slots.default
 
+      if (child === undefined || child === null) {
+        return
+      }
       child.forEach(item => {
         if (typeof item.data !== 'undefined') {
           const listStyles = {}
