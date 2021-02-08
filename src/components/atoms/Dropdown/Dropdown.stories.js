@@ -26,13 +26,13 @@ const Template = (args, { argTypes }) => ({
 })
 
 export const Custom = Template.bind({})
-Custom.args = { size: 'medium', options: [{ label: 'YooDropDown', value: '1' }, { label: 'YooDropDown 2', value: '2' }, { label: 'YooDropDown 3', value: '3' }], selected: { label: 'YooDropDown', value: '1' } }
+Custom.args = { size: 'medium', options: [{ label: 'YooDropDown 1', value: '1' }, { label: 'YooDropDown 2', value: '2' }, { label: 'YooDropDown 3', value: '3' }], selected: { label: 'YooDropDown 1', value: '1' } }
 
 export const Small = Template.bind({})
-Small.args = { size: 'small', options: [{ label: 'YooDropDown', value: '1' }, { label: 'YooDropDown 2', value: '2' }], selected: { label: 'YooDropDown', value: '1' } }
+Small.args = { size: 'small', options: [{ label: 'YooDropDown 1', value: '1' }, { label: 'YooDropDown 2', value: '2' }], selected: { label: 'YooDropDown 1', value: '1' } }
 
 export const Medium = Template.bind({})
-Medium.args = { size: 'medium', options: [{ label: 'YooDropDown', value: '1' }, { label: 'YooDropDown 2', value: '2' }], selected: { label: 'YooDropDown', value: '1' } }
+Medium.args = { size: 'medium', options: [{ label: 'YooDropDown 1', value: '1' }, { label: 'YooDropDown 2', value: '2' }, { label: 'YooDropDown 3', value: '3' }], selected: { label: 'YooDropDown 1', value: '1' } }
 
 export const Large = Template.bind({})
-Large.args = { size: 'large', options: [{ label: 'YooDropDown', value: '1' }, { label: 'YooDropDown 2', value: '2' }], selected: { label: 'YooDropDown', value: '1' } }
+Large.args = { size: 'large', options: [{ label: 'YooDropDown 1', value: '1' }, { label: 'YooDropDown 2', value: '2' }, { label: 'YooDropDown 3', value: '3' }, { label: 'YooDropDown 4', value: '4' }], selected: { label: 'YooDropDown 1', value: '1' } }
