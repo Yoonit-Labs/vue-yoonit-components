@@ -82,10 +82,6 @@ export default {
       if (!Array.isArray(child)) {
         return
       }
-
-      if (child === undefined || child === null) {
-        return
-      }
       child.forEach(item => {
         if (typeof item.data !== 'undefined') {
           const listStyles = {}

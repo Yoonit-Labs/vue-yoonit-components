@@ -76,7 +76,7 @@ describe('YooTableCard Component', () => {
       })
       it('Has a check button', async () => {
         await wrapper.setProps({ actionable: true, actionableType: 'check' })
-        expect(wrapper.find('.yoo-check').exists()).toBe(true)
+        expect(wrapper.find('.yoo-checkbox').exists()).toBe(true)
       })
     })
 
@@ -85,9 +85,9 @@ describe('YooTableCard Component', () => {
         expect(PropsConfig.actionableTextPosition.options.includes(YooTableCard.props.actionableTextPosition.default)).toBe(true)
       })
       PropsConfig.actionableTextPosition.options.forEach(actionableTextPosition => {
-        it(`Includes actionableTextPosition class: .yoo-check--text-${actionableTextPosition}`, async () => {
+        it(`Includes actionableTextPosition class: .yoo-checkbox__text--${actionableTextPosition}`, async () => {
           await wrapper.setProps({ actionable: true, actionableType: 'check', actionableTextPosition })
-          expect(wrapper.find(`.yoo-check--text-${actionableTextPosition}`).exists()).toBe(true)
+          expect(wrapper.find(`.yoo-checkbox__text--${actionableTextPosition}`).exists()).toBe(true)
         })
       })
     })
@@ -129,13 +129,31 @@ describe('YooTableCard Component', () => {
         expect(wrapper.vm.flexDirection).toBe('row')
       })
       it('Includes wrap style', async () => {
-        wrapper = shallowMount(YooTableCard, {
+        wrapper = mount(YooTableCard, {
           propsData: {
             title: 'wrap',
-            wrap: true
+            wrap: true,
+            details: [
+              {
+                text: 'Admin',
+                status: true
+              },
+              {
+                text: 'Funcionários',
+                status: false
+              },
+              {
+                text: 'Segurança',
+                status: false
+              },
+              {
+                text: 'Manutenção'
+              }
+            ]
           }
         })
         await wrapper.vm.$nextTick()
+        expect(wrapper.find('.yoo-table-card__detail--wrap').exists()).toBe(false)
         expect(wrapper.vm.flexAlignItems).toBe('flex-start')
         expect(wrapper.vm.flexDirection).toBe('column')
       })

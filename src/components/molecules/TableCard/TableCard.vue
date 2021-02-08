@@ -173,16 +173,6 @@ export default {
         ? 'yoo-table-card__title--wrap'
         : ''
     },
-    /**
-    * @description Returns class based on the wrap prop
-    * @computed takeDetailWrapModifier
-    * @returns {string}
-    */
-    takeDetailWrapModifier () {
-      return this.wrap
-        ? 'yoo-table-card__detail--wrap'
-        : ''
-    }
   },
   methods: {
     /**
