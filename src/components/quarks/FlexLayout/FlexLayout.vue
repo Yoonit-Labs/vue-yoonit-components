@@ -46,15 +46,12 @@ export default {
   mounted () {
     this.doGetChildProps()
   },
-<<<<<<< Updated upstream
-=======
   beforeUpdate () {},
   updated () {
     this.doGetChildProps()
   },
   beforeDestroy () {},
   destroyed () {},
->>>>>>> Stashed changes
   computed: {
     takeFlexDirection () {
       return `flex-direction: ${this.flexDirection};`
