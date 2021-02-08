@@ -12,7 +12,7 @@
       flexDirection="column"
       width="90%"
     )
-      YooFlexLayout(
+      YooFlexLayout.m__b--s(
         justifyContent="wrap"
         alignItems="center"
         flexDirection="row"
