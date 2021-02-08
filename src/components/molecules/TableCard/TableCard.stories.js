@@ -45,7 +45,6 @@ const Template = (args, { argTypes }) => ({
 export const Custom = Template.bind({})
 Custom.args = { title: 'YooTableCard', subtitle: 'Admin', details: [{ text: 'Admin', status: true }, { text: 'Funcionários', status: false }, { text: 'Segurança', status: false }, { text: 'Manutenção' }, { text: 'Nome do Grupo' }, { text: 'Pagode da Firma' }] }
 
-
 export const Actionable = Template.bind({})
 Actionable.args = { title: 'YooTableCard', subtitle: 'Admin', details: [{ text: 'Admin' }, { text: 'Funcionários' }, { text: 'Segurança' }], actionable: true }
 

@@ -18,12 +18,12 @@
         flexDirection="row"
       )
         p(
-          :class="[ 'yoo-table-card__title', takeTitleColorModifier, takeTitleWrapModifier ]"
+          :class="[ 'yoo-table-card__title', takeTitleWrapModifier ]"
         )
           | {{ title }}
 
         p(
-          :class="[ 'yoo-table-card__subtitle', takeTitleColorModifier, takeTitleWrapModifier ]"
+          :class="[ 'yoo-table-card__subtitle', takeTitleWrapModifier ]"
         )
           | {{ `• ${subtitle}` }}
 
@@ -33,18 +33,20 @@
         alignItems="flex-start"
         flexDirection="row"
       )
-        p.yoo-table-card__no-detail(
-          v-if="!details.length"
-          size="small"
-        )
-          | Não pertence a nenhum grupo
 
         p(
-          v-else
+          v-if="details && details.length"
           v-for="(detail, index) in details",
+          :key="index"
           :class="detail.status ? ['yoo-table-card__detail', 'yoo-table-card__detail--on'] : 'yoo-table-card__detail'"
         )
           | {{ detail.text }}
+
+        p.yoo-table-card__no-detail(
+          v-else
+          size="small"
+        )
+          | Não pertence a nenhum grupo
 
     YooFlexLayout(
       justifyContent="space-between"

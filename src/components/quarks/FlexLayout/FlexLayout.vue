@@ -46,6 +46,15 @@ export default {
   mounted () {
     this.doGetChildProps()
   },
+<<<<<<< Updated upstream
+=======
+  beforeUpdate () {},
+  updated () {
+    this.doGetChildProps()
+  },
+  beforeDestroy () {},
+  destroyed () {},
+>>>>>>> Stashed changes
   computed: {
     takeFlexDirection () {
       return `flex-direction: ${this.flexDirection};`
@@ -73,6 +82,9 @@ export default {
   methods: {
     doGetChildProps () {
       const child = this.$slots.default
+      if (!Array.isArray(child)) {
+        return
+      }
 
       if (child === undefined || child === null) {
         return

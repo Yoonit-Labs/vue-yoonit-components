@@ -26,7 +26,11 @@ const mountComponent = () => {
           text: 'Manutenção'
         }
       ]
-    }
+    },
+    data: () => ({
+      flexAlignItems: 'center',
+      flexDirection: 'row'
+    })
   })
 }
 
