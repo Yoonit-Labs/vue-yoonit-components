@@ -55,7 +55,7 @@ YooFlexLayout(
         :hover="true"
         :active="true"
         :disabled="actionableDisable"
-        @doClick="$emit('response')"
+        @onClick="$emit('response')"
       )
 
       YooCheckButton.m__l--s(

@@ -190,7 +190,7 @@ describe('YooTableAttribute Component', () => {
     describe('Click', () => {
       it('Emits Click Event', async () => {
         await wrapper.setProps({ actionable: true, actionableType: 'button' })
-        await wrapper.find('.yoo__container--button').vm.$emit('doClick')
+        await wrapper.find('.yoo__container--button').vm.$emit('onClick')
         expect(wrapper.emitted()).toHaveProperty('response')
       })
     })
