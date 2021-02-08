@@ -1,15 +1,15 @@
 <template lang="pug">
-.dropdown(
+.yoo-dropdown(
   :class="['dropdowns', ...takeModifier]"
 )
-  .dropdown__select(
+  .yoo-dropdown__select(
     v-if="!showOptions"
     @click="doShowOptions"
   )
     .select
       p.select__text {{takeSelectedOptionLabel}}
 
-  .dropdown__options(
+  .yoo-dropdown__options(
     v-if="showOptions"
   )
     .option(
@@ -27,10 +27,7 @@ export default {
   props: {
     options: {
       type: Array,
-      required: true,
-      default () {
-        return []
-      }
+      required: true
     },
     selected: {
       type: Object,
@@ -88,16 +85,13 @@ export default {
       return this.options
     },
     takeModifier () {
-      const block = 'dropdown'
+      const block = 'yoo-dropdown'
       const classList = []
 
-      if (this.size && (this.size !== 'medium')) {
-        classList
-          .push(
-            `${block}--${this.size}`
-          )
-      }
-
+      classList
+        .push(
+          `${block}--${this.size}`
+        )
       return classList
     }
   },
@@ -106,10 +100,8 @@ export default {
       this.showOptions = !this.showOptions
     },
     doSelectLabelChange (label, value) {
-      if (label && value) {
-        this.selectLabel = Object.assign({ label, value })
-        this.$emit('onClick', value)
-      }
+      this.selectLabel = Object.assign({ label, value })
+      this.$emit('onClick', value)
       this.doShowOptions()
     }
   },
