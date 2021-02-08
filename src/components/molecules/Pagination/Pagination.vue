@@ -140,3 +140,5 @@ export default {
 }
 
 </script>
+
+<style src="./Pagination.sass" lang="sass" scoped></style>

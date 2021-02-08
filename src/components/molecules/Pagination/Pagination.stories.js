@@ -45,4 +45,7 @@ const Template = (args, { argTypes }) => ({
 })
 
 export const Custom = Template.bind({})
-Custom.args = { totalPages: 5, currentPage: 1 }
+Custom.args = { totalPages: 5, currentPage: 0 }
+
+export const Default = Template.bind({})
+Default.args = { totalPages: 5, currentPage: 0 }

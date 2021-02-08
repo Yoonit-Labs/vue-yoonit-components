@@ -101,7 +101,7 @@ export default {
     * @returns {array}
     */
     takeModifier () {
-      return `yoo-post-card--fill-${this.fill}`
+      return `yoo-post-card__fill--${this.fill}`
     }
   },
   methods: {

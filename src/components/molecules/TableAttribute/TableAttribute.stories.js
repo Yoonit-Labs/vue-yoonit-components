@@ -17,6 +17,18 @@ export default {
         options: PropsConfig.titleFill.options
       }
     },
+    titleWeight: {
+      control: {
+        type: 'select',
+        options: PropsConfig.titleWeight.options
+      }
+    },
+    titleSize: {
+      control: {
+        type: 'select',
+        options: PropsConfig.titleSize.options
+      }
+    },
     iconFill: {
       control: {
         type: 'select',
@@ -27,12 +39,6 @@ export default {
       control: {
         type: 'select',
         options: PropsConfig.actionableType.options
-      }
-    },
-    actionableTextPosition: {
-      control: {
-        type: 'select',
-        options: PropsConfig.actionableTextPosition.options
       }
     },
     iconStyle: {
@@ -67,8 +73,14 @@ Custom.args = { title: 'YooTableAttribute', detail: 'detail' }
 export const Icon = Template.bind({})
 Icon.args = { title: 'YooTableAttribute', detail: 'detail', icon: 'cog' }
 
-export const Actionable = Template.bind({})
-Actionable.args = { title: 'YooTableAttribute', detail: 'detail', actionable: true, titleFill: 'danger' }
+export const ActionableButton = Template.bind({})
+ActionableButton.args = { title: 'YooTableAttribute', detail: 'detail', actionable: true }
+
+export const ActionableCheck = Template.bind({})
+ActionableCheck.args = { title: 'YooTableAttribute', detail: 'detail', actionable: true, actionableType: 'check', titleFill: 'danger' }
+
+export const ActionableSwitch = Template.bind({})
+ActionableSwitch.args = { title: 'YooTableAttribute', detail: 'detail', actionable: true, actionableType: 'switch' }
 
 export const Separator = Template.bind({})
 Separator.args = { title: 'YooTableAttribute', actionable: true, separator: true }

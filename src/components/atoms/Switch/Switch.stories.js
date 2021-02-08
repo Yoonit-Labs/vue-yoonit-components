@@ -22,13 +22,13 @@ const Template = (args, { argTypes }) => ({
 })
 
 export const Custom = Template.bind({})
-Custom.args = { text: 'Yoo Switch' }
+Custom.args = { size: 'medium', initialValue: true }
 
 export const Small = Template.bind({})
-Small.args = { text: 'Yoo Warning test component', size: 'small' }
+Small.args = { size: 'small' }
 
 export const Medium = Template.bind({})
-Medium.args = { text: 'Yoo Warning test component', size: 'medium' }
+Medium.args = { size: 'medium' }
 
 export const Large = Template.bind({})
-Large.args = { text: 'Yoo Warning test component', size: 'large' }
+Large.args = { size: 'large' }

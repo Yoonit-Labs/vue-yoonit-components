@@ -5,5 +5,16 @@ module.exports = {
       'primary',
       'danger'
     ]
+  },
+  fontSize: {
+    options: [
+      'tn',
+      'xs',
+      'sm',
+      'md',
+      'lg',
+      'xl',
+      'hg'
+    ]
   }
 }

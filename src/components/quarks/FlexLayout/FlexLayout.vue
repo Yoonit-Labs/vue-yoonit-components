@@ -14,52 +14,38 @@ export default {
   props: {
     flexDirection: {
       type: String,
-      required: false,
       default: 'row',
       validator: value => PropsConfig.flexDirection.options.includes(value)
     },
     flexWrap: {
       type: String,
-      required: false,
       default: 'nowrap',
       validator: value => PropsConfig.flexWrap.options.includes(value)
     },
     justifyContent: {
       type: String,
-      required: false,
       default: 'center',
       validator: value => PropsConfig.justifyContent.options.includes(value)
     },
     alignItems: {
       type: String,
-      required: false,
       default: 'stretch',
       validator: value => PropsConfig.alignItems.options.includes(value)
     },
     alignContent: {
       type: String,
-      required: false,
       default: 'stretch',
       validator: value => PropsConfig.alignContent.options.includes(value)
     },
     gap: {
       type: String,
-      required: false,
       default: '0'
     }
   },
   components: {},
-  data: () => ({}),
-  beforeCreate () {},
-  created () {},
-  beforeMount () {},
   mounted () {
     this.doGetChildProps()
   },
-  beforeUpdate () {},
-  updated () {},
-  beforeDestroy () {},
-  destroyed () {},
   computed: {
     takeFlexDirection () {
       return `flex-direction: ${this.flexDirection};`
@@ -88,6 +74,9 @@ export default {
     doGetChildProps () {
       const child = this.$slots.default
 
+      if (child === undefined || child === null) {
+        return
+      }
       child.forEach(item => {
         if (typeof item.data !== 'undefined') {
           const listStyles = {}

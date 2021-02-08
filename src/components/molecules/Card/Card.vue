@@ -5,7 +5,7 @@
     cols="*, auto"
     width="100%"
   )
-    YooFlexLayout(
+    YooFlexLayout.m__t--l.m__b--l.p__t--x.p__b--x.p__l--xl(
       flexDirection="column"
       col="1"
       row="1"
@@ -93,14 +93,14 @@ export default {
     * @returns {array}
     */
     takeItemsModifier () {
-      const blockItem = 'yoo-card__item'
+      const blockItem = 'yoo-card'
       const classList = []
 
       classList
-        .push(`${blockItem}--border-left`)
+        .push(`${blockItem}__style--border-${this.borderLeft}`)
 
       classList
-        .push(`${blockItem}--border-fill-${this.borderFill}`)
+        .push(`${blockItem}__fill--border-${this.borderFill}`)
 
       return classList
     },

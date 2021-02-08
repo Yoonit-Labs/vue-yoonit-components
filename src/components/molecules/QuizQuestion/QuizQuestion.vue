@@ -13,15 +13,16 @@
         v-if="question.required"
       ) *
 
-    YooSwitchCard(
+    CheckButton(
       v-for="(ans, index) in question.answers"
       :key="'radio-' + question.id + '-' + ans.id + '-' + index"
       :row="index+2"
       :col="1"
-      :class="['yoo-quiz__switch-card']"
+      :class="['yoo-quiz__card']"
       :textPosition="textPosition"
       :text="ans.text.ptBR"
       :checked="doTakeStatus(index)"
+      :card="true"
       @response='doTap($event, index, ans.override, question.type)'
     )
 
@@ -30,7 +31,7 @@
 <script>
 
 import YooGridLayout from '@/components/quarks/GridLayout/GridLayout.vue'
-import YooSwitchCard from '@/components/molecules/SwitchCard/SwitchCard.vue'
+import CheckButton from '@/components/atoms/CheckButton/CheckButton.vue'
 import PropsConfig from '@/components/molecules/QuizQuestion/QuizQuestion.config'
 
 export default {
@@ -38,7 +39,7 @@ export default {
   props: {
     textPosition: {
       type: String,
-      default: 'right',
+      default: 'left',
       validator: value => PropsConfig.textPosition.options.includes(value)
     },
     question: {
@@ -49,7 +50,7 @@ export default {
   },
   components: {
     YooGridLayout,
-    YooSwitchCard
+    CheckButton
   },
   data: () => ({
     localAnswers: []

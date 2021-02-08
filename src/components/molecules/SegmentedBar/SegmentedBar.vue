@@ -16,7 +16,7 @@
       YooButton(
         :text="option.title"
         variation="clear",
-        :fill="index === selectedIndex ? 'primary' : 'default'",
+        :fill="index === selectedIndex ? 'primary' : 'light'",
         size="normal",
         style="width: 100%; height: 40px;"
         @onClick="onSelectedIndexChange(index)"

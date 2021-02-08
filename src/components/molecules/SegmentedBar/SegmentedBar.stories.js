@@ -16,3 +16,6 @@ const Template = (args, { argTypes }) => ({
 
 export const Custom = Template.bind({})
 Custom.args = { list: [{ title: 'First' }, { title: 'Second' }] }
+
+export const Default = Template.bind({})
+Default.args = { list: [{ title: 'First' }, { title: 'Second' }] }

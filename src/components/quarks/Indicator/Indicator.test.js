@@ -37,6 +37,16 @@ describe('YooIndicator Component', () => {
         })
       })
     })
+    describe('Animation Test', () => {
+      it('If not Animation state', async () => {
+        const wrapper = shallowMount(YooIndicator, {
+          propsData: {
+            animation: false
+          }
+        })
+        expect(wrapper.find(`.${classBlock}`).classes().includes('yoo-indicator--pulse')).toBe(false)
+      })
+    })
     describe('size', () => {
       it('Has a valid default value', () => {
         expect(PropsConfig.size.options.includes(YooIndicator.props.size.default)).toBe(true)

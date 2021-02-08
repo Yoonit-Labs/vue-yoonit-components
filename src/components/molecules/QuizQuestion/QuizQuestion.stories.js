@@ -53,3 +53,18 @@ Custom.args = {
   },
   answers: answers
 }
+
+export const Default = Template.bind({})
+Default.args = {
+  question: {
+    id: 'covid-cl1',
+    text: {
+      ptBR: 'Marque os sintomas sentidos nas últimas horas'
+    },
+    required: true,
+    visible: true,
+    type: 'check',
+    answers: answers
+  },
+  answers: answers
+}

@@ -1,11 +1,11 @@
 <template lang="pug">
 div
   div(
-    :class="['separator', ...takeModifier]"
+    :class="['yoo-separator', ...takeModifier]"
   )
-    p(
-      class="separator__label m__l--l m__t--none m__b--none m__r--none"
+    p.m__l--m.m__t--none.m__b--none.m__r--none(
       v-show="text"
+      :class="['yoo-separator__label',  ...takeModifier]"
     )
       | {{text}}
 </template>
@@ -28,6 +28,11 @@ export default {
         return typeof value === 'string'
       },
       default: ''
+    },
+    fontSize: {
+      type: String,
+      default: 'md',
+      validator: value => PropsConfig.fontSize.options.includes(value)
     }
   },
   computed: {
@@ -37,12 +42,16 @@ export default {
     * @returns {array}
     */
     takeModifier () {
-      const block = 'separator'
+      const block = 'yoo-separator'
       const classList = []
 
       classList
         .push(
-          `${block}--fill-${this.fill}`
+          `${block}__fill--${this.fill}`
+        )
+      classList
+        .push(
+          `${block}__font--${this.fontSize}`
         )
 
       return classList
