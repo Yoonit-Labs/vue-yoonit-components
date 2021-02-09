@@ -172,7 +172,7 @@ export default {
       return this.wrap
         ? 'yoo-table-card__title--wrap'
         : ''
-    },
+    }
   },
   methods: {
     /**
