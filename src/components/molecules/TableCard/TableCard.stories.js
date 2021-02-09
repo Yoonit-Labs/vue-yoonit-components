@@ -2,7 +2,7 @@ import YooTableCard from './TableCard.vue'
 import PropsConfig from './TableCard.config'
 
 export default {
-  title: 'Yoonit/TableCard',
+  title: 'Yoonit/YooTableCard',
   component: YooTableCard,
   argTypes: {
     actionableType: {
