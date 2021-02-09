@@ -7,7 +7,7 @@ exports[`YooSelectButton Component Matches Snapshot 1`] = `
       <p class="yoo-btn__text">1</p>
       <!---->
     </button></div>
-  <div class="yoo__container--button"><button class="yoo-btn yoo-btn__fill--light yoo-btn--base yoo-btn--xs yoo-btn--animation-none">
+  <div class="yoo__container--button"><button class="yoo-btn yoo-btn__fill--primary yoo-btn--base yoo-btn--xs yoo-btn--animation-none">
       <!---->
       <p class="yoo-btn__text">2</p>
       <!---->

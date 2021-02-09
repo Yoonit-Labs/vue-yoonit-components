@@ -164,6 +164,20 @@ describe('YooTableAttribute Component', () => {
       })
     })
 
+    describe('actionableActive', () => {
+      it('Has a valid default value', () => {
+        expect(YooTableAttribute.props.actionableActive.default).toBe(false)
+      })
+      it('Has a checkButton is active', async () => {
+        await wrapper.setProps({ actionable: true, actionableType: 'check', actionableActive: true })
+        expect(wrapper.find('.yoo-checkbox__check--active').exists()).toBe(true)
+      })
+      it('Has a switch is active', async () => {
+        await wrapper.setProps({ actionable: true, actionableType: 'switch', actionableActive: true })
+        expect(wrapper.find('.yoo-switch--checked').exists()).toBe(true)
+      })
+    })
+
     describe('wrap', () => {
       it('Has a valid default value', () => {
         expect(YooTableAttribute.props.wrap.default).toBe(false)
