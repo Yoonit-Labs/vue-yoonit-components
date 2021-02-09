@@ -105,7 +105,7 @@ export default {
     * @description Validate inputed value
     * @method doValidate
     */
-    doValidate (e) {
+    doValidate () {
       if (this.required) {
         this.value === ''
           ? this.isValid = false
