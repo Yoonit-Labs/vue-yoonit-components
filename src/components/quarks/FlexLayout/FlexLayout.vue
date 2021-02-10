@@ -42,16 +42,12 @@ export default {
       default: '0'
     }
   },
-  components: {},
   mounted () {
     this.doGetChildProps()
   },
-  beforeUpdate () {},
   updated () {
     this.doGetChildProps()
   },
-  beforeDestroy () {},
-  destroyed () {},
   computed: {
     takeFlexDirection () {
       return `flex-direction: ${this.flexDirection};`
@@ -118,9 +114,7 @@ export default {
         }
       })
     }
-  },
-  filters: {},
-  watch: {}
+  }
 }
 </script>
 

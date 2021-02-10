@@ -133,19 +133,12 @@ export default {
     flexAlignItems: 'center',
     flexDirection: 'row'
   }),
-  beforeCreate () {},
   created () {
     if (this.wrap) {
       this.flexAlignItems = 'flex-start'
       this.flexDirection = 'column'
     }
   },
-  beforeMount () {},
-  mounted () {},
-  beforeUpdate () {},
-  updated () {},
-  beforeDestroy () {},
-  destroyed () {},
   computed: {
     /**
     * @description Returns classes based on the chosen props
@@ -182,9 +175,7 @@ export default {
     doGetValue (e) {
       this.$emit('response', e)
     }
-  },
-  filters: {},
-  watch: {}
+  }
 }
 </script>
 

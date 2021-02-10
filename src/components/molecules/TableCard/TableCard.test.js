@@ -1,4 +1,4 @@
-import { mount, shallowMount } from '@vue/test-utils'
+import { mount } from '@vue/test-utils'
 import PropsConfig from './TableCard.config'
 import YooTableCard from '@/components/molecules/TableCard/TableCard.vue'
 
@@ -9,6 +9,7 @@ const mountComponent = () => {
     propsData: {
       title: 'Title',
       subtitle: 'Subtitle',
+      wrap: false,
       details: [
         {
           text: 'Admin',
