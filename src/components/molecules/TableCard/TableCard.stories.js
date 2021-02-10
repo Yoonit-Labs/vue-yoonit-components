@@ -49,7 +49,10 @@ export const Actionable = Template.bind({})
 Actionable.args = { title: 'YooTableCard', subtitle: 'Admin', details: [{ text: 'Admin' }, { text: 'Funcionários' }, { text: 'Segurança' }], actionable: true }
 
 export const Separator = Template.bind({})
-Separator.args = { title: 'YooTableCard', subtitle: 'Admin', actionable: true, separator: true, details: [] }
+Separator.args = { title: 'YooTableCard', subtitle: 'Admin', actionable: true, separator: true }
 
 export const Wrap = Template.bind({})
 Wrap.args = { title: 'YooTableCard', subtitle: 'Admin', details: [{ text: 'Admin' }, { text: 'Funcionários' }, { text: 'Segurança' }], wrap: true }
+
+export const DetailsString = Template.bind({})
+DetailsString.args = { title: 'YooTableCard', subtitle: 'Admin', details: 'Details as a simple string', wrap: true }

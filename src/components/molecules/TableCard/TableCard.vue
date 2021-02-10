@@ -33,20 +33,18 @@
         alignItems="flex-start"
         flexDirection="row"
       )
+        p.yoo-table-card__no-detail(
+          v-if="(typeof details !== 'object')"
+        )
+          | {{ details }}
 
         p(
-          v-if="details && details.length"
+          v-else
           v-for="(detail, index) in details",
           :key="index"
           :class="detail.status ? ['yoo-table-card__detail', 'yoo-table-card__detail--on'] : 'yoo-table-card__detail'"
         )
           | {{ detail.text }}
-
-        p.yoo-table-card__no-detail(
-          v-else
-          size="small"
-        )
-          | Não pertence a nenhum grupo
 
     YooFlexLayout(
       justifyContent="space-between"
@@ -94,8 +92,8 @@ export default {
       default: ''
     },
     details: {
-      type: Array,
-      required: true
+      type: [Array, String],
+      required: false
     },
     actionable: {
       type: Boolean,
