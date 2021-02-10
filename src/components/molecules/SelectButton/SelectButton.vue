@@ -41,6 +41,13 @@ export default {
   data: () => ({
     selectedArray: []
   }),
+  mounted () {
+    this.rate.forEach(item => {
+      if (item.active === true) {
+        this.selectedArray.push(item.value)
+      }
+    })
+  },
   methods: {
     doActive (index, valor) {
       if (this.multiple) {

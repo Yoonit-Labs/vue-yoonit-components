@@ -62,6 +62,7 @@ YooFlexLayout(
         v-else-if="actionable && actionableType === 'check'"
         size="small"
         :class="[ 'yoo-table-attribute__detail', takeDetailFillModifier ]"
+        :initialValue="actionableActive"
         @response="$emit('response', $event)"
       )
 
@@ -70,6 +71,7 @@ YooFlexLayout(
         size="small"
         :class="[ 'yoo-table-attribute__detail' ]"
         :disabled="actionableDisable"
+        :initialValue="actionableActive"
         @response="$emit('response', $event)"
       )
 
@@ -125,6 +127,10 @@ export default {
       default: false
     },
     actionableDisable: {
+      type: Boolean,
+      default: false
+    },
+    actionableActive: {
       type: Boolean,
       default: false
     },
