@@ -18,7 +18,7 @@
         v-show="options[index]"
         :text="option",
         :variation="selectedIndex === index ? 'base' : 'clear'",
-        :fill="selectedIndex === index ? 'primary' : 'light'",
+        :fill="selectedIndex === index ? 'primary' : 'dark'",
         size="normal",
         style="width: 100%;"
         @onClick="doEmitChoice($event, index)"
