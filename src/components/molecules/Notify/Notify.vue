@@ -30,7 +30,7 @@
       :col="takeTextColumn"
       row="1"
     )
-      p.m__r--l.m__l--l(
+      p.m__r--l.m__l--s(
         :class="['yoo-notify__text', takeTextColor, takeTextSize, takeTextPosition]"
         alignItems="center"
       ) {{ notifyText }}
@@ -199,11 +199,11 @@ export default {
     */
     takeCols () {
       if ((this.showIndicator || this.showIcon) && this.showButton) {
-        return '10%, 80%, 10%'
+        return 'auto, 1, auto'
       } else if (this.showIndicator || this.showIcon) {
-        return '10%, 90%'
+        return 'auto, 1'
       } else if (this.showButton) {
-        return '90%, 10%'
+        return '1, auto'
       }
       return '*'
     },
