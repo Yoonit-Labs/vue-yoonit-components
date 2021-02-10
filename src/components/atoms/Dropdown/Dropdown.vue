@@ -64,12 +64,22 @@ export default {
   destroyed () {},
   components: {},
   computed: {
+    /**
+    * @description Select the label according to the option
+    * @computed takeSelectedOptionLabel
+    * @returns {Object}
+    */
     takeSelectedOptionLabel () {
       if (this.selectLabel && this.selectLabel.label) {
         return this.selectLabel.label
       }
       return this.takeOptions[0].label
     },
+    /**
+    * @description Sets the options on the element
+    * @computed takeOptions
+    * @returns {Array}
+    */
     takeOptions () {
       const hasSelectLabel = Object.keys(this.selectLabel).length
       if (hasSelectLabel !== 0) {
@@ -84,6 +94,11 @@ export default {
       }
       return this.options
     },
+    /**
+    * @description Print classes based on the chosen props
+    * @computed takeModifier
+    * @returns {Array}
+    */
     takeModifier () {
       const block = 'yoo-dropdown'
       const classList = []
@@ -96,9 +111,19 @@ export default {
     }
   },
   methods: {
+    /**
+    * @description Toggles the element's options to show them
+    * @computed doShowOptions
+    * @returns {array}
+    */
     doShowOptions () {
       this.showOptions = !this.showOptions
     },
+    /**
+    * @description Changes the selected label according to the chosen option
+    * @computed doSelectLabelChange
+    * @returns {Function}
+    */
     doSelectLabelChange (label, value) {
       this.selectLabel = Object.assign({ label, value })
       this.$emit('onClick', value)
