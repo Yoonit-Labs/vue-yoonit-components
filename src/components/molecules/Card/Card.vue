@@ -5,7 +5,7 @@
     cols="*, auto"
     width="100%"
   )
-    YooFlexLayout.m__t--l.m__b--l.p__t--x.p__b--x.p__l--xl(
+    YooFlexLayout.m__t--l.m__b--l(
       flexDirection="column"
       col="1"
       row="1"
@@ -96,8 +96,10 @@ export default {
       const blockItem = 'yoo-card'
       const classList = []
 
-      classList
-        .push(`${blockItem}__style--border-${this.borderLeft}`)
+      if (this.borderLeft) {
+        classList
+          .push(`${blockItem}__style--border-left`)
+      }
 
       classList
         .push(`${blockItem}__fill--border-${this.borderFill}`)
