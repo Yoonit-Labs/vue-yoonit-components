@@ -35,4 +35,4 @@ export const Medium = Template.bind({})
 Medium.args = { size: 'medium', options: [{ label: 'BR', value: '1' }, { label: 'US', value: '2' }], selected: { label: 'BR', value: '1' } }
 
 export const Large = Template.bind({})
-Large.args = { size: 'large', options: [{ label: 'BR', value: '1' }, { label: 'US', value: '2' }], selected: { label: 'BR', value: '1' } }
+Large.args = { size: 'large', options: [{ label: 'BR', value: '1' }, { label: 'US', value: '2' }], selected: { label: 'US', value: '2' } }
