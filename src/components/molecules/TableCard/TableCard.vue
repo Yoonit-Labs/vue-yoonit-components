@@ -17,13 +17,10 @@
         alignItems="center"
         flexDirection="row"
       )
-        p(
-          :class="[ 'yoo-table-card__title', takeTitleWrapModifier ]"
-        )
-          | {{ title }}
+        p.yoo-table-card__title {{ title }}
 
         p(
-          :class="[ 'yoo-table-card__subtitle', takeTitleWrapModifier ]"
+          :class="[ 'yoo-table-card__subtitle', takeFillModifier ]"
         )
           | {{ `• ${subtitle}` }}
 
@@ -42,7 +39,7 @@
           v-else
           v-for="(detail, index) in details",
           :key="index"
-          :class="detail.status ? ['yoo-table-card__detail', 'yoo-table-card__detail--on'] : 'yoo-table-card__detail'"
+          :class="detail.status ? ['yoo-table-card__detail', 'yoo-table-card__detail--on', takeFillModifier] : 'yoo-table-card__detail'"
         )
           | {{ detail.text }}
 
@@ -54,7 +51,7 @@
       YooButton(
         v-if="actionable && actionableType === 'button'"
         variation="clear"
-        fill="primary"
+        :fill="fill"
         icon="chevron-right"
         iconPosition="right"
         hover=true
@@ -63,11 +60,10 @@
         @doClick="doGetValue"
       )
 
-      YooCheckButton.m__t--l.m__r--l.m__b--l.m__l--l(
+      YooCheckButton(
         v-else-if="actionable && actionableType === 'check'"
         size="small"
         :text="detail"
-        :textPosition="actionableTextPosition"
         @response="doGetValue"
       )
 
@@ -108,18 +104,14 @@ export default {
       default: 'button',
       validator: value => PropsConfig.actionableType.options
     },
-    actionableTextPosition: {
-      type: String,
-      default: 'left',
-      validator: value => PropsConfig.actionableTextPosition.options
-    },
     separator: {
       type: Boolean,
       default: false
     },
-    wrap: {
-      type: Boolean,
-      default: false
+    fill: {
+      type: String,
+      default: 'primary',
+      validator: value => PropsConfig.fill.options
     }
   },
   components: {
@@ -131,12 +123,6 @@ export default {
     flexAlignItems: 'center',
     flexDirection: 'row'
   }),
-  created () {
-    if (this.wrap) {
-      this.flexAlignItems = 'flex-start'
-      this.flexDirection = 'column'
-    }
-  },
   computed: {
     /**
     * @description Returns classes based on the chosen props
@@ -155,14 +141,12 @@ export default {
       return classList
     },
     /**
-    * @description Returns class based on the wrap prop
-    * @computed takeTitleWrapModifier
+    * @description Returns class based on the fill prop
+    * @computed takeFillModifier
     * @returns {string}
     */
-    takeTitleWrapModifier () {
-      return this.wrap
-        ? 'yoo-table-card__title--wrap'
-        : ''
+    takeFillModifier () {
+      return `yoo-table-card__fill--${this.fill}`
     }
   },
   methods: {

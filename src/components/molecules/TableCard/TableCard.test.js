@@ -9,7 +9,6 @@ const mountComponent = () => {
     propsData: {
       title: 'Title',
       subtitle: 'Subtitle',
-      wrap: false,
       details: [
         {
           text: 'Admin',
@@ -81,14 +80,14 @@ describe('YooTableCard Component', () => {
       })
     })
 
-    describe('actionableTextPosition', () => {
+    describe('fill', () => {
       it('Has a valid default value', () => {
-        expect(PropsConfig.actionableTextPosition.options.includes(YooTableCard.props.actionableTextPosition.default)).toBe(true)
+        expect(PropsConfig.fill.options.includes(YooTableCard.props.fill.default)).toBe(true)
       })
-      PropsConfig.actionableTextPosition.options.forEach(actionableTextPosition => {
-        it(`Includes actionableTextPosition class: .yoo-checkbox__text--${actionableTextPosition}`, async () => {
-          await wrapper.setProps({ actionable: true, actionableType: 'check', actionableTextPosition })
-          expect(wrapper.find(`.yoo-checkbox__text--${actionableTextPosition}`).exists()).toBe(true)
+      PropsConfig.fill.options.forEach(fill => {
+        it(`Includes fill class: .yoo-table-card__fill--${fill}`, async () => {
+          await wrapper.setProps({ fill })
+          expect(wrapper.find(`.yoo-table-card__fill--${fill}`).exists()).toBe(true)
         })
       })
     })
@@ -118,45 +117,6 @@ describe('YooTableCard Component', () => {
       it('Has not a button disabled', async () => {
         await wrapper.setProps({ actionable: true, actionableType: 'button', buttonDisable: false })
         expect(wrapper.find('.yoo-btn--disabled').exists()).toBe(false)
-      })
-    })
-
-    describe('wrap', () => {
-      it('Has a valid default value', () => {
-        expect(YooTableCard.props.wrap.default).toBe(false)
-      })
-      it('Does not includes wrap class', async () => {
-        expect(wrapper.vm.flexAlignItems).toBe('center')
-        expect(wrapper.vm.flexDirection).toBe('row')
-      })
-      it('Includes wrap style', async () => {
-        wrapper = mount(YooTableCard, {
-          propsData: {
-            title: 'wrap',
-            wrap: true,
-            details: [
-              {
-                text: 'Admin',
-                status: true
-              },
-              {
-                text: 'Funcionários',
-                status: false
-              },
-              {
-                text: 'Segurança',
-                status: false
-              },
-              {
-                text: 'Manutenção'
-              }
-            ]
-          }
-        })
-        await wrapper.vm.$nextTick()
-        expect(wrapper.find('.yoo-table-card__detail--wrap').exists()).toBe(false)
-        expect(wrapper.vm.flexAlignItems).toBe('flex-start')
-        expect(wrapper.vm.flexDirection).toBe('column')
       })
     })
   }) // describe Props

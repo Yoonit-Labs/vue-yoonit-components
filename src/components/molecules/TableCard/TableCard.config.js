@@ -5,10 +5,12 @@ module.exports = {
       'check'
     ]
   },
-  actionableTextPosition: {
+  fill: {
     options: [
-      'left',
-      'right'
+      'primary',
+      'danger',
+      'light',
+      'dark'
     ]
   }
 }

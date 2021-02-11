@@ -11,10 +11,10 @@ export default {
         options: PropsConfig.actionableType.options
       }
     },
-    actionableTextPosition: {
+    fill: {
       control: {
         type: 'select',
-        options: PropsConfig.actionableTextPosition.options
+        options: PropsConfig.fill.options
       }
     },
     title: {
@@ -51,8 +51,17 @@ Actionable.args = { title: 'YooTableCard', subtitle: 'Admin', details: [{ text: 
 export const Separator = Template.bind({})
 Separator.args = { title: 'YooTableCard', subtitle: 'Admin', actionable: true, separator: true }
 
-export const Wrap = Template.bind({})
-Wrap.args = { title: 'YooTableCard', subtitle: 'Admin', details: [{ text: 'Admin' }, { text: 'Funcionários' }, { text: 'Segurança' }], wrap: true }
-
 export const DetailsString = Template.bind({})
-DetailsString.args = { title: 'YooTableCard', subtitle: 'Admin', details: 'Details as a simple string', wrap: true }
+DetailsString.args = { title: 'YooTableCard', subtitle: 'Admin', details: 'Details as a simple string' }
+
+export const FillPrimary = Template.bind({})
+FillPrimary.args = { title: 'YooTableCard', subtitle: 'Admin', details: [{ text: 'Admin', status: true }, { text: 'Funcionários' }, { text: 'Segurança' }], fill: 'primary', actionable: true }
+
+export const FillDanger = Template.bind({})
+FillDanger.args = { title: 'YooTableCard', subtitle: 'Admin', details: [{ text: 'Admin', status: true }, { text: 'Funcionários' }, { text: 'Segurança' }], fill: 'danger', actionable: true }
+
+export const FillLight = Template.bind({})
+FillLight.args = { title: 'YooTableCard', subtitle: 'Admin', details: [{ text: 'Admin', status: true }, { text: 'Funcionários' }, { text: 'Segurança' }], fill: 'light', actionable: true }
+
+export const FillDark = Template.bind({})
+FillDark.args = { title: 'YooTableCard', subtitle: 'Admin', details: [{ text: 'Admin', status: true }, { text: 'Funcionários' }, { text: 'Segurança' }], fill: 'dark', actionable: true }

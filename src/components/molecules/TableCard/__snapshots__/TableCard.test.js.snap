@@ -5,10 +5,10 @@ exports[`YooTableCard Component Matches Snapshot 1`] = `
   <div class="yoo-flex-layout" style="flex-direction: column; flex-wrap: nowrap; justify-content: space-between; align-items: flex-start; align-content: stretch; width: 90%;" width="90%">
     <div class="yoo-flex-layout m__b--s" style="flex-direction: row; flex-wrap: nowrap; justify-content: wrap; align-items: center; align-content: stretch;">
       <p class="yoo-table-card__title">Title</p>
-      <p class="yoo-table-card__subtitle">• Subtitle</p>
+      <p class="yoo-table-card__subtitle yoo-table-card__fill--primary">• Subtitle</p>
     </div>
     <div class="yoo-flex-layout" style="flex-direction: row; flex-wrap: wrap; justify-content: wrap; align-items: flex-start; align-content: stretch;">
-      <p class="yoo-table-card__detail yoo-table-card__detail--on">Admin</p>
+      <p class="yoo-table-card__detail yoo-table-card__detail--on yoo-table-card__fill--primary">Admin</p>
       <p class="yoo-table-card__detail">Funcionários</p>
       <p class="yoo-table-card__detail">Segurança</p>
       <p class="yoo-table-card__detail">Manutenção</p>
