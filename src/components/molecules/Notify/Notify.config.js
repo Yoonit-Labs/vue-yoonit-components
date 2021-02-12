@@ -13,13 +13,6 @@ module.exports = {
       'danger'
     ]
   },
-  textPosition: {
-    options: [
-      'left',
-      'center',
-      'right'
-    ]
-  },
   notifyTextSize: {
     options: [
       'tn',
@@ -41,6 +34,23 @@ module.exports = {
     options: [
       'light',
       'dark'
+    ]
+  },
+  indicatorFill: {
+    options: [
+      'primary',
+      'danger',
+      'light',
+      'dark',
+      'neutral'
+    ]
+  },
+  indicatorSize: {
+    options: [
+      'small',
+      'medium',
+      'normal',
+      'large'
     ]
   }
 }

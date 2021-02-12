@@ -23,18 +23,24 @@ export default {
         options: PropsConfig.notifyTextSize.options
       }
     },
+    indicatorFill: {
+      control: {
+        type: 'select',
+        options: PropsConfig.indicatorFill.options
+      }
+    },
+    indicatorSize: {
+      control: {
+        type: 'select',
+        options: PropsConfig.indicatorSize.options
+      }
+    },
     iconColor: {
       control: {
         type: 'select',
         options: PropsConfig.iconColor.options
       }
-    },
-    textPosition: {
-      control: {
-        type: 'select',
-        options: PropsConfig.textPosition.options
-      }
-    },
+    }
   }
 }
 

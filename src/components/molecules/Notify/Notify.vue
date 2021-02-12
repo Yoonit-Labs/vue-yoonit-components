@@ -76,11 +76,6 @@ export default {
       type: String,
       default: 'Yoo-Notify'
     },
-    textPosition: {
-      type: String,
-      default: 'left',
-      validator: value => PropsConfig.textPosition.options.includes(value)
-    },
     notifyTextColor: {
       type: String,
       default: 'dark',
@@ -93,11 +88,13 @@ export default {
     },
     indicatorSize: {
       type: String,
-      required: false
+      default: 'normal',
+      validator: value => PropsConfig.indicatorSize.options.includes(value)
     },
     indicatorFill: {
       type: String,
-      required: false
+      default: 'danger',
+      validator: value => PropsConfig.indicatorFill.options.includes(value)
     },
     buttonColor: {
       type: String,

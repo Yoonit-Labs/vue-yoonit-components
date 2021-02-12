@@ -1,4 +1,4 @@
-import { mount, shallowMount } from '@vue/test-utils'
+import { mount } from '@vue/test-utils'
 import YooNotify from '@/components/molecules/Notify/Notify.vue'
 import PropsConfig from './Notify.config'
 
@@ -55,6 +55,28 @@ describe('YooNotify Component', () => {
         it(`Includes iconStyle class: .${iconStyle === 'solid' ? 'fas' : 'far'}`, async () => {
           await wrapper.setProps({ showIndicator: false, showIcon: true, icon: 'cog', iconStyle })
           expect(wrapper.find('.yoo-notify__icon').classes().includes(`${iconStyle === 'solid' ? 'fas' : 'far'}`)).toBe(true)
+        })
+      })
+    })
+    describe('indicatorFill', () => {
+      it('Has a valid default value', () => {
+        expect(PropsConfig.indicatorFill.options.includes(YooNotify.props.indicatorFill.default)).toBe(true)
+      })
+      PropsConfig.indicatorFill.options.forEach(indicatorFill => {
+        it(`Includes indicatorFill class: .yoo-indicator--${indicatorFill}`, async () => {
+          await wrapper.setProps({ indicatorFill })
+          expect(wrapper.find(`.yoo-indicator--${indicatorFill}`).exists()).toBe(true)
+        })
+      })
+    })
+    describe('indicatorSize', () => {
+      it('Has a valid default value', () => {
+        expect(PropsConfig.indicatorSize.options.includes(YooNotify.props.indicatorSize.default)).toBe(true)
+      })
+      PropsConfig.indicatorSize.options.forEach(indicatorSize => {
+        it(`Includes indicatorFill class: .yoo-indicator--${indicatorSize}`, async () => {
+          await wrapper.setProps({ indicatorSize })
+          expect(wrapper.find(`.yoo-indicator--${indicatorSize}`).exists()).toBe(true)
         })
       })
     })
