@@ -3,7 +3,6 @@ module.exports = {
     options: [
       'primary',
       'danger',
-      'neutral',
       'dark',
       'light'
     ]
@@ -12,9 +11,25 @@ module.exports = {
     options: [
       'primary',
       'danger',
-      'neutral',
       'dark',
-      'light'
+      'light',
+      'black'
+    ]
+  },
+  titleWeight: {
+    options: [
+      'bold',
+      'semi-bold',
+      'medium',
+      'regular'
+    ]
+  },
+  titleSize: {
+    options: [
+      'sm',
+      'md',
+      'lg',
+      'xl'
     ]
   },
   iconFill: {
@@ -23,19 +38,16 @@ module.exports = {
       'danger',
       'neutral',
       'dark',
-      'light'
+      'light',
+      'black',
+      'white'
     ]
   },
   actionableType: {
     options: [
       'button',
-      'check'
-    ]
-  },
-  actionableTextPosition: {
-    options: [
-      'left',
-      'right'
+      'check',
+      'switch'
     ]
   },
   iconStyle: {

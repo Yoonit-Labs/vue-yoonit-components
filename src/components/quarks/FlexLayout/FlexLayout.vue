@@ -42,8 +42,10 @@ export default {
       default: '0'
     }
   },
-  components: {},
   mounted () {
+    this.doGetChildProps()
+  },
+  updated () {
     this.doGetChildProps()
   },
   computed: {
@@ -73,7 +75,9 @@ export default {
   methods: {
     doGetChildProps () {
       const child = this.$slots.default
-
+      if (!Array.isArray(child)) {
+        return
+      }
       child.forEach(item => {
         if (typeof item.data !== 'undefined') {
           const listStyles = {}
@@ -110,9 +114,7 @@ export default {
         }
       })
     }
-  },
-  filters: {},
-  watch: {}
+  }
 }
 </script>
 

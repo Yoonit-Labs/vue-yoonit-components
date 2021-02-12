@@ -47,6 +47,30 @@ describe('YooTableAttribute Component', () => {
       })
     })
 
+    describe('titleWeight', () => {
+      it('Has a valid default value', () => {
+        expect(PropsConfig.titleWeight.options.includes(YooTableAttribute.props.titleWeight.default)).toBe(true)
+      })
+      PropsConfig.titleWeight.options.forEach(titleWeight => {
+        it('Loads the Component HTML', async () => {
+          await wrapper.setProps({ titleWeight })
+          expect(wrapper.find(`.${classBlock}__title--${titleWeight}`).exists()).toBe(true)
+        })
+      })
+    })
+
+    describe('titleSize', () => {
+      it('Has a valid default value', () => {
+        expect(PropsConfig.titleSize.options.includes(YooTableAttribute.props.titleSize.default)).toBe(true)
+      })
+      PropsConfig.titleSize.options.forEach(titleSize => {
+        it('Loads the Component HTML', async () => {
+          await wrapper.setProps({ titleSize })
+          expect(wrapper.find(`.${classBlock}__title--${titleSize}`).exists()).toBe(true)
+        })
+      })
+    })
+
     describe('detailFill', () => {
       it('Has a valid default value', () => {
         expect(PropsConfig.detailFill.options.includes(YooTableAttribute.props.detailFill.default)).toBe(true)
@@ -106,20 +130,8 @@ describe('YooTableAttribute Component', () => {
       })
       PropsConfig.iconFill.options.forEach(iconFill => {
         it('Loads the Component HTML', async () => {
-          await wrapper.setProps({ iconFill })
+          await wrapper.setProps({ icon: 'icon-value', iconFill })
           expect(wrapper.find(`.yoo-icon__fill--${iconFill}`).exists()).toBe(true)
-        })
-      })
-    })
-
-    describe('actionableTextPosition', () => {
-      it('Has a valid default value', () => {
-        expect(PropsConfig.actionableTextPosition.options.includes(YooTableAttribute.props.actionableTextPosition.default)).toBe(true)
-      })
-      PropsConfig.actionableTextPosition.options.forEach(actionableTextPosition => {
-        it(`Includes actionableTextPosition class: .yoo-checkbox__text--${actionableTextPosition}`, async () => {
-          await wrapper.setProps({ actionable: true, actionableType: 'check', actionableTextPosition })
-          expect(wrapper.find(`.yoo-checkbox__text--${actionableTextPosition}`).exists()).toBe(true)
         })
       })
     })
@@ -138,17 +150,31 @@ describe('YooTableAttribute Component', () => {
       })
     })
 
-    describe('buttonDisable', () => {
+    describe('actionableDisable', () => {
       it('Has a valid default value', () => {
-        expect(YooTableAttribute.props.buttonDisable.default).toBe(false)
+        expect(YooTableAttribute.props.actionableDisable.default).toBe(false)
       })
       it('Has a button disabled', async () => {
-        await wrapper.setProps({ actionable: true, actionableType: 'button', buttonDisable: true })
+        await wrapper.setProps({ actionable: true, actionableType: 'button', actionableDisable: true })
         expect(wrapper.find('.yoo-btn--disabled').exists()).toBe(true)
       })
       it('Has not a button disabled', async () => {
-        await wrapper.setProps({ actionable: true, actionableType: 'button', buttonDisable: false })
+        await wrapper.setProps({ actionable: true, actionableType: 'button', actionableDisable: false })
         expect(wrapper.find('.yoo-btn--disabled').exists()).toBe(false)
+      })
+    })
+
+    describe('actionableActive', () => {
+      it('Has a valid default value', () => {
+        expect(YooTableAttribute.props.actionableActive.default).toBe(false)
+      })
+      it('Has a checkButton is active', async () => {
+        await wrapper.setProps({ actionable: true, actionableType: 'check', actionableActive: true })
+        expect(wrapper.find('.yoo-checkbox__check--active').exists()).toBe(true)
+      })
+      it('Has a switch is active', async () => {
+        await wrapper.setProps({ actionable: true, actionableType: 'switch', actionableActive: true })
+        expect(wrapper.find('.yoo-switch--checked').exists()).toBe(true)
       })
     })
 
@@ -178,7 +204,7 @@ describe('YooTableAttribute Component', () => {
     describe('Click', () => {
       it('Emits Click Event', async () => {
         await wrapper.setProps({ actionable: true, actionableType: 'button' })
-        await wrapper.find('.yoo__container--button').vm.$emit('doClick')
+        await wrapper.find('.yoo__container--button').vm.$emit('onClick')
         expect(wrapper.emitted()).toHaveProperty('response')
       })
     })

@@ -3,7 +3,7 @@ div
   div(
     :class="['yoo-separator', ...takeModifier]"
   )
-    p.m__l--l.m__t--none.m__b--none.m__r--none(
+    p.m__l--m.m__t--none.m__b--none.m__r--none(
       v-show="text"
       :class="['yoo-separator__label',  ...takeModifier]"
     )

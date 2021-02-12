@@ -32,6 +32,21 @@ describe('YooCard Component', () => {
   })
 
   describe('Props', () => {
+    describe('borderLeft', () => {
+      it('Has a valid default value', () => {
+        expect(YooCard.props.borderLeft.default).toBe(true)
+      })
+
+      it(`Includes borderLeft class: .${classBlock}__style--border-left`, async () => {
+        expect(wrapper.find(`.${classBlock}__style--border-left`).exists()).toBe(true)
+      })
+
+      it(`Does not includes borderLeft class: .${classBlock}__style--border-left`, async () => {
+        await wrapper.setProps({ borderLeft: false })
+        expect(wrapper.find(`.${classBlock}__style--border-left`).exists()).toBe(false)
+      })
+    })
+
     describe('borderFill', () => {
       it('Has a valid default value', () => {
         expect(PropsConfig.borderFill.options.includes(YooCard.props.borderFill.default)).toBe(true)

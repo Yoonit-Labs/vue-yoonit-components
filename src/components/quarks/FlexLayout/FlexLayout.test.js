@@ -105,6 +105,10 @@ describe('YooFlexLayout Component', () => {
         })
         expect(wrapper.html()).toContain('Slot content')
       })
+      it('Does not check mount childs', async () => {
+        const wrapper = shallowMount(YooFlexLayout, {})
+        expect(wrapper.html()).not.toContain('Slot content')
+      })
     })
   }) // describe Props
 })

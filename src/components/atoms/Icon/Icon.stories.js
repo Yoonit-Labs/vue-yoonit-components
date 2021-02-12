@@ -30,7 +30,7 @@ const Template = (args, { argTypes }) => ({
   props: Object.keys(argTypes),
   components: { YooIcon },
   template:
-    '<yoo-icon v-bind="$props"></yoo-avatar>'
+    '<yoo-icon v-bind="$props"></yoo-icon>'
 })
 
 export const Custom = Template.bind({})

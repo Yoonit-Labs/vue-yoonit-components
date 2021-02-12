@@ -14,7 +14,8 @@ const mountComponent = () => {
         },
         {
           text: '2',
-          value: 2
+          value: 2,
+          active: true
         },
         {
           text: '3',
