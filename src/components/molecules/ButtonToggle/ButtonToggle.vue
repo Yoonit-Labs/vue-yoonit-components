@@ -29,7 +29,7 @@
 
 import YooButton from '@/components/atoms/Button/Button.vue'
 
-import YooFlexLayout from '@/components/quarks/FlexLayout/FlexLayout.vue'
+import YooFlexLayout from '@/components/bosons/FlexLayout/FlexLayout.vue'
 
 export default {
   name: 'YooButtonToggle',

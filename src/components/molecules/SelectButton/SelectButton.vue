@@ -18,7 +18,7 @@
 
 <script>
 
-import YooFlexLayout from '@/components/quarks/FlexLayout/FlexLayout.vue'
+import YooFlexLayout from '@/components/bosons/FlexLayout/FlexLayout.vue'
 
 import YooButton from '@/components/atoms/Button/Button.vue'
 

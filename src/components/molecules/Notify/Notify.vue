@@ -34,9 +34,9 @@
 <script>
 
 import YooButton from '@/components/atoms/Button/Button.vue'
-import YooFlexLayout from '@/components/quarks/FlexLayout/FlexLayout.vue'
+import YooFlexLayout from '@/components/bosons/FlexLayout/FlexLayout.vue'
 import YooIndicator from '@/components/quarks/Indicator/Indicator.vue'
-import YooGridLayout from '@/components/quarks/GridLayout/GridLayout.vue'
+import YooGridLayout from '@/components/bosons/GridLayout/GridLayout.vue'
 
 import PropsConfig from '@/components/molecules/Notify/Notify.config'
 

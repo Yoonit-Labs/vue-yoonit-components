@@ -8,7 +8,7 @@
 
 <script>
 
-import PropsConfig from '@/components/quarks/GridLayout/GridLayout.config'
+import PropsConfig from '@/components/bosons/GridLayout/GridLayout.config'
 
 export default {
   name: 'YooGridLayout',

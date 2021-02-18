@@ -20,7 +20,7 @@
 </template>
 
 <script>
-import YooFlexLayout from '@/components/quarks/FlexLayout/FlexLayout.vue'
+import YooFlexLayout from '@/components/bosons/FlexLayout/FlexLayout.vue'
 
 export default {
   name: 'YooHeader',

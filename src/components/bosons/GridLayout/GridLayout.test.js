@@ -1,6 +1,6 @@
 import { shallowMount } from '@vue/test-utils'
-import YooGridLayout from '@/components/quarks/GridLayout/GridLayout.vue'
-import PropsConfig from '@/components/quarks/GridLayout/GridLayout.config'
+import YooGridLayout from '@/components/bosons/GridLayout/GridLayout.vue'
+import PropsConfig from '@/components/bosons/GridLayout/GridLayout.config'
 
 const classBlock = 'yoo-grid-layout'
 const SlotText = 'Default Slot Text'

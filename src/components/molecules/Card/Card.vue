@@ -38,8 +38,8 @@
 
 <script>
 
-import YooFlexLayout from '@/components/quarks/FlexLayout/FlexLayout.vue'
-import YooGridLayout from '@/components/quarks/GridLayout/GridLayout.vue'
+import YooFlexLayout from '@/components/bosons/FlexLayout/FlexLayout.vue'
+import YooGridLayout from '@/components/bosons/GridLayout/GridLayout.vue'
 
 export default {
   name: 'YooCard',

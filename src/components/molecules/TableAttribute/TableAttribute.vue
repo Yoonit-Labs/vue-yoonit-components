@@ -80,7 +80,7 @@ YooFlexLayout(
 <script>
 
 import PropsConfig from '@/components/molecules/TableAttribute/TableAttribute.config'
-import YooFlexLayout from '@/components/quarks/FlexLayout/FlexLayout.vue'
+import YooFlexLayout from '@/components/bosons/FlexLayout/FlexLayout.vue'
 import YooIcon from '@/components/atoms/Icon/Icon.vue'
 import YooButton from '@/components/atoms/Button/Button.vue'
 import YooCheckButton from '@/components/atoms/CheckButton/CheckButton.vue'

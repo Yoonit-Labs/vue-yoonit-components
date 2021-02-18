@@ -7,7 +7,7 @@
 
 <script>
 
-import PropsConfig from '@/components/quarks/FlexLayout/FlexLayout.config'
+import PropsConfig from '@/components/bosons/FlexLayout/FlexLayout.config'
 
 export default {
   name: 'YooFlexLayout',

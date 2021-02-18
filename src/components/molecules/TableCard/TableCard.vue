@@ -72,7 +72,7 @@
 <script>
 
 import PropsConfig from '@/components/molecules/TableCard/TableCard.config'
-import YooFlexLayout from '@/components/quarks/FlexLayout/FlexLayout.vue'
+import YooFlexLayout from '@/components/bosons/FlexLayout/FlexLayout.vue'
 import YooButton from '@/components/atoms/Button/Button.vue'
 import YooCheckButton from '@/components/atoms/CheckButton/CheckButton.vue'
 

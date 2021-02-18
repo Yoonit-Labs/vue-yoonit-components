@@ -48,7 +48,7 @@ Custom.args = {
     },
     required: true,
     visible: true,
-    type: 'check',
+    type: 'radio',
     answers: answers
   },
   answers: answers
