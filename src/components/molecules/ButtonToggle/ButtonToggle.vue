@@ -26,11 +26,8 @@
 </template>
 
 <script>
-
 import YooButton from '@/components/atoms/Button/Button.vue'
-
 import YooFlexLayout from '@/components/bosons/FlexLayout/FlexLayout.vue'
-
 export default {
   name: 'YooButtonToggle',
   props: {
