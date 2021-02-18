@@ -55,18 +55,16 @@ describe('YooCheckButton Component', () => {
       })
     })
 
-    describe('initialValue', () => {
-      it(`Does not include initialValue class: .${classBlock}__check--active when not initialValue`, async () => {
+    describe('checked', () => {
+      it(`Does not include checked class: .${classBlock}__check--active when not checked`, async () => {
         expect(wrapper.find(`.${classBlock}__check--active`).exists()).toBe(false)
       })
-      it(`Includes initialValue class: .${classBlock}__check--active when initialValue`, async () => {
-        wrapper = shallowMount(YooCheckButton, { propsData: { initialValue: true } })
-        await wrapper.vm.$nextTick()
+      it(`Includes checked class: .${classBlock}__check--active when checked`, async () => {
+        await wrapper.setProps({ checked: true })
         expect(wrapper.find(`.${classBlock}__check--active`).exists()).toBe(true)
       })
       it(`Includes card active class: .${classBlock}__card--active when card`, async () => {
-        wrapper = shallowMount(YooCheckButton, { propsData: { initialValue: true, card: true } })
-        await wrapper.vm.$nextTick()
+        await wrapper.setProps({ checked: true, card: true })
         expect(wrapper.find(`.${classBlock}__card--active`).exists()).toBe(true)
       })
     })
@@ -75,7 +73,7 @@ describe('YooCheckButton Component', () => {
       it(`Does not include disabled class: .${classBlock}__check--disabled when not disabled`, async () => {
         expect(wrapper.find(`.${classBlock}__check--disabled`).exists()).toBe(false)
       })
-      it(`Includes disabled class: .${classBlock}__check--disabled when initialValue`, async () => {
+      it(`Includes disabled class: .${classBlock}__check--disabled when checked`, async () => {
         await wrapper.setProps({ disabled: true })
         expect(wrapper.find(`.${classBlock}__check--disabled`).exists()).toBe(true)
       })
@@ -93,7 +91,7 @@ describe('YooCheckButton Component', () => {
         expect(wrapper.find(`.${classBlock}__card`).exists()).toBe(true)
       })
       it(`Includes card active class: .${classBlock}__card--active when card`, async () => {
-        wrapper = shallowMount(YooCheckButton, { propsData: { initialValue: true, card: true } })
+        wrapper = shallowMount(YooCheckButton, { propsData: { checked: true, card: true } })
         await wrapper.vm.$nextTick()
         expect(wrapper.find(`.${classBlock}__card--active`).exists()).toBe(true)
       })

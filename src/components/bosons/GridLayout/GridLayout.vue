@@ -125,7 +125,7 @@ export default {
     doGetChildProps () {
       const childNodes = this.$slots.default
       childNodes.forEach(item => {
-        if (typeof item.data !== 'undefined') {
+        if (item.data) {
           const listStyles = {}
           const attrs = (typeof item.data.attrs !== 'undefined') ? item.data.attrs : item.elm.attributes
 

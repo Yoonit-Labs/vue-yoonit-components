@@ -1,5 +1,6 @@
 import yooQuizQuestion from '@/components/molecules/QuizQuestion/QuizQuestion.vue'
 import PropsConfig from '@/components/molecules/QuizQuestion/QuizQuestion.config'
+import * as ConfigMocks from '@/components/molecules/QuizQuestion/QuizQuestion.forms'
 
 var answers = [
   {
@@ -41,30 +42,17 @@ const Template = (args, { argTypes }) => ({
 
 export const Custom = Template.bind({})
 Custom.args = {
-  question: {
-    id: 'covid-cl1',
-    text: {
-      ptBR: 'Marque os sintomas sentidos nas últimas horas'
-    },
-    required: true,
-    visible: true,
-    type: 'radio',
-    answers: answers
-  },
-  answers: answers
+  question: ConfigMocks.questionRadio,
+  answers: ConfigMocks.answers
 }
 
-export const Default = Template.bind({})
-Default.args = {
-  question: {
-    id: 'covid-cl1',
-    text: {
-      ptBR: 'Marque os sintomas sentidos nas últimas horas'
-    },
-    required: true,
-    visible: true,
-    type: 'check',
-    answers: answers
-  },
+export const CheckButton = Template.bind({})
+CheckButton.args = {
+  question: ConfigMocks.questionCheck,
+  answers: answers
+}
+export const RadioButton = Template.bind({})
+RadioButton.args = {
+  question: ConfigMocks.questionRadio,
   answers: answers
 }

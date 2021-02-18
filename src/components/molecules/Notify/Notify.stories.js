@@ -22,6 +22,39 @@ export default {
         type: 'select',
         options: PropsConfig.notifyTextSize.options
       }
+    },
+    indicatorFill: {
+      control: {
+        type: 'select',
+        options: PropsConfig.indicatorFill.options
+      }
+    },
+    showIndicator: {
+      control: {
+        type: 'boolean'
+      }
+    },
+    showButton: {
+      control: {
+        type: 'boolean'
+      }
+    },
+    showIcon: {
+      control: {
+        type: 'boolean'
+      }
+    },
+    indicatorSize: {
+      control: {
+        type: 'select',
+        options: PropsConfig.indicatorSize.options
+      }
+    },
+    iconColor: {
+      control: {
+        type: 'select',
+        options: PropsConfig.iconColor.options
+      }
     }
   }
 }
