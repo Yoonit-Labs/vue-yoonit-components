@@ -1,0 +1,7 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`YooModal Component Matches Snapshot 1`] = `
+<div class="backdrop">
+  <yooflexlayout-stub flexdirection="column" flexwrap="wrap" justifycontent="center" alignitems="center" aligncontent="stretch" gap="0" class="yoo-modal"></yooflexlayout-stub>
+</div>
+`;

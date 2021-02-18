@@ -19,9 +19,11 @@
     )
 </template>
 <script>
-import PropsConfig from '@/config/Props.config'
+
+import PropsConfig from '@/components/atoms/Button/Button.config'
+
 export default {
-  name: 'Button',
+  name: 'YooButton',
   props: {
     variation: {
       type: String,
@@ -91,11 +93,6 @@ export default {
       }
     }
   },
-  data: () => ({}),
-  created () {},
-  mounted () {},
-  updated () {},
-  components: {},
   computed: {
     takeIconColor () {
       return { color: `${this.iconCustomColor}` }
@@ -135,10 +132,7 @@ export default {
         ? 'fas' // fontawesome solid
         : 'far' // fontawesome regular
     }
-  },
-  methods: {},
-  filters: {},
-  watch: {}
+  }
 }
 </script>
 

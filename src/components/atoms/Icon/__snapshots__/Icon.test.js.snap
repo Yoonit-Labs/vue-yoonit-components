@@ -1,0 +1,3 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`YooIcon Component Matches Snapshot 1`] = `<i class="yoo-icon fas fa- yoo-icon__size--lg yoo-icon__fill--neutral"></i>`;
