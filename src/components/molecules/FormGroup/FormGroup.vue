@@ -74,6 +74,11 @@ export default {
       // protect custom input
       return { ...others }
     },
+    /**
+    * @description Returns classes based on the chosen props
+    * @computed takeModifier
+    * @returns {array}
+    */
     takeModifier () {
       const block = 'yoo-input'
       const classList = []
@@ -96,7 +101,11 @@ export default {
         this.doValidate(event)
       }
     },
-    doValidate (e) {
+    /**
+    * @description Validate inputed value
+    * @method doValidate
+    */
+    doValidate () {
       if (this.required) {
         this.value === ''
           ? this.isValid = false

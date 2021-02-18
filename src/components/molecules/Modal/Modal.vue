@@ -15,7 +15,7 @@
 
 <script>
 
-import YooFlexLayout from '@/components/quarks/FlexLayout/FlexLayout'
+import YooFlexLayout from '@/components/bosons/FlexLayout/FlexLayout'
 
 export default {
   name: 'YooModal',

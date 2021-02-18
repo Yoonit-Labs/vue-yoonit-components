@@ -12,7 +12,24 @@ module.exports = {
       'primary',
       'danger',
       'dark',
-      'light'
+      'light',
+      'black'
+    ]
+  },
+  titleWeight: {
+    options: [
+      'bold',
+      'semi-bold',
+      'medium',
+      'regular'
+    ]
+  },
+  titleSize: {
+    options: [
+      'sm',
+      'md',
+      'lg',
+      'xl'
     ]
   },
   iconFill: {
@@ -31,12 +48,6 @@ module.exports = {
       'button',
       'check',
       'switch'
-    ]
-  },
-  actionableCheckPosition: {
-    options: [
-      'left',
-      'right'
     ]
   },
   iconStyle: {

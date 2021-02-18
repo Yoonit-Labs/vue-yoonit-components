@@ -10,7 +10,7 @@ exports[`YooSegmentedBar Component Matches Snapshot 1`] = `
       </button></div>
   </div>
   <div class="yoo-flex-layout yoo-segmented-bar__item " style="flex-direction: row; flex-wrap: nowrap; justify-content: center; align-items: stretch; align-content: stretch;">
-    <div class="yoo__container--button" size="normal" style="width: 100%; height: 40px;"><button class="yoo-btn yoo-btn__fill--light yoo-btn--clear yoo-btn--normal yoo-btn--animation-none">
+    <div class="yoo__container--button" size="normal" style="width: 100%; height: 40px;"><button class="yoo-btn yoo-btn__fill--dark yoo-btn--clear yoo-btn--normal yoo-btn--animation-none">
         <!---->
         <p class="yoo-btn__text">Second</p>
         <!---->

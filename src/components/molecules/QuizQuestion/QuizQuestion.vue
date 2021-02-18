@@ -30,7 +30,7 @@
 
 <script>
 
-import YooGridLayout from '@/components/quarks/GridLayout/GridLayout.vue'
+import YooGridLayout from '@/components/bosons/GridLayout/GridLayout.vue'
 import CheckButton from '@/components/atoms/CheckButton/CheckButton.vue'
 import PropsConfig from '@/components/molecules/QuizQuestion/QuizQuestion.config'
 

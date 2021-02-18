@@ -1,6 +1,6 @@
 import { shallowMount } from '@vue/test-utils'
-import YooScrollView from '@/components/quarks/ScrollView/ScrollView.vue'
-import PropsConfig from '@/components/quarks/ScrollView/ScrollView.config'
+import YooScrollView from '@/components/bosons/ScrollView/ScrollView.vue'
+import PropsConfig from '@/components/bosons/ScrollView/ScrollView.config'
 
 const classBlock = 'yoo-scroll-view'
 const SlotText = 'Default Slot Text'

@@ -18,7 +18,7 @@
 
 <script>
 
-import YooFlexLayout from '@/components/quarks/FlexLayout/FlexLayout.vue'
+import YooFlexLayout from '@/components/bosons/FlexLayout/FlexLayout.vue'
 
 import YooButton from '@/components/atoms/Button/Button.vue'
 
@@ -41,6 +41,13 @@ export default {
   data: () => ({
     selectedArray: []
   }),
+  mounted () {
+    this.rate.forEach(item => {
+      if (item.active === true) {
+        this.selectedArray.push(item.value)
+      }
+    })
+  },
   methods: {
     doActive (index, valor) {
       if (this.multiple) {

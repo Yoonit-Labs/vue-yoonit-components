@@ -17,6 +17,18 @@ export default {
         options: PropsConfig.titleFill.options
       }
     },
+    titleWeight: {
+      control: {
+        type: 'select',
+        options: PropsConfig.titleWeight.options
+      }
+    },
+    titleSize: {
+      control: {
+        type: 'select',
+        options: PropsConfig.titleSize.options
+      }
+    },
     iconFill: {
       control: {
         type: 'select',
@@ -27,12 +39,6 @@ export default {
       control: {
         type: 'select',
         options: PropsConfig.actionableType.options
-      }
-    },
-    actionableCheckPosition: {
-      control: {
-        type: 'select',
-        options: PropsConfig.actionableCheckPosition.options
       }
     },
     iconStyle: {

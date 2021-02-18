@@ -18,7 +18,7 @@
         v-show="options[index]"
         :text="option",
         :variation="selectedIndex === index ? 'base' : 'clear'",
-        :fill="selectedIndex === index ? 'primary' : 'light'",
+        :fill="selectedIndex === index ? 'primary' : 'dark'",
         size="normal",
         style="width: 100%;"
         @onClick="doEmitChoice($event, index)"
@@ -29,7 +29,7 @@
 
 import YooButton from '@/components/atoms/Button/Button.vue'
 
-import YooFlexLayout from '@/components/quarks/FlexLayout/FlexLayout.vue'
+import YooFlexLayout from '@/components/bosons/FlexLayout/FlexLayout.vue'
 
 export default {
   name: 'YooButtonToggle',

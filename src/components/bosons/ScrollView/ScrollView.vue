@@ -7,7 +7,7 @@
 
 <script>
 
-import PropsConfig from '@/components/quarks/ScrollView/ScrollView.config'
+import PropsConfig from '@/components/bosons/ScrollView/ScrollView.config'
 
 export default {
   name: 'YooScrollView',

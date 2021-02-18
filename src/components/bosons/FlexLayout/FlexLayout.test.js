@@ -1,6 +1,6 @@
 import { shallowMount } from '@vue/test-utils'
-import YooFlexLayout from '@/components/quarks/FlexLayout/FlexLayout.vue'
-import PropsConfig from '@/components/quarks/FlexLayout/FlexLayout.config'
+import YooFlexLayout from '@/components/bosons/FlexLayout/FlexLayout.vue'
+import PropsConfig from '@/components/bosons/FlexLayout/FlexLayout.config'
 
 const classBlock = 'yoo-flex-layout'
 const SlotText = 'Default Slot Text'
@@ -104,6 +104,10 @@ describe('YooFlexLayout Component', () => {
           slots: { default: '<div height="100px" width="100px" order="1" flexGrow="1" flexShrink="0" alignSelf="flex-end" backgroundColor="#FFF">Slot content</div>' }
         })
         expect(wrapper.html()).toContain('Slot content')
+      })
+      it('Does not check mount childs', async () => {
+        const wrapper = shallowMount(YooFlexLayout, {})
+        expect(wrapper.html()).not.toContain('Slot content')
       })
     })
   }) // describe Props

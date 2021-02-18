@@ -5,7 +5,6 @@ import YooCheckButton from './atoms/CheckButton/CheckButton.vue'
 import YooIcon from './atoms/Icon/Icon.vue'
 import YooSeparator from './atoms/Separator/Separator.vue'
 import YooStepper from './atoms/Stepper/Stepper.vue'
-import YooWarning from './atoms/Warning/Warning.vue'
 import YooSwitch from './atoms/Switch/Switch.vue'
 
 import YooButtonToggle from './molecules/ButtonToggle/ButtonToggle.vue'
@@ -20,11 +19,13 @@ import YooQuizQuestion from './molecules/QuizQuestion/QuizQuestion.vue'
 import YooSelectButton from './molecules/SelectButton/SelectButton.vue'
 import YooSegmentedBar from './molecules/SegmentedBar/SegmentedBar.vue'
 import YooTableAttribute from './molecules/TableAttribute/TableAttribute.vue'
+import YooTableCard from './molecules/TableCard/TableCard.vue'
 
-import YooFlexLayout from './quarks/FlexLayout/FlexLayout.vue'
-import YooGridLayout from './quarks/GridLayout/GridLayout.vue'
+import YooFlexLayout from './bosons/FlexLayout/FlexLayout.vue'
+import YooGridLayout from './bosons/GridLayout/GridLayout.vue'
+import YooScrollView from './bosons/ScrollView/ScrollView.vue'
+
 import YooIndicator from './quarks/Indicator/Indicator.vue'
-import YooScrollView from './quarks/ScrollView/ScrollView.vue'
 
 const yooComponents = {
   YooAnimation,
@@ -34,7 +35,6 @@ const yooComponents = {
   YooIcon,
   YooSeparator,
   YooStepper,
-  YooWarning,
   YooButtonToggle,
   YooCard,
   YooFormGroup,
@@ -51,7 +51,8 @@ const yooComponents = {
   YooFlexLayout,
   YooGridLayout,
   YooIndicator,
-  YooScrollView
+  YooScrollView,
+  YooTableCard
 }
 
 export default yooComponents

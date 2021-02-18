@@ -35,7 +35,7 @@ export default {
       default: 'medium',
       validator: value => PropsConfig.size.options.includes(value)
     },
-    initialValue: {
+    checked: {
       type: Boolean,
       default: false
     },
@@ -60,7 +60,7 @@ export default {
     timeId: null
   }),
   mounted () {
-    this.checkedField = this.initialValue
+    this.checkedField = this.checked
     this.timeId = `ycid-${Math.random().toString().substr(-7)}`
   },
   computed: {
@@ -135,6 +135,11 @@ export default {
       if (!this.disabled) {
         this.$emit('response', this.checkedField)
       }
+    }
+  },
+  watch: {
+    checked (value) {
+      this.checkedField = value
     }
   }
 }

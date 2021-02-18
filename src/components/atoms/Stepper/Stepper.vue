@@ -21,7 +21,7 @@ YooFlexLayout.yoo-stepper(
 
 <script>
 
-import YooFlexLayout from '@/components/quarks/FlexLayout/FlexLayout.vue'
+import YooFlexLayout from '@/components/bosons/FlexLayout/FlexLayout.vue'
 import PropsConfig from '@/components/atoms/Stepper/Stepper.config'
 
 export default {

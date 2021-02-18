@@ -1,6 +1,6 @@
 import { shallowMount } from '@vue/test-utils'
-import YooGridLayout from '@/components/quarks/GridLayout/GridLayout.vue'
-import PropsConfig from '@/components/quarks/GridLayout/GridLayout.config'
+import YooGridLayout from '@/components/bosons/GridLayout/GridLayout.vue'
+import PropsConfig from '@/components/bosons/GridLayout/GridLayout.config'
 
 const classBlock = 'yoo-grid-layout'
 const SlotText = 'Default Slot Text'
@@ -131,6 +131,18 @@ describe('YooGridLayout Component', () => {
     })
 
     describe('Childs', () => {
+      it('Check slot has no column and row attributes defined', () => {
+        const wrapper = shallowMount(YooGridLayout, {
+          slots: { default: '<div style="width: 100%;">Slot content</div>' },
+          propsData: {
+            cols: 'auto',
+            rows: 'auto'
+          }
+        })
+
+        expect(wrapper.html()).toContain('Slot content')
+      })
+
       it('Check mount childs', () => {
         const wrapper = shallowMount(YooGridLayout, {
           slots: { default: '<div row="1" col="1">Slot content</div>' },

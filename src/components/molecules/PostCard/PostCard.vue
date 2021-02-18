@@ -39,7 +39,7 @@
 <script>
 
 import YooIcon from '@/components/atoms/Icon/Icon.vue'
-import YooFlexLayout from '@/components/quarks/FlexLayout/FlexLayout.vue'
+import YooFlexLayout from '@/components/bosons/FlexLayout/FlexLayout.vue'
 import YooIndicator from '@/components/quarks/Indicator/Indicator.vue'
 
 import PropsConfig from '@/components/molecules/PostCard/PostCard.config'
