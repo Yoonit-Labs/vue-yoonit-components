@@ -62,7 +62,7 @@ YooFlexLayout(
         v-else-if="actionable && actionableType === 'check'"
         size="small"
         :class="[ 'yoo-table-attribute__detail', takeDetailFillModifier ]"
-        :initialValue="actionableActive"
+        :checked="actionableActive"
         @response="$emit('response', $event)"
       )
 
