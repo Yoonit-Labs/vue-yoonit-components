@@ -29,6 +29,21 @@ export default {
         options: PropsConfig.indicatorFill.options
       }
     },
+    showIndicator: {
+      control: {
+        type: 'boolean'
+      }
+    },
+    showButton: {
+      control: {
+        type: 'boolean'
+      }
+    },
+    showIcon: {
+      control: {
+        type: 'boolean'
+      }
+    },
     indicatorSize: {
       control: {
         type: 'select',

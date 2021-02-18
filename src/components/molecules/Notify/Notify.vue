@@ -11,7 +11,6 @@
     YooFlexLayout(
       justifyContent="space-between"
       alignItems="center"
-      :col="takeTextColumn"
       col="1"
       row="1"
     )
