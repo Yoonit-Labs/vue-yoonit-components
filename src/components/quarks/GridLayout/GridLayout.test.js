@@ -131,6 +131,18 @@ describe('YooGridLayout Component', () => {
     })
 
     describe('Childs', () => {
+      it('Check slot has no column and row attributes defined', () => {
+        const wrapper = shallowMount(YooGridLayout, {
+          slots: { default: '<div style="width: 100%;">Slot content</div>' },
+          propsData: {
+            cols: 'auto',
+            rows: 'auto'
+          }
+        })
+
+        expect(wrapper.html()).toContain('Slot content')
+      })
+
       it('Check mount childs', () => {
         const wrapper = shallowMount(YooGridLayout, {
           slots: { default: '<div row="1" col="1">Slot content</div>' },

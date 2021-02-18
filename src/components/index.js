@@ -5,7 +5,6 @@ import YooCheckButton from './atoms/CheckButton/CheckButton.vue'
 import YooIcon from './atoms/Icon/Icon.vue'
 import YooSeparator from './atoms/Separator/Separator.vue'
 import YooStepper from './atoms/Stepper/Stepper.vue'
-import YooWarning from './atoms/Warning/Warning.vue'
 import YooSwitch from './atoms/Switch/Switch.vue'
 
 import YooButtonToggle from './molecules/ButtonToggle/ButtonToggle.vue'
@@ -35,7 +34,6 @@ const yooComponents = {
   YooIcon,
   YooSeparator,
   YooStepper,
-  YooWarning,
   YooButtonToggle,
   YooCard,
   YooFormGroup,
