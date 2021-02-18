@@ -1,52 +1,15 @@
 import { mount } from '@vue/test-utils'
 import PropsConfig from './QuizQuestion.config'
 import YooQuizQuestion from './QuizQuestion.vue'
+import * as ConfigMocks from '@/components/molecules/QuizQuestion/QuizQuestion.forms'
 
 const SlotText = 'Default Slot Text'
-const answers = [
-  {
-    id: 'ans1',
-    text: {
-      ptBR: 'Cansaço'
-    },
-    weight: 3
-  },
-  {
-    id: 'ans2',
-    text: {
-      ptBR: 'Corrimento Nasal (Coriza)'
-    },
-    weight: 3,
-    status: true,
-    override: true
-  }
-]
-
-const questionCheck = {
-  id: 'covid-cl1',
-  text: {
-    ptBR: 'Marque os sintomas sentidos nas últimas horas'
-  },
-  visible: true,
-  type: 'check',
-  answers
-}
-
-const questionRadio = {
-  id: 'covid-cl1',
-  text: {
-    ptBR: 'Marque os sintomas sentidos nas últimas horas'
-  },
-  visible: true,
-  type: 'radio',
-  answers
-}
 
 const mountComponent = () => {
   return mount(YooQuizQuestion, {
     slots: { default: SlotText },
     propsData: {
-      question: questionCheck
+      question: ConfigMocks.questionCheck
     }
   })
 }
@@ -88,7 +51,7 @@ describe('YooQuizQuestion Component', () => {
         expect(wrapper.text()).not.toMatch('*')
       })
       it('Show `*` if question required', async () => {
-        await wrapper.setProps({ question: { ...questionCheck, required: true } })
+        await wrapper.setProps({ question: { ...ConfigMocks.questionCheck, required: true } })
         expect(wrapper.text()).toMatch('*')
       })
     })
@@ -99,15 +62,7 @@ describe('YooQuizQuestion Component', () => {
       })
       it('Does not include class: .yoo-quiz__card when array answers does not has lenght', async () => {
         await wrapper.setProps({
-          question: {
-            id: 'covid-cl1',
-            text: {
-              ptBR: 'Marque os sintomas sentidos nas últimas horas'
-            },
-            visible: true,
-            type: 'check',
-            answers: []
-          }
+          question: ConfigMocks.questionAnswersNull
         })
         expect(wrapper.find('.yoo-quiz__card').exists()).toBe(false)
       })
@@ -124,7 +79,7 @@ describe('YooQuizQuestion Component', () => {
 
     describe('Click', () => {
       it('Emits Click Event', async () => {
-        await wrapper.setProps({ question: questionRadio })
+        await wrapper.setProps({ question: ConfigMocks.questionRadio })
         await wrapper.find('.yoo-quiz__card').vm.$emit('response')
         expect(wrapper.emitted()).toHaveProperty('tapChoice')
       })
