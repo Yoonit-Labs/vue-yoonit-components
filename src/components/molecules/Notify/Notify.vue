@@ -31,7 +31,7 @@
       row="1"
     )
       p.m__r--l.m__l--s(
-        :class="['yoo-notify__text', takeTextColor, takeTextSize, takeTextPosition]"
+        :class="['yoo-notify__text', takeTextColor, takeTextSize]"
         alignItems="center"
       ) {{ notifyText }}
 
@@ -180,14 +180,6 @@ export default {
     */
     takeIconColor () {
       return [`yoo-notify__icon--${this.iconColor}`]
-    },
-    /**
-    * @description Print classes based on the chosen prop textPosition
-    * @computed takeTextPosition
-    * @returns {array}
-    */
-    takeTextPosition () {
-      return [`yoo-notify__text--${this.textPosition}`]
     },
     /**
     * @description Print style based on the chosen props showIndicator and showCloseButton
