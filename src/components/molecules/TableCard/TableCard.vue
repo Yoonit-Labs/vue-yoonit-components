@@ -17,9 +17,9 @@
         alignItems="center"
         flexDirection="row"
       )
-        p.yoo-table-card__title {{ title }}
+        div.yoo-table-card__title {{ title }}
 
-        p(
+        div(
           :class="[ 'yoo-table-card__subtitle', takeFillModifier ]"
         )
           | {{ `• ${subtitle}` }}

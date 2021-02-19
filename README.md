@@ -1,43 +1,86 @@
-# yoonit-components
+[<img src="https://raw.githubusercontent.com/Yoonit-Labs/nativescript-yoonit-camera/development/logo_cyberlabs.png" width="300">](https://cyberlabs.ai/)
 
-<p align="center">
-  <a href="/coverage/icov-report/index.html"><img src="coverage/badge-branches.svg"></a>
-  <a href="/coverage/icov-report/index.html"><img src="coverage/badge-functions.svg"></a>
-  <a href="/coverage/icov-report/index.html"><img src="coverage/badge-lines.svg"></a>
-  <a href="/coverage/icov-report/index.html"><img src="coverage/badge-statements.svg"></a>
-</p>
+# Vue Yoonit Components
 
-<br/>
+![Version](https://img.shields.io/npm/v/@yoonit/nativescript-camera?color=lightgrey&style=for-the-badge&logo=npm)
+![Downloads](https://img.shields.io/npm/dm/@yoonit/nativescript-camera?color=lightgrey&logo=npm&style=for-the-badge)
+![Vue](https://img.shields.io/badge/Vue.js-35495E?color=lightgrey&style=for-the-badge&logo=vue.js)
+![Storybook](https://cdn.jsdelivr.net/gh/storybookjs/brand@master/badge/badge-storybook.svg)
+![MIT license](https://img.shields.io/npm/l/@yoonit/nativescript-camera?color=lightgrey&style=for-the-badge)
 
-## Project setup
-```
-npm install
-```
+A Vue lib to provide:
+- 28 Vue Components to create interfaces
+- Unit tests with 100% coverage
+- Standardized code
+- Consistency between interfaces
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
+## Installation
 
-### Compiles and minifies for production
-```
-npm run build
+```javascript
+npm i -s @yoonit/vue-components
 ```
 
-### Run your unit tests
-```
-npm run test:unit
+## Usage
+
+To see and interact with all components, see the project storybook
+
+```javascript
+npm run storybook
 ```
 
-### Run your end-to-end tests
-```
-npm run test:e2e
+#### VueJS Plugin
+`main.js`
+```javascript
+import Vue from 'vue'
+import YoonitVueComponents from '@yoonit/vue-components'
+
+Vue.use(YoonitVueComponents)
 ```
 
-### Lints and fixes files
-```
-npm run lint
-```
+After that, you can access each component by calling it in the html template
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+#### YooButton Component Example
+`App.vue`
+```vue
+<template>
+  <yoo-button
+    variation="base"
+    buttonSize="normal"
+    fill="primary"
+    animation="none"
+    text="Button Base"
+  />
+  
+  <yoo-button
+    variation="outline"
+    buttonSize="normal"
+    fill="primary"
+    animation="none"
+    text="Button Outline"
+  />
+  
+  <yoo-button
+    variation="base"
+    buttonSize="normal"
+    fill="danger"
+    icon="check"
+    iconPosition="left"
+    iconSize="normal"
+    iconStyle="solid"
+    animation="none"
+    text="Button danger + icon check"
+  />
+</template>
+```
+[<img src="https://github.com/Yoonit-Labs/vue-yoonit-components/blob/development/public/readme-img/button-example.png" width="400">](https://cyberlabs.ai/)
+
+
+## To contribute and make it better
+
+Clone the repo, change what you want and send PR.
+
+Contributions are always welcome!
+
+---
+
+Code with ❤ by the [**Cyberlabs AI**](https://cyberlabs.ai/) Front-End Team
