@@ -42,20 +42,20 @@ const Template = (args, { argTypes }) => ({
   props: Object.keys(argTypes),
   components: { yooFlexLayout },
   template:
-    `<yoo-flex-layout v-bind="$props">
-        <div>Item 1</div>
-        <div>Item 2</div>
-        <div>Item 3 (Lorem ipsum dolor<br/> sit amet)</div>
-        <div>Item 4</div>
-        <div>Item 5</div>
-        <div>Item 6</div>
-        <div>Item 7</div>
-        <div>Item 8</div>
+    `<yoo-flex-layout v-bind="$props" style="max-width: 500px; min-height: 200px; padding: 8px; border: 1px solid #D6DBE2;">
+        <div style="background-color: #F5F6F7; color: black; font-family: Montserrat, sans-serif; font-size: 16px; padding: 8px; text-align: center;">Item 1</div>
+        <div style="background-color: #F5F6F7; color: black; font-family: Montserrat, sans-serif; font-size: 16px; padding: 8px; text-align: center;">Item 2</div>
+        <div style="background-color: #F5F6F7; color: black; font-family: Montserrat, sans-serif; font-size: 16px; padding: 8px; text-align: center;">Item 3 (Lorem ipsum dolor<br/> sit amet)</div>
+        <div style="background-color: #F5F6F7; color: black; font-family: Montserrat, sans-serif; font-size: 16px; padding: 8px; text-align: center;">Item 4</div>
+        <div style="background-color: #F5F6F7; color: black; font-family: Montserrat, sans-serif; font-size: 16px; padding: 8px; text-align: center;">Item 5</div>
+        <div style="background-color: #F5F6F7; color: black; font-family: Montserrat, sans-serif; font-size: 16px; padding: 8px; text-align: center;">Item 6</div>
+        <div style="background-color: #F5F6F7; color: black; font-family: Montserrat, sans-serif; font-size: 16px; padding: 8px; text-align: center;">Item 7</div>
+        <div style="background-color: #F5F6F7; color: black; font-family: Montserrat, sans-serif; font-size: 16px; padding: 8px; text-align: center;">Item 8</div>
     </yoo-flex-layout>`
 })
 
 export const Custom = Template.bind({})
-Custom.args = { gap: '10px', flexWrap: 'wrap',justifyContent: 'flex-start' }
+Custom.args = { gap: '10px', flexWrap: 'wrap', justifyContent: 'flex-start' }
 
 export const Default = Template.bind({})
 Default.args = { }
