@@ -22,7 +22,7 @@
 
 <script>
 
-import PropsConfig from '@/components/atoms/Button/Dropdown.config'
+import PropsConfig from '@/components/atoms/Dropdown/Dropdown.config'
 
 export default {
   name: 'YooDropDown',
