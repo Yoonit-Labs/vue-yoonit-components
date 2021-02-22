@@ -43,14 +43,14 @@ const Template = (args, { argTypes }) => ({
   components: { yooFlexLayout },
   template:
     `<yoo-flex-layout v-bind="$props" style="max-width: 500px; min-height: 200px; padding: 8px; border: 1px solid #D6DBE2;">
-        <div style="background-color: #F5F6F7; color: black; font-family: Montserrat, sans-serif; font-size: 16px; padding: 8px; text-align: center;">Item 1</div>
-        <div style="background-color: #F5F6F7; color: black; font-family: Montserrat, sans-serif; font-size: 16px; padding: 8px; text-align: center;">Item 2</div>
-        <div style="background-color: #F5F6F7; color: black; font-family: Montserrat, sans-serif; font-size: 16px; padding: 8px; text-align: center;">Item 3 (Lorem ipsum dolor<br/> sit amet)</div>
-        <div style="background-color: #F5F6F7; color: black; font-family: Montserrat, sans-serif; font-size: 16px; padding: 8px; text-align: center;">Item 4</div>
-        <div style="background-color: #F5F6F7; color: black; font-family: Montserrat, sans-serif; font-size: 16px; padding: 8px; text-align: center;">Item 5</div>
-        <div style="background-color: #F5F6F7; color: black; font-family: Montserrat, sans-serif; font-size: 16px; padding: 8px; text-align: center;">Item 6</div>
-        <div style="background-color: #F5F6F7; color: black; font-family: Montserrat, sans-serif; font-size: 16px; padding: 8px; text-align: center;">Item 7</div>
-        <div style="background-color: #F5F6F7; color: black; font-family: Montserrat, sans-serif; font-size: 16px; padding: 8px; text-align: center;">Item 8</div>
+        <div style="background-color: #47C8C3; color: white; font-family: Montserrat, sans-serif; font-size: 16px; padding: 8px; text-align: center;">Item 1</div>
+        <div style="background-color: #47C8C3; color: white; font-family: Montserrat, sans-serif; font-size: 16px; padding: 8px; text-align: center;">Item 2</div>
+        <div style="background-color: #47C8C3; color: white; font-family: Montserrat, sans-serif; font-size: 16px; padding: 8px; text-align: center;">Item 3 (Lorem ipsum dolor<br/> sit amet)</div>
+        <div style="background-color: #47C8C3; color: white; font-family: Montserrat, sans-serif; font-size: 16px; padding: 8px; text-align: center;">Item 4</div>
+        <div style="background-color: #47C8C3; color: white; font-family: Montserrat, sans-serif; font-size: 16px; padding: 8px; text-align: center;">Item 5</div>
+        <div style="background-color: #47C8C3; color: white; font-family: Montserrat, sans-serif; font-size: 16px; padding: 8px; text-align: center;">Item 6</div>
+        <div style="background-color: #47C8C3; color: white; font-family: Montserrat, sans-serif; font-size: 16px; padding: 8px; text-align: center;">Item 7</div>
+        <div style="background-color: #47C8C3; color: white; font-family: Montserrat, sans-serif; font-size: 16px; padding: 8px; text-align: center;">Item 8</div>
     </yoo-flex-layout>`
 })
 
