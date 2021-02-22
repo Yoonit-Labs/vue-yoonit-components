@@ -22,8 +22,12 @@ describe('YooDropdown Component', () => {
     expect(wrapper).toMatchSnapshot()
   })
 
-  it('Loads the Component HTML', () => {
+  it('Loads the Component Dropdown HTML', () => {
     expect(wrapper.find('.yoo-dropdown').exists()).toBe(true)
+  })
+
+  it('Loads the Component Dropdown Select HTML', () => {
+    expect(wrapper.find('.yoo-dropdown__select').exists()).toBe(true)
   })
 
   describe('Props', () => {
@@ -32,7 +36,7 @@ describe('YooDropdown Component', () => {
         expect(PropsConfig.size.options.includes(YooDropdown.props.size.default)).toBe(true)
       })
       PropsConfig.size.options.forEach(size => {
-        it(`Includes variation class: .${classBlock}--${size}`, async () => {
+        it(`Includes size class: .${classBlock}--${size}`, async () => {
           await wrapper.setProps({ size })
           expect(wrapper.find(`.${classBlock}--${size}`).exists()).toBe(true)
         })

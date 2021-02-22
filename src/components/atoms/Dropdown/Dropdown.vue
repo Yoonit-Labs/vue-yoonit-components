@@ -1,6 +1,6 @@
 <template lang="pug">
 .yoo-dropdown(
-  :class="['dropdowns', ...takeModifier]"
+  :class="['yoo-dropdown', ...takeModifier]"
 )
   .yoo-dropdown__select(
     v-if="!showOptions"
@@ -22,6 +22,8 @@
 
 <script>
 
+import PropsConfig from '@/components/atoms/Button/Dropdown.config'
+
 export default {
   name: 'YooDropDown',
   props: {
@@ -36,33 +38,16 @@ export default {
     size: {
       type: String,
       default: 'medium',
-      validator (value) {
-        return [
-          'small',
-          'medium',
-          'large'
-        ].indexOf(value) !== -1
-      }
+      validator: value => PropsConfig.size.options.includes(value)
     }
   },
   data: () => ({
     selectLabel: {},
     showOptions: false
   }),
-  created () {},
   mounted () {
     this.selectLabel = this.selected || this.takeOptions[0]
   },
-  updated () {},
-  beforeDestroy () {
-    // document.removeEventListener(
-    //     '',
-    //     event =>
-    //         this.functionName(event)
-    // )
-  },
-  destroyed () {},
-  components: {},
   computed: {
     /**
     * @description Select the label according to the option
@@ -129,9 +114,7 @@ export default {
       this.$emit('onClick', value)
       this.doShowOptions()
     }
-  },
-  filters: {},
-  watch: {}
+  }
 }
 </script>
 
