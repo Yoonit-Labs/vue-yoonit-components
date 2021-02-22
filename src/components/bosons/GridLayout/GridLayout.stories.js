@@ -25,17 +25,17 @@ const Template = (args, { argTypes }) => ({
   components: { yooGridLayout },
   template:
     `<yoo-grid-layout v-bind="$props">
-      <div row="1" col="1/3" class="color">Item 1</div>
-      <div row="1" col="3" class="color">Item 2</div>
-      <div row="1" col="4" class="color">Item 3</div>
-      <div row="2" col="1" class="color">Item 4</div>
-      <div row="2" col="2" class="color">Item 5</div>
-      <div row="2" col="3" class="color">Item 6</div>
-      <div row="2" col="4" class="color">Item 7</div>
-      <div row="3" col="1" class="color">Item 8</div>
-      <div row="3" col="2/5" class="color">Item 9</div>
-      <div row="4/6" col="1/3" class="color">Item 10</div>
-      <div row="4/6" col="3/5" class="color">Item 11</div>
+      <div row="1" col="1/3" style="border-radius: 4px; padding: 4px; font-family: Montserrat, sans-serif; color: white; background-color: #47C8C3;">Item 1</div>
+      <div row="1" col="3" style="border-radius: 4px; padding: 4px; font-family: Montserrat, sans-serif; color: white; background-color: #47C8C3;">Item 2</div>
+      <div row="1" col="4" style="border-radius: 4px; padding: 4px; font-family: Montserrat, sans-serif; color: white; background-color: #47C8C3;">Item 3</div>
+      <div row="2" col="1" style="border-radius: 4px; padding: 4px; font-family: Montserrat, sans-serif; color: white; background-color: #47C8C3;">Item 4</div>
+      <div row="2" col="2" style="border-radius: 4px; padding: 4px; font-family: Montserrat, sans-serif; color: white; background-color: #47C8C3;">Item 5</div>
+      <div row="2" col="3" style="border-radius: 4px; padding: 4px; font-family: Montserrat, sans-serif; color: white; background-color: #47C8C3;">Item 6</div>
+      <div row="2" col="4" style="border-radius: 4px; padding: 4px; font-family: Montserrat, sans-serif; color: white; background-color: #47C8C3;">Item 7</div>
+      <div row="3" col="1" style="border-radius: 4px; padding: 4px; font-family: Montserrat, sans-serif; color: white; background-color: #47C8C3;">Item 8</div>
+      <div row="3" col="2/5" style="border-radius: 4px; padding: 4px; font-family: Montserrat, sans-serif; color: white; background-color: #47C8C3;">Item 9</div>
+      <div row="4/6" col="1/3" style="border-radius: 4px; padding: 4px; font-family: Montserrat, sans-serif; color: white; background-color: #47C8C3;">Item 10</div>
+      <div row="4/6" col="3/5" style="border-radius: 4px; padding: 4px; font-family: Montserrat, sans-serif; color: white; background-color: #47C8C3;">Item 11</div>
     </yoo-grid-layout>`
 })
 
@@ -44,9 +44,9 @@ const TemplateDefault = (args, { argTypes }) => ({
   components: { yooGridLayout },
   template:
     `<yoo-grid-layout v-bind="$props">
-      <div row="1" col="1/3" class="example">Item 1</div>
-      <div row="2" col="1" class="example">Item 2</div>
-      <div row="2" col="2" class="example">Item 3</div>
+      <div row="1" col="1/3" style="padding: 8px; color: black; font-family: Montserrat, sans-serif; font-size: 16px; background-color: #F5F6F7;">Item 1</div>
+      <div row="2" col="1" style="padding: 8px; color: black; font-family: Montserrat, sans-serif; font-size: 16px; background-color: #F5F6F7;">Item 2</div>
+      <div row="2" col="2" style="padding: 8px; color: black; font-family: Montserrat, sans-serif; font-size: 16px; background-color: #F5F6F7;">Item 3</div>
     </yoo-grid-layout>`
 })
 
