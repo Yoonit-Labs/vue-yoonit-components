@@ -1,2 +1,15 @@
 @import '~@yoonit/style'
 @import '~@yoonit/style/bosons/YooFlexLayout'
+
+/*Templates to Storybook*/
+.yoo-flex-layout
+  max-width: 500px
+  min-height: 200px
+  padding: $spacing-xs
+  +border('sm', map-get($grey, 'greyLight'), solid, 'none')
+
+  > div
+    background-color: map-get($grey, 'greyLightest')
+    +font($black, 'md', $font-primary, 'medium')
+    padding: $spacing-md
+    text-align: center
