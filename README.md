@@ -22,13 +22,10 @@ npm i -s @yoonit/vue-components
 
 ## Usage
 
-To see and interact with all components, see the project storybook
-
-```javascript
-npm run storybook
-```
-
 #### VueJS Plugin
+
+To use the components, import the library into your project's main.js file
+
 `main.js`
 ```javascript
 import Vue from 'vue'
@@ -72,7 +69,17 @@ After that, you can access each component by calling it in the html template
   />
 </template>
 ```
-[<img src="https://github.com/Yoonit-Labs/vue-yoonit-components/blob/development/public/readme-img/button-example.png" width="400">](https://cyberlabs.ai/)
+
+## StoryBook
+
+To see all the components, run the Storybook available in this project
+
+```javascript
+npm run storybook
+```
+After running the command above, an address will be available for you to access the component library. There you will be able to meet, interact and copy the code ready to put in your project
+
+[<img src="https://github.com/Yoonit-Labs/vue-yoonit-components/blob/feature/readme/public/readme-img/sandbox.png" width="400">](https://cyberlabs.ai/)
 
 
 ## To contribute and make it better
