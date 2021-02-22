@@ -9,10 +9,12 @@
 ![MIT license](https://img.shields.io/npm/l/@yoonit/nativescript-camera?color=lightgrey&style=for-the-badge)
 
 A Vue lib to provide:
-- 28 Vue Components to create interfaces
+- 26 Vue Components to create interfaces
 - Unit tests with 100% coverage
 - Standardized code
 - Consistency between interfaces
+
+[<img src="https://github.com/Yoonit-Labs/vue-yoonit-components/blob/feature/readme/public/readme-img/sandbox.png" width="960">](https://cyberlabs.ai/)
 
 ## Installation
 
@@ -78,8 +80,6 @@ To see all the components, run the Storybook available in this project
 npm run storybook
 ```
 After running the command above, an address will be available for you to access the component library. There you will be able to meet, interact and copy the code ready to put in your project
-
-[<img src="https://github.com/Yoonit-Labs/vue-yoonit-components/blob/feature/readme/public/readme-img/sandbox.png" width="400">](https://cyberlabs.ai/)
 
 
 ## To contribute and make it better
