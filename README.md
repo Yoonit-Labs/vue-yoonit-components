@@ -5,7 +5,6 @@
 ![Version](https://img.shields.io/npm/v/@yoonit/nativescript-camera?color=lightgrey&style=for-the-badge&logo=npm)
 ![Downloads](https://img.shields.io/npm/dm/@yoonit/nativescript-camera?color=lightgrey&logo=npm&style=for-the-badge)
 ![Vue](https://img.shields.io/badge/Vue.js-35495E?color=lightgrey&style=for-the-badge&logo=vue.js)
-![Storybook](https://cdn.jsdelivr.net/gh/storybookjs/brand@master/badge/badge-storybook.svg)
 ![MIT license](https://img.shields.io/npm/l/@yoonit/nativescript-camera?color=lightgrey&style=for-the-badge)
 
 A Vue lib to provide:
@@ -26,7 +25,7 @@ npm i -s @yoonit/vue-components
 
 #### VueJS Plugin
 
-To use the components, import the library into your project's main.js file
+To use the components, import the library into your project's main.js file.
 
 `main.js`
 ```javascript
@@ -36,7 +35,7 @@ import YoonitVueComponents from '@yoonit/vue-components'
 Vue.use(YoonitVueComponents)
 ```
 
-After that, you can access each component by calling it in the html template
+After that, you can access each component by calling it in the html template.
 
 #### YooButton Component Example
 `App.vue`
@@ -74,12 +73,14 @@ After that, you can access each component by calling it in the html template
 
 ## StoryBook
 
-To see all the components, run the Storybook available in this project
+To see all the components, run the Storybook available in this project. 
 
 ```javascript
 npm run storybook
 ```
-After running the command above, an address will be available for you to access the component library. There you will be able to meet, interact and copy the code ready to put in your project
+After running the command above, an address will be available for you to access the component library. There you will be able to meet, interact and copy the code ready to put in your project.
+
+[<img src="https://github.com/Yoonit-Labs/vue-yoonit-components/blob/feature/readme/public/readme-img/StorybookButton.png" width="960">](https://cyberlabs.ai/)
 
 
 ## To contribute and make it better
