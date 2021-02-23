@@ -24,17 +24,8 @@ describe('YooDropdown Component', () => {
 
   it('Loads the Component Dropdown HTML', () => {
     expect(wrapper.find('.yoo-dropdown').exists()).toBe(true)
-  })
-
-  it('Loads the Component Dropdown Select HTML', () => {
     expect(wrapper.find('.yoo-dropdown__select').exists()).toBe(true)
-  })
-
-  it('Loads the Component Dropdown Select Container HTML', () => {
     expect(wrapper.find('.select').exists()).toBe(true)
-  })
-
-  it('Loads the Component Dropdown Select Item HTML', () => {
     expect(wrapper.find('.select__text').exists()).toBe(true)
   })
 
