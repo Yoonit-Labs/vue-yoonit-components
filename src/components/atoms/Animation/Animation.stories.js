@@ -14,4 +14,4 @@ const Template = (args, { argTypes }) => ({
 })
 
 export const Custom = Template.bind({})
-Custom.args = { active: true, options: { animationData: animationData.default } }
+Custom.args = { options: { animationData: animationData.default } }
