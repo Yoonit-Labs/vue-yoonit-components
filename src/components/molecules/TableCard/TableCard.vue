@@ -13,7 +13,7 @@
       width="90%"
     )
       YooFlexLayout.m__b--s(
-        justifyContent="wrap"
+        flexWrap="wrap"
         alignItems="center"
         flexDirection="row"
       )
@@ -25,7 +25,6 @@
           | {{ `• ${subtitle}` }}
 
       YooFlexLayout(
-        justifyContent="wrap"
         flexWrap="wrap"
         alignItems="flex-start"
         flexDirection="row"
