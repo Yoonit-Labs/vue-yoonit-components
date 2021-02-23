@@ -7,7 +7,7 @@ const $yoo = {
       .entries(Components)
       .forEach(([name, code]) =>
         Vue.component(name, code)
-    )
+      )
 }
 
 export default $yoo
