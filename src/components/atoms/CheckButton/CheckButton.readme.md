@@ -1,6 +1,7 @@
-[<img src="https://raw.githubusercontent.com/Yoonit-Labs/nativescript-yoonit-camera/development/logo_cyberlabs.png" width="300">](https://cyberlabs.ai/)
+# Yonnit Components
 
-## CheckButton
+[Home](https://cyberlabs.ai/) | [Atoms](https://cyberlabs.ai/) | [Molecules](https://cyberlabs.ai/) | [Bosons](https://cyberlabs.ai/) | [Quarks](https://cyberlabs.ai/)
+## YooCheckButton
 
 ## Usage
 
@@ -29,6 +30,18 @@ To use the component, simply invoke it in your template with the desired props
   />
 </template>
 ```
+### Output
+
+### Props
+
+| Name               | Input/Format                                  | Description                                                                 |
+| -                  | -                                             | -                                                                           |
+| size               | small, medium, large                          | Set the component size                                                      |
+| textPosition       | left, right                                   | Defines the position of the text in relation to the input                   |
+| text               | string                                        | Defines the text for the component                                          |
+| checked            | true/false                                    | Defines the component as checked or not                                     |
+| card               | true/false                                    | Sets the component to be displayed as a card or not                         |
+| disabled           | true/false                                    | Disables the checkbutton                                                    |
 
 ## To contribute and make it better
 
