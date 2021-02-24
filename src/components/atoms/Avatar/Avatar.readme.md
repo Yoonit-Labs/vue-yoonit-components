@@ -12,7 +12,7 @@ To use the component, simply invoke it in your template with the desired props
 ```vue
 <template>
   <yoo-avatar
-    size="medium"
+    size="small"
     fill="primary"
     text="Yoo Avatar"
     textColor="light"
@@ -23,8 +23,35 @@ To use the component, simply invoke it in your template with the desired props
     text="Yoo Avatar"
     textColor="light"
   />
+  <yoo-avatar
+    size="large"
+    fill="primary"
+    text="Yoo Avatar"
+    textColor="light"
+  />
+  <yoo-avatar
+    size="xlarge"
+    fill="primary"
+    text="Yoo Avatar"
+    textColor="light"
+  />
 </template>
 ```
+### Output
+
+The output of the above code will be:
+
+<img src="https://raw.githubusercontent.com/Yoonit-Labs/nativescript-yoonit-camera/development/logo_cyberlabs.png" width="300">
+
+### Props
+
+| Name               | Input/Format                                  | Description                                                                 |
+| -                  | -                                             | -                                                                           |
+| size               | small, medium, large, xlarge                  | Set the component size                                                      |
+| fill               | primary, danger, light, dark, neutral         | If the image prop is empty, set a color for the avatar background           |
+| textColor          | light, dark                                   | If the image prop is empty, define a color for the text                     |
+| text               | string                                        | Set a text for the avatar to take the initials                              |
+| image              | require('[pathImage]') or external path image | Set a text for the avatar to take the initials                              |
 
 ## To contribute and make it better
 
