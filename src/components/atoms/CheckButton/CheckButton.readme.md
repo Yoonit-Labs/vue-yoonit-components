@@ -18,6 +18,12 @@ To use the component, simply invoke it in your template with the desired props
   <yoo-check-button
     text="Yoo Checkbox"
     size="medium"
+    textPosition="left" 
+    :checked:"true"
+  />
+  <yoo-check-button
+    text="Yoo Checkbox"
+    size="medium"
     textPosition="left"
     :card="true"
   />
@@ -31,6 +37,11 @@ To use the component, simply invoke it in your template with the desired props
 </template>
 ```
 ### Output
+
+The output of the above code will be:
+
+<img src="https://github.com/Yoonit-Labs/vue-yoonit-components/blob/feature/readme/public/readme-img/checkbox.png" width="250">
+<img src="https://github.com/Yoonit-Labs/vue-yoonit-components/blob/feature/readme/public/readme-img/checkbox-card.png" width="250">
 
 ### Props
 
