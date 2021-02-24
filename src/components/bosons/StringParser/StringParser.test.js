@@ -1,7 +1,6 @@
 import * as StringParser from './StringParser'
 
 describe('StringParser Methods', () => {
-
   it('Generates Initials', () => {
     expect(StringParser.generateNameInitials()).toBe('')
     expect(StringParser.generateNameInitials('')).toBe('')

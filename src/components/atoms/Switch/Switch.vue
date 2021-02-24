@@ -49,18 +49,18 @@ export default {
       const block = 'yoo-switch'
       const classList = []
       switch (this.size) {
-        case 'small':
-          classList
-            .push(`${block}--${this.size}`)
-          break
-        case 'medium':
-          classList
-            .push(`${block}--${this.size}`)
-          break
-        case 'large':
-          classList
-            .push(`${block}--${this.size}`)
-          break
+      case 'small':
+        classList
+          .push(`${block}--${this.size}`)
+        break
+      case 'medium':
+        classList
+          .push(`${block}--${this.size}`)
+        break
+      case 'large':
+        classList
+          .push(`${block}--${this.size}`)
+        break
       }
       if (this.checkedField) {
         classList
