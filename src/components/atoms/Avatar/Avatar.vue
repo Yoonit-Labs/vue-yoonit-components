@@ -85,6 +85,11 @@ export default {
     takeFill () {
       return [`yoo-avatar--${this.fill}`]
     },
+    /**
+    * @description Prints initials letters of name based on props text
+    * @computed takeInitials
+    * @returns {string}
+    */
     takeInitials () {
       return StringParser.generateNameInitials(this.text)
     },
