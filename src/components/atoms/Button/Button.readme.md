@@ -2,7 +2,7 @@
 
 [**Home**](https://cyberlabs.ai/) | [**Atoms**](https://cyberlabs.ai/) | [**Molecules**](https://cyberlabs.ai/) | [**Bosons**](https://cyberlabs.ai/) | [**Quarks**](https://cyberlabs.ai/)
 
-## Button
+## YooButton
 
 The component is used to illustrate a user and displays the profile picture or the beginning of the word
 
