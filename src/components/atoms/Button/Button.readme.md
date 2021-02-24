@@ -1,6 +1,6 @@
 # Yonnit Components
 
-:star2: [Home](https://cyberlabs.ai/) | :dart: [Atoms](https://cyberlabs.ai/) | :art: [Molecules](https://cyberlabs.ai/) | :rocket: [Bosons](https://cyberlabs.ai/) | :triangular_flag_on_post: [Quarks](https://cyberlabs.ai/)
+[Home](https://cyberlabs.ai/) | [Atoms](https://cyberlabs.ai/) | [Molecules](https://cyberlabs.ai/) | [Bosons](https://cyberlabs.ai/) | [Quarks](https://cyberlabs.ai/)
 
 ## YooButton
 
