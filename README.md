@@ -70,6 +70,7 @@ After that, you can access each component by calling it in the html template.
   />
 </template>
 ```
+[<img src="https://github.com/Yoonit-Labs/vue-yoonit-components/blob/development/public/readme-img/button-example.png" width="400">](https://cyberlabs.ai/)
 
 ## StoryBook
 
