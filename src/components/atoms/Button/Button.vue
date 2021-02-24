@@ -90,16 +90,9 @@ export default {
     },
     iconCustomColor: {
       type: String,
-      default: '',
-      validator: value => {
-        if (value.includes('#')) {
-          const rx = /^#([0-9a-f]{6}|[0-9a-f]{3})$/i
-
-          return value.match(rx)
-        } else {
-          return value === ''
-        }
-      }
+      default: '#fff',
+      validator: value =>
+        value.match(PropsConfig.iconCustomColor.color)
     }
   },
   computed: {
