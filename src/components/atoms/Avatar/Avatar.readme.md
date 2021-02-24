@@ -2,13 +2,14 @@
 
 ## Avatar
 
-The component is used to illustrate a user and displays the profile picture or the beginning of the word
+The component is used to illustrate a user and displays the profile picture or the initials of the word
 
 ## Usage
 
 To use the component, simply invoke it in your template with the desired props
 
 ### Input
+`App.vue`
 ```vue
 <template>
   <yoo-avatar
