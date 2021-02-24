@@ -43,6 +43,7 @@ To use the component, simply invoke it in your template with the desired props
 The output of the above code will be:
 
 <img src="https://github.com/Yoonit-Labs/vue-yoonit-components/blob/feature/readme/public/readme-img/avatar.png" width="300">
+<img src="https://github.com/Yoonit-Labs/vue-yoonit-components/blob/feature/readme/public/readme-img/avatar-image.png" width="300">
 
 ### Props
 
