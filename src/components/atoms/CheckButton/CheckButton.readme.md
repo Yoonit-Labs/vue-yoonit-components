@@ -41,7 +41,7 @@ To use the component, simply invoke it in your template with the desired props
 The output of the above code will be:
 
 <img src="https://github.com/Yoonit-Labs/vue-yoonit-components/blob/feature/readme/public/readme-img/checkbox.png" width="250">
-<img src="https://github.com/Yoonit-Labs/vue-yoonit-components/blob/feature/readme/public/readme-img/checkbox-card.png" width="250">
+<img src="https://github.com/Yoonit-Labs/vue-yoonit-components/blob/feature/readme/public/readme-img/checkbox-card.png" width="300">
 
 ### Props
 
