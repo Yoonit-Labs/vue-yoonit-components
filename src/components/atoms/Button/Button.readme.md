@@ -1,6 +1,6 @@
 [<img src="https://raw.githubusercontent.com/Yoonit-Labs/nativescript-yoonit-camera/development/logo_cyberlabs.png" width="300">](https://cyberlabs.ai/)
 
-## Button
+## YooButton
 
 The component is used to illustrate a user and displays the profile picture or the beginning of the word
 
