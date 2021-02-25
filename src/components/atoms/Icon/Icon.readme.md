@@ -56,6 +56,12 @@ The output of the above code will be:
 | fill               | primary, danger, neutral, dark, white, black  | Sets color for the icon                                                     |
 | icon               | String                                        | Sets an icon on the button based on fontawesome                             |
 
+#
+
+ #### :arrow_forward: [**Next component**](https://github.com/Yoonit-Labs/vue-yoonit-components/blob/feature/readme/src/components/atoms/Separator/Separator.readme.md)
+
+#
+
 ## To contribute and make it better
 
 Clone the repo, change what you want and send PR.
