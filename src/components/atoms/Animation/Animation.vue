@@ -54,7 +54,7 @@ export default {
         animationData: this.options.animationData,
         rendererSettings: this.options.rendererSettings
       })
-      this.$emit('animCreated', this.animation)
+      this.$emit('animationCreated', this.animation)
     }
   }
 }
