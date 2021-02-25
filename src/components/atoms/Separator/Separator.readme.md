@@ -1,6 +1,10 @@
-[<img src="https://raw.githubusercontent.com/Yoonit-Labs/nativescript-yoonit-camera/development/logo_cyberlabs.png" width="300">](https://cyberlabs.ai/)
+# Yonnit Components
 
-## Separator
+[Home](https://github.com/Yoonit-Labs/vue-yoonit-components/blob/development/README.md) | [Atoms](https://github.com/Yoonit-Labs/vue-yoonit-components/blob/development/README.md#atoms) | [Molecules](https://github.com/Yoonit-Labs/vue-yoonit-components/blob/development/README.md#molecules) | [Bosons](https://github.com/Yoonit-Labs/vue-yoonit-components/blob/development/README.md#bosons) | [Quarks](https://github.com/Yoonit-Labs/vue-yoonit-components/blob/development/README.md#quarks)
+
+## YooSeparator
+
+The component is used as a separation strip between components on the screen
 
 ## Usage
 
@@ -14,8 +18,32 @@ To use the component, simply invoke it in your template with the desired props
     text="Yoo Warning test component"
     fontSize="md"
   />
+  <yoo-separator
+    fill="primary"
+    text="Yoo Warning test component"
+    fontSize="sm"
+  />
+  <yoo-separator
+    fill="danger"
+    text="Yoo Warning test component"
+    fontSize="sm"
+  />
 </template>
 ```
+### Output
+
+The output of the above code will be:
+
+<img src="https://github.com/Yoonit-Labs/vue-yoonit-components/blob/feature/readme/public/readme-img/separator.png">
+
+### Props
+
+| Name               | Input/Format                                  | Description                                                                 |
+| -                  | -                                             | -                                                                           |
+| fill               | default, primary, danger                      | Sets color for the separator                                                |
+| fontSize           | tn, xs, sm, md, lg, xl, hg                    | Sets fontsize for the separator                                             |
+| text               | String                                        | Set text for the separator                                                  |
+
 
 ## To contribute and make it better
 
