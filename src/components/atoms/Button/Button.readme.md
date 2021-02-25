@@ -54,8 +54,8 @@ The output of the above code will be:
 | Name               | Input/Format                                  | Description                                                                 |
 | -                  | -                                             | -                                                                           |
 | variation          | base, outline, clear                          | Sets variation for the button - Base (filled) / Outline (bordered, colorless) / Clear (Borderless and colorless)|
-| buttonSize         | normal, short, xs                             | Sets size for the button                                                    |
 | fill               | primary, danger, light, dark                  | Sets color for the button                                                   |
+| buttonSize         | normal, short, xs                             | Sets size for the button                                                    |
 | text               | String                                        | Set text for the button                                                     |
 | icon               | String                                        | Sets an icon on the button based on fontawesome                             |
 | iconPosition       | left, right                                   | Defines the position of the icon in relation to the button text             |
