@@ -55,6 +55,12 @@ The output of the above code will be:
 | card               | true/false                                    | Sets the component to be displayed as a card or not                         |
 | disabled           | true/false                                    | Disables the checkbutton                                                    |
 
+#
+
+ #### :arrow_forward: [**Next component**](https://github.com/Yoonit-Labs/vue-yoonit-components/blob/feature/readme/src/components/atoms/Icon/Icon.readme.md)
+
+#
+
 ## To contribute and make it better
 
 Clone the repo, change what you want and send PR.
