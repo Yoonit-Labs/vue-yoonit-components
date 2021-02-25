@@ -44,6 +44,13 @@ The output of the above code will be:
 | fontSize           | tn, xs, sm, md, lg, xl, hg                    | Sets fontsize for the separator                                             |
 | text               | String                                        | Set text for the separator                                                  |
 
+#
+
+ #### [**Next component**](https://github.com/Yoonit-Labs/vue-yoonit-components/blob/feature/readme/src/components/atoms/Stepper/Stepper.readme.md) :arrow_forward:
+ 
+ #### :arrow_backward: [**Previous component**](https://github.com/Yoonit-Labs/vue-yoonit-components/blob/feature/readme/src/components/atoms/Icon/Icon.readme.md)
+
+#
 
 ## To contribute and make it better
 

@@ -58,7 +58,9 @@ The output of the above code will be:
 
 #
 
- #### :arrow_forward: [**Next component**](https://github.com/Yoonit-Labs/vue-yoonit-components/blob/feature/readme/src/components/atoms/Separator/Separator.readme.md)
+ #### [**Next component**](https://github.com/Yoonit-Labs/vue-yoonit-components/blob/feature/readme/src/components/atoms/Separator/Separator.readme.md) :arrow_forward:
+ 
+ #### :arrow_backward: [**Previous component**](https://github.com/Yoonit-Labs/vue-yoonit-components/blob/feature/readme/src/components/atoms/CheckButton/CheckButton.readme.md)
 
 #
 
