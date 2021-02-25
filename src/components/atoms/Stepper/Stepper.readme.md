@@ -39,6 +39,14 @@ The output of the above code will be:
 | totalSteps         | Number                                        | Sets the total number of steps                                              |
 | currentStep        | Number                                        | Set the current step                                                        |
 
+#
+
+ #### [**Next component**](https://github.com/Yoonit-Labs/vue-yoonit-components/blob/feature/readme/src/components/atoms/Switch/Switch.readme.md) :arrow_forward:
+ 
+ #### :arrow_backward: [**Previous component**](https://github.com/Yoonit-Labs/vue-yoonit-components/blob/feature/readme/src/components/atoms/Separator/Separator.readme.md)
+
+#
+
 ## To contribute and make it better
 
 Clone the repo, change what you want and send PR.
