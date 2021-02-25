@@ -57,6 +57,12 @@ The output of the above code will be:
 | text               | string                                        | Set a text for the avatar to take the initials                              |
 | image              | require('[pathImage]') or external path image | Set a text for the avatar to take the initials                              |
 
+#
+
+ #### :arrow_forward: [**Next component**](https://github.com/Yoonit-Labs/vue-yoonit-components/edit/feature/readme/src/components/atoms/Button/Button.readme.md)
+
+#
+
 ## To contribute and make it better
 
 Clone the repo, change what you want and send PR.
