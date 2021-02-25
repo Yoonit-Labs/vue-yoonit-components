@@ -56,13 +56,13 @@ The output of the above code will be:
 | variation          | base, outline, clear                          | Sets variation for the button - Base (filled) / Outline (bordered, colorless) / Clear (Borderless and colorless)|
 | buttonSize         | normal, short, xs                             | Sets size for the button                                                    |
 | fill               | primary, danger, light, dark                  | Sets color for the button                                                   |
+| icon               | String                                        | Sets an icon on the button based on fontawesome                             |
 | iconPosition       | left, right                                   | Defines the position of the icon in relation to the button text             |
 | iconSize           | small, normal, large                          | When there is an icon, set the icon size                                    |
 | iconStyle          | regular, solid                                | Sets the icon type to filled or bordered only                               |
 | animation          | none, pulse                                   | Set a pulse animation to the button                                         |
 | iconCustomColor    | Hexadecimal color                             | Sets custom color for the icon                                              |
 | text               | String                                        | Set text for the button                                                     |
-| icon               | String                                        | Sets an icon on the button based on fontawesome                             |
 | disabled           | true/false                                    | Disables the button                                                         |
 | hover              | true/false                                    | Enables the style change on the button hover                                |
 | active             | true/false                                    | Enables the style change in the button active                               |
