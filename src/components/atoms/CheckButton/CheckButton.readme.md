@@ -59,7 +59,7 @@ The output of the above code will be:
 
  #### [**Next component**](https://github.com/Yoonit-Labs/vue-yoonit-components/blob/feature/readme/src/components/atoms/Icon/Icon.readme.md) :arrow_forward:
 
- #### :arrow_backward: [**Previous component**](https://github.com/Yoonit-Labs/vue-yoonit-components/blob/feature/readme/src/components/atoms/Buttom/Button.readme.md)
+ #### :arrow_backward: [**Previous component**](https://github.com/Yoonit-Labs/vue-yoonit-components/blob/feature/readme/src/components/atoms/Button/Button.readme.md)
 
 #
 
