@@ -3,7 +3,6 @@
     :class="['yoo-card']"
     rows="auto"
     cols="*, auto"
-    width="100%"
   )
     YooFlexLayout.m__t--l.m__b--l(
       flexDirection="column"
