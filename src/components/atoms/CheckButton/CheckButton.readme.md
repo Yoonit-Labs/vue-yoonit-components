@@ -1,6 +1,7 @@
 # Yonnit Components
 
-[Home](https://cyberlabs.ai/) | [Atoms](https://cyberlabs.ai/) | [Molecules](https://cyberlabs.ai/) | [Bosons](https://cyberlabs.ai/) | [Quarks](https://cyberlabs.ai/)
+[Home](https://github.com/Yoonit-Labs/vue-yoonit-components/blob/development/README.md) | [Atoms](https://github.com/Yoonit-Labs/vue-yoonit-components/blob/development/README.md#atoms) | [Molecules](https://github.com/Yoonit-Labs/vue-yoonit-components/blob/development/README.md#molecules) | [Bosons](https://github.com/Yoonit-Labs/vue-yoonit-components/blob/development/README.md#bosons) | [Quarks](https://github.com/Yoonit-Labs/vue-yoonit-components/blob/development/README.md#quarks)
+
 ## YooCheckButton
 
 ## Usage
@@ -18,6 +19,12 @@ To use the component, simply invoke it in your template with the desired props
   <yoo-check-button
     text="Yoo Checkbox"
     size="medium"
+    textPosition="left" 
+    :checked:"true"
+  />
+  <yoo-check-button
+    text="Yoo Checkbox"
+    size="medium"
     textPosition="left"
     :card="true"
   />
@@ -31,6 +38,11 @@ To use the component, simply invoke it in your template with the desired props
 </template>
 ```
 ### Output
+
+The output of the above code will be:
+
+<img src="https://github.com/Yoonit-Labs/vue-yoonit-components/blob/feature/readme/public/readme-img/checkbox.png" width="250">
+<img src="https://github.com/Yoonit-Labs/vue-yoonit-components/blob/feature/readme/public/readme-img/checkbox-card.png" width="300">
 
 ### Props
 
