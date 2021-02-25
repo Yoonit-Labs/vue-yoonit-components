@@ -1,6 +1,10 @@
-[<img src="https://raw.githubusercontent.com/Yoonit-Labs/nativescript-yoonit-camera/development/logo_cyberlabs.png" width="300">](https://cyberlabs.ai/)
+# Yonnit Components
 
-## Stepper
+[Home](https://github.com/Yoonit-Labs/vue-yoonit-components/blob/development/README.md) | [Atoms](https://github.com/Yoonit-Labs/vue-yoonit-components/blob/development/README.md#atoms) | [Molecules](https://github.com/Yoonit-Labs/vue-yoonit-components/blob/development/README.md#molecules) | [Bosons](https://github.com/Yoonit-Labs/vue-yoonit-components/blob/development/README.md#bosons) | [Quarks](https://github.com/Yoonit-Labs/vue-yoonit-components/blob/development/README.md#quarks)
+
+## YooSwitch
+
+Component used to change the state of an item
 
 ## Usage
 
@@ -10,11 +14,37 @@ To use the component, simply invoke it in your template with the desired props
 ```vue
 <template>
   <yoo-switch
+    size="small"
+    :initialValue="true"
+  />
+  <yoo-switch
     size="medium"
+    :initialValue="true"
+  />
+  <yoo-switch
+    size="large"
     :initialValue="true"
   />
 </template>
 ```
+### Output
+
+The output of the above code will be:
+
+<img src="https://github.com/Yoonit-Labs/vue-yoonit-components/blob/feature/readme/public/readme-img/switch.png">
+
+### Props
+
+| Name               | Input/Format                                  | Description                                                                 |
+| -                  | -                                             | -                                                                           |
+| size               | small, medium, large                          | Sets size for the switch button                                             |
+| initialValue       | true/false                                    | Sets the initial state of the switch (enabled / disabled)                   |
+
+#
+ 
+ #### :arrow_backward: [**Previous component**](https://github.com/Yoonit-Labs/vue-yoonit-components/blob/feature/readme/src/components/atoms/Stepper/Stepper.readme.md)
+
+#
 
 ## To contribute and make it better
 
