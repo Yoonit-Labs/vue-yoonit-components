@@ -67,6 +67,12 @@ The output of the above code will be:
 | hover              | true/false                                    | Enables the style change on the button hover                                |
 | active             | true/false                                    | Enables the style change in the button active                               |
 
+#
+
+ #### :arrow_forward: [**Next component**](https://github.com/Yoonit-Labs/vue-yoonit-components/blob/feature/readme/src/components/atoms/CheckButton/CheckButton.readme.md)
+
+#
+
 ## To contribute and make it better
 
 Clone the repo, change what you want and send PR.
