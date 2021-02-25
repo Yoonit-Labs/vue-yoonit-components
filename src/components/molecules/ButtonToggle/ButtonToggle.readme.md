@@ -25,7 +25,7 @@ To use the component, simply invoke it in your template with the desired props.
 
 The output of the above code will be:
 
-<img src="../../../../public/readme-img/button-toggle.png" width="400">
+<img src="../../../../public/readme-img/button-toggle.png" width="600">
 
 ### Props
 
