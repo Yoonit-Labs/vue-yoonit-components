@@ -12,7 +12,7 @@ YooFlexLayout.yoo-stepper(
     v-if="counterType === 'dot'"
     v-for="(step, index) in takeStepsLength"
     :key="'dotStep-' + index"
-    class="yoo-stepper__dot m__r--m m__l--m"
+    class="yoo-stepper__dot m__l--m"
     :class=`[
       { 'yoo-stepper__dot--active': index === currentStep },
       { 'yoo-stepper__dot--last': index === totalSteps }]`
