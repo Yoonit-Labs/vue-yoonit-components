@@ -15,9 +15,16 @@ export default {
   props: {
     /**
     * @description Set options for rendering animation based on lottie.loadAnimation()
-    * @prop options
+    * @prop lottieOptions
+    * animationData: an Object with the exported animation data.
+    * path: the relative path to the animation object. (animationData and path are mutually exclusive).
+    * loop: true || false || number.
+    * autoplay: true || false it will start playing as soon as it is ready.
+    * name: animation name for future reference.
+    * renderer: 'svg' || 'canvas' || 'html' to set the renderer.
+    * container: the dom element on which to render the animation.
     */
-    options: {
+    lottieOptions: {
       type: Object,
       required: true
     },
@@ -45,7 +52,7 @@ export default {
     this.animation = loadAnimation({
       container,
       renderer: 'svg',
-      ...this.options
+      ...this.lottieOptions
     })
 
     this.$emit('created', this.animation)

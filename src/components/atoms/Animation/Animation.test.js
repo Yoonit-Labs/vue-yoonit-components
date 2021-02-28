@@ -8,7 +8,7 @@ const SlotText = 'Default Slot Text'
 const mountComponent = () => {
   return shallowMount(YooAnimation, {
     slots: { default: SlotText },
-    propsData: { options: { animationData: animationData.default } }
+    propsData: { lottieOptions: { animationData: animationData.default } }
   })
 }
 
