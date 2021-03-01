@@ -25,12 +25,4 @@ describe('YooAnimation Component', () => {
   it('Loads the Component HTML', () => {
     expect(wrapper.find(`.${classBlock}`).exists()).toBe(true)
   })
-
-  describe('Props', () => {
-    describe('active', () => {
-      it('Has a valid default value', () => {
-        expect(YooAnimation.props.active.default).toBe(false)
-      })
-    })
-  })
 })
