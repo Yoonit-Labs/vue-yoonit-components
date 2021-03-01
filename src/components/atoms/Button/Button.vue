@@ -1,7 +1,7 @@
 <template lang="pug">
 .yoo__container--button
   button.yoo-btn(
-    :class="[...takeModifier]"
+    :class="[...takeModifierButton]"
     :disabled="disabled"
     @click="$emit('onClick')"
   )
@@ -90,22 +90,25 @@ export default {
     },
     iconCustomColor: {
       type: String,
-      default: '',
-      validator: value => {
-        if (value.includes('#')) {
-          const rx = /^#([0-9a-f]{6}|[0-9a-f]{3})$/i
-
-          return value.match(rx)
-        } else {
-          return value === ''
-        }
-      }
+      default: '#fff',
+      validator: value =>
+        value.match(PropsConfig.iconCustomColor.color)
     }
   },
   computed: {
+    /**
+    * @description Add icon color based on the chosen props
+    * @computed takeIconColor
+    * @returns {string}
+    */
     takeIconColor () {
       return { color: `${this.iconCustomColor}` }
     },
+    /**
+    * @description Prints classes in icon based on the chosen props
+    * @computed takeModifierIcon
+    * @returns {array}
+    */
     takeModifierIcon () {
       const block = 'yoo-btn__icon'
       const classList = []
@@ -118,7 +121,12 @@ export default {
 
       return classList
     },
-    takeModifier () {
+    /**
+    * @description Prints classes in button based on the chosen props
+    * @computed takeModifierButton
+    * @returns {array}
+    */
+    takeModifierButton () {
       const block = 'yoo-btn'
       const classList = []
 
@@ -141,9 +149,19 @@ export default {
 
       return classList
     },
+    /**
+    * @description Prints icon name based on the chosen props
+    * @computed takeIconName
+    * @returns {string}
+    */
     takeIconName () {
       return `fa-${this.icon}`
     },
+    /**
+    * @description Prints icon style based on the chosen props
+    * @computed takeIconStyle
+    * @returns {string}
+    */
     takeIconStyle () {
       return this.iconStyle === 'solid'
         ? 'fas' // fontawesome solid

@@ -1,25 +1,32 @@
 <template lang="pug">
 .yoo-animation
   .yoo-animation__content(
-    ref="lavContainer"
-    :style="style"
+    ref="container"
+    :style="{...style, width, height}"
   )
 </template>
 
 <script>
 
-import lottie from 'lottie-web'
+import { loadAnimation } from 'lottie-web'
 
 export default {
   name: 'YooAnimation',
   props: {
-    options: {
+    /**
+    * @description Set options for rendering animation based on lottie.loadAnimation()
+    * @prop lottieOptions
+    * animationData: an Object with the exported animation data.
+    * path: the relative path to the animation object. (animationData and path are mutually exclusive).
+    * loop: true || false || number.
+    * autoplay: true || false it will start playing as soon as it is ready.
+    * name: animation name for future reference.
+    * renderer: 'svg' || 'canvas' || 'html' to set the renderer.
+    * container: the dom element on which to render the animation.
+    */
+    lottieOptions: {
       type: Object,
       required: true
-    },
-    active: {
-      type: Boolean,
-      default: false
     },
     height: {
       type: String,
@@ -30,28 +37,28 @@ export default {
       default: '100%'
     }
   },
-  data () {
-    return {
-      style: {
-        width: this.width,
-        height: this.height,
-        overflow: 'hidden',
-        margin: '0 auto'
-      }
-    }
-  },
+  data: () => ({
+    style: {
+      overflow: 'hidden',
+      margin: '0 auto'
+    },
+    animation: null
+  }),
   mounted () {
-    this.animation = lottie.loadAnimation({
-      container: this.$refs.lavContainer,
+    const {
+      container
+    } = this.$refs
+
+    this.animation = loadAnimation({
+      container,
       renderer: 'svg',
-      loop: this.options.loop !== false,
-      autoplay: this.options.autoplay !== false,
-      animationData: this.options.animationData,
-      rendererSettings: this.options.rendererSettings
+      ...this.lottieOptions
     })
-    this.$emit('animCreated', this.animation)
+
+    this.$emit('created', this.animation)
   }
 }
+
 </script>
 
 <style src="./Animation.sass" lang="sass" scoped></style>
