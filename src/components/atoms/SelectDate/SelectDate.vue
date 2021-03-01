@@ -162,10 +162,17 @@ export default {
       now.setHours(timeString[0])
       now.setMinutes(timeString[1])
     } else if (this.value && this.type === 'date') {
-      const dateString = this.value.split('/')
-      now.setDate(dateString[0])
-      now.setMonth(dateString[1] - 1)
-      now.setFullYear(dateString[2])
+      if (this.value.match(/((\d{2}|\d{4})-\d{1,2}-\d{1,2})/)) {
+        const dateString = this.value.split('-')
+        now.setFullYear(dateString[0])
+        now.setMonth(dateString[1] - 1)
+        now.setDate(dateString[2])
+      } else {
+        const dateString = this.value.split('/')
+        now.setDate(dateString[0])
+        now.setMonth(dateString[1] - 1)
+        now.setFullYear(dateString[2])
+      }
     }
 
     this.currentDateTime = now

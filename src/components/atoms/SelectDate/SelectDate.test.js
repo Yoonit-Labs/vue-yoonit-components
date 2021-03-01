@@ -102,7 +102,20 @@ describe('YooSelectDate Component', () => {
           expect(wrapper.find('.yoo-selectdate__separator').exists()).toBe(false)
         })
 
-        it('Set date by prop value', async () => {
+        it('Set date by prop value - english format', async () => {
+          wrapper = shallowMount(YooSelectDate, {
+            propsData: {
+              type: 'date',
+              value: '2002-12-03'
+            }
+          })
+          await wrapper.vm.$nextTick()
+          expect(wrapper.vm.selectedDate.year.current).toBe(2002)
+          expect(wrapper.vm.selectedDate.month.current).toBe(11)
+          expect(wrapper.vm.selectedDate.day.current).toBe(3)
+        })
+
+        it('Set date by prop value - brazilian format', async () => {
           wrapper = shallowMount(YooSelectDate, {
             propsData: {
               type: 'date',
@@ -113,7 +126,6 @@ describe('YooSelectDate Component', () => {
           expect(wrapper.vm.selectedDate.year.current).toBe(2002)
           expect(wrapper.vm.selectedDate.month.current).toBe(11)
           expect(wrapper.vm.selectedDate.day.current).toBe(3)
-          expect(wrapper.find('.yoo-selectdate__separator').exists()).toBe(false)
         })
 
         it('Limits of month date type', async () => {
