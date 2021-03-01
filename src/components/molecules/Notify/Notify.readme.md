@@ -73,19 +73,20 @@ The output of the above code will be:
 | Name               | Input/Format                                  | Description                                                                 |
 | -                  | -                                             | -                                                                           |
 | title              | String                                        | Sets the component item title                                               |
-| subtitle           | String                                        | Set the text next to the title                                              |
-| fill               | primary, danger, light, dark                  | Set the color of the tag, subtitle and button                               |
-| details            | [{"text":"NameTag","status":true/false} ]     | Set a list of tags                                                          |
-| actionable         | true/false                                    | Set the item as actionable                                                  |
-| actionableType     | button, check                                 | Set a button or checkbox on the item                                        |
-| buttonDisable      | true/false                                    | Sets the button to disabled when the type option is a button                |
-| separator          | true/false                                    | Set a border under item separation                                          |
+| notifyText         | String                                        | Sets the component item text                                                |
+| notifyTextColor    | dark, light, danger                           | Sets a color for component text                                             |
+| notifyTextSize     | tn, xs, sm, md, lg, xl, hg                    | Set a size for the component text                                           |
+| notifyFill         | light, primary, danger                        | Set a background color                                                      |
+| showIndicator      | true/false                                    | Shows the indicator component                                               |
+| indicatorSize      | small, medium, normal, large                  | Set a size for the indicator                                                |
+| indicatorFill      | primary, danger, light, dark, neutral         | Set a color for the indicator                                               |
+| showIcon           | true/false                                    | When there is no indicator, enable the icon                                 |
+| icon               | String                                        | Sets an icon on the button based on fontawesome                             |
+| iconColor          | light, dark                                   | Sets a color for the icon                                                   |
+| iconStyle          | solid, regular                                | Sets the icon type to filled or bordered only                               |
+| closeButton        | true/false                                    | Sets a close button for the component                                       |
+| buttonColor        | Hexadecimal                                   | Set a color to the close button                                             |
 
-#
- 
- #### :arrow_backward: [**Previous component**](https://github.com/Yoonit-Labs/vue-yoonit-components/blob/feature/readme/src/components/molecules/TableAttribute/TableAttribute.readme.md)
-
-#
 
 ## To contribute and make it better
 
