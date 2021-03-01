@@ -1,17 +1,16 @@
 <template lang="pug">
-  div(
-    :class="['yoo-avatar', ...takeModifier, ...takeFill]"
+  .yoo-avatar(
+    :class="[...takeModifier, ...takeFill]"
     :style="image ? `background: url('${image}')no-repeat center center / cover` : ''"
   )
-    p(
-      :class="['yoo-avatar__text', ...takeTextColor]"
+    p.yoo-avatar__text(
+      :class="[...takeTextColor]"
       v-if="takeInitials && !image"
     ) {{ takeInitials }}
-
 </template>
 
 <script>
-
+import PropsConfig from './Avatar.config'
 import { StringParser } from '@/components/bosons'
 
 export default {
@@ -21,25 +20,13 @@ export default {
       type: String,
       default: 'medium',
       validator: value =>
-        [
-          'small',
-          'medium',
-          'large',
-          'xlarge'
-        ]
-          .includes(value)
+        PropsConfig.size.options.includes(value)
     },
     fill: {
       type: String,
       default: 'primary',
       validator: value =>
-        [
-          'primary',
-          'danger',
-          'light',
-          'dark'
-        ]
-          .includes(value)
+        PropsConfig.fill.options.includes(value)
     },
     text: {
       type: String,
@@ -49,11 +36,7 @@ export default {
       type: String,
       default: 'light',
       validator: value =>
-        [
-          'light',
-          'dark'
-        ]
-          .includes(value)
+        PropsConfig.textColor.options.includes(value)
     },
     image: {
       type: String,
@@ -69,24 +52,29 @@ export default {
     takeModifier () {
       const block = 'yoo-avatar'
       const classList = []
+
       switch (this.size) {
-        case 'small':
-          classList
-            .push(`${block}--${this.size}`)
-          break
-        case 'medium':
-          classList
-            .push(`${block}--${this.size}`)
-          break
-        case 'large':
-          classList
-            .push(`${block}--${this.size}`)
-          break
-        case 'xlarge':
-          classList
-            .push(`${block}--${this.size}`)
-          break
+      case 'small':
+        classList
+          .push(`${block}--${this.size}`)
+        break
+
+      case 'medium':
+        classList
+          .push(`${block}--${this.size}`)
+        break
+
+      case 'large':
+        classList
+          .push(`${block}--${this.size}`)
+        break
+
+      case 'xlarge':
+        classList
+          .push(`${block}--${this.size}`)
+        break
       }
+
       return classList
     },
     /**
@@ -97,6 +85,11 @@ export default {
     takeFill () {
       return [`yoo-avatar--${this.fill}`]
     },
+    /**
+    * @description Prints initials letters of name based on props text
+    * @computed takeInitials
+    * @returns {string}
+    */
     takeInitials () {
       return StringParser.generateNameInitials(this.text)
     },

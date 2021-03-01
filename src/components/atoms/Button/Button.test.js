@@ -141,7 +141,6 @@ describe('YooButton Component', () => {
       it('Validator iconCustomColor returns validation object', async () => {
         // await wrapper.setProps({ icon: 'icon-value', iconCustomColor: '#d2d2d2' })
         expect(YooButton.props.iconCustomColor.validator('#d2d2d2')[0]).toBe('#d2d2d2')
-        expect(YooButton.props.iconCustomColor.validator('#d2d2d2')[1]).toBe('d2d2d2')
       })
     })
 
