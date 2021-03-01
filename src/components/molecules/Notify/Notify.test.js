@@ -43,7 +43,7 @@ describe('YooNotify Component', () => {
         expect(YooNotify.props.showIcon.default).toBe(false)
       })
       it('Test prop showIndicator', async () => {
-        await wrapper.setProps({ showIndicator: false, showIcon: true, showButton: true })
+        await wrapper.setProps({ showIndicator: false, showIcon: true, closeButton: true })
         expect(wrapper.find(`.${classBlock}__icon`).exists()).toBe(true)
       })
     })
@@ -113,12 +113,12 @@ describe('YooNotify Component', () => {
         })
       })
     })
-    describe('showButton', () => {
+    describe('closeButton', () => {
       it('Has a valid default value', () => {
         expect(YooNotify.props.showButton.default).toBe(false)
       })
-      it('Test prop showButton', async () => {
-        await wrapper.setProps({ showIndicator: false, showIcon: false, showButton: true })
+      it('Test prop closeButton', async () => {
+        await wrapper.setProps({ showIndicator: false, showIcon: false, closeButton: true })
         expect(wrapper.find('.yoo__container--button').exists()).toBe(true)
       })
     })
