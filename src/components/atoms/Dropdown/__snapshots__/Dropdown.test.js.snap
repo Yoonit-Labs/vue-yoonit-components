@@ -1,0 +1,12 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`YooDropdown Component Matches Snapshot 1`] = `
+<div class="yoo-dropdown yoo-dropdown yoo-dropdown--medium">
+  <div class="yoo-dropdown__select">
+    <div class="select">
+      <p class="select__text">YooDropDown 1</p>
+    </div>
+  </div>
+  <!---->
+</div>
+`;
