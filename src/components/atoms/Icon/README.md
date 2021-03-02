@@ -44,23 +44,23 @@ To use the component, simply invoke it in your template with the desired props
 The output of the above code will be:
 
 
-<img src="https://github.com/Yoonit-Labs/vue-yoonit-components/blob/feature/readme/public/readme-img/icon.png" width="200">
+<img src="../../../../public/readme-img/icon.png" width="200">
 
 
 ### Props
 
-| Name               | Input/Format                                  | Description                                                                 |
-| -                  | -                                             | -                                                                           |
-| iconStyle          | regular, solid                                | Sets the icon type to filled or bordered only                               |
-| size               | small, medium, large                          | Set the component size                                                      |
-| fill               | primary, danger, neutral, dark, white, black  | Sets color for the icon                                                     |
-| icon               | String                                        | Sets an icon on the button based on fontawesome                             |
+| Parameter | Type | Default | Valid values | Description | Required |
+|-----------|------|------------------------|--------------|-------------|--
+| `iconStyle`    | String | **regular** | <ul><li>regular</li><li>solid</li><ul> | Sets the icon type to filled or bordered only | false
+| `size`    | String | **lg** | <ul><li>tn</li><li>sm</li><li>md</li><li>lg</li><li>xl</li><li>hg</li><ul> | Set the component size | false
+| `fill`    | String | **neutral** | <ul><li>primary</li><li>danger</li><li>neutral</li><li>dark</li><li>white</li><li>black</li><ul> | Sets color for the icon | false
+| `icon`    | String |  |  | Sets an icon on the button based on fontawesome | false
 
 #
 
- #### [**Next component**](https://github.com/Yoonit-Labs/vue-yoonit-components/blob/feature/readme/src/components/atoms/Separator/Separator.readme.md) :arrow_forward:
+ #### [**Next component**](../SelectDate/README.md) :arrow_forward:
  
- #### :arrow_backward: [**Previous component**](https://github.com/Yoonit-Labs/vue-yoonit-components/blob/feature/readme/src/components/atoms/CheckButton/CheckButton.readme.md)
+ #### :arrow_backward: [**Previous component**](../CheckButton/README.md)
 
 #
 

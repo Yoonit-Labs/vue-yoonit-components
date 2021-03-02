@@ -46,9 +46,9 @@ The output of the above code will be:
 
 #
 
- #### [**Next component**](../Separator/) :arrow_forward:
+ #### [**Next component**](../Separator/README.md) :arrow_forward:
  
- #### :arrow_backward: [**Previous component**](../Icon/)
+ #### :arrow_backward: [**Previous component**](../Icon/README.md)
 
 #
 

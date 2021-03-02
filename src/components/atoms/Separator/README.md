@@ -34,21 +34,20 @@ To use the component, simply invoke it in your template with the desired props
 
 The output of the above code will be:
 
-<img src="https://github.com/Yoonit-Labs/vue-yoonit-components/blob/feature/readme/public/readme-img/separator.png">
+<img src="../../../../public/readme-img/separator.png" alt="Example for separator component">
 
 ### Props
-
-| Name               | Input/Format                                  | Description                                                                 |
-| -                  | -                                             | -                                                                           |
-| fill               | default, primary, danger                      | Sets color for the separator                                                |
-| fontSize           | tn, xs, sm, md, lg, xl, hg                    | Sets fontsize for the separator                                             |
-| text               | String                                        | Set text for the separator                                                  |
+| Parameter | Type    | Default     | Valid values                                            | Description                                 | Required
+|-----------|---------|-------------|---------------------------------------------------------|---------------------------------------------|---------
+| `fill`    | String  | **default** | <ul><li>default</li><li>primary</li><li>danger</li><ul> | Sets color for the separator                | false
+| `fontSize`| String  | **md**      | <ul><li>tn</li><li>xs</li><li>sm</li><li>md</li><li>lg</li><li>xl</li><li>hg</li><ul> | Sets fontsize for the separator | false
+| `text`    | String  |             | Any string                                              | Set text for the separator                  | false
 
 #
 
- #### [**Next component**](https://github.com/Yoonit-Labs/vue-yoonit-components/blob/feature/readme/src/components/atoms/Stepper/Stepper.readme.md) :arrow_forward:
+ #### [**Next component**](../Stepper/README.md) :arrow_forward:
  
- #### :arrow_backward: [**Previous component**](https://github.com/Yoonit-Labs/vue-yoonit-components/blob/feature/readme/src/components/atoms/Icon/Icon.readme.md)
+ #### :arrow_backward: [**Previous component**](../SelectDate/README.md)
 
 #
 
