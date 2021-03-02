@@ -29,7 +29,9 @@ To use the component, simply invoke by passing the information in your props, an
 
 The output of the above code will be:
 
-<img src="../../../../public/readme-img/select-button.png" alt="YooSelectButton">
+<img src="../../../../public/readme-img/select-button-01.png" alt="YooSelectButton">
+<img src="../../../../public/readme-img/select-button-02.png" alt="YooSelectButton">
+<img src="../../../../public/readme-img/select-button-03.png" alt="YooSelectButton">
 
 ### Demo Default
 
