@@ -20,7 +20,7 @@ To use the component, simply invoke by passing the information in your props, an
 
   <yoo-select-button
     :options='[{"text":"1","value":1},{"text":"2","value":2},{"text":"3","value":3}]'
-    multiple
+    multiple="true"
   />
 </template>
 ```
@@ -29,16 +29,12 @@ To use the component, simply invoke by passing the information in your props, an
 
 The output of the above code will be:
 
-<img src="../../../../public/readme-img/select-button-01.png" alt="YooSelectButton" width="400px">
-<img src="../../../../public/readme-img/select-button-02.png" alt="YooSelectButton" width="400px">
-<img src="../../../../public/readme-img/select-button-03.png" alt="YooSelectButton" width="400px">
-
-### Demo Default
+### Default
 
 <img src="../../../../public/readme-demo/select-button-default.gif" alt="YooSelectButtonOne" width="400px">
 
 
-### Demo Multiple
+### Multiple
 
 <img src="../../../../public/readme-demo/select-button-multiple.gif" alt="YooSelectButtonMultiple" width="400px">
 
