@@ -35,10 +35,12 @@ The output of the above code will be:
 
 ### Demo Default
 
-<video width="400px" height="400px">
-  <source src="../../../../public/readme-demo/select-button-one" type="video/mp4">
-</video>
+<img src="../../../../public/readme-demo/select-button-one.gif" alt="YooSelectButtonOne">
 
+
+### Demo Multiple
+
+<img src="../../../../public/readme-demo/select-button-multiple.gif" alt="YooSelectButtonMultiple">
 
 ### Props
 
