@@ -48,12 +48,12 @@ The output of the above code will be:
 
 | Parameter     | Type    | Default     | Valid values                                            | Description                                   | Required
 |---------------|---------|-------------|---------------------------------------------------------|-----------------------------------------------|---------
-| `size`        | String  | **regular** | <ul><li>small</li><li>medium</li><li>large</li><ul>     | Set the component size                        | false
-| `tetPosition` | String  | **regular** | <ul><li>left</li><li>right</li><ul>                     | Defines the position of the text in relation to the input | false
-| `text`        | String  |             | Any string                                              | Defines the text for the component            | false
-| `checked`     | Boolean | **regular** | true/false                                              | Defines the component as checked or not       | false
-| `card`        | Boolean | **regular** | true/false                                              | Sets the component to be displayed as a card or not | false
-| `disabled`    | Boolean | **regular** | true/false                                              | Disables the checkbutton                      | false
+| `size`        | String  | **medium** | <ul><li>small</li><li>medium</li><li>large</li><ul>     | Set the component size                        | false
+| `tetPosition` | String  | **left** | <ul><li>left</li><li>right</li><ul>                     | Defines the position of the text in relation to the input | false
+| `text`        | String  | ''          | Any string                                              | Defines the text for the component            | false
+| `checked`     | Boolean | **false**   | true/false                                              | Defines the component as checked or not       | false
+| `card`        | Boolean | **false**   | true/false                                              | Sets the component to be displayed as a card or not | false
+| `disabled`    | Boolean | **false**   | true/false                                              | Disables the checkbutton                      | false
 
 #
 
