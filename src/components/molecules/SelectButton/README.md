@@ -29,18 +29,18 @@ To use the component, simply invoke by passing the information in your props, an
 
 The output of the above code will be:
 
-<img src="../../../../public/readme-img/select-button-01.png" alt="YooSelectButton">
-<img src="../../../../public/readme-img/select-button-02.png" alt="YooSelectButton">
-<img src="../../../../public/readme-img/select-button-03.png" alt="YooSelectButton">
+<img src="../../../../public/readme-img/select-button-01.png" alt="YooSelectButton" width="400px">
+<img src="../../../../public/readme-img/select-button-02.png" alt="YooSelectButton" width="400px">
+<img src="../../../../public/readme-img/select-button-03.png" alt="YooSelectButton" width="400px">
 
 ### Demo Default
 
-<img src="../../../../public/readme-demo/select-button-one.gif" alt="YooSelectButtonOne">
+<img src="../../../../public/readme-demo/select-button-one.gif" alt="YooSelectButtonOne" width="400px">
 
 
 ### Demo Multiple
 
-<img src="../../../../public/readme-demo/select-button-multiple.gif" alt="YooSelectButtonMultiple">
+<img src="../../../../public/readme-demo/select-button-multiple.gif" alt="YooSelectButtonMultiple" width="400px">
 
 ### Props
 
