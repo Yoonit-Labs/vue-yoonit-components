@@ -35,7 +35,7 @@ The output of the above code will be:
 
 ### Demo Default
 
-<img src="../../../../public/readme-demo/select-button-one.gif" alt="YooSelectButtonOne" width="400px">
+<img src="../../../../public/readme-demo/select-button-default.gif" alt="YooSelectButtonOne" width="400px">
 
 
 ### Demo Multiple
