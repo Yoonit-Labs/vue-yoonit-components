@@ -29,21 +29,21 @@ To use the component, simply invoke it in your template with the desired props
 
 The output of the above code will be:
 
-<img src="https://github.com/Yoonit-Labs/vue-yoonit-components/blob/feature/readme/public/readme-img/stepper.png">
+<img src="../../../../public/readme-img/stepper.png" alt="Example for YooStepper">
 
 ### Props
 
-| Name               | Input/Format                                  | Description                                                                 |
-| -                  | -                                             | -                                                                           |
-| counterType        | number, dot                                   | Sets the type of pagination the component will use                          |
-| totalSteps         | Number                                        | Sets the total number of steps                                              |
-| currentStep        | Number                                        | Set the current step                                                        |
+| Parameter     | Type    | Default     | Valid values                         | Description                                        | Required
+|---------------|---------|-------------|--------------------------------------|----------------------------------------------------|---------
+| `counterType` | String  | **number**  | <ul><li>number</li><li>dot</li><ul>  | Sets the type of pagination the component will use | false
+| `totalSteps`  | Number  | **1**       | Any positive number                  | Sets the total number of steps                     | false
+| `currentStep` | Number  | **0**       | Any positive number                  | Set the current step                               | false
 
 #
 
- #### [**Next component**](https://github.com/Yoonit-Labs/vue-yoonit-components/blob/feature/readme/src/components/atoms/Switch/Switch.readme.md) :arrow_forward:
+ #### [**Next component**](../Switch/README.md) :arrow_forward:
  
- #### :arrow_backward: [**Previous component**](https://github.com/Yoonit-Labs/vue-yoonit-components/blob/feature/readme/src/components/atoms/Separator/Separator.readme.md)
+ #### :arrow_backward: [**Previous component**](../Separator/README.md)
 
 #
 
