@@ -54,7 +54,7 @@ The output of the above code will be:
 | `size`       | String  | **medium**  | small, medium, large, xlarge                | Set the component size                                           | false    |
 | `fill`       | String  | **primary** | primary, danger, light, dark, neutral       | If the image prop is empty, set a color for the avatar background| false    |
 | `textColor`  | String  | **light**  | light, dark                                  | If the image prop is empty, define a color for the text          | false    |
-| `text`       | String  |  **''**    | tring                                        | Set a text for the avatar to take the initials                   | false    |
+| `text`       | String  |  **''**    | String                                        | Set a text for the avatar to take the initials                   | false    |
 | `image`      | String  |  **''**    | require('[pathImage]') or external path image| Set a text for the avatar to take the initials                   | false    |
 
 #
