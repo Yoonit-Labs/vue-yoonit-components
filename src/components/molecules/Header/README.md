@@ -34,24 +34,29 @@ To use the component, you must inform what should be rendered in each slot. The 
 
 The output of the above code will be:
 
-<img src="../../../../public/readme-img/header.png" alt="YooHeader" width="900">
+<img src="../../../../public/readme-img/header.png" alt="YooHeader" width="1000">
 
 ### Image
 
-<img src="../../../../public/readme-img/header-image.png" alt="YooHeader" width="900">
+<img src="../../../../public/readme-img/header-image.png" alt="YooHeader" width="1000">
 
 ### Avatar
 
-<img src="../../../../public/readme-img/header-avatar-and-button.png" alt="YooHeader" width="900">
+<img src="../../../../public/readme-img/header-avatar-and-button.png" alt="YooHeader" width="1000">
 
 ### Slots
 
-| Name               | Input/Format                                  | Description                                                                 |
-| -                  | -                                             | -                                                                           |
-| header-left        | any                                           | Render the element in the left slot of the header                                                                         |
-| header-center      | any                                           | Render the element in the middle slot of the header                                           |
-| header-right       | any                                           | Render the element in the right slot of the header                                                                         |
+| Slot | Type | Description |
+|-----------|------|------------------------|
+| **`header-left`** | Any | Render the element in the left slot of the header. | 
+| **`header-center`** | Any |Render the element in the middle slot of the header. |
+| **`header-right`** | Any | Render the element in the right slot of the header. |
 
+#### [**Next component**](../Modal/README.md) :arrow_forward:
+
+#### :arrow_backward: [**Previous component**](../FormGroup/README.md)
+
+## To contribute and make it better
 ## To contribute and make it better
 
 Clone the repo, change what you want and send PR.
