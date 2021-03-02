@@ -13,7 +13,7 @@ export const answers = [
     },
     weight: 3,
     status: true,
-    override: true
+    override: false
   }
 ]
 export const questionCheck = {
@@ -38,7 +38,7 @@ export const questionAnswersNull = {
 export const questionRadio = {
   id: 'covid-cl1',
   text: {
-    ptBR: 'Marque os sintomas sentidos nas últimas horas'
+    ptBR: 'auhsuhashuashuashuaus'
   },
   visible: true,
   type: 'radio',

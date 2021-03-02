@@ -7,7 +7,7 @@ const mountComponent = () => {
   return mount(YooSelectButton, {
     slots: { default: SlotText },
     propsData: {
-      rate: [
+      options: [
         {
           text: '1',
           value: 1
