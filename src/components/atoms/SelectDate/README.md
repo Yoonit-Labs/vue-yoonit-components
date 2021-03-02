@@ -32,9 +32,9 @@ To use the component, simply invoke it in your template with the desired props
 
 The output of the above code will be:
 
-<img src="../../../../public/readme-img/selectdate-time.png">
-<img src="../../../../public/readme-img/selectdate-en.png">
-<img src="../../../../public/readme-img/selectdate-br.png">
+<img src="../../../../public/readme-img/selectdate-time.png" alt="Example for time type">
+<img src="../../../../public/readme-img/selectdate-en.png" alt="Example for date type with english format">
+<img src="../../../../public/readme-img/selectdate-br.png" alt="Example for date type with brazilian format">
 
 ### Props
 
