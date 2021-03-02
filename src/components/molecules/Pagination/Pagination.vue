@@ -14,7 +14,7 @@
 
       YooStepper(
         :counterType="counterType"
-        :totalSteps="totalPages",
+        :totalSteps="totalPages"
         :currentStep="currentPage"
       )
 
@@ -22,7 +22,8 @@
         v-show="!nextButton ? !(lastButton && takeAtLastPage) : false"
         icon="arrow-right"
         iconStyle="solid"
-        @onClick="doNext()",
+        :variation="variationButtonNext"
+        @onClick="doNext()"
         :disabled="takeNextBtnEnabled"
       )
       YooButton.button__next--grow(
@@ -31,6 +32,7 @@
         iconPosition="right"
         flexGrow="1"
         :text="nextButton"
+        :variation="variationButtonNext"
         :disabled="takeNextBtnEnabled"
         @onClick="doNext()"
       )

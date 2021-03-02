@@ -4,15 +4,13 @@ YooFlexLayout.yoo-stepper(
   justifyContent="space-around"
   alignItems="center"
 )
-  div(
+  div.yoo-stepper__number.m__t--xs(
     v-if="counterType === 'number'"
-    class="yoo-stepper__number m__t--xs"
   ) {{takeNumberLabel}}
-  div(
+  div.yoo-stepper__dot.m__l--m.m__r--m(
     v-if="counterType === 'dot'"
     v-for="(step, index) in takeStepsLength"
     :key="'dotStep-' + index"
-    class="yoo-stepper__dot m__l--m"
     :class=`[
       { 'yoo-stepper__dot--active': index === currentStep },
       { 'yoo-stepper__dot--last': index === totalSteps }]`

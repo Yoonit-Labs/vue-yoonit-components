@@ -74,7 +74,7 @@ export default {
     },
     notifyText: {
       type: String,
-      default: 'Yoo-Notify'
+      default: ''
     },
     notifyTextColor: {
       type: String,
