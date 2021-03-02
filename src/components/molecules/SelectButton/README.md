@@ -42,8 +42,8 @@ The output of the above code will be:
 
 | Parameter | Type | Default | Valid values | Description | Required |
 |-----------|------|------------------------|--------------|-------------|---------|
-| **`options`** | Array | `''` | Array of objects i.e [{"text": "1", "value": 1}] | Informs the items that will be rendered. | true
-| **`multiple`** | Boolean | `false` | <ul><li>true</li></ul><ul><li>false</li></ul> | Shows whether it will be possible to select more than one option. | false
+| **`options`** | Array | `''` | Array of objects i.e [{"text": "1", "value": 1}] | Informs the items that will be rendered. | true |
+| **`multiple`** | Boolean | `false` | <ul><li>true</li></ul><ul><li>false</li></ul> | Shows whether it will be possible to select more than one option. | false |
 
 #### [**Next component**](../TableAttribute/README.md) :arrow_forward:
 

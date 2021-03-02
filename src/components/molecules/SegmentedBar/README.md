@@ -25,14 +25,18 @@ To use the component, you must inform the na prop list the number of items that 
 
 The output of the above code will be:
 
-<img src="../../../../public/readme-img/segmented-bar.png" alt="YooSegmentedBar" width="900">
+<img src="../../../../public/readme-img/segmented-bar.gif" alt="YooSegmentedBar" width="600px">
 
 ### Props
 
-| Name               | Input/Format                                  | Description                                                                 |
-| -                  | -                                             | -                                                                           |
-| list               | array                                         | List of items to be rendered                                                                         |
-| current            | number                                        | Item that is selected                                                       |
+| Parameter | Type | Default | Valid values | Description | Required |
+|-----------|------|------------------------|--------------|-------------|---------|
+| **`list`** | Array | `''` | Array of objects i.e [{"title": "First"}, {"title": "Second"}] | List of items to be rendered. | true | 
+| **`currentIndex`** | Number | `0` | Any number respecting the item limit | Item that is selected. | false |
+
+#### [**Next component**](../SelectButton/README.md) :arrow_forward:
+
+#### :arrow_backward: [**Previous component**](../QuizQuestion/README.md)
 
 ## To contribute and make it better
 
