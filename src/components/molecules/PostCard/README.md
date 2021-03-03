@@ -4,7 +4,7 @@
 
 ## YooPostCard
 
-Component used to display a notification space to the user
+Component used for card creation
 
 ## Usage
 
