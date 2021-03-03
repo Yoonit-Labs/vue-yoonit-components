@@ -4,7 +4,7 @@
 
 ## YooTableAttribute
 
-Component used for card creation
+Component used to create a list item with attributes
 
 ## Usage
 
