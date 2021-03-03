@@ -28,6 +28,7 @@
         flexWrap="wrap"
         alignItems="flex-start"
         flexDirection="row"
+        justifyContent="flex-start"
       )
         p.yoo-table-card__no-detail(
           v-if="(typeof details !== 'object')"
