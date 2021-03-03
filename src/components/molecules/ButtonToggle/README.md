@@ -29,11 +29,12 @@ The output of the above code will be:
 
 ### Props
 
-| Name               | Input/Format                                  | Description                                                                 |
-| -                  | -                                             | -                                                                           |
-| options            | array                                         | Set the number of buttons to be rendered and their  names                                                      |
-| current            | number                                        | Arrow which button is active          |
+| Parameter | Type | Default | Valid values | Description | Required |
+|-----------|------|------------------------|--------------|-------------|---------|
+| **`options`** | Array | `''` | i.e ['Yoo Button Toggle', 'Yoo Button Toggle 1'] | Set the number of buttons to be rendered and their. | true |
+| **`current`** | Number | `0` | Any Number | Arrow which button is active. | false |
 
+#### [**Next component**](../Card/README.md) :arrow_forward:
 ## To contribute and make it better
 
 Clone the repo, change what you want and send PR.

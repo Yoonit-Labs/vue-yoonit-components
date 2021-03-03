@@ -2,14 +2,14 @@ export const answers = [
   {
     id: 'ans1',
     text: {
-      ptBR: 'Cansaço'
+      enUS: 'Yes'
     },
     weight: 3
   },
   {
     id: 'ans2',
     text: {
-      ptBR: 'Corrimento Nasal (Coriza)'
+      enUS: 'No'
     },
     weight: 3,
     status: true,
@@ -17,9 +17,9 @@ export const answers = [
   }
 ]
 export const questionCheck = {
-  id: 'covid-cl1',
+  id: 'yoonit-cl1',
   text: {
-    ptBR: 'Marque os sintomas sentidos nas últimas horas'
+    enUS: 'Are you enjoying using Yoonit Components'
   },
   visible: true,
   type: 'check',
@@ -27,18 +27,18 @@ export const questionCheck = {
 }
 
 export const questionAnswersNull = {
-  id: 'covid-cl1',
+  id: 'yoonit-cl1',
   text: {
-    ptBR: 'Marque os sintomas sentidos nas últimas horas'
+    enUS: 'Are you enjoying using Yoonit Components'
   },
   visible: true,
   type: 'check',
   answers: []
 }
 export const questionRadio = {
-  id: 'covid-cl1',
+  id: 'yoonit-cl1',
   text: {
-    ptBR: 'auhsuhashuashuashuaus'
+    enUS: 'Are you enjoying using Yoonit Components'
   },
   visible: true,
   type: 'radio',

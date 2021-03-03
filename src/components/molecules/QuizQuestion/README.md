@@ -16,8 +16,8 @@ To use the component, simply invoke by passing the information in your props, qu
 <template>
   <yoo-quiz-question
     textPosition="left"
-    :question='{"id":"covid-cl1","text":{"ptBR":"Marque os sintomas sentidos nas últimas horas"},"visible":true,"type":"radio","answers":[{"id":"ans1","text":{"ptBR":"Cansaço"},"weight":3},{"id":"ans2","text":{"ptBR":"Corrimento Nasal (Coriza)"},"weight":3,"status":true,"override":true}]}'
-    :answers='[{"id":"ans1","text":{"ptBR":"Cansaço"},"weight":3},{"id":"ans2","text":{"ptBR":"Corrimento Nasal (Coriza)"},"weight":3,"status":true,"override":true}]'
+    :question='{"id":"yoonit-cl1","text":{"enUS":"Are you enjoying using Yoonit Components"},"visible":true,"type":"radio","answers":[{"id":"ans1","text":{"enUS":"Yes"},"weight":3},{"id":"ans2","text":{"enUS":"No"},"weight":3,"status":true,"override":false}]}'
+    :answers='[{"id":"ans1","text":{"enUS":"Yes"},"weight":3},{"id":"ans2","text":{"enUS":"No"},"weight":3,"status":true,"override":false}]'
   />
 </template>
 ```
@@ -34,11 +34,14 @@ The output of the above code will be:
 
 ### Props
 
-| Name               | Input/Format                                  | Description                                                                 |
-| -                  | -                                             | -                                                                           |
-| textPosition       | left, right                                   | Position of text in the component                                           |
-| question           | object                                        | Object with the questions that will be rendered                             |     
+| Parameter | Type | Default | Valid values | Description | Required |
+|-----------|------|------------------------|--------------|-------------|---------|
+| **`textPosition`** | String | `left` | <ul><li>left</li></ul><ul><li>right</li></ul> | Position of text in the component. | false |
+| **`question`** | Object | `''` | i.e {"id":"yoonit-cl1","text":{"enUS":"Are you enjoying using Yoonit Components"},"visible":true,"type":"radio","answers":[{"id":"ans1","text":{"enUS":"Yes"},"weight":3},{"id":"ans2","text":{"enUS":"No"},"weight":3,"status":true,"override":false}]} | Object with the questions that will be rendered. | true |
 
+#### [**Next component**](../SegmentedBar/README.md) :arrow_forward:
+
+#### :arrow_backward: [**Previous component**](../PostCard/README.md)
 ## To contribute and make it better
 
 Clone the repo, change what you want and send PR.

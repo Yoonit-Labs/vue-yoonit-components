@@ -8,7 +8,7 @@
       row="1"
       col="1"
       :class="['yoo-quiz__question']"
-    ) {{ question.text.ptBR }}
+    ) {{ question.text.enUS }}
       span(
         v-if="question.required"
       ) *
@@ -20,7 +20,7 @@
       :col="1"
       :class="['yoo-quiz__card']"
       :textPosition="textPosition"
-      :text="ans.text.ptBR"
+      :text="ans.text.enUS"
       :checked="doTakeStatus(index)"
       :card="true"
       @response='doTap($event, index, ans.override, question.type)'
