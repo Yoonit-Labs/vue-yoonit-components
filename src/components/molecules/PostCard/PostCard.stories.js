@@ -29,10 +29,10 @@ export default {
         options: PropsConfig.iconStyle.options
       }
     },
-    appIndicatorFill: {
+    indicatorFill: {
       control: {
         type: 'select',
-        options: PropsConfig.appIndicatorFill.options
+        options: PropsConfig.indicatorFill.options
       }
     }
   }

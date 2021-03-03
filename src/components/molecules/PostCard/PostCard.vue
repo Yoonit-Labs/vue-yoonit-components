@@ -20,7 +20,7 @@
       YooIndicator(
         v-if="showIndicator"
         size="small"
-        :fill="appIndicatorFill"
+        :fill="indicatorFill"
       )
 
     h3(
@@ -83,10 +83,10 @@ export default {
       default: 'solid',
       validator: value => PropsConfig.iconStyle.options.includes(value)
     },
-    appIndicatorFill: {
+    indicatorFill: {
       type: String,
       default: 'danger',
-      validator: value => PropsConfig.appIndicatorFill.options.includes(value)
+      validator: value => PropsConfig.indicatorFill.options.includes(value)
     }
   },
   components: {

@@ -13,52 +13,43 @@ To use the component, simply invoke it in your template with the desired props
 ### Input
 ```vue
 <template>
-  <yoo-notify
-    notifyFill="light"
-    notifyText="This is an example text from YooNotify"
-    notifyTextColor="dark"
-    notifyTextSize="md"
-    :showIndicator="false"
-    :showIcon="false"
-    :closeButton="false"
+  <yoo-post-card
+    title="Yoo PostCard"
+    subtitle="Test"
+    fill="white"
   />
-  <yoo-notify
-    notifyFill="light"
-    notifyText="This is an example text from YooNotify"
-    notifyTextColor="dark"
-    notifyTextSize="md"
-    :showIndicator="false"
-    :showIcon="false"
-    :closeButton="true"
-  />
-  <yoo-notify
-    notifyFill="light"
-    notifyText="This is an example text from YooNotify"
-    notifyTextColor="dark"
-    notifyTextSize="md"
-    :showIndicator="true"
-    :showIcon="false"
-    :closeButton="false"
-  />
-  <yoo-notify
-    notifyFill="light"
-    notifyText="This is an example text from YooNotify"
-    notifyTextColor="dark"
-    notifyTextSize="md"
-    :showIndicator="false"
-    :showIcon="true"
+  <yoo-post-card
+    title="Yoo PostCard"
+    subtitle="Test"
+    fill="white"
+    showIndicator
     icon="cog"
+    iconSize="xl"
+    iconFill="neutral"
     iconStyle="solid"
-    iconColor="dark"
+    indicatorFill="danger"
   />
-  <yoo-notify
-    notifyFill="light"
-    notifyText="This is an example text from YooNotify"
-    notifyTextColor="dark"
-    notifyTextSize="md"
-    :showIndicator="true"
-    :showIcon="false"
-    :closeButton="true"
+  <yoo-post-card
+    title="Yoo PostCard"
+    subtitle="Test"
+    fill="primary"
+    showIndicator
+    icon="cog"
+    iconSize="xl"
+    iconFill="white"
+    iconStyle="solid"
+    indicatorFill="danger"
+  />
+  <yoo-post-card
+    title="Yoo PostCard"
+    subtitle="Test"
+    fill="danger"
+    showIndicator
+    icon="cog"
+    iconSize="xl"
+    iconFill="light"
+    iconStyle="solid"
+    indicatorFill="neutral"
   />
 </template>
 ```
@@ -66,31 +57,26 @@ To use the component, simply invoke it in your template with the desired props
 
 The output of the above code will be:
 
-<img src="https://github.com/Yoonit-Labs/vue-yoonit-components/blob/feature/readme/public/readme-img/notify.png">
+<img src="https://github.com/Yoonit-Labs/vue-yoonit-components/blob/feature/readme/public/readme-img/postcard.png">
 
 ### Props
 
 | Parameter          | Type    | Default | Valid values                              | Description                                    | Required |
 |--------------------|---------|---------|-------------------------------------------|------------------------------------------------|----------|
 | `title`              | String  |   **''**    | Any String                                | Sets the component item title                  | false    |
-| `notifyText`         | String  |   **''**    | Any String                                | Sets the component item text                   | false    |
-| `notifyTextColor`    | String  | **dark**    | <ul><li>dark</li><li>light</li><li>danger</li></ul> | Sets a color for component text   | false    |
-| `notifyTextSize`     | String  | **md**      | <ul><li>tn</li><li>xs</li><li>sm</li><li>md</li><li>lg</li><li>xl</li><li>hg</li></ul>  | Set a size for the component text     | false    |
-| `notifyFill`         | String  | **light**   | <ul><li>light</li><li>primary</li><li>danger</li></ul>                    | Set a background color                         | false    |
+| `subtitle`           | String  |   **''**    | Any String                                | Sets the component item text                   | false    |
+| `fill`    | String  | **dark**    | <ul><li>white</li><li>primary</li><li>danger</li><li>neutral</li><li>light</li><li>dark</li></ul> | Sets a color for component text   | false    |
 | `showIndicator`      | Boolean | **true**    | true/false                                | Shows the indicator component                  | true     |
-| `indicatorSize`      | String  | **normal**  | <ul><li>small</li>, <li>medium</li> <li>normal</li> <li>large</li>              | Set a size for the indicator                   | false    |
 | `indicatorFill`      | String  | **danger**  | <ul><li>primary</li>, <li>danger</li> <li>light</li> <li>dark</li> <li>neutral</li>     | Set a color for the indicator                  | false    |
-| `showIcon`           | Boolean |  **false**  | true/false                                | When there is no indicator, enable the icon    | false    |
 | `icon`               | String  |   **''**    | Any icon related to fontawesome           | Sets an icon on the button based on fontawesome| false    |
-| `iconColor`          | String  | **dark**    | <ul><li>light</li><li>dark</li>           | Sets a color for the icon                      | false    |
+| `iconFill`          | String  | **dark**    | <ul><li>white</li><li>primary</li><li>danger</li><li>neutral</li><li>light</li><li>dark</li></ul>           | Sets a color for the icon                      | false    |
 | `iconStyle`          | String  | **solid**   | <ul><li>solid</li><li>regular</li>        | Sets the icon type to filled or bordered only  | false    |
-| `closeButton`        | Boolean | **false**   | true/false                                | Sets a close button for the component          | false    |
-| `buttonColor`        | String  |   **''**    | Any color i.e #00000                      | Set a color to the close button                | false    |
+
 #
 
- #### [**Next component**](../Modal/Modal.readme.md) :arrow_forward:
+ #### [**Next component**](../QuizQuestion/README.md) :arrow_forward:
 
- #### :arrow_backward: [**Previous component**](../Pagination/Pagination.readme.md)
+ #### :arrow_backward: [**Previous component**](../Pagination/README.md)
 
 #
 
