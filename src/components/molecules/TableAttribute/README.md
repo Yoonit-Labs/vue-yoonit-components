@@ -13,43 +13,50 @@ To use the component, simply invoke it in your template with the desired props
 ### Input
 ```vue
 <template>
-  <yoo-post-card
-    title="Yoo PostCard"
-    subtitle="Test"
-    fill="white"
+<template>
+  <yoo-table-attribute
+    title="YooTableAttribute"
+    titleWeight="medium"
+    titleSize="md"
+    detail="detail"
+    detailFill="light"
+    titleFill="black"
+    :actionable="true"
+    actionableType="button"
   />
-  <yoo-post-card
-    title="Yoo PostCard"
-    subtitle="Test"
-    fill="white"
-    showIndicator
-    icon="cog"
-    iconSize="xl"
+  <yoo-table-attribute
+    title="YooTableAttribute"
+    titleWeight="medium"
+    titleSize="md"
+    detail="detail"
+    detailFill="light"
+    titleFill="black"
+    :actionable="true"
+    actionableType="check"
+  />
+  <yoo-table-attribute
+    title="YooTableAttribute"
+    titleWeight="medium"
+    titleSize="md"
+    detail="detail"
+    detailFill="light"
+    titleFill="black"
+    :actionable="true"
+    actionableType="switch"
+    :wrap="true"
+  />
+  <yoo-table-attribute
+    title="YooTableAttribute"
+    titleWeight="medium"
+    titleSize="md"
+    detail="detail"
+    detailFill="light"
+    titleFill="black"
     iconFill="neutral"
-    iconStyle="solid"
-    indicatorFill="danger"
-  />
-  <yoo-post-card
-    title="Yoo PostCard"
-    subtitle="Test"
-    fill="primary"
-    showIndicator
+    :actionable="true"
+    actionableType="switch"
     icon="cog"
-    iconSize="xl"
-    iconFill="white"
     iconStyle="solid"
-    indicatorFill="danger"
-  />
-  <yoo-post-card
-    title="Yoo PostCard"
-    subtitle="Test"
-    fill="danger"
-    showIndicator
-    icon="cog"
-    iconSize="xl"
-    iconFill="light"
-    iconStyle="solid"
-    indicatorFill="neutral"
   />
 </template>
 ```
