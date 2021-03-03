@@ -96,12 +96,12 @@ export default {
     titleWeight: {
       type: String,
       default: 'medium',
-      validator: value => PropsConfig.titleWeight.options
+      validator: value => PropsConfig.titleWeight.options.includes(value)
     },
     titleSize: {
       type: String,
       default: 'md',
-      validator: value => PropsConfig.titleSize.options
+      validator: value => PropsConfig.titleSize.options.includes(value)
     },
     detail: {
       type: String,
@@ -110,17 +110,17 @@ export default {
     detailFill: {
       type: String,
       default: 'light',
-      validator: value => PropsConfig.detailFill.options
+      validator: value => PropsConfig.detailFill.options.includes(value)
     },
     titleFill: {
       type: String,
       default: 'dark',
-      validator: value => PropsConfig.titleFill.options
+      validator: value => PropsConfig.titleFill.options.includes(value)
     },
     iconFill: {
       type: String,
       default: 'neutral',
-      validator: value => PropsConfig.iconFill.options
+      validator: value => PropsConfig.iconFill.options.includes(value)
     },
     actionable: {
       type: Boolean,
@@ -137,7 +137,7 @@ export default {
     actionableType: {
       type: String,
       default: 'button',
-      validator: value => PropsConfig.actionableType.options
+      validator: value => PropsConfig.actionableType.options.includes(value)
     },
     separator: {
       type: Boolean,
