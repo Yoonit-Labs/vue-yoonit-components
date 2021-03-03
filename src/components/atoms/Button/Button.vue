@@ -90,9 +90,7 @@ export default {
     },
     iconCustomColor: {
       type: String,
-      default: '#fff',
-      validator: value =>
-        value.match(PropsConfig.iconCustomColor.color)
+      validator: value => value.match(PropsConfig.iconCustomColor.color)
     }
   },
   computed: {
