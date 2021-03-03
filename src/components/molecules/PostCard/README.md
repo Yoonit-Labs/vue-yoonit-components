@@ -65,9 +65,9 @@ The output of the above code will be:
 |--------------------|---------|---------|-------------------------------------------|------------------------------------------------|----------|
 | `title`              | String  |   **''**    | Any String                                | Sets the component item title                  | false    |
 | `subtitle`           | String  |   **''**    | Any String                                | Sets the component item text                   | false    |
-| `fill`    | String  | **dark**    | <ul><li>white</li><li>primary</li><li>danger</li><li>neutral</li><li>light</li><li>dark</li></ul> | Sets a color for component text   | false    |
-| `showIndicator`      | Boolean | **true**    | true/false                                | Shows the indicator component                  | true     |
-| `indicatorFill`      | String  | **danger**  | <ul><li>primary</li>, <li>danger</li> <li>light</li> <li>dark</li> <li>neutral</li>     | Set a color for the indicator                  | false    |
+| `fill`    | String  | **dark**    | <ul><li>white</li><li>primary</li><li>danger</li><li>neutral</li><li>light</li><li>dark</li></ul> | Sets a color for background component   | false    |
+| `showIndicator`      | Boolean | **true**    | true/false                                | Shows the indicator component                  | false     |
+| `indicatorFill`      | String  | **danger**  | <ul><li>primary</li><li>danger</li> <li>light</li> <li>dark</li> <li>neutral</li>     | Set a color for the indicator                  | false    |
 | `icon`               | String  |   **''**    | Any icon related to fontawesome           | Sets an icon on the button based on fontawesome| false    |
 | `iconFill`          | String  | **dark**    | <ul><li>white</li><li>primary</li><li>danger</li><li>neutral</li><li>light</li><li>dark</li></ul>           | Sets a color for the icon                      | false    |
 | `iconStyle`          | String  | **solid**   | <ul><li>solid</li><li>regular</li>        | Sets the icon type to filled or bordered only  | false    |
