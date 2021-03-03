@@ -1,0 +1,23 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`YooSelectDate Component Matches Snapshot 1`] = `
+<div class="yoo-selectdate">
+  <yooflexlayout-stub flexdirection="row" flexwrap="nowrap" justifycontent="center" alignitems="stretch" aligncontent="stretch" gap="32px">
+    <yooflexlayout-stub flexdirection="column" flexwrap="nowrap" justifycontent="center" alignitems="center" aligncontent="stretch" gap="0" class="yoo-selectdate__container">
+      <div class="yoo-selectdate__item">31</div>
+      <div class="yoo-selectdate__item yoo-selectdate__item--active day">01</div>
+      <div class="yoo-selectdate__item">02</div>
+    </yooflexlayout-stub>
+    <yooflexlayout-stub flexdirection="column" flexwrap="nowrap" justifycontent="center" alignitems="center" aligncontent="stretch" gap="0" class="yoo-selectdate__container">
+      <div class="yoo-selectdate__item">fev</div>
+      <div class="yoo-selectdate__item yoo-selectdate__item--active month">mar</div>
+      <div class="yoo-selectdate__item">abr</div>
+    </yooflexlayout-stub>
+    <yooflexlayout-stub flexdirection="column" flexwrap="nowrap" justifycontent="center" alignitems="center" aligncontent="stretch" gap="0" class="yoo-selectdate__container">
+      <div class="yoo-selectdate__item">2020</div>
+      <div class="yoo-selectdate__item yoo-selectdate__item--active year">2021</div>
+      <div class="yoo-selectdate__item">2022</div>
+    </yooflexlayout-stub>
+  </yooflexlayout-stub>
+</div>
+`;
