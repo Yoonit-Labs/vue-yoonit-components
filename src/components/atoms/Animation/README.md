@@ -11,7 +11,7 @@ Component to make an animation using a json generated on the [**LottieFiles**](h
 To use the component, host a [**LottieFiles**](https://lottiefiles.com/) json file in your project, import the file into your template and send it as a prop to the animation component
 
 ### Input
-`main.vue`
+`app.vue`
 ```javascript
 import * as animationData from '@/assets/animations/loading.json'
 ```
