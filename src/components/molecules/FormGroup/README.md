@@ -29,19 +29,19 @@ To use the component, simply invoke by passing the information in your props.
 
 The output of the above code will be:
 
-<img src="../../../../public/readme-img/form-group-default.gif" alt="YooFormGroup" width="800">
+<img src="../../../../public/readme-img/form-group-default.gif" alt="YooFormGroup" width="600">
 
 ### Valid
 
-<img src="../../../../public/readme-img/form-group-valid.png" alt="YooFormGroup Valid" width="800">
+<img src="../../../../public/readme-img/form-group-valid.png" alt="YooFormGroup Valid" width="600">
 
 ### Invalid
 
-<img src="../../../../public/readme-img/form-group-invalid.png" alt="YooFormGroup Invalid" width="800">
+<img src="../../../../public/readme-img/form-group-invalid.png" alt="YooFormGroup Invalid" width="600">
 
 ### Disabled
 
-<img src="../../../../public/readme-img/form-group-disabled.png" alt="YooFormGroup Disabled" width="800">
+<img src="../../../../public/readme-img/form-group-disabled.png" alt="YooFormGroup Disabled" width="600">
 
 ### Props
 
@@ -51,7 +51,7 @@ The output of the above code will be:
 | **`value`** | String | `''` | Any String | Informs the value of the input. | false |
 | **`required`** | Boolean | `''` | `true` or `false` | Tells whether value is required. | false |
 | **`validateOnDataInput`** | Boolean | `false` | `true` or `false` | Informs if the value received in the value field is valid. | false |
-| **`requiredRule`** | Function | `''` | ????????? | ????????? | false |
+| **`requiredRule`** | Function | `''` | i.e let result = result.length > 3 ? true : false | Reports the component validation rule | false |
 | **`disabled`** | Boolean | `''` | `true` or `false` | Informs if the input is enabled. | false |
 
 
