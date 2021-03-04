@@ -39,7 +39,7 @@ To use the component, simply invoke it in your template with the desired props
 
 The output of the above code will be:
 
-<img src="../../../../public/readme-img/gridlayout.png" alt="Example for FlexLayout component">
+<img src="../../../../public/readme-img/gridlayout.png" alt="Example for YooGridLayout component">
 
 ### Props
 
