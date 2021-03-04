@@ -13,7 +13,6 @@ To use the component, simply invoke it in your template with the desired props
 ### Input
 ```vue
 <template>
-<template>
   <yoo-table-attribute
     title="YooTableAttribute"
     titleWeight="medium"
