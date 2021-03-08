@@ -1,6 +1,5 @@
 <template lang="pug">
-  YooFlexLayout(
-    class="yoo-select"
+  YooFlexLayout.yoo-select(
     justifyContent="space-around"
     alignItems="center"
   )

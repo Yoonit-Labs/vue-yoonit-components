@@ -1,16 +1,14 @@
 <template lang="pug">
-  YooFlexLayout(
+  YooFlexLayout.yoo-button-toggle(
     flexDirection="column",
     flexWrap="nowrap"
-    class="yoo-button-toggle"
   )
-    YooFlexLayout(
+    YooFlexLayout.yoo-button-toggle__container(
       flexDirection="row",
       alignContent="center",
       alignItems="center",
       justifyContent="center",
       flexWrap="nowrap"
-      class="yoo-button-toggle__container"
     )
       YooButton(
         v-for="(option, index) in options",

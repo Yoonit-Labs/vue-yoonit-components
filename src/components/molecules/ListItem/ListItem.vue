@@ -1,24 +1,21 @@
 <template lang="pug">
-  YooGridLayout(
-    :class="['yoo-list-item']"
+  YooGridLayout.yoo-list-item(
     rows="auto"
     cols="*, auto"
   )
-    YooFlexLayout.m__t--l.m__b--l(
+    YooFlexLayout.yoo-list-item__item.m__t--l.m__b--l(
       flexDirection="column"
       col="1"
       row="1"
       flexWrap="wrap"
       justifyContent="center"
-      :class="['yoo-list-item__item', ...takeItemsModifier]"
+      :class="[...takeItemsModifier]"
     )
-      h3(
-        class="yoo-list-item__title"
+      h3.yoo-list-item__title(
       ) {{title}}
 
-      p(
+      p.yoo-list-item__subtitle(
         v-show="subtitle",
-        class="yoo-list-item__subtitle"
         width="100%"
       ) {{subtitle}}
 

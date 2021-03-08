@@ -1,12 +1,10 @@
 <template lang="pug">
-  div(
-    :class="['yoo-input-group']"
+  div.yoo-input-group(
   )
-    label(
-      :class="['yoo-input', ...takeModifier]"
+    label.yoo-input(
+      :class="[...takeModifier]"
     )
-      input(
-        :class="['yoo-input__field']"
+      input.yoo-input__field(
         :value="value"
         v-on="listeners"
         v-bind="$attrs"
@@ -15,13 +13,11 @@
         ref="textField"
       )
 
-      span(
-        class="yoo-input__label"
+      span.yoo-input__label(
       ) {{ label }}
         i.fa
 
-      span(
-        :class="['yoo-input__feedback']",
+      span.yoo-input__feedback(
         v-show="!isValid"
       ) {{ invalidMessage }}
 

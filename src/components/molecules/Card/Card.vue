@@ -1,6 +1,6 @@
 <template lang="pug">
-  div(
-    :class="['yoo-card', takeModifier]"
+  div.yoo-card(
+    :class="[...takeModifier]"
     @click="doClick"
   )
     YooFlexLayout(
@@ -9,12 +9,11 @@
       width="100%"
       justifyContent="space-between"
     )
-      YooIcon(
+      YooIcon.yoo-card__icon(
         :icon="icon"
         :fill="iconFill"
         :size="iconSize"
         :iconStyle="iconStyle"
-        class="yoo-card__icon"
       )
 
       YooIndicator(
@@ -23,16 +22,14 @@
         :fill="appIndicatorFill"
       )
 
-    h3(
+    h3.yoo-card__title(
       row="2"
       col="1"
-      class="yoo-card__title"
     ) {{ title }}
 
-    p(
+    p.yoo-card__subtitle(
       row="3"
       col="1"
-      class="yoo-card__subtitle"
     ) {{ subtitle }}
 </template>
 

@@ -1,11 +1,10 @@
 <template lang="pug">
-  YooFlexLayout(
+  YooFlexLayout.yoo-segmented-bar(
     flexDirection="row",
     alignContent="center",
     alignItems="center",
     justifyContent="center",
-    flexWrap="nowrap",
-    class="yoo-segmented-bar"
+    flexWrap="nowrap"
   )
     YooFlexLayout(
       v-for="(option, index) in list",

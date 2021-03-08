@@ -1,6 +1,6 @@
 <template lang="pug">
-  div(
-    :class="['yoo-indicator', ...takeModifier]"
+  div.yoo-indicator(
+    :class="[...takeModifier]"
   ) {{ text }}
 </template>
 
