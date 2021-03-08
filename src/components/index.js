@@ -9,7 +9,7 @@ import YooStepper from './atoms/Stepper/Stepper.vue'
 import YooSwitch from './atoms/Switch/Switch.vue'
 
 import YooButtonToggle from './molecules/ButtonToggle/ButtonToggle.vue'
-import YooCard from './molecules/Card/Card.vue'
+import YooListItem from './molecules/ListItem/ListItem.vue'
 import YooFormGroup from './molecules/FormGroup/FormGroup.vue'
 import YooHeader from './molecules/Header/Header.vue'
 import YooModal from './molecules/Modal/Modal.vue'
@@ -38,7 +38,7 @@ const yooComponents = {
   YooSeparator,
   YooStepper,
   YooButtonToggle,
-  YooCard,
+  YooListItem,
   YooFormGroup,
   YooHeader,
   YooModal,

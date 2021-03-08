@@ -1,12 +1,12 @@
 import { shallowMount } from '@vue/test-utils'
-import YooCard from '@/components/molecules/Card/Card.vue'
-import PropsConfig from './Card.config'
+import YooListItem from '@/components/molecules/ListItem/ListItem.vue'
+import PropsConfig from './ListItem.config'
 
-const classBlock = 'yoo-card'
+const classBlock = 'yoo-list-item'
 const SlotText = 'Default Slot Text'
 
 const mountComponent = () => {
-  return shallowMount(YooCard, {
+  return shallowMount(YooListItem, {
     slots: { default: SlotText },
     propsData: {
       title: 'Default Title',
@@ -15,7 +15,7 @@ const mountComponent = () => {
   })
 }
 
-describe('YooCard Component', () => {
+describe('YooListItem Component', () => {
   let wrapper
   beforeEach(() => {
     wrapper = mountComponent()
@@ -26,15 +26,15 @@ describe('YooCard Component', () => {
   })
 
   it('Loads the Component HTML', async () => {
-    expect(wrapper.classes('yoo-card')).toBe(true)
-    expect(wrapper.find('.yoo-card__title').exists()).toBe(true)
-    expect(wrapper.find('.yoo-card__subtitle').exists()).toBe(true)
+    expect(wrapper.classes('yoo-list-item')).toBe(true)
+    expect(wrapper.find('.yoo-list-item__title').exists()).toBe(true)
+    expect(wrapper.find('.yoo-list-item__subtitle').exists()).toBe(true)
   })
 
   describe('Props', () => {
     describe('borderLeft', () => {
       it('Has a valid default value', () => {
-        expect(YooCard.props.borderLeft.default).toBe(true)
+        expect(YooListItem.props.borderLeft.default).toBe(true)
       })
 
       it(`Includes borderLeft class: .${classBlock}__style--border-left`, async () => {
@@ -49,7 +49,7 @@ describe('YooCard Component', () => {
 
     describe('borderFill', () => {
       it('Has a valid default value', () => {
-        expect(PropsConfig.borderFill.options.includes(YooCard.props.borderFill.default)).toBe(true)
+        expect(PropsConfig.borderFill.options.includes(YooListItem.props.borderFill.default)).toBe(true)
       })
       PropsConfig.borderFill.options.forEach(borderFill => {
         it(`Includes borderFill class: .${classBlock}__fill--border-${borderFill}`, async () => {

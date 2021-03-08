@@ -1,6 +1,6 @@
 <template lang="pug">
   YooGridLayout(
-    :class="['yoo-card']"
+    :class="['yoo-list-item']"
     rows="auto"
     cols="*, auto"
   )
@@ -10,15 +10,15 @@
       row="1"
       flexWrap="wrap"
       justifyContent="center"
-      :class="['yoo-card__item', ...takeItemsModifier]"
+      :class="['yoo-list-item__item', ...takeItemsModifier]"
     )
       h3(
-        class="yoo-card__title"
+        class="yoo-list-item__title"
       ) {{title}}
 
       p(
         v-show="subtitle",
-        class="yoo-card__subtitle"
+        class="yoo-list-item__subtitle"
         width="100%"
       ) {{subtitle}}
 
@@ -41,7 +41,7 @@ import YooFlexLayout from '@/components/bosons/FlexLayout/FlexLayout.vue'
 import YooGridLayout from '@/components/bosons/GridLayout/GridLayout.vue'
 
 export default {
-  name: 'YooCard',
+  name: 'YooListItem',
   props: {
     title: {
       type: String,
@@ -92,7 +92,7 @@ export default {
     * @returns {array}
     */
     takeItemsModifier () {
-      const blockItem = 'yoo-card'
+      const blockItem = 'yoo-list-item'
       const classList = []
 
       if (this.borderLeft) {
@@ -117,4 +117,4 @@ export default {
 }
 </script>
 
-<style src="./Card.sass" lang="sass" scoped></style>
+<style src="./ListItem.sass" lang="sass" scoped></style>
