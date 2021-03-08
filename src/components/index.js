@@ -3,7 +3,6 @@ import YooAvatar from './atoms/Avatar/Avatar.vue'
 import YooButton from './atoms/Button/Button.vue'
 import YooCheckButton from './atoms/CheckButton/CheckButton.vue'
 import YooIcon from './atoms/Icon/Icon.vue'
-import YooSeparator from './atoms/Separator/Separator.vue'
 import YooSelectDate from './atoms/SelectDate/SelectDate.vue'
 import YooStepper from './atoms/Stepper/Stepper.vue'
 import YooSwitch from './atoms/Switch/Switch.vue'
@@ -35,7 +34,6 @@ const yooComponents = {
   YooCheckButton,
   YooIcon,
   YooSelectDate,
-  YooSeparator,
   YooStepper,
   YooButtonToggle,
   YooCard,
