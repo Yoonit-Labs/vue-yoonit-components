@@ -1,12 +1,12 @@
 import { mount } from '@vue/test-utils'
-import YooPostCard from '@/components/molecules/PostCard/PostCard.vue'
-import PropsConfig from './PostCard.config'
+import YooCard from '@/components/molecules/Card/Card.vue'
+import PropsConfig from './Card.config'
 
-const classBlock = 'yoo-post-card'
+const classBlock = 'yoo-card'
 const SlotText = 'Default Slot Text'
 
 const mountComponent = () => {
-  return mount(YooPostCard, {
+  return mount(YooCard, {
     slots: { default: SlotText },
     propsData: {
       showIndicator: true
@@ -14,7 +14,7 @@ const mountComponent = () => {
   })
 }
 
-describe('YooPostCard Component', () => {
+describe('YooCard Component', () => {
   let wrapper
   beforeEach(() => {
     wrapper = mountComponent()
@@ -25,15 +25,15 @@ describe('YooPostCard Component', () => {
   })
 
   it('Loads the Component HTML', async () => {
-    expect(wrapper.classes('yoo-post-card')).toBe(true)
-    expect(wrapper.find('.yoo-post-card__icon').exists()).toBe(true)
+    expect(wrapper.classes('yoo-card')).toBe(true)
+    expect(wrapper.find('.yoo-card__icon').exists()).toBe(true)
     expect(wrapper.find('.yoo-indicator').exists()).toBe(true)
   })
 
   describe('Props', () => {
     describe('fill', () => {
       it('Has a valid default value', () => {
-        expect(PropsConfig.fill.options.includes(YooPostCard.props.fill.default)).toBe(true)
+        expect(PropsConfig.fill.options.includes(YooCard.props.fill.default)).toBe(true)
       })
       PropsConfig.fill.options.forEach(fill => {
         it(`Includes fill class: .${classBlock}__fill--${fill}`, async () => {

@@ -1,9 +1,9 @@
-import yooPostCard from './PostCard.vue'
-import PropsConfig from './PostCard.config'
+import YooCard from './Card.vue'
+import PropsConfig from './Card.config'
 
 export default {
-  title: 'Yoonit/YooPostCard',
-  component: yooPostCard,
+  title: 'Yoonit/YooCard',
+  component: YooCard,
   argTypes: {
     fill: {
       control: {
@@ -40,22 +40,22 @@ export default {
 
 const Template = (args, { argTypes }) => ({
   props: Object.keys(argTypes),
-  components: { yooPostCard },
+  components: { YooCard },
   template:
-    '<yoo-post-card v-bind="$props"></yoo-post-card>'
+    '<yoo-card v-bind="$props"></yoo-card>'
 })
 
 export const Custom = Template.bind({})
-Custom.args = { title: 'Yoo PostCard', subtitle: 'Test' }
+Custom.args = { title: 'YooCard', subtitle: 'Test' }
 
 export const Danger = Template.bind({})
-Danger.args = { title: 'Yoo PostCard', subtitle: 'Test', fill: 'danger', showIndicator: true, icon: 'cog', iconFill: 'white', iconSize: 'xl' }
+Danger.args = { title: 'YooCard', subtitle: 'Test', fill: 'danger', showIndicator: true, icon: 'cog', iconFill: 'white', iconSize: 'xl' }
 
 export const Neutral = Template.bind({})
-Neutral.args = { title: 'Yoo PostCard', subtitle: 'Test', fill: 'neutral', showIndicator: true, icon: 'cog', iconFill: 'white', iconSize: 'xl' }
+Neutral.args = { title: 'YooCard', subtitle: 'Test', fill: 'neutral', showIndicator: true, icon: 'cog', iconFill: 'white', iconSize: 'xl' }
 
 export const Light = Template.bind({})
-Light.args = { title: 'Yoo PostCard', subtitle: 'Test', fill: 'light', showIndicator: true, icon: 'cog', iconFill: 'neutral', iconSize: 'xl' }
+Light.args = { title: 'YooCard', subtitle: 'Test', fill: 'light', showIndicator: true, icon: 'cog', iconFill: 'neutral', iconSize: 'xl' }
 
 export const Dark = Template.bind({})
-Dark.args = { title: 'Yoo PostCard', subtitle: 'Test', fill: 'dark', showIndicator: true, icon: 'cog', iconFill: 'white', iconSize: 'xl' }
+Dark.args = { title: 'YooCard', subtitle: 'Test', fill: 'dark', showIndicator: true, icon: 'cog', iconFill: 'white', iconSize: 'xl' }

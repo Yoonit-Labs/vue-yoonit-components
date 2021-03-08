@@ -1,6 +1,6 @@
 <template lang="pug">
   div(
-    :class="['yoo-post-card', takeModifier]"
+    :class="['yoo-card', takeModifier]"
     @click="doClick"
   )
     YooFlexLayout(
@@ -14,7 +14,7 @@
         :fill="iconFill"
         :size="iconSize"
         :iconStyle="iconStyle"
-        class="yoo-post-card__icon"
+        class="yoo-card__icon"
       )
 
       YooIndicator(
@@ -26,13 +26,13 @@
     h3(
       row="2"
       col="1"
-      class="yoo-post-card__title"
+      class="yoo-card__title"
     ) {{ title }}
 
     p(
       row="3"
       col="1"
-      class="yoo-post-card__subtitle"
+      class="yoo-card__subtitle"
     ) {{ subtitle }}
 </template>
 
@@ -42,10 +42,10 @@ import YooIcon from '@/components/atoms/Icon/Icon.vue'
 import YooFlexLayout from '@/components/bosons/FlexLayout/FlexLayout.vue'
 import YooIndicator from '@/components/quarks/Indicator/Indicator.vue'
 
-import PropsConfig from '@/components/molecules/PostCard/PostCard.config'
+import PropsConfig from '@/components/molecules/Card/Card.config'
 
 export default {
-  name: 'YooPostCard',
+  name: 'YooCard',
   props: {
     title: {
       type: String,
@@ -101,7 +101,7 @@ export default {
     * @returns {array}
     */
     takeModifier () {
-      return `yoo-post-card__fill--${this.fill}`
+      return `yoo-card__fill--${this.fill}`
     }
   },
   methods: {
@@ -112,4 +112,4 @@ export default {
 }
 </script>
 
-<style src="./PostCard.sass" lang="sass" scoped></style>
+<style src="./Card.sass" lang="sass" scoped></style>
