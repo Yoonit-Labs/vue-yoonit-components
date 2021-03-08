@@ -5,6 +5,12 @@ export default {
   title: 'Yoonit/YooTableAttribute',
   component: yooTableAttribute,
   argTypes: {
+    fill: {
+      control: {
+        type: 'select',
+        options: PropsConfig.fill.options
+      }
+    },
     detailFill: {
       control: {
         type: 'select',

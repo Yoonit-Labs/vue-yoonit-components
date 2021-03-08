@@ -1,10 +1,20 @@
 module.exports = {
+  fill: {
+    options: [
+      'none',
+      'default',
+      'primary',
+      'danger'
+    ]
+  },
   detailFill: {
     options: [
       'primary',
       'danger',
       'dark',
-      'light'
+      'light',
+      'black',
+      'white'
     ]
   },
   titleFill: {
@@ -12,8 +22,9 @@ module.exports = {
       'primary',
       'danger',
       'dark',
-      'light',
-      'black'
+      'neutral',
+      'black',
+      'white'
     ]
   },
   titleWeight: {

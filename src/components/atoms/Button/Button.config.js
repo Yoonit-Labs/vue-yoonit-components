@@ -18,7 +18,9 @@ module.exports = {
       'primary',
       'danger',
       'dark',
-      'light'
+      'light',
+      'white',
+      'black'
     ]
   },
   iconPosition: {
