@@ -1,5 +1,5 @@
 <template lang="pug">
-  div.yoo-input-group(
+  .yoo-input-group(
   )
     label.yoo-input(
       :class="[...takeModifier]"

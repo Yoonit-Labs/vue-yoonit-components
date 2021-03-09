@@ -1,5 +1,5 @@
 <template lang="pug">
-  div.yoo-card(
+  .yoo-card(
     :class="[...takeModifier]"
     @click="doClick"
   )

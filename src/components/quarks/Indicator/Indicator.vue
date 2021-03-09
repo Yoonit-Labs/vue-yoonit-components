@@ -1,5 +1,5 @@
 <template lang="pug">
-  div.yoo-indicator(
+  .yoo-indicator(
     :class="[...takeModifier]"
   ) {{ text }}
 </template>
