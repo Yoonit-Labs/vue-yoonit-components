@@ -9,8 +9,7 @@ module.exports = {
   buttonSize: {
     options: [
       'normal',
-      'short',
-      'xs'
+      'short'
     ]
   },
   fill: {
