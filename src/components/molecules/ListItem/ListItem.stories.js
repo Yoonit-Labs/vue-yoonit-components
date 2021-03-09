@@ -1,3 +1,6 @@
+import yooIndicator from '@/components/quarks/Indicator/Indicator.vue'
+import yooIcon from '@/components/atoms/Icon/Icon.vue'
+import yooButton from '@/components/atoms/Button/Button.vue'
 import YooListItem from './ListItem.vue'
 import PropsConfig from './ListItem.config'
 
@@ -22,13 +25,19 @@ export default {
 
 const Template = (args, { argTypes }) => ({
   props: Object.keys(argTypes),
-  components: { YooListItem },
+  components: { YooListItem, yooButton, yooIndicator, yooIcon },
   template:
-    '<yoo-list-item v-bind="$props"></yoo-list-item>'
+  `<yoo-list-item v-bind="$props">
+      <template v-slot:control>
+        <yoo-indicator fill="danger" size="small" animation></yoo-indicator>
+        <yoo-icon class="m__l--xs m__r--xs" icon="virus" fill="neutral" size="lg"></yoo-icon>
+        <p>19%</p>
+      </template>
+    </yoo-list-item>`
 })
 
 export const Custom = Template.bind({})
-Custom.args = { title: 'YooListItem', subtitle: 'Test' }
+Custom.args = { title: 'YooListItem', subtitle: 'Admin', details: [{ text: 'Admin' }, { text: 'Funcionários' }, { text: 'Segurança' }] }
 
 export const Neutral = Template.bind({})
 Neutral.args = { title: 'YooListItem', subtitle: 'Test', borderFill: 'neutral' }

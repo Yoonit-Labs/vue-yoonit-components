@@ -34,16 +34,11 @@ describe('YooListItem Component', () => {
   describe('Props', () => {
     describe('borderLeft', () => {
       it('Has a valid default value', () => {
-        expect(YooListItem.props.borderLeft.default).toBe(true)
+        expect(YooListItem.props.borderLeft.default).toBe(false)
       })
-
-      it(`Includes borderLeft class: .${classBlock}__style--border-left`, async () => {
-        expect(wrapper.find(`.${classBlock}__style--border-left`).exists()).toBe(true)
-      })
-
       it(`Does not includes borderLeft class: .${classBlock}__style--border-left`, async () => {
-        await wrapper.setProps({ borderLeft: false })
-        expect(wrapper.find(`.${classBlock}__style--border-left`).exists()).toBe(false)
+        await wrapper.setProps({ borderLeft: true })
+        expect(wrapper.find(`.${classBlock}__style--border-left`).exists()).toBe(true)
       })
     })
 

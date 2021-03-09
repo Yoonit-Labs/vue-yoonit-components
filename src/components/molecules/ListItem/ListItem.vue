@@ -1,31 +1,46 @@
 <template lang="pug">
-  YooGridLayout.yoo-list-item(
-    rows="auto"
-    cols="*, auto"
+  YooFlexLayout.yoo-list-item(
+    justifyContent="space-between"
+    alignItems="center"
+    flexDirection="row"
+    width="100%"
   )
-    YooFlexLayout.yoo-list-item__item.m__t--l.m__b--l(
-      flexDirection="column"
-      col="1"
-      row="1"
-      flexWrap="wrap"
-      justifyContent="center"
-      :class="[...takeItemsModifier]"
-    )
-      h3.yoo-list-item__title(
-      ) {{title}}
+    .yoo-list-item__item.m__t--l.m__b--l
+      YooFlexLayout.yoo-list-item__item(
+        justifyContent="center"
+        alignItems="center"
+        :class="[...takeItemsModifier]"
+      )
+        h3.yoo-list-item__title.m__r--xs(
+        ) {{title}}
 
-      p.yoo-list-item__subtitle(
-        v-show="subtitle",
-        width="100%"
-      ) {{subtitle}}
+        p.yoo-list-item__subtitle(
+          v-show="subtitle",
+          width="100%"
+        ) {{subtitle}}
+
+      YooFlexLayout(
+        flexWrap="wrap"
+        justifyContent="flex-start"
+        flexDirection="row"
+      )
+        p.yoo-table-card__no-detail.m__t--xs.m__b--none(
+          v-if="(typeof details !== 'object')"
+        )
+          | {{ details }}
+
+        p(
+          v-else
+          v-for="(detail, index) in details",
+          :key="index"
+          :class="detail.status ? ['yoo-table-card__detail', 'yoo-table-card__detail--on', takeFillModifier] : 'yoo-table-card__detail'"
+        )
+          | {{ detail.text }}
 
     YooFlexLayout(
       v-if="controlVisibility"
-      col="2"
-      row="1"
       :justifyContent="justifySlotContent"
       alignItems="center"
-      gap="8px"
     )
       slot(
         name="control"
@@ -48,6 +63,10 @@ export default {
       type: String,
       default: ''
     },
+    details: {
+      type: [Array, String],
+      required: false
+    },
     justifySlotContent: {
       type: String,
       default: 'center',
@@ -62,7 +81,7 @@ export default {
     },
     borderLeft: {
       type: Boolean,
-      default: true
+      default: false
     },
     borderFill: {
       type: String,
@@ -96,7 +115,10 @@ export default {
         classList
           .push(`${blockItem}__style--border-left`)
       }
-
+      if (this.wrapSubtitle) {
+        classList
+          .push(`${blockItem}__style--wrap`)
+      }
       classList
         .push(`${blockItem}__fill--border-${this.borderFill}`)
 
