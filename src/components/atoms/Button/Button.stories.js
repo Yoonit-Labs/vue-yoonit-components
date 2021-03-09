@@ -51,6 +51,12 @@ export default {
       control: {
         type: 'text'
       }
+    },
+    textSize: {
+      control: {
+        type: 'select',
+        options: PropsConfig.textSize.options
+      }
     }
   }
 }

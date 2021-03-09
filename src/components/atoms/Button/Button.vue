@@ -11,7 +11,9 @@
       :style="takeIconColor"
     )
 
-    p.yoo-btn__text {{ text }}
+    p.yoo-btn__text(
+      :class="[...takeTextSize]"
+    ) {{ text }}
 
     i.yoo-btn__icon(
       v-if="icon.length && iconPosition === 'right'"
@@ -71,6 +73,12 @@ export default {
       default: 'none',
       validator: value =>
         PropsConfig.animation.options.includes(value)
+    },
+    textSize: {
+      type: String,
+      default: 'md',
+      validator: value =>
+        PropsConfig.textSize.options.includes(value)
     },
     disabled: {
       type: Boolean,
@@ -164,6 +172,19 @@ export default {
       return this.iconStyle === 'solid'
         ? 'fas' // fontawesome solid
         : 'far' // fontawesome regular
+    },
+    /**
+    * @description Prints text size based on the chosen props
+    * @computed takeTextSize
+    * @returns {string}
+    */
+    takeTextSize () {
+      const block = 'yoo-btn__text'
+      const classList = []
+
+      classList.push(`${block}--${this.textSize}`)
+
+      return classList
     }
   }
 }

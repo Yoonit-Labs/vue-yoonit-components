@@ -1,17 +1,17 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`YooNotify Component Matches Snapshot 1`] = `
-<div class="yoo-grid-layout p__t--xs p__b--xs p__r--s p__l--s yoo-grid-layout--h-space-between yoo-grid-layout--v-center yoo-notify yoo-notify--light" style="grid-template-columns: auto 1fr; grid-template-rows: auto; width: 100%; height: auto;">
+<div class="yoo-grid-layout yoo-notify p__t--xs p__b--xs p__r--s p__l--s yoo-grid-layout--h-space-between yoo-grid-layout--v-center yoo-notify--light" style="grid-template-columns: auto 1fr; grid-template-rows: auto; width: 100%; height: auto;">
   <div class="yoo-flex-layout" style="flex-direction: row; flex-wrap: nowrap; justify-content: space-between; align-items: center; align-content: stretch; grid-row: 1; grid-column: 1;" col="1" row="1">
     <div class="yoo-indicator yoo-indicator--normal yoo-indicator--danger yoo-indicator--pulse"></div>
     <!---->
   </div>
   <div class="yoo-flex-layout" style="flex-direction: row; flex-wrap: nowrap; justify-content: space-between; align-items: center; align-content: stretch; grid-row: 1; grid-column: 2;" col="2" row="1">
-    <p alignitems="center" class="m__r--l m__l--s yoo-notify__text yoo-notify__text--dark yoo-notify__text--md">Yoo-Notify</p>
+    <p alignitems="center" class="yoo-notify__text m__r--l m__l--s yoo-notify__text--dark yoo-notify__text--md">Yoo-Notify</p>
   </div>
   <div class="yoo-flex-layout" style="flex-direction: row; flex-wrap: nowrap; justify-content: space-between; align-items: center; align-content: stretch; grid-row: 1; grid-column: 3;" col="3" row="1">
     <div class="yoo__container--button" style="display: none;"><button class="yoo-btn yoo-btn__fill--primary yoo-btn--clear yoo-btn--normal yoo-btn--animation-none"><i class="yoo-btn__icon fas fa-times yoo-btn__icon--normal"></i>
-        <p class="yoo-btn__text"></p>
+        <p class="yoo-btn__text yoo-btn__text--md"></p>
         <!---->
       </button></div>
   </div>
