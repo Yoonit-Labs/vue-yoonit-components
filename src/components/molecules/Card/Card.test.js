@@ -1,4 +1,4 @@
-import { shallowMount } from '@vue/test-utils'
+import { mount } from '@vue/test-utils'
 import YooCard from '@/components/molecules/Card/Card.vue'
 import PropsConfig from './Card.config'
 
@@ -6,11 +6,10 @@ const classBlock = 'yoo-card'
 const SlotText = 'Default Slot Text'
 
 const mountComponent = () => {
-  return shallowMount(YooCard, {
+  return mount(YooCard, {
     slots: { default: SlotText },
     propsData: {
-      title: 'Default Title',
-      subtitle: 'Default Subtitle'
+      showIndicator: true
     }
   })
 }
@@ -21,42 +20,36 @@ describe('YooCard Component', () => {
     wrapper = mountComponent()
   })
 
-  it('Matches Snapshot', async () => {
+  it('Matches Snapshot', () => {
     expect(wrapper).toMatchSnapshot()
   })
 
   it('Loads the Component HTML', async () => {
     expect(wrapper.classes('yoo-card')).toBe(true)
-    expect(wrapper.find('.yoo-card__title').exists()).toBe(true)
-    expect(wrapper.find('.yoo-card__subtitle').exists()).toBe(true)
+    expect(wrapper.find('.yoo-card__icon').exists()).toBe(true)
+    expect(wrapper.find('.yoo-indicator').exists()).toBe(true)
   })
 
   describe('Props', () => {
-    describe('borderLeft', () => {
+    describe('fill', () => {
       it('Has a valid default value', () => {
-        expect(YooCard.props.borderLeft.default).toBe(true)
+        expect(PropsConfig.fill.options.includes(YooCard.props.fill.default)).toBe(true)
       })
-
-      it(`Includes borderLeft class: .${classBlock}__style--border-left`, async () => {
-        expect(wrapper.find(`.${classBlock}__style--border-left`).exists()).toBe(true)
-      })
-
-      it(`Does not includes borderLeft class: .${classBlock}__style--border-left`, async () => {
-        await wrapper.setProps({ borderLeft: false })
-        expect(wrapper.find(`.${classBlock}__style--border-left`).exists()).toBe(false)
-      })
-    })
-
-    describe('borderFill', () => {
-      it('Has a valid default value', () => {
-        expect(PropsConfig.borderFill.options.includes(YooCard.props.borderFill.default)).toBe(true)
-      })
-      PropsConfig.borderFill.options.forEach(borderFill => {
-        it(`Includes borderFill class: .${classBlock}__fill--border-${borderFill}`, async () => {
-          await wrapper.setProps({ borderFill })
-          expect(wrapper.find(`.${classBlock}__fill--border-${borderFill}`).exists()).toBe(true)
+      PropsConfig.fill.options.forEach(fill => {
+        it(`Includes fill class: .${classBlock}__fill--${fill}`, async () => {
+          await wrapper.setProps({ fill })
+          expect(wrapper.find(`.${classBlock}__fill--${fill}`).exists()).toBe(true)
         })
       })
     })
   }) // describe Props
+
+  describe('Events', () => {
+    describe('doClick', () => {
+      it('Emits doClick Event', async () => {
+        wrapper.find(`.${classBlock}`).trigger('click')
+        expect(wrapper.emitted()).toHaveProperty('onClick')
+      })
+    })
+  }) // describe Events
 })

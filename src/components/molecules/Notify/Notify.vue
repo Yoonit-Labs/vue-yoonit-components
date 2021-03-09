@@ -1,6 +1,6 @@
 <template lang="pug">
-  YooGridLayout.p__t--xs.p__b--xs.p__r--s.p__l--s(
-    :class="['yoo-notify', ...takeModifier]"
+  YooGridLayout.yoo-notify.p__t--xs.p__b--xs.p__r--s.p__l--s(
+    :class="[...takeModifier]"
     :cols="takeCols"
     rows="*"
     horizontalAlign="space-between"
@@ -19,9 +19,9 @@
         :size="indicatorSize"
         :fill="indicatorFill"
       )
-      i(
+      i.yoo-notify__icon(
         v-if="showIcon && !showIndicator"
-        :class="['yoo-notify__icon', takeIconStyle, takeIconName, takeIconColor]"
+        :class="[takeIconStyle, takeIconName, takeIconColor]"
       )
     YooFlexLayout(
       justifyContent="space-between"
@@ -29,8 +29,8 @@
       :col="takeTextColumn"
       row="1"
     )
-      p.m__r--l.m__l--s(
-        :class="['yoo-notify__text', takeTextColor, takeTextSize]"
+      p.yoo-notify__text.m__r--l.m__l--s(
+        :class="[takeTextColor, takeTextSize]"
         alignItems="center"
       ) {{ notifyText }}
 

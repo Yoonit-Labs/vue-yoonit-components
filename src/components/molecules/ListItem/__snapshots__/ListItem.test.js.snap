@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`YooListItem Component Matches Snapshot 1`] = `
+<yoogridlayout-stub rows="auto" cols="*, auto" gap="0" horizontalalign="stretch" verticalalign="stretch" class="yoo-list-item">
+  <yooflexlayout-stub flexdirection="column" flexwrap="wrap" justifycontent="center" alignitems="stretch" aligncontent="stretch" gap="0" col="1" row="1" class="m__t--l m__b--l yoo-list-item__item yoo-list-item__style--border-left yoo-list-item__fill--border-neutral">
+    <h3 class="yoo-list-item__title">Default Title</h3>
+    <p width="100%" class="yoo-list-item__subtitle">Default Subtitle</p>
+  </yooflexlayout-stub>
+  <!---->
+</yoogridlayout-stub>
+`;

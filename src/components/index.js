@@ -9,13 +9,13 @@ import YooStepper from './atoms/Stepper/Stepper.vue'
 import YooSwitch from './atoms/Switch/Switch.vue'
 
 import YooButtonToggle from './molecules/ButtonToggle/ButtonToggle.vue'
-import YooCard from './molecules/Card/Card.vue'
+import YooListItem from './molecules/ListItem/ListItem.vue'
 import YooFormGroup from './molecules/FormGroup/FormGroup.vue'
 import YooHeader from './molecules/Header/Header.vue'
 import YooModal from './molecules/Modal/Modal.vue'
 import YooNotify from './molecules/Notify/Notify.vue'
 import YooPagination from './molecules/Pagination/Pagination.vue'
-import YooPostCard from './molecules/PostCard/PostCard.vue'
+import YooCard from './molecules/Card/Card.vue'
 import YooQuizQuestion from './molecules/QuizQuestion/QuizQuestion.vue'
 import YooSelectButton from './molecules/SelectButton/SelectButton.vue'
 import YooSegmentedBar from './molecules/SegmentedBar/SegmentedBar.vue'
@@ -38,13 +38,13 @@ const yooComponents = {
   YooSeparator,
   YooStepper,
   YooButtonToggle,
-  YooCard,
+  YooListItem,
   YooFormGroup,
   YooHeader,
   YooModal,
   YooNotify,
   YooPagination,
-  YooPostCard,
+  YooCard,
   YooQuizQuestion,
   YooSelectButton,
   YooSegmentedBar,
