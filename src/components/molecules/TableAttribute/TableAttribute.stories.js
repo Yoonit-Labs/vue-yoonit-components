@@ -68,6 +68,12 @@ export default {
         type: 'select',
         options: PropsConfig.buttonTextSize.options
       }
+    },
+    iconButtonSize: {
+      control: {
+        type: 'select',
+        options: PropsConfig.iconButtonSize.options
+      }
     }
   }
 }

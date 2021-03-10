@@ -75,5 +75,12 @@ module.exports = {
       'lg',
       'xl'
     ]
+  },
+  iconButtonSize: {
+    options: [
+      'small',
+      'normal',
+      'large'
+    ]
   }
 }
