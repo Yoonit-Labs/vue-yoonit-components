@@ -66,5 +66,14 @@ module.exports = {
       'solid',
       'regular'
     ]
+  },
+  buttonTextSize: {
+    options: [
+      'xs',
+      'sm',
+      'md',
+      'lg',
+      'xl'
+    ]
   }
 }

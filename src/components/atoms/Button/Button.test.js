@@ -155,6 +155,18 @@ describe('YooButton Component', () => {
         })
       })
     })
+
+    describe('textSize', () => {
+      it('Has a valid default value', () => {
+        expect(PropsConfig.textSize.options.includes(YooButton.props.textSize.default)).toBe(true)
+      })
+      PropsConfig.textSize.options.forEach(textSize => {
+        it(`Includes textSize class: .${classBlock}__text--${textSize}`, async () => {
+          await wrapper.setProps({ textSize })
+          expect(wrapper.find(`.${classBlock}__text--${textSize}`).exists()).toBe(true)
+        })
+      })
+    })
   }) // describe Props
 
   describe('Events', () => {

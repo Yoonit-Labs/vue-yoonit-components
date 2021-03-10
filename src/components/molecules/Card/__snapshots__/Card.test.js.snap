@@ -1,11 +1,11 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`YooCard Component Matches Snapshot 1`] = `
-<yoogridlayout-stub rows="auto" cols="*, auto" gap="0" horizontalalign="stretch" verticalalign="stretch" class="yoo-card">
-  <yooflexlayout-stub flexdirection="column" flexwrap="wrap" justifycontent="center" alignitems="stretch" aligncontent="stretch" gap="0" col="1" row="1" class="m__t--l m__b--l yoo-card__item yoo-card__style--border-left yoo-card__fill--border-neutral">
-    <h3 class="yoo-card__title">Default Title</h3>
-    <p width="100%" class="yoo-card__subtitle">Default Subtitle</p>
-  </yooflexlayout-stub>
-  <!---->
-</yoogridlayout-stub>
+<div class="yoo-card yoo-card__fill--white">
+  <div class="yoo-flex-layout" style="flex-direction: row; flex-wrap: nowrap; justify-content: space-between; align-items: stretch; align-content: stretch;" row="1" col="1" width="100%"><i class="yoo-icon yoo-card__icon fas fa- yoo-icon__size--md yoo-icon__fill--neutral"></i>
+    <div class="yoo-indicator yoo-indicator--small yoo-indicator--danger yoo-indicator--pulse"></div>
+  </div>
+  <h3 row="2" col="1" class="yoo-card__title"></h3>
+  <p row="3" col="1" class="yoo-card__subtitle"></p>
+</div>
 `;

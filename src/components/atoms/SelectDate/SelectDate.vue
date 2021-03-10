@@ -4,8 +4,7 @@
       v-if="type === 'time'"
       gap="16px"
     )
-      YooFlexLayout(
-        class="yoo-selectdate__container"
+      YooFlexLayout.yoo-selectdate__container(
         flexDirection="column"
         alignItems="center"
       )
@@ -20,14 +19,12 @@
           @click="doUpdate('setHours', selectedTime.hours.next)"
         ) {{ ('0' + selectedTime.hours.next).slice(-2) }}
 
-      YooFlexLayout(
-        class="yoo-selectdate__container"
+      YooFlexLayout.yoo-selectdate__container(
         alignItems="center"
       )
         p.yoo-selectdate__separator :
 
-      YooFlexLayout(
-        class="yoo-selectdate__container yoo-selectdate__separator"
+      YooFlexLayout.yoo-selectdate__container.yoo-selectdate__separator(
         flexDirection="column"
       )
         .yoo-selectdate__item(
@@ -45,8 +42,7 @@
       v-else
       gap="32px"
     )
-      YooFlexLayout(
-        class="yoo-selectdate__container"
+      YooFlexLayout.yoo-selectdate__container(
         flexDirection="column"
         alignItems="center"
       )
@@ -61,8 +57,7 @@
           @click="doUpdate('setDate', selectedDate.day.next)"
         ) {{ ('0' + selectedDate.day.next).slice(-2) }}
 
-      YooFlexLayout(
-        class="yoo-selectdate__container"
+      YooFlexLayout.yoo-selectdate__container(
         flexDirection="column"
         alignItems="center"
       )
@@ -77,8 +72,7 @@
           @click="doUpdate('setMonth', selectedDate.month.next)"
         ) {{ doGetMonthName(selectedDate.month.next, 'short') }}
 
-      YooFlexLayout(
-        class="yoo-selectdate__container"
+      YooFlexLayout.yoo-selectdate__container(
         flexDirection="column"
         alignItems="center"
       )

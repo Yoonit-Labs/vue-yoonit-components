@@ -1,5 +1,5 @@
 <template lang="pug">
-div.yoo-checkbox.m__t--s.m__b--s(
+.yoo-checkbox.m__t--s.m__b--s(
   :class="[takeModifier]"
 )
   input(
@@ -8,12 +8,12 @@ div.yoo-checkbox.m__t--s.m__b--s(
     v-model="checkedField"
     @change="doCheck($event)"
   )
-  label(
+  label.yoo-checkbox__check.fas.fa-check(
     :for="timeId"
-    :class="['yoo-checkbox__check', 'fas fa-check', takeModifierSize, ...takeModifierCheck]"
+    :class="[takeModifierSize, ...takeModifierCheck]"
   )
-    p(
-      :class="['yoo-checkbox__text', takeModifierSize]"
+    p.yoo-checkbox__text(
+      :class="[takeModifierSize]"
       v-if="text !== ''"
     ) {{ text }}
 

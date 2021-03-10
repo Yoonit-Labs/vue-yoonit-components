@@ -1,44 +1,45 @@
 <template lang="pug">
-  YooGridLayout(
-    :class="['yoo-card']"
-    rows="auto"
-    cols="*, auto"
+  .yoo-card(
+    :class="[...takeModifier]"
+    @click="doClick"
   )
-    YooFlexLayout.m__t--l.m__b--l(
-      flexDirection="column"
-      col="1"
-      row="1"
-      flexWrap="wrap"
-      justifyContent="center"
-      :class="['yoo-card__item', ...takeItemsModifier]"
-    )
-      h3(
-        class="yoo-card__title"
-      ) {{title}}
-
-      p(
-        v-show="subtitle",
-        class="yoo-card__subtitle"
-        width="100%"
-      ) {{subtitle}}
-
     YooFlexLayout(
-      v-if="controlVisibility"
-      col="2"
       row="1"
-      :justifyContent="justifySlotContent"
-      alignItems="center"
-      gap="8px"
+      col="1"
+      width="100%"
+      justifyContent="space-between"
     )
-      slot(
-        name="control"
+      YooIcon.yoo-card__icon(
+        :icon="icon"
+        :fill="iconFill"
+        :size="iconSize"
+        :iconStyle="iconStyle"
       )
+
+      YooIndicator(
+        v-if="showIndicator"
+        size="small"
+        :fill="appIndicatorFill"
+      )
+
+    h3.yoo-card__title(
+      row="2"
+      col="1"
+    ) {{ title }}
+
+    p.yoo-card__subtitle(
+      row="3"
+      col="1"
+    ) {{ subtitle }}
 </template>
 
 <script>
 
+import YooIcon from '@/components/atoms/Icon/Icon.vue'
 import YooFlexLayout from '@/components/bosons/FlexLayout/FlexLayout.vue'
-import YooGridLayout from '@/components/bosons/GridLayout/GridLayout.vue'
+import YooIndicator from '@/components/quarks/Indicator/Indicator.vue'
+
+import PropsConfig from '@/components/molecules/Card/Card.config'
 
 export default {
   name: 'YooCard',
@@ -51,67 +52,58 @@ export default {
       type: String,
       default: ''
     },
-    justifySlotContent: {
+    fill: {
       type: String,
-      default: 'center',
-      validator: value => [
-        'flex-start',
-        'flex-end',
-        'center',
-        'space-between',
-        'space-around'
-      ]
-        .includes(value)
+      default: 'white',
+      validator: value => PropsConfig.fill.options.includes(value)
     },
-    borderLeft: {
+    showIndicator: {
       type: Boolean,
-      default: true
+      default: false
     },
-    borderFill: {
+    icon: {
+      type: String,
+      default: ''
+    },
+    iconSize: {
+      type: String,
+      default: 'md',
+      validator: value => PropsConfig.iconSize.options.includes(value)
+    },
+    iconFill: {
       type: String,
       default: 'neutral',
-      validator: value => [
-        'neutral',
-        'primary',
-        'danger',
-        'light',
-        'dark',
-        'darkest'
-      ]
-        .includes(value)
+      validator: value => PropsConfig.iconFill.options.includes(value)
+    },
+    iconStyle: {
+      type: String,
+      default: 'solid',
+      validator: value => PropsConfig.iconStyle.options.includes(value)
+    },
+    appIndicatorFill: {
+      type: String,
+      default: 'danger',
+      validator: value => PropsConfig.appIndicatorFill.options.includes(value)
     }
   },
   components: {
-    YooGridLayout,
-    YooFlexLayout
+    YooFlexLayout,
+    YooIndicator,
+    YooIcon
   },
   computed: {
     /**
     * @description Print classes based on the chosen props
-    * @computed takeItemsModifier
+    * @computed takeModifier
     * @returns {array}
     */
-    takeItemsModifier () {
-      const blockItem = 'yoo-card'
-      const classList = []
-
-      if (this.borderLeft) {
-        classList
-          .push(`${blockItem}__style--border-left`)
-      }
-
-      classList
-        .push(`${blockItem}__fill--border-${this.borderFill}`)
-
-      return classList
-    },
-    /**
-    * @description Changes item visibility
-    * @computed controlVisibility
-    * @returns {boolean}
-    */
-    controlVisibility () {
-      return !!this.$slots.control
+    takeModifier () {
+      return `yoo-card__fill--${this.fill}`
+    }
+  },
+  methods: {
+    doClick (event) {
+      this.$emit('onClick', event)
     }
   }
 }

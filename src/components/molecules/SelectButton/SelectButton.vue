@@ -1,6 +1,5 @@
 <template lang="pug">
-  YooFlexLayout(
-    class="yoo-select"
+  YooFlexLayout.yoo-select(
     justifyContent="space-around"
     alignItems="center"
   )
@@ -9,7 +8,7 @@
       :key="index"
       :text="item.text"
       :fill="selectedArray.includes(item.value) ? 'primary' : 'light'"
-      buttonSize="xs"
+      buttonSize="short"
       variation="base"
       @onClick="doActive(index, item.value)"
     )

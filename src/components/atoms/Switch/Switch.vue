@@ -1,15 +1,14 @@
 <template lang="pug">
   .yoo-switch-container.m__t--s.m__b--s.m__r--s.m__l--s
-    input(
+    input.yoo-switch(
       type="checkbox"
       :id="timeId"
-      :class="['yoo-switch', ...takeModifier]"
+      :class="[...takeModifier]"
       v-model="checkedField"
       @change="doCheck($event)"
     )
-    label(
+    label.yoo-switch__label(
       :for="timeId"
-      class="yoo-switch__label"
     )
 
 </template>

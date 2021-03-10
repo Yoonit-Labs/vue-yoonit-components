@@ -3,7 +3,7 @@
 exports[`YooButton Component Matches Snapshot 1`] = `
 <div class="yoo__container--button"><button class="yoo-btn yoo-btn__fill--primary yoo-btn--base yoo-btn--normal yoo-btn--animation-none">
     <!---->
-    <p class="yoo-btn__text"></p>
+    <p class="yoo-btn__text yoo-btn__text--md"></p>
     <!---->
   </button></div>
 `;

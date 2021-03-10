@@ -1,6 +1,6 @@
 <template lang="pug">
 .yoo-dropdown(
-  :class="['yoo-dropdown', ...takeModifier]"
+  :class="[...takeModifier]"
 )
   .yoo-dropdown__select(
     v-if="!showOptions"

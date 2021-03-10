@@ -1,21 +1,48 @@
 module.exports = {
-  justifySlotContent: {
+  fill: {
     options: [
-      'flex-start',
-      'flex-end',
-      'center',
-      'space-between',
-      'space-around'
+      'white',
+      'primary',
+      'danger',
+      'neutral',
+      'light',
+      'dark'
     ]
   },
-  borderFill: {
+  iconSize: {
     options: [
+      'tn',
+      'xs',
+      'sm',
+      'md',
+      'lg',
+      'xl',
+      'hg'
+    ]
+  },
+  iconFill: {
+    options: [
+      'white',
+      'primary',
+      'danger',
       'neutral',
+      'light',
+      'dark'
+    ]
+  },
+  iconStyle: {
+    options: [
+      'solid',
+      'regular'
+    ]
+  },
+  appIndicatorFill: {
+    options: [
       'primary',
       'danger',
       'light',
       'dark',
-      'darkest'
+      'neutral'
     ]
   }
 }
