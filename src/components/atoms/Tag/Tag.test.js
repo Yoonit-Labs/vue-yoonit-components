@@ -42,7 +42,6 @@ describe('YooTag Component', () => {
 
   it('Loads the Component HTML', () => {
     expect(wrapper.classes(`${classBlock}`)).toBe(true)
-    expect(wrapper.find(`${classBlock}__item`).exists()).toBe(true)
   })
 
   describe('Props', () => {

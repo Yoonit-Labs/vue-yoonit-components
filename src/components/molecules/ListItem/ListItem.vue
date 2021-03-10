@@ -1,15 +1,16 @@
 <template lang="pug">
-  YooFlexLayout.yoo-list-item(
-    justifyContent="space-between"
+  YooGridLayout.yoo-list-item(
     alignItems="center"
-    flexDirection="row"
-    width="100%"
+    :cols="takeCols"
+    rows="*"
+    horizontalAlign="space-between"
+    verticalAlign="center"
+    :class="[...takeModifier]"
   )
-    .yoo-list-item__item.m__t--l.m__b--l
+    .yoo-list-item__item.m__b--m
       YooFlexLayout.yoo-list-item__item(
         justifyContent="center"
         alignItems="center"
-        :class="[...takeItemsModifier]"
       )
         h3.yoo-list-item__title.m__r--xs(
         ) {{title}}
@@ -24,33 +25,51 @@
         justifyContent="flex-start"
         flexDirection="row"
       )
-        p.yoo-table-card__no-detail.m__t--xs.m__b--none(
-          v-if="(typeof details !== 'object')"
+        YooTag(
+          :tags="tags ? tags : ''"
         )
-          | {{ details }}
-
-        p(
-          v-else
-          v-for="(detail, index) in details",
-          :key="index"
-          :class="detail.status ? ['yoo-table-card__detail', 'yoo-table-card__detail--on', takeFillModifier] : 'yoo-table-card__detail'"
-        )
-          | {{ detail.text }}
 
     YooFlexLayout(
       v-if="controlVisibility"
-      :justifyContent="justifySlotContent"
+      justifyContent="flex-end"
       alignItems="center"
     )
       slot(
         name="control"
       )
+    YooFlexLayout.m__r--l.m__l--l(
+      justifyContent="flex-end"
+      alignItems="center"
+    )
+      YooButton(
+        v-if="actionable && actionableType === 'button'"
+        variation="clear"
+        icon="chevron-right"
+        iconPosition="right"
+        hover=true
+        active=true
+        :disabled="buttonDisable"
+        @doClick="doGetValue"
+      )
+
+      YooCheckButton(
+        v-else-if="actionable && actionableType === 'check'"
+        size="small"
+        :text="detail"
+        @response="doGetValue"
+      )
 </template>
 
 <script>
 
+import YooTag from '@/components/atoms/Tag/Tag.vue'
+import YooButton from '@/components/atoms/Button/Button.vue'
+import YooCheckButton from '@/components/atoms/CheckButton/CheckButton.vue'
+
 import YooFlexLayout from '@/components/bosons/FlexLayout/FlexLayout.vue'
 import YooGridLayout from '@/components/bosons/GridLayout/GridLayout.vue'
+
+import PropsConfig from '@/components/molecules/ListItem/ListItem.config'
 
 export default {
   name: 'YooListItem',
@@ -63,21 +82,26 @@ export default {
       type: String,
       default: ''
     },
-    details: {
+    tags: {
       type: [Array, String],
       required: false
     },
-    justifySlotContent: {
+    actionable: {
+      type: Boolean,
+      default: false
+    },
+    buttonDisable: {
+      type: Boolean,
+      default: false
+    },
+    actionableType: {
       type: String,
-      default: 'center',
-      validator: value => [
-        'flex-start',
-        'flex-end',
-        'center',
-        'space-between',
-        'space-around'
-      ]
-        .includes(value)
+      default: 'button',
+      validator: value => PropsConfig.actionableType.options.includes(value)
+    },
+    separator: {
+      type: Boolean,
+      default: false
     },
     borderLeft: {
       type: Boolean,
@@ -86,38 +110,34 @@ export default {
     borderFill: {
       type: String,
       default: 'neutral',
-      validator: value => [
-        'neutral',
-        'primary',
-        'danger',
-        'light',
-        'dark',
-        'darkest'
-      ]
-        .includes(value)
+      validator: value => PropsConfig.borderFill.options.includes(value)
     }
   },
   components: {
     YooGridLayout,
-    YooFlexLayout
+    YooFlexLayout,
+    YooTag,
+    YooButton,
+    YooCheckButton
   },
   computed: {
     /**
     * @description Print classes based on the chosen props
-    * @computed takeItemsModifier
+    * @computed takeModifier
     * @returns {array}
     */
-    takeItemsModifier () {
+    takeModifier () {
       const blockItem = 'yoo-list-item'
       const classList = []
-
       if (this.borderLeft) {
         classList
-          .push(`${blockItem}__style--border-left`)
+          .push(`${blockItem}--border-left`)
       }
-      if (this.wrapSubtitle) {
+      if (this.separator) {
         classList
-          .push(`${blockItem}__style--wrap`)
+          .push(
+            `${blockItem}--separated`
+          )
       }
       classList
         .push(`${blockItem}__fill--border-${this.borderFill}`)
@@ -131,6 +151,26 @@ export default {
     */
     controlVisibility () {
       return !!this.$slots.control
+    },
+    /**
+    * @description Print style based on the chosen props showIndicator and showCloseButton
+    * @computed takeCols
+    * @returns {string}
+    */
+    takeCols () {
+      if (this.actionable) {
+        return 'auto, 1, auto'
+      }
+      return 'auto, auto'
+    }
+  },
+  methods: {
+    /**
+    * @description Emits value reciveid
+    * @method doGetValue
+    */
+    doGetValue (e) {
+      this.$emit('response', e)
     }
   }
 }

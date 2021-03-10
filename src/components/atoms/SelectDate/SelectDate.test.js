@@ -147,6 +147,26 @@ describe('YooSelectDate Component', () => {
           await wrapper.vm.$nextTick()
           expect(wrapper.vm.selectedDate.month.prev).toBe(11)
         })
+
+        it('Limits of days date type', async () => {
+          wrapper = shallowMount(YooSelectDate, {
+            propsData: {
+              type: 'date',
+              value: '28/02/2001'
+            }
+          })
+          await wrapper.vm.$nextTick()
+          expect(wrapper.vm.selectedDate.day.next).toBe(1)
+
+          wrapper = shallowMount(YooSelectDate, {
+            propsData: {
+              type: 'date',
+              value: '01/02/2001'
+            }
+          })
+          await wrapper.vm.$nextTick()
+          expect(wrapper.vm.selectedDate.day.prev).toBe(28)
+        })
       })
     })
 
