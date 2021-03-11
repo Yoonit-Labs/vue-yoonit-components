@@ -42,7 +42,7 @@ const Template = (args, { argTypes }) => ({
 })
 
 export const Custom = Template.bind({})
-Custom.args = { title: 'YooListItem', subtitle: '• Admin', tags: [{ text: 'Admin', status: true }, { text: 'Funcionários' }, { text: 'Segurança' }] }
+Custom.args = { title: 'YooListItem', subtitle: '• Admin', tags: [{ name: 'Admin', status: true }, { name: 'Funcionários' }, { name: 'Segurança' }] }
 
 export const Button = Template.bind({})
 Button.args = { title: 'YooListItem', subtitle: '• Admin', borderFill: 'neutral', actionable: true }
@@ -51,4 +51,4 @@ export const CheckButton = Template.bind({})
 CheckButton.args = { title: 'YooListItem', subtitle: '• Admin', borderFill: 'neutral', actionable: true, actionableType: 'check' }
 
 export const Tags = Template.bind({})
-Tags.args = { title: 'YooListItem', subtitle: '• Admin', tags: [{ text: 'Admin', status: true }, { text: 'Funcionários' }, { text: 'Segurança' }], borderFill: 'danger', borderLeft: true }
+Tags.args = { title: 'YooListItem', subtitle: '• Admin', tags: [{ name: 'Admin', status: true }, { name: 'Funcionários' }, { name: 'Segurança' }], borderFill: 'danger', borderLeft: true }
