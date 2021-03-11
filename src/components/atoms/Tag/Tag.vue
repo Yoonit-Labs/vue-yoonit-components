@@ -15,7 +15,7 @@
       :key="index"
       :class="tag.status ? ['yoo-tag__item', 'yoo-tag__item--on', takeFillModifier] : ['yoo-tag__item', takeFillModifier]"
     )
-      | {{ tag.text }}
+      | {{ tag.name }}
 </template>
 <script>
 

@@ -1,19 +1,19 @@
 module.exports = {
-  notifyFill: {
+  fill: {
     options: [
       'primary',
       'danger',
       'light'
     ]
   },
-  notifyTextColor: {
+  textColor: {
     options: [
       'light',
       'dark',
       'danger'
     ]
   },
-  notifyTextSize: {
+  textSize: {
     options: [
       'tn',
       'xs',

@@ -11,19 +11,19 @@ const mountComponent = () => {
     propsData: {
       tags: [
         {
-          text: 'Admin',
+          name: 'Admin',
           status: true
         },
         {
-          text: 'Funcionários',
+          name: 'Funcionários',
           status: false
         },
         {
-          text: 'Segurança',
+          name: 'Segurança',
           status: false
         },
         {
-          text: 'Manutenção'
+          name: 'Manutenção'
         }
       ]
     }
