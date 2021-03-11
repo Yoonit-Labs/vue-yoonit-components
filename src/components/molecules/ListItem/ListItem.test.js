@@ -58,6 +58,15 @@ describe('YooListItem Component', () => {
         expect(wrapper.find('.yoo-checkbox').exists()).toBe(true)
       })
     })
+    describe('actionableActive', () => {
+      it('Has a valid default value', () => {
+        expect(YooListItem.props.actionableActive.default).toBe(false)
+      })
+      it('Has a checkButton is active', async () => {
+        await wrapper.setProps({ actionable: true, actionableType: 'check', actionableActive: true })
+        expect(wrapper.find('.yoo-checkbox__check--active').exists()).toBe(true)
+      })
+    })
     describe('separator', () => {
       it('Has a valid default value', () => {
         expect(YooListItem.props.separator.default).toBe(false)

@@ -55,7 +55,7 @@
       YooCheckButton(
         v-else-if="actionable && actionableType === 'check'"
         size="small"
-        :text="detail"
+        :checked="actionableActive"
         @response="doGetValue"
       )
 </template>
@@ -98,6 +98,10 @@ export default {
       type: String,
       default: 'button',
       validator: value => PropsConfig.actionableType.options.includes(value)
+    },
+    actionableActive: {
+      type: Boolean,
+      default: false
     },
     separator: {
       type: Boolean,
