@@ -3,7 +3,9 @@ module.exports = {
     options: [
       'primary',
       'danger',
-      'light'
+      'light',
+      'lightest',
+      'dark'
     ]
   },
   textColor: {
@@ -33,7 +35,9 @@ module.exports = {
   iconColor: {
     options: [
       'light',
-      'dark'
+      'dark',
+      'primary',
+      'danger'
     ]
   },
   indicatorFill: {
