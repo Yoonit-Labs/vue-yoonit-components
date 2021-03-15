@@ -19,7 +19,6 @@ import YooQuizQuestion from './molecules/QuizQuestion/QuizQuestion.vue'
 import YooSelectButton from './molecules/SelectButton/SelectButton.vue'
 import YooSegmentedBar from './molecules/SegmentedBar/SegmentedBar.vue'
 import YooTableAttribute from './molecules/TableAttribute/TableAttribute.vue'
-import YooTableCard from './molecules/TableCard/TableCard.vue'
 
 import YooFlexLayout from './bosons/FlexLayout/FlexLayout.vue'
 import YooGridLayout from './bosons/GridLayout/GridLayout.vue'

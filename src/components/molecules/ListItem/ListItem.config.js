@@ -1,11 +1,8 @@
 module.exports = {
-  justifySlotContent: {
+  actionableType: {
     options: [
-      'flex-start',
-      'flex-end',
-      'center',
-      'space-between',
-      'space-around'
+      'button',
+      'check'
     ]
   },
   borderFill: {

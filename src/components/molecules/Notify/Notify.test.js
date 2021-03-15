@@ -80,36 +80,36 @@ describe('YooNotify Component', () => {
         })
       })
     })
-    describe('notifyFill', () => {
+    describe('fill', () => {
       it('Has a valid default value', () => {
-        expect(PropsConfig.notifyFill.options.includes(YooNotify.props.notifyFill.default)).toBe(true)
+        expect(PropsConfig.fill.options.includes(YooNotify.props.fill.default)).toBe(true)
       })
-      PropsConfig.notifyFill.options.forEach(notifyFill => {
-        it(`Includes notifyFill class: .${classBlock}--${notifyFill}`, async () => {
-          await wrapper.setProps({ notifyFill })
-          expect(wrapper.find(`.${classBlock}--${notifyFill}`).exists()).toBe(true)
+      PropsConfig.fill.options.forEach(fill => {
+        it(`Includes fill class: .${classBlock}--${fill}`, async () => {
+          await wrapper.setProps({ fill })
+          expect(wrapper.find(`.${classBlock}--${fill}`).exists()).toBe(true)
         })
       })
     })
-    describe('notifyTextColor', () => {
+    describe('textColor', () => {
       it('Has a valid default value', () => {
-        expect(PropsConfig.notifyTextColor.options.includes(YooNotify.props.notifyTextColor.default)).toBe(true)
+        expect(PropsConfig.textColor.options.includes(YooNotify.props.textColor.default)).toBe(true)
       })
-      PropsConfig.notifyTextColor.options.forEach(notifyTextColor => {
-        it(`Includes notifyTextColor class: .${classBlock}__text--${notifyTextColor}`, async () => {
-          await wrapper.setProps({ notifyTextColor })
-          expect(wrapper.find(`.${classBlock}__text--${notifyTextColor}`).exists()).toBe(true)
+      PropsConfig.textColor.options.forEach(textColor => {
+        it(`Includes textColor class: .${classBlock}__text--${textColor}`, async () => {
+          await wrapper.setProps({ textColor })
+          expect(wrapper.find(`.${classBlock}__text--${textColor}`).exists()).toBe(true)
         })
       })
     })
-    describe('notifyTextSize', () => {
+    describe('textSize', () => {
       it('Has a valid default value', () => {
-        expect(PropsConfig.notifyTextSize.options.includes(YooNotify.props.notifyTextSize.default)).toBe(true)
+        expect(PropsConfig.textSize.options.includes(YooNotify.props.textSize.default)).toBe(true)
       })
-      PropsConfig.notifyTextSize.options.forEach(notifyTextSize => {
-        it(`Includes notifyTextSize class: .${classBlock}__text--${notifyTextSize}`, async () => {
-          await wrapper.setProps({ notifyTextSize })
-          expect(wrapper.find(`.${classBlock}__text--${notifyTextSize}`).exists()).toBe(true)
+      PropsConfig.textSize.options.forEach(textSize => {
+        it(`Includes textSize class: .${classBlock}__text--${textSize}`, async () => {
+          await wrapper.setProps({ textSize })
+          expect(wrapper.find(`.${classBlock}__text--${textSize}`).exists()).toBe(true)
         })
       })
     })

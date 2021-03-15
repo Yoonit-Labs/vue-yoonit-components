@@ -10,6 +10,7 @@
       :fill="selectedArray.includes(item.value) ? 'primary' : 'light'"
       buttonSize="short"
       variation="base"
+      height="inherit"
       @onClick="doActive(index, item.value)"
     )
 
