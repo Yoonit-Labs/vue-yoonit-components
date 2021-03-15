@@ -5,6 +5,12 @@ export default {
   title: 'Yoonit/YooTableAttribute',
   component: yooTableAttribute,
   argTypes: {
+    fill: {
+      control: {
+        type: 'select',
+        options: PropsConfig.fill.options
+      }
+    },
     detailFill: {
       control: {
         type: 'select',
@@ -55,6 +61,18 @@ export default {
     detail: {
       control: {
         type: 'text'
+      }
+    },
+    buttonTextSize: {
+      control: {
+        type: 'select',
+        options: PropsConfig.buttonTextSize.options
+      }
+    },
+    iconButtonSize: {
+      control: {
+        type: 'select',
+        options: PropsConfig.iconButtonSize.options
       }
     }
   }

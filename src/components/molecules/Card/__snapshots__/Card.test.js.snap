@@ -2,7 +2,7 @@
 
 exports[`YooCard Component Matches Snapshot 1`] = `
 <div class="yoo-card yoo-card__fill--white">
-  <div class="yoo-flex-layout" style="flex-direction: row; flex-wrap: nowrap; justify-content: space-between; align-items: stretch; align-content: stretch;" row="1" col="1" width="100%"><i class="yoo-card__icon yoo-icon fas fa- yoo-icon__size--md yoo-icon__fill--neutral"></i>
+  <div class="yoo-flex-layout" style="flex-direction: row; flex-wrap: nowrap; justify-content: space-between; align-items: stretch; align-content: stretch;" row="1" col="1" width="100%"><i class="yoo-icon yoo-card__icon fas fa- yoo-icon__size--md yoo-icon__fill--neutral"></i>
     <div class="yoo-indicator yoo-indicator--small yoo-indicator--danger yoo-indicator--pulse"></div>
   </div>
   <h3 row="2" col="1" class="yoo-card__title"></h3>
