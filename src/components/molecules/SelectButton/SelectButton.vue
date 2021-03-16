@@ -8,8 +8,9 @@
       :key="index"
       :text="item.text"
       :fill="selectedArray.includes(item.value) ? 'primary' : 'light'"
-      buttonSize="xs"
+      buttonSize="short"
       variation="base"
+      height="inherit"
       @onClick="doActive(index, item.value)"
     )
 

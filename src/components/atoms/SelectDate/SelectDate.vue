@@ -246,9 +246,7 @@ export default {
       const objDate = new Date()
       objDate.setDate(1)
       objDate.setMonth(month)
-
       const monthName = objDate.toLocaleString(this.locale, { month: format }).replace('.', '')
-
       return monthName
     }
   }

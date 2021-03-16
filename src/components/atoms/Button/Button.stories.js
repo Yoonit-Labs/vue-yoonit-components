@@ -51,6 +51,12 @@ export default {
       control: {
         type: 'text'
       }
+    },
+    textSize: {
+      control: {
+        type: 'select',
+        options: PropsConfig.textSize.options
+      }
     }
   }
 }
@@ -108,7 +114,4 @@ export const Animated = Template.bind({})
 Animated.args = { text: 'Yoo Button', variation: 'base', fill: 'dark', animation: 'pulse', icon: 'credit-card', iconStyle: 'solid' }
 
 export const Short = Template.bind({})
-Short.args = { text: 'Yoo Button', variation: 'base', fill: 'primary', icon: 'check', buttonSize: 'short' }
-
-export const Xs = Template.bind({})
-Xs.args = { text: '99', variation: 'base', fill: 'danger', animation: 'pulse', buttonSize: 'xs' }
+Short.args = { text: '99', variation: 'base', fill: 'primary', animation: 'pulse', buttonSize: 'short' }
