@@ -6,6 +6,7 @@
   "unpkg": "yoo.min.js",
   "scripts": {
     "serve": "vue-cli-service serve",
+    "build": "bash ./build.sh",
     "build:all": "npm run build:vue & npm run build:wc",
     "build:vue": "cross-env NODE_ENV=vue vue-cli-service build --target lib --name yoo src/main.js",
     "build:wc": "cross-env NODE_ENV=wc vue-cli-service build --target wc-async --name yoo ./src/**/**.vue",
