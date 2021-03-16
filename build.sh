@@ -22,9 +22,10 @@
 
 function pause() {
   echo ''
+  echo '---------------------'
   echo 'Package ready!'
   echo ''
-  read -s -n 1 -p 'Press any key to continue...'
+  read -r -s -n 1 -p 'Press any key to continue...'
   echo ''
 }
 
@@ -35,26 +36,41 @@ echo 'Updating repository...'
 git checkout development
 git pull
 wait
+echo ''
+echo '---------------------'
 echo 'Cleaning files...'
 rm -rf node_modules
 rm -rf npm
 rm -rf dist
 wait
+echo ''
+echo '---------------------'
 echo 'Installing dependencies...'
 npm i
 wait
+echo ''
+echo '---------------------'
 echo 'Running linter...'
 npm run lint
 wait
+echo ''
+echo '---------------------'
 echo 'Running Unit Tests...'
 npm run test:unit
 wait
+echo ''
+echo '---------------------'
 echo 'Tests Coverage...'
 npm run test:unit:coverage
 wait
+echo ''
+echo '---------------------'
 echo 'Building...'
 npm run build:vue
+# npm run build:wc
 wait
+echo ''
+echo '---------------------'
 echo 'Preparing "npm" folder to deploy...'
 mkdir npm
 mkdir npm/vue

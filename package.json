@@ -10,9 +10,9 @@
     "build:vue": "cross-env NODE_ENV=vue vue-cli-service build --target lib --name yoo src/main.js",
     "build:wc": "cross-env NODE_ENV=wc vue-cli-service build --target wc-async --name yoo ./src/**/**.vue",
     "build:storybook": "build-storybook",
-    "test:unit": "vue-cli-service test:unit",
+    "test:unit": "vue-cli-service test:unit -u",
     "test:unit:coverage": "vue-cli-service test:unit --collectCoverage",
-    "test:unit:watch": "vue-cli-service test:unit --watchAll",
+    "test:unit:watch": "vue-cli-service test:unit -u --watchAll",
     "test:e2e": "vue-cli-service test:e2e",
     "lint": "vue-cli-service lint",
     "storybook": "start-storybook -p 6006"
