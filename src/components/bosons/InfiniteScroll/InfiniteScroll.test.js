@@ -1,17 +1,23 @@
 import { shallowMount } from '@vue/test-utils'
-import YooScrollView from '@/components/bosons/ScrollView/ScrollView.vue'
-import PropsConfig from '@/components/bosons/ScrollView/ScrollView.config'
+import YooInfiniteScroll from '@/components/bosons/InfiniteScroll/InfiniteScroll.vue'
+import PropsConfig from '@/components/bosons/InfiniteScroll/InfiniteScroll.config'
+import 'intersection-observer'
 
-const classBlock = 'yoo-scroll-view'
+const classBlock = 'yoo-infinite'
 const SlotText = 'Default Slot Text'
 
 const mountComponent = () => {
-  return shallowMount(YooScrollView, {
-    slots: { default: SlotText }
+  var mockDirective = {}
+  return shallowMount(YooInfiniteScroll, {
+    slots: { default: SlotText },
+    directives: { resize: mockDirective },
+    data: () => ({
+      showLoading: true
+    })
   })
 }
 
-describe('YooIndicator Component', () => {
+describe('YooInfiniteScroll Component', () => {
   let wrapper
   beforeEach(() => {
     wrapper = mountComponent()
@@ -22,18 +28,29 @@ describe('YooIndicator Component', () => {
   })
 
   it('Loads the Component HTML', () => {
-    expect(wrapper.find('.yoo-scroll-view').exists()).toBe(true)
+    expect(wrapper.find('.yoo-infinite').exists()).toBe(true)
   })
 
   describe('Props', () => {
-    describe('orientation', () => {
+    describe('loadingFill', () => {
       it('Has a valid default value', () => {
-        expect(PropsConfig.orientation.options.includes(YooScrollView.props.orientation.default)).toBe(true)
+        expect(PropsConfig.loadingFill.options.includes(YooInfiniteScroll.props.loadingFill.default)).toBe(true)
       })
-      PropsConfig.orientation.options.forEach(orientation => {
-        it(`Includes orientation class: .${classBlock}--${orientation}`, async () => {
-          await wrapper.setProps({ orientation })
-          expect(wrapper.find(`.${classBlock}--${orientation}`).exists()).toBe(true)
+      PropsConfig.loadingFill.options.forEach(loadingFill => {
+        it(`Includes loadingFill class: .${classBlock}__loader--${loadingFill}`, async () => {
+          await wrapper.setProps({ loadingFill })
+          expect(wrapper.find(`.${classBlock}__loader--${loadingFill}`).exists()).toBe(true)
+        })
+      })
+    })
+    describe('loadingSize', () => {
+      it('Has a valid default value', () => {
+        expect(PropsConfig.loadingSize.options.includes(YooInfiniteScroll.props.loadingSize.default)).toBe(true)
+      })
+      PropsConfig.loadingSize.options.forEach(loadingSize => {
+        it(`Includes loadingSize class: .${classBlock}__loader--${loadingSize}`, async () => {
+          await wrapper.setProps({ loadingSize })
+          expect(wrapper.find(`.${classBlock}__loader--${loadingSize}`).exists()).toBe(true)
         })
       })
     })

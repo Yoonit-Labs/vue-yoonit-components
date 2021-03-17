@@ -1,9 +1,22 @@
 import yooInfiniteScroll from './InfiniteScroll.vue'
+import PropsConfig from './InfiniteScroll.config'
 
 export default {
   title: 'Yoonit/InfiniteScroll',
   component: yooInfiniteScroll,
   argTypes: {
+    loadingFill: {
+      control: {
+        type: 'select',
+        options: PropsConfig.loadingFill.options
+      }
+    },
+    loadingSize: {
+      control: {
+        type: 'select',
+        options: PropsConfig.loadingSize.options
+      }
+    }
   }
 }
 
