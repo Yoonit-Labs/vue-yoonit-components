@@ -59,18 +59,19 @@ export default {
   },
   methods: {
     scrollIntersection () {
-      const observer = new IntersectionObserver((entries) => {
-        this.showLoading = false
-        console.log(entries)
-        this.showLoading = false
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            this.showLoading = true
-            this.$emit('intersecting', entry.isIntersecting)
-          }
-        })
-      }, { rootMargin: this.rootMargin })
+      const observer = new IntersectionObserver(this.callbackObserver, { rootMargin: this.rootMargin })
+      console.log(observer)
       observer.observe(this.$refs.infiniteScroll)
+    },
+    callbackObserver (entries) {
+      this.showLoading = false
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          console.log('cheguei aqui dentro')
+          this.showLoading = true
+          this.$emit('intersecting', entry.isIntersecting)
+        }
+      })
     }
   },
   mounted () {

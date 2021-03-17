@@ -1,16 +1,13 @@
 import { shallowMount } from '@vue/test-utils'
 import YooInfiniteScroll from '@/components/bosons/InfiniteScroll/InfiniteScroll.vue'
 import PropsConfig from '@/components/bosons/InfiniteScroll/InfiniteScroll.config'
-import 'intersection-observer'
 
 const classBlock = 'yoo-infinite'
 const SlotText = 'Default Slot Text'
 
 const mountComponent = () => {
-  var mockDirective = {}
   return shallowMount(YooInfiniteScroll, {
     slots: { default: SlotText },
-    directives: { resize: mockDirective },
     data: () => ({
       showLoading: true
     })
@@ -20,6 +17,12 @@ const mountComponent = () => {
 describe('YooInfiniteScroll Component', () => {
   let wrapper
   beforeEach(() => {
+    const observe = jest.fn()
+
+    window.IntersectionObserver = jest.fn(function () {
+      console.log(this.observe)
+      this.observe = observe
+    })
     wrapper = mountComponent()
   })
 
@@ -55,4 +58,19 @@ describe('YooInfiniteScroll Component', () => {
       })
     })
   }) // describe Props
+
+  describe('Events', () => {
+    describe('Check emit method', () => {
+      it('Emitted true intersecting', async () => {
+        wrapper.vm.callbackObserver([{ isIntersecting: true }])
+        expect(wrapper.emitted('intersecting')).toEqual([[true]])
+      })
+    })
+    describe('Check emit method', () => {
+      it('Emitted false intersecting', async () => {
+        wrapper.vm.callbackObserver([{ isIntersecting: false }])
+        expect(wrapper.emitted('intersecting')).toEqual(undefined)
+      })
+    })
+  }) // describe Events
 })

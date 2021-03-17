@@ -24,20 +24,28 @@ const Template = (args, { argTypes }) => ({
   props: Object.keys(argTypes),
   components: { yooInfiniteScroll },
   template:
-    `<yoo-infinite-scroll v-bind="$props">
+    `<yoo-infinite-scroll v-bind="$props" style="height:300px;overflow:auto">
         <template v-slot>
-          <h3>item</h3>
-          <h3>item</h3>
-          <h3>item</h3>
-          <h3>item</h3>
-          <h3>item</h3>
-          <h3>item</h3>
-          <h3>item</h3>
-          <h3>item</h3>
-          <h3>ultimo</h3>
+          <h3 style="background-color: #47C8C3; color: white; font-family: Montserrat, sans-serif; font-size: 16px; padding: 8px; text-align: center;">item</h3>
+          <h3 style="background-color: #47C8C3; color: white; font-family: Montserrat, sans-serif; font-size: 16px; padding: 8px; text-align: center;">item</h3>
+          <h3 style="background-color: #47C8C3; color: white; font-family: Montserrat, sans-serif; font-size: 16px; padding: 8px; text-align: center;">item</h3>
+          <h3 style="background-color: #47C8C3; color: white; font-family: Montserrat, sans-serif; font-size: 16px; padding: 8px; text-align: center;">item</h3>
+          <h3 style="background-color: #47C8C3; color: white; font-family: Montserrat, sans-serif; font-size: 16px; padding: 8px; text-align: center;">item</h3>
+          <h3 style="background-color: #47C8C3; color: white; font-family: Montserrat, sans-serif; font-size: 16px; padding: 8px; text-align: center;">item</h3>
+          <h3 style="background-color: #47C8C3; color: white; font-family: Montserrat, sans-serif; font-size: 16px; padding: 8px; text-align: center;">item</h3>
+          <h3 style="background-color: #47C8C3; color: white; font-family: Montserrat, sans-serif; font-size: 16px; padding: 8px; text-align: center;">item</h3>
+          <h3 style="background-color: #47C8C3; color: white; font-family: Montserrat, sans-serif; font-size: 16px; padding: 8px; text-align: center;">item</h3>
+          <h3 style="background-color: #47C8C3; color: white; font-family: Montserrat, sans-serif; font-size: 16px; padding: 8px; text-align: center;">item</h3>
+          <h3 style="background-color: #47C8C3; color: white; font-family: Montserrat, sans-serif; font-size: 16px; padding: 8px; text-align: center;">item</h3>
+          <h3 style="background-color: #47C8C3; color: white; font-family: Montserrat, sans-serif; font-size: 16px; padding: 8px; text-align: center;">item</h3>
+          <h3 style="background-color: #47C8C3; color: white; font-family: Montserrat, sans-serif; font-size: 16px; padding: 8px; text-align: center;">item</h3>
+          <h3 style="background-color: #47C8C3; color: white; font-family: Montserrat, sans-serif; font-size: 16px; padding: 8px; text-align: center;">item</h3>
+          <h3 style="background-color: #47C8C3; color: white; font-family: Montserrat, sans-serif; font-size: 16px; padding: 8px; text-align: center;">item</h3>
+          <h3 style="background-color: #47C8C3; color: white; font-family: Montserrat, sans-serif; font-size: 16px; padding: 8px; text-align: center;">item</h3>
+          <h3 style="background-color: #47C8C3; color: white; font-family: Montserrat, sans-serif; font-size: 16px; padding: 8px; text-align: center;">último</h3>
         </template>
     </yoo-infinite-scroll>`
 })
 
 export const Custom = Template.bind({})
-Custom.args = { rootMargin: '0px 0px 30% 0px' }
+Custom.args = { rootMargin: '0px 0px 100px 0px' }
