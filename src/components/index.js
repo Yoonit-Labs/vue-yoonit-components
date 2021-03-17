@@ -50,8 +50,7 @@ const yooComponents = {
   YooFlexLayout,
   YooGridLayout,
   YooIndicator,
-  YooScrollView,
-  YooTableCard
+  YooScrollView
 }
 
 export default yooComponents

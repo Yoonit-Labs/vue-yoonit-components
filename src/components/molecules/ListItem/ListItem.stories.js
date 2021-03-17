@@ -33,6 +33,14 @@ const Template = (args, { argTypes }) => ({
   components: { YooListItem, yooButton, yooIndicator, yooIcon },
   template:
   `<yoo-list-item v-bind="$props">
+  </yoo-list-item>`
+})
+
+const TemplateSlot = (args, { argTypes }) => ({
+  props: Object.keys(argTypes),
+  components: { YooListItem, yooButton, yooIndicator, yooIcon },
+  template:
+  `<yoo-list-item v-bind="$props">
       <template v-slot:control>
         <yoo-indicator fill="danger" size="small" animation></yoo-indicator>
         <yoo-icon class="m__l--xs m__r--xs" icon="virus" fill="neutral" size="lg"></yoo-icon>
@@ -41,7 +49,7 @@ const Template = (args, { argTypes }) => ({
     </yoo-list-item>`
 })
 
-export const Custom = Template.bind({})
+export const Custom = TemplateSlot.bind({})
 Custom.args = { title: 'YooListItem', subtitle: '• Admin', tags: [{ name: 'Admin', status: true }, { name: 'Funcionários' }, { name: 'Segurança' }] }
 
 export const Button = Template.bind({})
@@ -51,4 +59,4 @@ export const CheckButton = Template.bind({})
 CheckButton.args = { title: 'YooListItem', subtitle: '• Admin', borderFill: 'neutral', actionable: true, actionableType: 'check' }
 
 export const Tags = Template.bind({})
-Tags.args = { title: 'YooListItem', subtitle: '• Admin', tags: [{ name: 'Admin', status: true }, { name: 'Funcionários' }, { name: 'Segurança' }], borderFill: 'danger', borderLeft: true }
+Tags.args = { title: 'Sabrina Angelim Sampaio', subtitle: '• Admin', tags: [{ name: 'Admin', status: true }, { name: 'Funcionários' }, { name: 'Segurança' }], borderFill: 'danger', borderLeft: true }
