@@ -12,7 +12,7 @@ jobs:
       - name: Installing dependencies
         run: |
           Installing dependencies...,
-          npm ci
+          npm install
           
       - name: Run unit tests
         run: |
