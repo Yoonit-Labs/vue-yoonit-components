@@ -14,7 +14,7 @@ const Template = (args, { argTypes }) => ({
 
 export const Custom = Template.bind({})
 Custom.args = {
-  rate: [
+  options: [
     {
       text: '1',
       value: 1
@@ -32,7 +32,7 @@ Custom.args = {
 
 export const Multiple = Template.bind({})
 Multiple.args = {
-  rate: [
+  options: [
     {
       text: '1',
       value: 1

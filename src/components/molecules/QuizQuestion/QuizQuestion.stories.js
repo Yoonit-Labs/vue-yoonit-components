@@ -6,14 +6,14 @@ var answers = [
   {
     id: 'ans1',
     text: {
-      ptBR: 'Cansaço'
+      enUS: 'Yes'
     },
     weight: 3
   },
   {
     id: 'ans2',
     text: {
-      ptBR: 'Corrimento Nasal (Coriza)'
+      enUS: 'No'
     },
     weight: 3,
     status: true

@@ -4,7 +4,7 @@
     alignItems="center"
   )
     YooButton(
-      v-for="(item, index) in rate"
+      v-for="(item, index) in options"
       :key="index"
       :text="item.text"
       :fill="selectedArray.includes(item.value) ? 'primary' : 'light'"
@@ -29,7 +29,7 @@ export default {
     YooButton
   },
   props: {
-    rate: {
+    options: {
       type: Array,
       required: true
     },
@@ -42,7 +42,7 @@ export default {
     selectedArray: []
   }),
   mounted () {
-    this.rate.forEach(item => {
+    this.options.forEach(item => {
       if (item.active === true) {
         this.selectedArray.push(item.value)
       }

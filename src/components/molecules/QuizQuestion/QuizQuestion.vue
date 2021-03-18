@@ -17,7 +17,7 @@
       :row="index+2"
       :col="1"
       :textPosition="textPosition"
-      :text="ans.text.ptBR"
+      :text="ans.text.enUS"
       :checked="doTakeStatus(index)"
       :card="true"
       @response='doTap($event, index, ans.override, question.type)'

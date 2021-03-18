@@ -29,10 +29,12 @@ export default {
   name: 'YooFormGroup',
   props: {
     label: {
-      type: String
+      type: String,
+      default: ''
     },
     value: {
-      type: String
+      type: String,
+      default: ''
     },
     required: {
       type: Boolean
