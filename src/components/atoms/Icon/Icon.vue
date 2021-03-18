@@ -1,6 +1,6 @@
 <template lang="pug">
-  i(
-    :class="['yoo-icon', takeIconStyle, takeIconName, ...takeModifier]"
+  i.yoo-icon(
+    :class="[takeIconStyle, takeIconName, ...takeModifier]"
   )
 </template>
 

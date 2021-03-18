@@ -8,6 +8,7 @@
 ![Version](https://img.shields.io/npm/v/@yoonit/nativescript-camera?color=lightgrey&style=for-the-badge&logo=npm)
 ![Downloads](https://img.shields.io/npm/dm/@yoonit/nativescript-camera?color=lightgrey&logo=npm&style=for-the-badge)
 ![Vue](https://img.shields.io/badge/Vue.js-35495E?color=lightgrey&style=for-the-badge&logo=vue.js)
+![Storybook](https://img.shields.io/badge/Storybook-35495E?color=lightgrey&style=for-the-badge&logo=storybook)
 ![MIT license](https://img.shields.io/npm/l/@yoonit/nativescript-camera?color=lightgrey&style=for-the-badge)
 
 ### [Atoms](#atoms)
@@ -104,7 +105,7 @@ After that, you can access each component by calling it in the html template.
   />
 </template>
 ```
-[<img src="https://github.com/Yoonit-Labs/vue-yoonit-components/blob/development/public/readme-img/button-example.png" width="400">](https://cyberlabs.ai/)
+<img src="https://github.com/Yoonit-Labs/vue-yoonit-components/blob/development/public/readme-img/button-example.png" width="400">
 
 ## StoryBook
 

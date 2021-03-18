@@ -123,7 +123,19 @@ describe('YooTableAttribute Component', () => {
         })
       })
     })
-
+    describe('fill', () => {
+      it('Has a valid default value', () => {
+        expect(PropsConfig.fill.options.includes(YooTableAttribute.props.fill.default)).toBe(true)
+      })
+      PropsConfig.fill.options.forEach(fill => {
+        it('Loads the Component HTML', async () => {
+          if (fill !== 'none') {
+            await wrapper.setProps({ fill })
+            expect(wrapper.find(`.${classBlock}__fill--${fill}`).exists()).toBe(true)
+          }
+        })
+      })
+    })
     describe('iconFill', () => {
       it('Has a valid default value', () => {
         expect(PropsConfig.iconFill.options.includes(YooTableAttribute.props.iconFill.default)).toBe(true)

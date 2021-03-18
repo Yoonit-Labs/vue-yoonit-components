@@ -1,6 +1,6 @@
 <template lang="pug">
-  YooGridLayout.p__t--xs.p__b--xs.p__r--s.p__l--s(
-    :class="['yoo-notify', ...takeModifier]"
+  YooGridLayout.yoo-notify.p__t--xs.p__b--xs.p__r--s.p__l--s(
+    :class="[...takeModifier]"
     :cols="takeCols"
     rows="*"
     horizontalAlign="space-between"
@@ -19,9 +19,9 @@
         :size="indicatorSize"
         :fill="indicatorFill"
       )
-      i(
+      i.yoo-notify__icon(
         v-if="showIcon && !showIndicator"
-        :class="['yoo-notify__icon', takeIconStyle, takeIconName, takeIconColor]"
+        :class="[takeIconStyle, takeIconName, takeIconColor]"
       )
     YooFlexLayout(
       justifyContent="space-between"
@@ -29,10 +29,10 @@
       :col="takeTextColumn"
       row="1"
     )
-      p.m__r--l.m__l--s(
-        :class="['yoo-notify__text', takeTextColor, takeTextSize]"
+      p.yoo-notify__text.m__r--l.m__l--s(
+        :class="[takeTextColor, takeTextSize]"
         alignItems="center"
-      ) {{ notifyText }}
+      ) {{ text }}
 
     YooFlexLayout(
       justifyContent="space-between"
@@ -67,24 +67,24 @@ export default {
     YooButton
   },
   props: {
-    notifyFill: {
+    fill: {
       type: String,
       default: 'light',
-      validator: value => PropsConfig.notifyFill.options.includes(value)
+      validator: value => PropsConfig.fill.options.includes(value)
     },
-    notifyText: {
+    text: {
       type: String,
       default: ''
     },
-    notifyTextColor: {
+    textColor: {
       type: String,
       default: 'dark',
-      validator: value => PropsConfig.notifyTextColor.options.includes(value)
+      validator: value => PropsConfig.textColor.options.includes(value)
     },
-    notifyTextSize: {
+    textSize: {
       type: String,
       default: 'md',
-      validator: value => PropsConfig.notifyTextSize.options.includes(value)
+      validator: value => PropsConfig.textSize.options.includes(value)
     },
     indicatorSize: {
       type: String,
@@ -150,28 +150,28 @@ export default {
         : 'far'
     },
     /**
-    * @description Print classes based on the chosen prop notifyFill
+    * @description Print classes based on the chosen prop fill
     * @computed takeModifier
     * @returns {array}
     */
     takeModifier () {
-      return [`yoo-notify--${this.notifyFill}`]
+      return [`yoo-notify--${this.fill}`]
     },
     /**
-    * @description Print classes based on the chosen prop notifyTextColor
+    * @description Print classes based on the chosen prop textColor
     * @computed takeTextColor
     * @returns {array}
     */
     takeTextColor () {
-      return [`yoo-notify__text--${this.notifyTextColor}`]
+      return [`yoo-notify__text--${this.textColor}`]
     },
     /**
-    * @description Print classes based on the chosen prop notifyTextSize
+    * @description Print classes based on the chosen prop textSize
     * @computed takeTextSize
     * @returns {array}
     */
     takeTextSize () {
-      return [`yoo-notify__text--${this.notifyTextSize}`]
+      return [`yoo-notify__text--${this.textSize}`]
     },
     /**
     * @description Print classes based on the chosen prop iconColor

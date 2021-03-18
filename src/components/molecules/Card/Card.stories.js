@@ -5,16 +5,34 @@ export default {
   title: 'Yoonit/YooCard',
   component: YooCard,
   argTypes: {
-    justifySlotContent: {
+    fill: {
       control: {
         type: 'select',
-        options: PropsConfig.justifySlotContent.options
+        options: PropsConfig.fill.options
       }
     },
-    borderFill: {
+    iconSize: {
       control: {
         type: 'select',
-        options: PropsConfig.borderFill.options
+        options: PropsConfig.iconSize.options
+      }
+    },
+    iconFill: {
+      control: {
+        type: 'select',
+        options: PropsConfig.iconFill.options
+      }
+    },
+    iconStyle: {
+      control: {
+        type: 'select',
+        options: PropsConfig.iconStyle.options
+      }
+    },
+    appIndicatorFill: {
+      control: {
+        type: 'select',
+        options: PropsConfig.appIndicatorFill.options
       }
     }
   }
@@ -30,20 +48,14 @@ const Template = (args, { argTypes }) => ({
 export const Custom = Template.bind({})
 Custom.args = { title: 'YooCard', subtitle: 'Test' }
 
-export const Neutral = Template.bind({})
-Neutral.args = { title: 'YooCard', subtitle: 'Test', borderFill: 'neutral' }
-
-export const Primary = Template.bind({})
-Primary.args = { title: 'YooCard', subtitle: 'Test', borderFill: 'primary' }
-
 export const Danger = Template.bind({})
-Danger.args = { title: 'YooCard', subtitle: 'Test', borderFill: 'danger' }
+Danger.args = { title: 'YooCard', subtitle: 'Test', fill: 'danger', showIndicator: true, icon: 'cog', iconFill: 'white', iconSize: 'xl' }
+
+export const Neutral = Template.bind({})
+Neutral.args = { title: 'YooCard', subtitle: 'Test', fill: 'neutral', showIndicator: true, icon: 'cog', iconFill: 'white', iconSize: 'xl' }
 
 export const Light = Template.bind({})
-Light.args = { title: 'YooCard', subtitle: 'Test', borderFill: 'light' }
+Light.args = { title: 'YooCard', subtitle: 'Test', fill: 'light', showIndicator: true, icon: 'cog', iconFill: 'neutral', iconSize: 'xl' }
 
 export const Dark = Template.bind({})
-Dark.args = { title: 'YooCard', subtitle: 'Test', borderFill: 'dark' }
-
-export const Darkest = Template.bind({})
-Darkest.args = { title: 'YooCard', subtitle: 'Test', borderFill: 'darkest' }
+Dark.args = { title: 'YooCard', subtitle: 'Test', fill: 'dark', showIndicator: true, icon: 'cog', iconFill: 'white', iconSize: 'xl' }

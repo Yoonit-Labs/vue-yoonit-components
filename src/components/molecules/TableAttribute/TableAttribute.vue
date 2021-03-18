@@ -1,10 +1,10 @@
 <template lang="pug">
-YooFlexLayout(
+YooFlexLayout.yoo-table-attribute(
   justifyContent="space-between"
   alignItems="center"
   flexDirection="row"
   width="100%"
-  :class="[ 'yoo-table-attribute', takeModifier ]"
+  :class="[...takeModifier]"
 )
     YooFlexLayout(
       justifyContent="space-between"
@@ -24,14 +24,14 @@ YooFlexLayout(
           size="lg"
         )
 
-        p.m__t--none.m__b--none(
-          :class="[ 'yoo-table-attribute__title', takeTitleModifier ]"
+        p.yoo-table-attribute__title.m__t--none.m__b--none(
+          :class="[...takeTitleModifier]"
         )
           | {{ title }}
 
-      p.m__t--s.m__b--none(
+      p.yoo-table-attribute__detail.yoo-table-attribute__detail--wrap.m__t--s.m__b--none(
         v-if="detail && wrap"
-        :class="[ 'yoo-table-attribute__detail', 'yoo-table-attribute__detail--wrap', takeDetailFillModifier ]"
+        :class="[takeDetailFillModifier]"
       )
         | {{ detail }}
 
@@ -40,36 +40,37 @@ YooFlexLayout(
       alignItems="center"
       flexDirection="row"
     )
-      p(
-        v-if="!wrap"
-        :class="[ 'yoo-table-attribute__detail', takeDetailFillModifier ]"
+      p.yoo-table-attribute__detail(
+        v-if="!wrap && !actionable || actionableType !== 'button'"
+        :class="[...takeDetailFillModifier]"
       )
         | {{ detail }}
 
-      YooButton.m__l--s(
+      YooButton.yoo-table-attribute__actionable.m__l--s(
         v-if="actionable && actionableType === 'button'"
         variation="clear"
         :fill="detailFill"
-        icon="chevron-right"
+        :icon="buttonIcon"
         iconPosition="right"
         :hover="true"
         :active="true"
+        :text="detail"
         :disabled="actionableDisable"
         @onClick="$emit('response')"
+        :textSize="buttonTextSize"
+        :iconSize="iconButtonSize"
       )
-
-      YooCheckButton.m__l--s(
+      YooCheckButton.yoo-table-attribute__detail.yoo-table-attribute__actionable.m__l--s(
         v-else-if="actionable && actionableType === 'check'"
         size="small"
-        :class="[ 'yoo-table-attribute__detail', takeDetailFillModifier ]"
+        :class="[...takeDetailFillModifier]"
         :checked="actionableActive"
         @response="$emit('response', $event)"
       )
 
-      YooSwitch.m__l--m(
+      YooSwitch.yoo-table-attribute__detail.yoo-table-attribute_actionable.m__l--m(
         v-else-if="actionable && actionableType === 'switch'"
         size="small"
-        :class="[ 'yoo-table-attribute__detail' ]"
         :disabled="actionableDisable"
         :initialValue="actionableActive"
         @response="$emit('response', $event)"
@@ -96,12 +97,17 @@ export default {
     titleWeight: {
       type: String,
       default: 'medium',
-      validator: value => PropsConfig.titleWeight.options
+      validator: value => PropsConfig.titleWeight.options.includes(value)
     },
     titleSize: {
       type: String,
       default: 'md',
-      validator: value => PropsConfig.titleSize.options
+      validator: value => PropsConfig.titleSize.options.includes(value)
+    },
+    fill: {
+      type: String,
+      default: 'none',
+      validator: value => PropsConfig.fill.options.includes(value)
     },
     detail: {
       type: String,
@@ -110,17 +116,26 @@ export default {
     detailFill: {
       type: String,
       default: 'light',
-      validator: value => PropsConfig.detailFill.options
+      validator: value => PropsConfig.detailFill.options.includes(value)
     },
     titleFill: {
       type: String,
       default: 'dark',
-      validator: value => PropsConfig.titleFill.options
+      validator: value => PropsConfig.titleFill.options.includes(value)
     },
     iconFill: {
       type: String,
       default: 'neutral',
-      validator: value => PropsConfig.iconFill.options
+      validator: value => PropsConfig.iconFill.options.includes(value)
+    },
+    buttonIcon: {
+      type: String,
+      default: 'chevron-right'
+    },
+    buttonTextSize: {
+      type: String,
+      default: 'md',
+      validator: value => PropsConfig.buttonTextSize.options.includes(value)
     },
     actionable: {
       type: Boolean,
@@ -137,7 +152,7 @@ export default {
     actionableType: {
       type: String,
       default: 'button',
-      validator: value => PropsConfig.actionableType.options
+      validator: value => PropsConfig.actionableType.options.includes(value)
     },
     separator: {
       type: Boolean,
@@ -147,10 +162,15 @@ export default {
       type: String,
       default: ''
     },
+    iconButtonSize: {
+      type: String,
+      default: 'normal',
+      validator: value => PropsConfig.iconButtonSize.options.includes(value)
+    },
     iconStyle: {
       type: String,
       default: 'solid',
-      validator: value => PropsConfig.iconStyle.options
+      validator: value => PropsConfig.iconStyle.options.includes(value)
     },
     wrap: {
       type: Boolean,
@@ -183,6 +203,18 @@ export default {
     takeModifier () {
       const block = 'yoo-table-attribute'
       const classList = []
+      if (this.fill !== 'none') {
+        classList
+          .push(
+            `${block}__fill--${this.fill} p__l--m p__r--m`
+          )
+      }
+      if (this.wrap) {
+        classList
+          .push(
+            `${block}--wrap`
+          )
+      }
       if (this.icon && this.icon.length > 2) {
         classList
           .push(

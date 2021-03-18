@@ -5,22 +5,22 @@ export default {
   title: 'Yoonit/YooNotify',
   component: yooNotify,
   argTypes: {
-    notifyFill: {
+    fill: {
       control: {
         type: 'select',
-        options: PropsConfig.notifyFill.options
+        options: PropsConfig.fill.options
       }
     },
-    notifyTextColor: {
+    textColor: {
       control: {
         type: 'select',
-        options: PropsConfig.notifyTextColor.options
+        options: PropsConfig.textColor.options
       }
     },
-    notifyTextSize: {
+    textSize: {
       control: {
         type: 'select',
-        options: PropsConfig.notifyTextSize.options
+        options: PropsConfig.textSize.options
       }
     },
     indicatorFill: {
@@ -76,13 +76,16 @@ const Template = (args, { argTypes }) => ({
 })
 
 export const Custom = Template.bind({})
-Custom.args = { notifyText: 'Yoo Notify' }
+Custom.args = { text: 'Yoo Notify' }
 
 export const Primary = Template.bind({})
-Primary.args = { notifyText: 'Yoo Notify', notifyFill: 'primary' }
+Primary.args = { text: 'Yoo Notify', fill: 'primary' }
 
 export const Danger = Template.bind({})
-Danger.args = { notifyText: 'Yoo Notify', notifyFill: 'danger' }
+Danger.args = { text: 'Yoo Notify', fill: 'danger' }
 
 export const Light = Template.bind({})
 Light.args = { notifyText: 'Yoo Notify', notifyFill: 'light' }
+
+export const Dark = Template.bind({})
+Dark.args = { text: 'Yoo Notify', fill: 'dark' }

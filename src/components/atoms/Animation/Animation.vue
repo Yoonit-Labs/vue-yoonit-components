@@ -8,6 +8,7 @@
 
 <script>
 import { loadAnimation } from 'lottie-web'
+
 export default {
   name: 'YooAnimation',
   props: {
@@ -46,14 +47,17 @@ export default {
     const {
       container
     } = this.$refs
+
     this.animation = loadAnimation({
       container,
       renderer: 'svg',
       ...this.lottieOptions
     })
+
     this.$emit('created', this.animation)
   }
 }
+
 </script>
 
 <style src="./Animation.sass" lang="sass" scoped></style>

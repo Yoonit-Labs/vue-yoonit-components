@@ -1,7 +1,15 @@
 module.exports = {
+  outputDir:
+    process.env.NODE_ENV === 'wc'
+      ? 'dist/wc'
+      : process.env.NODE_ENV === 'vue'
+        ? 'dist/vue'
+        : 'dist',
+
   css: {
     extract: false
   },
+
   chainWebpack: config => {
     const imageRule = config.module.rule('images')
     imageRule.uses.clear()

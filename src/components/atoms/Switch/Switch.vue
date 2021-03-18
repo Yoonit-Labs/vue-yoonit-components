@@ -1,15 +1,14 @@
 <template lang="pug">
   .yoo-switch-container.m__t--s.m__b--s.m__r--s.m__l--s
-    input(
+    input.yoo-switch(
       type="checkbox"
       :id="timeId"
-      :class="['yoo-switch', ...takeModifier]"
+      :class="[...takeModifier]"
       v-model="checkedField"
       @change="doCheck($event)"
     )
-    label(
+    label.yoo-switch__label(
       :for="timeId"
-      class="yoo-switch__label"
     )
 
 </template>
@@ -49,18 +48,18 @@ export default {
       const block = 'yoo-switch'
       const classList = []
       switch (this.size) {
-        case 'small':
-          classList
-            .push(`${block}--${this.size}`)
-          break
-        case 'medium':
-          classList
-            .push(`${block}--${this.size}`)
-          break
-        case 'large':
-          classList
-            .push(`${block}--${this.size}`)
-          break
+      case 'small':
+        classList
+          .push(`${block}--${this.size}`)
+        break
+      case 'medium':
+        classList
+          .push(`${block}--${this.size}`)
+        break
+      case 'large':
+        classList
+          .push(`${block}--${this.size}`)
+        break
       }
       if (this.checkedField) {
         classList

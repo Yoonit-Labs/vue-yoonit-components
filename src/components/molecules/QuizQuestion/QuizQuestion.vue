@@ -1,24 +1,21 @@
 <template lang="pug">
-  YooGridLayout(
+  YooGridLayout.yoo-quiz(
     rows="*"
     :cols="takeRows"
-    :class="['yoo-quiz']"
   )
-    p(
+    p.yoo-quiz__question(
       row="1"
       col="1"
-      :class="['yoo-quiz__question']"
     ) {{ question.text.ptBR }}
       span(
         v-if="question.required"
       ) *
 
-    CheckButton(
+    CheckButton.yoo-quiz__card(
       v-for="(ans, index) in question.answers"
       :key="'radio-' + question.id + '-' + ans.id + '-' + index"
       :row="index+2"
       :col="1"
-      :class="['yoo-quiz__card']"
       :textPosition="textPosition"
       :text="ans.text.ptBR"
       :checked="doTakeStatus(index)"

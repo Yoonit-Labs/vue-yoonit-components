@@ -141,7 +141,6 @@ describe('YooButton Component', () => {
       it('Validator iconCustomColor returns validation object', async () => {
         // await wrapper.setProps({ icon: 'icon-value', iconCustomColor: '#d2d2d2' })
         expect(YooButton.props.iconCustomColor.validator('#d2d2d2')[0]).toBe('#d2d2d2')
-        expect(YooButton.props.iconCustomColor.validator('#d2d2d2')[1]).toBe('d2d2d2')
       })
     })
 
@@ -153,6 +152,18 @@ describe('YooButton Component', () => {
         it(`Include animation class: .${classBlock}--animation-${animation}`, async () => {
           await wrapper.setProps({ animation })
           expect(wrapper.find(`.${classBlock}`).classes().includes(`${classBlock}--animation-${animation}`)).toBe(true)
+        })
+      })
+    })
+
+    describe('textSize', () => {
+      it('Has a valid default value', () => {
+        expect(PropsConfig.textSize.options.includes(YooButton.props.textSize.default)).toBe(true)
+      })
+      PropsConfig.textSize.options.forEach(textSize => {
+        it(`Includes textSize class: .${classBlock}__text--${textSize}`, async () => {
+          await wrapper.setProps({ textSize })
+          expect(wrapper.find(`.${classBlock}__text--${textSize}`).exists()).toBe(true)
         })
       })
     })

@@ -1,19 +1,21 @@
 module.exports = {
-  notifyFill: {
+  fill: {
     options: [
       'primary',
       'danger',
-      'light'
+      'light',
+      'lightest',
+      'dark'
     ]
   },
-  notifyTextColor: {
+  textColor: {
     options: [
       'light',
       'dark',
       'danger'
     ]
   },
-  notifyTextSize: {
+  textSize: {
     options: [
       'tn',
       'xs',
@@ -33,7 +35,9 @@ module.exports = {
   iconColor: {
     options: [
       'light',
-      'dark'
+      'dark',
+      'primary',
+      'danger'
     ]
   },
   indicatorFill: {

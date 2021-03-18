@@ -14,4 +14,4 @@ const Template = (args, { argTypes }) => ({
 })
 
 export const Custom = Template.bind({})
-Custom.args = { lottieOptions: { animationData: animationData.default } }
+Custom.args = { active: true, lottieOptions: { animationData: animationData.default } }
