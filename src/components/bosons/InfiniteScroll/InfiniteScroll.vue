@@ -60,14 +60,12 @@ export default {
   methods: {
     scrollIntersection () {
       const observer = new IntersectionObserver(this.callbackObserver, { rootMargin: this.rootMargin })
-      console.log(observer)
       observer.observe(this.$refs.infiniteScroll)
     },
     callbackObserver (entries) {
       this.showLoading = false
       entries.forEach(entry => {
         if (entry.isIntersecting) {
-          console.log('cheguei aqui dentro')
           this.showLoading = true
           this.$emit('intersecting', entry.isIntersecting)
         }
@@ -79,8 +77,4 @@ export default {
   }
 }
 </script>
-
-<style lang="sass" scoped>
-</style>
-
 <style src="./InfiniteScroll.sass" lang="sass" scoped></style>

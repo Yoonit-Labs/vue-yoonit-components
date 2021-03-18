@@ -2,7 +2,7 @@ import yooInfiniteScroll from './InfiniteScroll.vue'
 import PropsConfig from './InfiniteScroll.config'
 
 export default {
-  title: 'Yoonit/InfiniteScroll',
+  title: 'Yoonit/YooInfiniteScroll',
   component: yooInfiniteScroll,
   argTypes: {
     loadingFill: {
@@ -34,18 +34,10 @@ const Template = (args, { argTypes }) => ({
           <h3 style="background-color: #47C8C3; color: white; font-family: Montserrat, sans-serif; font-size: 16px; padding: 8px; text-align: center;">item</h3>
           <h3 style="background-color: #47C8C3; color: white; font-family: Montserrat, sans-serif; font-size: 16px; padding: 8px; text-align: center;">item</h3>
           <h3 style="background-color: #47C8C3; color: white; font-family: Montserrat, sans-serif; font-size: 16px; padding: 8px; text-align: center;">item</h3>
-          <h3 style="background-color: #47C8C3; color: white; font-family: Montserrat, sans-serif; font-size: 16px; padding: 8px; text-align: center;">item</h3>
-          <h3 style="background-color: #47C8C3; color: white; font-family: Montserrat, sans-serif; font-size: 16px; padding: 8px; text-align: center;">item</h3>
-          <h3 style="background-color: #47C8C3; color: white; font-family: Montserrat, sans-serif; font-size: 16px; padding: 8px; text-align: center;">item</h3>
-          <h3 style="background-color: #47C8C3; color: white; font-family: Montserrat, sans-serif; font-size: 16px; padding: 8px; text-align: center;">item</h3>
-          <h3 style="background-color: #47C8C3; color: white; font-family: Montserrat, sans-serif; font-size: 16px; padding: 8px; text-align: center;">item</h3>
-          <h3 style="background-color: #47C8C3; color: white; font-family: Montserrat, sans-serif; font-size: 16px; padding: 8px; text-align: center;">item</h3>
-          <h3 style="background-color: #47C8C3; color: white; font-family: Montserrat, sans-serif; font-size: 16px; padding: 8px; text-align: center;">item</h3>
-          <h3 style="background-color: #47C8C3; color: white; font-family: Montserrat, sans-serif; font-size: 16px; padding: 8px; text-align: center;">item</h3>
           <h3 style="background-color: #47C8C3; color: white; font-family: Montserrat, sans-serif; font-size: 16px; padding: 8px; text-align: center;">último</h3>
         </template>
     </yoo-infinite-scroll>`
 })
 
 export const Custom = Template.bind({})
-Custom.args = { rootMargin: '0px 0px 100px 0px' }
+Custom.args = { loadingFill: 'primary' }
