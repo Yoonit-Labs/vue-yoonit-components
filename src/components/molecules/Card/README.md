@@ -14,15 +14,57 @@ To use the component, simply invoke it in your template with the desired props
 ```vue
 <template>
  <yoo-card
-    title="Yoo Card"
+    title="YooCard"
     subtitle="Test"
   />
   <yoo-card
-    title="Yoo Card"
+    title="YooCard"
     subtitle="Test"
-    fill="white"
+    fill="primary"
+    icon="cog"
+    iconSize="md"
+    iconFill="light"
+    iconStyle="solid"
+  />
+  <yoo-card
+    title="YooCard"
+    subtitle="Test"
+    fill="danger"
+    icon="cog"
+    iconSize="md"
+    iconFill="light"
+    iconStyle="solid"
+  />
+  <yoo-card
+    title="YooCard"
+    subtitle="Test"
+    fill="neutral"
+    :showIndicator="true"
+    icon="cog"
+    iconSize="md"
+    iconFill="light"
+    iconStyle="solid"
+    appIndicatorFill="danger"
+  />
+  <yoo-card
+    title="YooCard"
+    subtitle="Test"
+    fill="light"
+    :showIndicator="true"
+    icon="cog"
     iconSize="md"
     iconFill="neutral"
+    iconStyle="solid"
+    appIndicatorFill="danger"
+  />
+  <yoo-card
+    title="YooCard"
+    subtitle="Test"
+    fill="dark"
+    showIndicator
+    icon="cog"
+    iconSize="md"
+    iconFill="light"
     iconStyle="solid"
     appIndicatorFill="danger"
   />
@@ -32,7 +74,12 @@ To use the component, simply invoke it in your template with the desired props
 
 The output of the above code will be:
 
-<img src="https://github.com/Yoonit-Labs/vue-yoonit-components/blob/feature/readme/public/readme-img/postcard.png">
+<img src="../../../../public/readme-img/card-default.jpg">
+<img src="../../../../public/readme-img/card-primary.jpg">
+<img src="../../../../public/readme-img/card-danger.jpg">
+<img src="../../../../public/readme-img/card-neutral.jpg">
+<img src="../../../../public/readme-img/card-light.jpg">
+<img src="../../../../public/readme-img/card-dark.jpg">
 
 ### Props
 
@@ -40,12 +87,12 @@ The output of the above code will be:
 |--------------------|---------|------------|-------------------------------------------|------------------------------------------------|----------|
 | `title`            | String  | **''**     | Any String                                | Sets the component item title                  | false    |
 | `subtitle`         | String  | **''**     | Any String                                | Sets the component item text                   | false    |
-| `fill`             | String  | **dark**   | <ul><li>white</li><li>primary</li><li>danger</li><li>neutral</li><li>light</li><li>dark</li></ul> | Sets a color for background component   | false    |
+| `fill`             | String  | **dark**   | <ul><li>white</li><li>primary</li><li>danger</li><li>neutral</li><li>light</li><li>dark</li></ul> | Sets a color for background component | false    |
 | `showIndicator`    | Boolean | **true**   | true/false                                | Shows the indicator component                  | false    |
-| `appIndicatorFill` | String  | **danger** | <ul><li>primary</li><li>danger</li> <li>light</li> <li>dark</li> <li>neutral</li>     | Set a color for the indicator                  | false    |
+| `appIndicatorFill` | String  | **danger** | <ul><li>primary</li><li>danger</li> <li>light</li> <li>dark</li> <li>neutral</li> | Set a color for the indicator | false    |
 | `icon`             | String  | **''**     | Any icon related to fontawesome           | Sets an icon on the button based on fontawesome| false    |
-| `iconFill`         | String  | **dark**   | <ul><li>white</li><li>primary</li><li>danger</li><li>neutral</li><li>light</li><li>dark</li></ul>           | Sets a color for the icon                      | false    |
-| `iconSize`         | String  | **md**     | <ul><li>tn</li><li>xs</li><li>sm</li><li>md</li><li>lg</li><li>xl</li><li>hg</li></ul>           | Sets a color for the icon                      | false    |
+| `iconFill`         | String  | **dark**   | <ul><li>white</li><li>primary</li><li>danger</li><li>neutral</li><li>light</li><li>dark</li></ul> | Sets a color for the icon | false    |
+| `iconSize`         | String  | **md**     | <ul><li>tn</li><li>xs</li><li>sm</li><li>md</li><li>lg</li><li>xl</li><li>hg</li></ul> | Sets a color for the icon | false    |
 | `iconStyle`        | String  | **solid**  | <ul><li>solid</li><li>regular</li>        | Sets the icon type to filled or bordered only  | false    |
 
 #
