@@ -50,7 +50,6 @@ export default {
       validator: value => PropsConfig.verticalAlign.options.includes(value)
     }
   },
-  data: () => ({}),
   mounted () {
     this.doGetChildProps()
   },

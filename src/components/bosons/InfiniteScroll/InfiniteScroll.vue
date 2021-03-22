@@ -16,9 +16,6 @@ import PropsConfig from '@/components/bosons/InfiniteScroll/InfiniteScroll.confi
 
 export default {
   name: 'YooInfiniteScroll',
-  data: () => ({
-    showLoading: false
-  }),
   props: {
     rootMargin: {
       type: String,
@@ -35,6 +32,12 @@ export default {
       default: 'normal',
       validator: value => PropsConfig.loadingSize.options.includes(value)
     }
+  },
+  data: () => ({
+    showLoading: false
+  }),
+  mounted () {
+    this.scrollIntersection()
   },
   computed: {
     /**
@@ -71,9 +74,6 @@ export default {
         }
       })
     }
-  },
-  mounted () {
-    this.scrollIntersection()
   }
 }
 </script>
