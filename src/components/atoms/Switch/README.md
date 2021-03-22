@@ -34,6 +34,8 @@ The output of the above code will be:
 
 #
  
+ #### [**Next component**](../Tag/README.md) :arrow_forward:
+ 
  #### :arrow_backward: [**Previous component**](../Stepper/README.md)
 
 #
