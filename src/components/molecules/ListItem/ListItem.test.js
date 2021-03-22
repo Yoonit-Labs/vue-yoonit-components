@@ -45,6 +45,34 @@ describe('YooListItem Component', () => {
         expect(wrapper.find('.yoo-btn').exists()).toBe(false)
       })
     })
+
+    describe('Test slot', () => {
+      it('Without slot', () => {
+        const wrapper = mount(YooListItem, {
+          propsData: {
+            title: 'Default Title',
+            subtitle: 'Default Subtitle'
+          }
+        })
+
+        expect(wrapper.find('.yoo-grid-layout').attributes().style).toBe('grid-template-columns: 1fr; grid-template-rows: auto;')
+      })
+
+      it('With a slot named control', () => {
+        const wrapper = mount(YooListItem, {
+          slots: {
+            control: '<p>19%</p>'
+          },
+          propsData: {
+            title: 'Default Title',
+            subtitle: 'Default Subtitle'
+          }
+        })
+
+        expect(wrapper.find('.yoo-grid-layout').attributes().style).toBe('grid-template-columns: 1fr auto; grid-template-rows: auto;')
+      })
+    })
+
     describe('actionableType', () => {
       it('Has a valid default value', () => {
         expect(PropsConfig.actionableType.options.includes(YooListItem.props.actionableType.default)).toBe(true)

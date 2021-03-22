@@ -9,15 +9,14 @@
   )
     .yoo-list-item__item.m__b--m
       YooFlexLayout.yoo-list-item__item(
-        justifyContent="center"
+        justifyContent="flex-start"
         alignItems="center"
       )
         h3.yoo-list-item__title.m__r--xs(
         ) {{title}}
 
         p.yoo-list-item__subtitle(
-          v-show="subtitle",
-          width="100%"
+          v-show="subtitle"
         ) {{subtitle}}
 
       YooFlexLayout(
@@ -162,10 +161,17 @@ export default {
     * @returns {string}
     */
     takeCols () {
+      const columns = ['1fr']
+
       if (this.actionable) {
-        return 'auto, 1, auto'
+        columns.push('auto')
       }
-      return 'auto, auto'
+
+      if (this.$slots.control) {
+        columns.push('auto')
+      }
+
+      return columns.join()
     }
   },
   methods: {

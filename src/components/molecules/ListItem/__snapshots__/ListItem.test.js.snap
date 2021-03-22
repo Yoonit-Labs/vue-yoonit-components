@@ -1,11 +1,11 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`YooListItem Component Matches Snapshot 1`] = `
-<div class="yoo-grid-layout yoo-list-item yoo-grid-layout--h-space-between yoo-grid-layout--v-center yoo-list-item__fill--border-neutral" style="grid-template-columns: auto auto; grid-template-rows: auto;" alignitems="center">
+<div class="yoo-grid-layout yoo-list-item yoo-grid-layout--h-space-between yoo-grid-layout--v-center yoo-list-item__fill--border-neutral" style="grid-template-columns: 1fr; grid-template-rows: auto;" alignitems="center">
   <div class="yoo-list-item__item m__b--m">
-    <div class="yoo-flex-layout yoo-list-item__item" style="flex-direction: row; flex-wrap: nowrap; justify-content: center; align-items: center; align-content: stretch;">
+    <div class="yoo-flex-layout yoo-list-item__item" style="flex-direction: row; flex-wrap: nowrap; justify-content: flex-start; align-items: center; align-content: stretch;">
       <h3 class="yoo-list-item__title m__r--xs">Default Title</h3>
-      <p width="100%" class="yoo-list-item__subtitle" style="width: 100%;">Default Subtitle</p>
+      <p class="yoo-list-item__subtitle">Default Subtitle</p>
     </div>
     <div class="yoo-flex-layout" style="flex-direction: row; flex-wrap: wrap; justify-content: flex-start; align-items: stretch; align-content: stretch;">
       <div class="yoo-flex-layout yoo-tag" style="flex-direction: row; flex-wrap: wrap; justify-content: flex-start; align-items: stretch; align-content: stretch;">
