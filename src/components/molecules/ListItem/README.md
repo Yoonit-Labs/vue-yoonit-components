@@ -60,7 +60,7 @@ The output of the above code will be:
 
 | Parameter | Type | Default | Valid values | Description | Required |
 |-----------|------|------------------------|--------------|-------------|---------|
-| **`tags`** | Array Object | `''` | i.e tags: [{ name: 'Admin', status: true }, { name: 'Funcionários' }] | Informa as tags que serão renderizadas. | false |
+| **`tags`** | Array Object | `''` | i.e tags: [{ name: 'Admin', status: true }, { name: 'Funcionários' }] | Informs the tags that will be rendered. | false |
 | **`title`** | String | `''` | Any String | Report or title that will be rendered non-component. | false |
 | **`subtitle`** | String | `''` | Any String | Report or subtitle that will be rendered non-component. | false |
 | **`actionable`** | Boolean | `false` | `true` or `false` | Indicates whether to render a call to action element. | false |

@@ -40,13 +40,11 @@ The output of the above code will be:
 
 | Parameter | Type | Default | Valid values | Description | Required |
 |-----------|------|------------------------|--------------|-------------|--
-| `type`    | String | **date** | <ul><li>date</li><li>time</li><ul> | Sets the type of the component | false
-| `value`   | String | **Current Date** | Supported formats: <ul><li>YYYY-mm-dd</li><li>dd/mm/YYYY</li><li>HH:mm</li></ul> | Sets initial value to date or time | false
-| `locale`  | String | **pt-br** | Any locale notation. Ex.: `en-us`, `pt-br` | Sets the locale for date | false
+| **`type`**    | String | **date** | <ul><li>date</li><li>time</li><ul> | Sets the type of the component | false
+| **`value`**   | String | **Current Date** | Supported formats: <ul><li>YYYY-mm-dd</li><li>dd/mm/YYYY</li><li>HH:mm</li></ul> | Sets initial value to date or time | false
+| **`locale`**  | String | **pt-br** | Any locale notation. Ex.: `en-us`, `pt-br` | Sets the locale for date | false
 
-#
-
- #### [**Next component**](../Separator/README.md) :arrow_forward:
+ #### [**Next component**](../Stepper/README.md) :arrow_forward:
  
  #### :arrow_backward: [**Previous component**](../Icon/README.md)
 
