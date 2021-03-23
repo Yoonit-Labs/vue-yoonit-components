@@ -14,7 +14,7 @@ To use the component, simply invoke it in your template with the desired props
 ```vue
 <template>
   <yoo-dropdown
-    :options='[{"label":"BRAZIL","value":"1"},{"label":"UNITED STATES","value":"2"}]'
+    :options='[{"label":"BRAZIL","value":"1"},{"label":"UNITED STATES","value":"2"},{"label":"ARGENTINA","value":3},{"label":"PORTUGAL","value":4}]'
     :selected='{"label":"BRAZIL","value":"1"}'
     size="medium"
   />
@@ -23,6 +23,19 @@ To use the component, simply invoke it in your template with the desired props
 ### Output
 
 The output of the above code will be:
+
+<img src="../../../../public/readme-img/dropdown-medium-closed.png">
+<img src="../../../../public/readme-img/dropdown-medium-opened.png">
+
+### Small
+
+<img src="../../../../public/readme-img/dropdown-small-closed.png">
+<img src="../../../../public/readme-img/dropdown-small-opened.png">
+
+### Large
+
+<img src="../../../../public/readme-img/dropdown-large-closed.png">
+<img src="../../../../public/readme-img/dropdown-large-opened.png">
 
 ### Props
 
