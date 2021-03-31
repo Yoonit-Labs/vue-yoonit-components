@@ -76,6 +76,15 @@ export default {
     doCheck (e) {
       this.$emit('response', this.checkedField)
     }
+  },
+  watch: {
+    initialValue: function (newValue, oldValue) {
+      if (newValue === oldValue) {
+        return
+      }
+
+      this.checkedField = newValue
+    }
   }
 }
 </script>

@@ -42,13 +42,16 @@ export default {
     selectedArray: []
   }),
   mounted () {
-    this.rate.forEach(item => {
-      if (item.active === true) {
-        this.selectedArray.push(item.value)
-      }
-    })
+    this.doSetItemsActive()
   },
   methods: {
+    doSetItemsActive () {
+      this.rate.forEach(item => {
+        if (item.active === true) {
+          this.selectedArray.push(item.value)
+        }
+      })
+    },
     doActive (index, valor) {
       if (this.multiple) {
         const idx = this.selectedArray.indexOf(valor)
@@ -62,6 +65,14 @@ export default {
         this.selectedArray = [valor]
       }
       this.$emit('doClick', this.selectedArray)
+    }
+  },
+  watch: {
+    rate: {
+      handler: function () {
+        this.doSetItemsActive()
+      },
+      deep: true
     }
   }
 }
