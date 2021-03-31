@@ -8,9 +8,10 @@ const SlotText = 'Default Slot Text'
 const mountComponent = () => {
   return shallowMount(YooInfiniteScroll, {
     slots: { default: SlotText },
-    data: () => ({
+    propsData: {
+      isReady: true,
       showLoading: true
-    })
+    }
   })
 }
 
@@ -20,7 +21,6 @@ describe('YooInfiniteScroll Component', () => {
     const observe = jest.fn()
 
     window.IntersectionObserver = jest.fn(function () {
-      console.log(this.observe)
       this.observe = observe
     })
     wrapper = mountComponent()
