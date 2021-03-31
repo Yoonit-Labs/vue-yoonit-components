@@ -27,7 +27,7 @@ const Template = (args, { argTypes }) => ({
 })
 
 export const Custom = Template.bind({})
-Custom.args = { tags: [{ name: 'Admin', status: true }, { name: 'Funcionários', status: false }, { name: 'Segurança', status: false }, { name: 'Manutenção' }, { name: 'Nome do Grupo' }] }
+Custom.args = { tags: [{ name: 'Admin', status: true }, { name: 'Staff', status: false }, { name: 'Support', status: false }, { name: 'Business' }, { name: 'Group' }] }
 
-export const Actionable = Template.bind({})
-Actionable.args = { tags: [{ name: 'Admin' }, { name: 'Funcionários' }, { name: 'Segurança' }], actionable: true }
+export const Default = Template.bind({})
+Default.args = { tags: [{ name: 'Admin' }, { name: 'Funcionários' }, { name: 'Segurança' }] }
