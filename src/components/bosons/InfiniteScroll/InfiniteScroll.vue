@@ -31,11 +31,17 @@ export default {
       type: String,
       default: 'normal',
       validator: value => PropsConfig.loadingSize.options.includes(value)
+    },
+    showLoading: {
+      type: Boolean,
+      default: false
+    },
+    isReady: {
+      type: Boolean,
+      default: false
     }
   },
-  data: () => ({
-    showLoading: false
-  }),
+  data: () => ({}),
   mounted () {
     this.scrollIntersection()
   },
@@ -66,10 +72,8 @@ export default {
       observer.observe(this.$refs.infiniteScroll)
     },
     callbackObserver (entries) {
-      this.showLoading = false
       entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          this.showLoading = true
+        if (entry.isIntersecting && this.isReady) {
           this.$emit('intersecting', entry.isIntersecting)
         }
       })
