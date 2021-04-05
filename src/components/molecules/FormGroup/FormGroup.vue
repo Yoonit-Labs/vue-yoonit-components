@@ -12,19 +12,14 @@
         @blur="doValidate"
         ref="textField"
       )
-
       span.yoo-input__label(
       ) {{ label }}
         i.fa
-
       span.yoo-input__feedback(
         v-show="!isValid"
       ) {{ invalidMessage }}
-
 </template>
-
 <script>
-
 export default {
   name: 'YooFormGroup',
   props: {
@@ -46,20 +41,17 @@ export default {
     validateOnDataInput: {
       type: Boolean,
       default: false
+    },
+    isValid: {
+      type: Boolean
     }
   },
   data: () => ({
-    isValid: '',
+    userHasTyped: false,
     invalidMessage: ''
   }),
   mounted () {
     if (this.disabled) this.$refs.textField.disabled = true
-
-    if (this.required) {
-      this.value === ''
-        ? this.isValid = false
-        : this.isValid = true
-    }
   },
   computed: {
     listeners () {
@@ -71,22 +63,22 @@ export default {
       return { ...others }
     },
     /**
-    * @description Returns classes based on the chosen props
-    * @computed takeModifier
-    * @returns {array}
-    */
+     * @description Returns classes based on the chosen props
+     * @computed takeModifier
+     * @returns {array}
+     */
     takeModifier () {
       const block = 'yoo-input'
       const classList = []
-
+      if (!this.userHasTyped) {
+        return classList
+      }
       if (this.isValid === false) {
         classList.push(`${block}--error`)
       }
-
       if (this.isValid === true) {
         classList.push(`${block}--success`)
       }
-
       return classList
     }
   },
@@ -98,32 +90,32 @@ export default {
       }
     },
     /**
-    * @description Validate inputed value
-    * @method doValidate
-    */
+     * @description Validate inputed value
+     * @method doValidate
+     */
     doValidate () {
       if (this.required) {
         this.value === ''
-          ? this.isValid = false
-          : this.isValid = true
-
+          ? this.$emit('update:isValid', false)
+          : this.$emit('update:isValid', true)
         this.invalidMessage = `O campo ${this.label} é obrigatório.`
       }
-
       if (this.value && this.requiredRule) {
         const {
           result,
           message
         } = this
           .requiredRule(this.value)
-
-        this.isValid = result
+        this.$emit('update:isValid', result)
         this.invalidMessage = message
       }
-      this.$emit('update:isValid', this.isValid)
+    }
+  },
+  watch: {
+    value: function (newValue) {
+      this.userHasTyped = true
     }
   }
 }
 </script>
-
 <style src="./FormGroup.sass" lang="sass" scoped></style>
