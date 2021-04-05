@@ -46,20 +46,17 @@ export default {
     validateOnDataInput: {
       type: Boolean,
       default: false
+    },
+    isValid: {
+      type: Boolean
     }
   },
   data: () => ({
-    isValid: '',
+    userHasTyped: false,
     invalidMessage: ''
   }),
   mounted () {
     if (this.disabled) this.$refs.textField.disabled = true
-
-    if (this.required) {
-      this.value === ''
-        ? this.isValid = false
-        : this.isValid = true
-    }
   },
   computed: {
     listeners () {
@@ -78,6 +75,10 @@ export default {
     takeModifier () {
       const block = 'yoo-input'
       const classList = []
+
+      if (!this.userHasTyped) {
+        return classList
+      }
 
       if (this.isValid === false) {
         classList.push(`${block}--error`)
@@ -104,8 +105,8 @@ export default {
     doValidate () {
       if (this.required) {
         this.value === ''
-          ? this.isValid = false
-          : this.isValid = true
+          ? this.$emit('update:isValid', false)
+          : this.$emit('update:isValid', true)
 
         this.invalidMessage = `O campo ${this.label} é obrigatório.`
       }
@@ -117,10 +118,14 @@ export default {
         } = this
           .requiredRule(this.value)
 
-        this.isValid = result
+        this.$emit('update:isValid', result)
         this.invalidMessage = message
       }
-      this.$emit('update:isValid', this.isValid)
+    }
+  },
+  watch: {
+    value: function (newValue) {
+      this.userHasTyped = true
     }
   }
 }
