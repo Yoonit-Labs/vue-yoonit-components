@@ -1,4 +1,4 @@
-import { shallowMount, mount } from '@vue/test-utils'
+import { shallowMount } from '@vue/test-utils'
 import YooFormGroup from '@/components/molecules/FormGroup/FormGroup.vue'
 const mountComponent = () => {
   return shallowMount(YooFormGroup, {
