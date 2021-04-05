@@ -15,7 +15,7 @@
         h3.yoo-list-item__title.m__r--xs(
         ) {{title}}
 
-        p.yoo-list-item__subtitle(
+        p.yoo-list-item__subtitle.m__t--none.m__b--none(
           v-show="subtitle"
         ) {{subtitle}}
 
@@ -24,7 +24,7 @@
         justifyContent="flex-start"
         flexDirection="row"
       )
-        YooTag(
+        YooTag.m__t--xs(
           :tags="tags ? tags : ''"
         )
 
@@ -36,9 +36,9 @@
       slot(
         name="control"
       )
-    YooFlexLayout.m__r--l.m__l--l(
+    YooFlexLayout.m__r--l.m__l--l.m__t--s(
       justifyContent="flex-end"
-      alignItems="center"
+      alignItems="flex-start"
     )
       YooButton(
         v-if="actionable && actionableType === 'button'"
