@@ -7,13 +7,12 @@ YooFlexLayout.yoo-table-attribute(
   :class="[...takeModifier]"
 )
     YooFlexLayout(
-      justifyContent="space-between"
       :alignItems="flexAlignItems"
       :flexDirection="flexDirection"
     )
       YooFlexLayout(
         justifyContent="center"
-        alignItems="flex-start"
+        alignItems="center"
         flexDirection="row"
       )
         YooIcon.m__r--m(

@@ -78,11 +78,7 @@ export default {
     }
   },
   watch: {
-    initialValue: function (newValue, oldValue) {
-      if (newValue === oldValue) {
-        return
-      }
-
+    initialValue: function (newValue) {
       this.checkedField = newValue
     }
   }
