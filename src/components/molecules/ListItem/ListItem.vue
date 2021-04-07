@@ -7,16 +7,21 @@
     verticalAlign="center"
     :class="[...takeModifier]"
   )
-    .yoo-list-item__item.m__b--m
+    YooFlexLayout(
+      justifyContent="stretch"
+      alignItems="center"
+      flexWrap="wrap"
+    )
       YooFlexLayout.yoo-list-item__item(
         justifyContent="flex-start"
         alignItems="center"
+        width="100%"
       )
         h3.yoo-list-item__title.m__r--xs(
         ) {{title}}
 
         p.yoo-list-item__subtitle.m__t--none.m__b--none(
-          v-show="subtitle"
+          v-if="subtitle"
         ) {{subtitle}}
 
       YooFlexLayout(
@@ -26,6 +31,7 @@
       )
         YooTag.m__t--xs(
           :tags="tags ? tags : ''"
+          v-if="tags"
         )
 
     YooFlexLayout(
@@ -36,9 +42,10 @@
       slot(
         name="control"
       )
-    YooFlexLayout.m__r--l.m__l--l.m__t--s(
+    YooFlexLayout.m__r--l.m__l--l(
       justifyContent="flex-end"
-      alignItems="flex-start"
+      alignItems="center"
+      height="100%"
     )
       YooButton(
         v-if="actionable && actionableType === 'button'"

@@ -1,5 +1,5 @@
 <template lang="pug">
-.yoo-checkbox.m__t--s.m__b--s(
+.yoo-checkbox(
   :class="[takeModifier]"
 )
   input(
