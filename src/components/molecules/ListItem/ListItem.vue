@@ -8,7 +8,7 @@
     :class="[...takeModifier]"
   )
     YooFlexLayout(
-      justifyContent="stretch"
+      justifyContent="flex-start"
       alignItems="center"
       flexWrap="wrap"
     )
