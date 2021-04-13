@@ -62,6 +62,8 @@
         v-else-if="actionable && actionableType === 'check'"
         size="small"
         :checked="actionableActive"
+        :disabled="buttonDisable"
+        :locked="checkButtonLocked"
         @response="doGetValue"
       )
 </template>
@@ -106,6 +108,10 @@ export default {
       validator: value => PropsConfig.actionableType.options.includes(value)
     },
     actionableActive: {
+      type: Boolean,
+      default: false
+    },
+    checkButtonLocked: {
       type: Boolean,
       default: false
     },
