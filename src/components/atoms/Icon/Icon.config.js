@@ -21,7 +21,6 @@ module.exports = {
       'primary',
       'danger',
       'neutral',
-      'light',
       'dark',
       'white',
       'black'
