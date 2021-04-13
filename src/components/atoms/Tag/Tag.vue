@@ -32,7 +32,7 @@ export default {
     },
     fill: {
       type: String,
-      default: 'dark',
+      default: 'primary',
       validator: value => PropsConfig.fill.options.includes(value)
     }
   },
