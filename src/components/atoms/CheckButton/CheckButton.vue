@@ -5,7 +5,6 @@
   input(
     type="checkbox"
     :id="timeId"
-    v-model="checkedField"
     @change="doCheck($event)"
   )
   label.yoo-checkbox__check.fas.fa-check(
@@ -36,6 +35,10 @@ export default {
       validator: value => PropsConfig.size.options.includes(value)
     },
     checked: {
+      type: Boolean,
+      default: false
+    },
+    locked: {
       type: Boolean,
       default: false
     },
@@ -132,14 +135,22 @@ export default {
   },
   methods: {
     doCheck (e) {
-      if (!this.disabled) {
-        this.$emit('response', this.checkedField)
+      if (this.disabled) {
+        return
       }
+
+      if (!this.locked) {
+        this.checkedField = !this.checkedField
+      }
+
+      this.$emit('response', this.checkedField)
     }
   },
   watch: {
     checked (value) {
-      this.checkedField = value
+      if (!this.locked) {
+        this.checkedField = value
+      }
     }
   }
 }
