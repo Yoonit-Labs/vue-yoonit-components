@@ -3,6 +3,7 @@
     flexWrap="wrap"
     justifyContent="flex-start"
     flexDirection="row"
+    gap="4px"
   )
     p.yoo-tag__notag.m__t--xs.m__b--none(
       v-if="(typeof tags !== 'object')"
