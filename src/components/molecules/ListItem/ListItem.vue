@@ -42,7 +42,7 @@
       slot(
         name="control"
       )
-    YooFlexLayout.m__r--l.m__l--l(
+    YooFlexLayout.m__l--l(
       justifyContent="flex-end"
       alignItems="center"
       height="100%"
