@@ -20,7 +20,7 @@
         h3.yoo-list-item__title.m__r--xs(
         ) {{title}}
 
-        p.yoo-list-item__subtitle.m__t--none.m__b--none(
+        p.yoo-list-item__subtitle.m__t--xs.m__b--none(
           v-if="subtitle"
         ) {{subtitle}}
 
