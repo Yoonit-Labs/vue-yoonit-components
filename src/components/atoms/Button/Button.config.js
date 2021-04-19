@@ -58,5 +58,11 @@ module.exports = {
       'lg',
       'xl'
     ]
+  },
+  textWeight: {
+    options: [
+      'medium',
+      'semi-bold'
+    ]
   }
 }
