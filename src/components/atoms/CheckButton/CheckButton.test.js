@@ -7,6 +7,7 @@ const SlotText = 'Default Slot Text'
 
 const mountComponent = () => {
   return shallowMount(YooCheckButton, {
+    setProps: { locked: false },
     slots: { default: SlotText }
   })
 }
@@ -80,12 +81,17 @@ describe('YooCheckButton Component', () => {
     })
 
     describe('locked', () => {
-      it(`Does not include disabled class: .${classBlock}__check--disabled when not disabled`, async () => {
-        expect(wrapper.find(`.${classBlock}__check--disabled`).exists()).toBe(false)
+      it('If prop locked is false', async () => {
+        await wrapper.setProps({ locked: false })
+        await wrapper.setProps({ checked: true })
+        expect(wrapper.find(`.${classBlock}__check--active`).exists()).toBe(true)
       })
-      it(`Includes disabled class: .${classBlock}__check--disabled when checked`, async () => {
-        await wrapper.setProps({ disabled: true })
-        expect(wrapper.find(`.${classBlock}__check--disabled`).exists()).toBe(true)
+
+      it('If prop locked is true', async () => {
+        await wrapper.setProps({ checked: true })
+        await wrapper.setProps({ locked: true })
+        await wrapper.setProps({ checked: false })
+        expect(wrapper.find(`.${classBlock}__check--active`).exists()).toBe(true)
       })
     })
 
@@ -113,6 +119,12 @@ describe('YooCheckButton Component', () => {
       it('Emits change Event', async () => {
         wrapper.find('input').trigger('click')
         expect(wrapper.emitted()).toHaveProperty('response')
+      })
+
+      it('Locked is true, emits no change', async () => {
+        await wrapper.setProps({ locked: true })
+        wrapper.find('input').trigger('click')
+        expect(wrapper.emitted('response')[0][0]).toBe(false)
       })
 
       it('Does not emits change Event', async () => {
