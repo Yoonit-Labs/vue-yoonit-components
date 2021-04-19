@@ -7,16 +7,21 @@
     verticalAlign="center"
     :class="[...takeModifier]"
   )
-    .yoo-list-item__item.m__b--m
+    YooFlexLayout(
+      justifyContent="flex-start"
+      alignItems="center"
+      flexWrap="wrap"
+    )
       YooFlexLayout.yoo-list-item__item(
         justifyContent="flex-start"
         alignItems="center"
+        width="100%"
       )
         h3.yoo-list-item__title.m__r--xs(
         ) {{title}}
 
-        p.yoo-list-item__subtitle(
-          v-show="subtitle"
+        p.yoo-list-item__subtitle.m__t--xs.m__b--none(
+          v-if="subtitle"
         ) {{subtitle}}
 
       YooFlexLayout(
@@ -24,8 +29,9 @@
         justifyContent="flex-start"
         flexDirection="row"
       )
-        YooTag(
+        YooTag.m__t--xs(
           :tags="tags ? tags : ''"
+          v-if="tags"
         )
 
     YooFlexLayout(
@@ -36,9 +42,10 @@
       slot(
         name="control"
       )
-    YooFlexLayout.m__r--l.m__l--l(
+    YooFlexLayout.m__l--l(
       justifyContent="flex-end"
       alignItems="center"
+      height="100%"
     )
       YooButton(
         v-if="actionable && actionableType === 'button'"
@@ -55,6 +62,8 @@
         v-else-if="actionable && actionableType === 'check'"
         size="small"
         :checked="actionableActive"
+        :disabled="buttonDisable"
+        :locked="checkButtonLocked"
         @response="doGetValue"
       )
 </template>
@@ -99,6 +108,10 @@ export default {
       validator: value => PropsConfig.actionableType.options.includes(value)
     },
     actionableActive: {
+      type: Boolean,
+      default: false
+    },
+    checkButtonLocked: {
       type: Boolean,
       default: false
     },

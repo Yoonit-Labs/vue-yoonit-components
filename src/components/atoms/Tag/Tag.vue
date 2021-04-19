@@ -3,6 +3,7 @@
     flexWrap="wrap"
     justifyContent="flex-start"
     flexDirection="row"
+    gap="4px"
   )
     p.yoo-tag__notag.m__t--xs.m__b--none(
       v-if="(typeof tags !== 'object')"
@@ -32,7 +33,7 @@ export default {
     },
     fill: {
       type: String,
-      default: 'dark',
+      default: 'primary',
       validator: value => PropsConfig.fill.options.includes(value)
     }
   },

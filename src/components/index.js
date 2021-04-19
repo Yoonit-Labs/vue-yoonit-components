@@ -23,6 +23,7 @@ import YooTableAttribute from './molecules/TableAttribute/TableAttribute.vue'
 import YooFlexLayout from './bosons/FlexLayout/FlexLayout.vue'
 import YooGridLayout from './bosons/GridLayout/GridLayout.vue'
 import YooScrollView from './bosons/ScrollView/ScrollView.vue'
+import YooInfiniteScroll from './bosons/InfiniteScroll/InfiniteScroll.vue'
 
 import YooIndicator from './quarks/Indicator/Indicator.vue'
 
@@ -50,7 +51,8 @@ const yooComponents = {
   YooFlexLayout,
   YooGridLayout,
   YooIndicator,
-  YooScrollView
+  YooScrollView,
+  YooInfiniteScroll
 }
 
 export default yooComponents

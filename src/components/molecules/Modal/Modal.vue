@@ -2,7 +2,7 @@
   .backdrop(
     @click.self.stop="doCloseModal"
   )
-    YooFlexLayout.yoo-modal(
+    YooFlexLayout.yoo-modal.m__l--l.m__r--l(
       flexDirection="column"
       flexWrap="wrap"
       justifyContent="center"

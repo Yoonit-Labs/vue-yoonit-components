@@ -59,4 +59,4 @@ export const CheckButton = Template.bind({})
 CheckButton.args = { title: 'YooListItem', subtitle: '• Admin', borderFill: 'neutral', actionable: true, actionableType: 'check' }
 
 export const Tags = Template.bind({})
-Tags.args = { title: 'Sabrina Angelim Sampaio', subtitle: '• Admin', tags: [{ name: 'Admin', status: true }, { name: 'Funcionários' }, { name: 'Segurança' }], borderFill: 'danger', borderLeft: true }
+Tags.args = { title: 'YooListItem', subtitle: '• Admin', tags: [{ name: 'Admin', status: true }, { name: 'Funcionários' }, { name: 'Segurança' }], borderFill: 'danger', borderLeft: true }

@@ -7,13 +7,12 @@ YooFlexLayout.yoo-table-attribute(
   :class="[...takeModifier]"
 )
     YooFlexLayout(
-      justifyContent="space-between"
       :alignItems="flexAlignItems"
       :flexDirection="flexDirection"
     )
       YooFlexLayout(
         justifyContent="center"
-        alignItems="flex-start"
+        alignItems="center"
         flexDirection="row"
       )
         YooIcon.m__r--m(
@@ -59,6 +58,7 @@ YooFlexLayout.yoo-table-attribute(
         @onClick="$emit('response')"
         :textSize="buttonTextSize"
         :iconSize="iconButtonSize"
+        textWeight="medium"
       )
       YooCheckButton.yoo-table-attribute__detail.yoo-table-attribute__actionable.m__l--s(
         v-else-if="actionable && actionableType === 'check'"
@@ -92,7 +92,7 @@ export default {
   props: {
     title: {
       type: String,
-      required: true
+      required: false
     },
     titleWeight: {
       type: String,
@@ -134,7 +134,7 @@ export default {
     },
     buttonTextSize: {
       type: String,
-      default: 'md',
+      default: 'sm',
       validator: value => PropsConfig.buttonTextSize.options.includes(value)
     },
     actionable: {

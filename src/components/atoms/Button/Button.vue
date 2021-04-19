@@ -12,7 +12,7 @@
     )
 
     p.yoo-btn__text(
-      :class="[...takeTextSize]"
+      :class="[...takeTextSize, takeTextWeight]"
     ) {{ text }}
 
     i.yoo-btn__icon(
@@ -79,6 +79,12 @@ export default {
       default: 'md',
       validator: value =>
         PropsConfig.textSize.options.includes(value)
+    },
+    textWeight: {
+      type: String,
+      default: 'semi-bold',
+      validator: value =>
+        PropsConfig.textWeight.options.includes(value)
     },
     disabled: {
       type: Boolean,
@@ -185,6 +191,14 @@ export default {
       classList.push(`${block}--${this.textSize}`)
 
       return classList
+    },
+    /**
+    * @description Prints text size based on the chosen props
+    * @computed takeTextSize
+    * @returns {string}
+    */
+    takeTextWeight () {
+      return `yoo-btn__text--weight-${this.textWeight}`
     }
   }
 }

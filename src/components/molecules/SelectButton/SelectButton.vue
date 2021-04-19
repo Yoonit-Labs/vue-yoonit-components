@@ -4,7 +4,7 @@
     alignItems="center"
   )
     YooButton(
-      v-for="(item, index) in options"
+      v-for="(item, index) in rate"
       :key="index"
       :text="item.text"
       :fill="selectedArray.includes(item.value) ? 'primary' : 'light'"
@@ -29,7 +29,7 @@ export default {
     YooButton
   },
   props: {
-    options: {
+    rate: {
       type: Array,
       required: true
     },
@@ -42,13 +42,16 @@ export default {
     selectedArray: []
   }),
   mounted () {
-    this.options.forEach(item => {
-      if (item.active === true) {
-        this.selectedArray.push(item.value)
-      }
-    })
+    this.doSetItemsActive()
   },
   methods: {
+    doSetItemsActive () {
+      this.rate.forEach(item => {
+        if (item.active === true) {
+          this.selectedArray.push(item.value)
+        }
+      })
+    },
     doActive (index, valor) {
       if (this.multiple) {
         const idx = this.selectedArray.indexOf(valor)
@@ -62,6 +65,14 @@ export default {
         this.selectedArray = [valor]
       }
       this.$emit('doClick', this.selectedArray)
+    }
+  },
+  watch: {
+    rate: {
+      handler: function () {
+        this.doSetItemsActive()
+      },
+      deep: true
     }
   }
 }

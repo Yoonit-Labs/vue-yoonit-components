@@ -3,7 +3,7 @@
 exports[`YooPagination Component Matches Snapshot 1`] = `
 <div class="yoo-flex-layout yoo-pagination" style="flex-direction: row; flex-wrap: nowrap; justify-content: space-between; align-items: stretch; align-content: stretch;">
   <div class="yoo__container--button button__back"><button class="yoo-btn yoo-btn__fill--primary yoo-btn--outline yoo-btn--normal yoo-btn--animation-none"><i class="yoo-btn__icon fas fa-arrow-left yoo-btn__icon--normal"></i>
-      <p class="yoo-btn__text yoo-btn__text--md"></p>
+      <p class="yoo-btn__text yoo-btn__text--md yoo-btn__text--weight-semi-bold"></p>
       <!---->
     </button></div>
   <div class="yoo-flex-layout yoo-stepper" style="flex-direction: row; flex-wrap: nowrap; justify-content: space-around; align-items: center; align-content: stretch;">
@@ -15,16 +15,16 @@ exports[`YooPagination Component Matches Snapshot 1`] = `
     <div class="yoo-stepper__dot"></div>
   </div>
   <div class="yoo__container--button button__next"><button class="yoo-btn yoo-btn__fill--primary yoo-btn--base yoo-btn--normal yoo-btn--animation-none"><i class="yoo-btn__icon fas fa-arrow-right yoo-btn__icon--normal"></i>
-      <p class="yoo-btn__text yoo-btn__text--md"></p>
+      <p class="yoo-btn__text yoo-btn__text--md yoo-btn__text--weight-semi-bold"></p>
       <!---->
     </button></div>
   <div class="yoo__container--button button__next--grow" flexgrow="1" style="display: none; flex-grow: 1;"><button class="yoo-btn yoo-btn__fill--primary yoo-btn--base yoo-btn--normal yoo-btn--animation-none">
       <!---->
-      <p class="yoo-btn__text yoo-btn__text--md"></p><i class="yoo-btn__icon fas fa-arrow-right yoo-btn__icon--normal"></i>
+      <p class="yoo-btn__text yoo-btn__text--md yoo-btn__text--weight-semi-bold"></p><i class="yoo-btn__icon fas fa-arrow-right yoo-btn__icon--normal"></i>
     </button></div>
   <div class="yoo__container--button button__last" flexgrow="1" style="display: none; flex-grow: 1;"><button class="yoo-btn yoo-btn__fill--primary yoo-btn--base yoo-btn--normal yoo-btn--animation-none">
       <!---->
-      <p class="yoo-btn__text yoo-btn__text--md"></p><i class="yoo-btn__icon fas fa-arrow-right yoo-btn__icon--normal"></i>
+      <p class="yoo-btn__text yoo-btn__text--md yoo-btn__text--weight-semi-bold"></p><i class="yoo-btn__icon fas fa-arrow-right yoo-btn__icon--normal"></i>
     </button></div>
 </div>
 `;

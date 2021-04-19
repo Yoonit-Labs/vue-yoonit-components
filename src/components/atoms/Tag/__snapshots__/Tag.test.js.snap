@@ -1,10 +1,10 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`YooTag Component Matches Snapshot 1`] = `
-<yooflexlayout-stub flexdirection="row" flexwrap="wrap" justifycontent="flex-start" alignitems="stretch" aligncontent="stretch" gap="0" class="yoo-tag">
-  <p class="yoo-tag__item yoo-tag__item--on yoo-tag__fill--dark">Admin</p>
-  <p class="yoo-tag__item yoo-tag__fill--dark">Funcionários</p>
-  <p class="yoo-tag__item yoo-tag__fill--dark">Segurança</p>
-  <p class="yoo-tag__item yoo-tag__fill--dark">Manutenção</p>
+<yooflexlayout-stub flexdirection="row" flexwrap="wrap" justifycontent="flex-start" alignitems="stretch" aligncontent="stretch" gap="4px" class="yoo-tag">
+  <p class="yoo-tag__item yoo-tag__item--on yoo-tag__fill--primary">Admin</p>
+  <p class="yoo-tag__item yoo-tag__fill--primary">Funcionários</p>
+  <p class="yoo-tag__item yoo-tag__fill--primary">Segurança</p>
+  <p class="yoo-tag__item yoo-tag__fill--primary">Manutenção</p>
 </yooflexlayout-stub>
 `;
