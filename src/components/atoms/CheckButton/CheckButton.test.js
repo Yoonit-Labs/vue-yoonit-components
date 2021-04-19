@@ -79,6 +79,16 @@ describe('YooCheckButton Component', () => {
       })
     })
 
+    describe('locked', () => {
+      it(`Does not include disabled class: .${classBlock}__check--disabled when not disabled`, async () => {
+        expect(wrapper.find(`.${classBlock}__check--disabled`).exists()).toBe(false)
+      })
+      it(`Includes disabled class: .${classBlock}__check--disabled when checked`, async () => {
+        await wrapper.setProps({ disabled: true })
+        expect(wrapper.find(`.${classBlock}__check--disabled`).exists()).toBe(true)
+      })
+    })
+
     describe('card', () => {
       it('Has a valid default value', () => {
         expect(YooCheckButton.props.card.default).toBe(false)

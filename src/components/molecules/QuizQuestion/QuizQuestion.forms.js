@@ -14,6 +14,15 @@ export const answers = [
     weight: 3,
     status: true,
     override: false
+  },
+  {
+    id: 'ans3',
+    text: {
+      enUS: 'Maybe'
+    },
+    weight: 4,
+    status: true,
+    override: true
   }
 ]
 export const questionCheck = {
