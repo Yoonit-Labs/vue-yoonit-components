@@ -7,7 +7,6 @@
 </template>
 
 <script>
-
 import { loadAnimation } from 'lottie-web'
 
 export default {

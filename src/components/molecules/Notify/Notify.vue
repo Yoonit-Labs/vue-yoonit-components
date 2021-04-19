@@ -41,7 +41,7 @@
       row="1"
     )
       YooButton(
-        v-show="showButton"
+        v-show="closeButton"
         variation="clear"
         icon="times"
         :iconCustomColor="buttonColor"
@@ -74,7 +74,7 @@ export default {
     },
     text: {
       type: String,
-      default: 'Yoo-Notify'
+      default: ''
     },
     textColor: {
       type: String,
@@ -125,7 +125,7 @@ export default {
       default: 'dark',
       validator: value => PropsConfig.iconColor.options.includes(value)
     },
-    showButton: {
+    closeButton: {
       type: Boolean,
       default: false
     }
@@ -187,11 +187,11 @@ export default {
     * @returns {string}
     */
     takeCols () {
-      if ((this.showIndicator || this.showIcon) && this.showButton) {
+      if ((this.showIndicator || this.showIcon) && this.closeButton) {
         return 'auto, 1, auto'
       } else if (this.showIndicator || this.showIcon) {
         return 'auto, 1'
-      } else if (this.showButton) {
+      } else if (this.closeButton) {
         return '1, auto'
       }
       return '*'

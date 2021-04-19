@@ -7,7 +7,7 @@ YooFlexLayout.yoo-stepper(
   .yoo-stepper__number.m__t--xs(
     v-if="counterType === 'number'"
   ) {{takeNumberLabel}}
-  .yoo-stepper__dot.m__r--m.m__l--m(
+  .yoo-stepper__dot(
     v-if="counterType === 'dot'"
     v-for="(step, index) in takeStepsLength"
     :key="'dotStep-' + index"

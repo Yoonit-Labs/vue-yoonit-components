@@ -1,5 +1,8 @@
 [<img src="https://raw.githubusercontent.com/Yoonit-Labs/nativescript-yoonit-camera/development/logo_cyberlabs.png" width="300">](https://cyberlabs.ai/)
 
+[<img src="https://github.com/Yoonit-Labs/vue-yoonit-components/blob/feature/readme/public/readme-img/sandbox.png" width="960">](https://cyberlabs.ai/)
+
+
 # Vue Yoonit Components
 
 ![Version](https://img.shields.io/npm/v/@yoonit/nativescript-camera?color=lightgrey&style=for-the-badge&logo=npm)
@@ -8,8 +11,41 @@
 ![Storybook](https://img.shields.io/badge/Storybook-35495E?color=lightgrey&style=for-the-badge&logo=storybook)
 ![MIT license](https://img.shields.io/npm/l/@yoonit/nativescript-camera?color=lightgrey&style=for-the-badge)
 
+### [Atoms](#atoms)
+* [YooAnimation](https://github.com/Yoonit-Labs/vue-yoonit-components/tree/development/src/components/atoms/Animation)
+* [YooAvatar](https://github.com/Yoonit-Labs/vue-yoonit-components/tree/development/src/components/atoms/Avatar)
+* [YooButton](https://github.com/Yoonit-Labs/vue-yoonit-components/tree/development/src/components/atoms/Button)
+* [YooCheckButton](https://github.com/Yoonit-Labs/vue-yoonit-components/tree/development/src/components/atoms/CheckButton)
+* [YooDropdown](https://github.com/Yoonit-Labs/vue-yoonit-components/tree/development/src/components/atoms/DropDown)
+* [YooIcon](https://github.com/Yoonit-Labs/vue-yoonit-components/tree/development/src/components/atoms/Icon)
+* [YooSelectDate](https://github.com/Yoonit-Labs/vue-yoonit-components/tree/development/src/components/atoms/SelectDate)
+* [YooSeparator](https://github.com/Yoonit-Labs/vue-yoonit-components/tree/development/src/components/atoms/Separator)
+* [YooStepper](https://github.com/Yoonit-Labs/vue-yoonit-components/tree/development/src/components/atoms/Stepper)
+* [YooSwitch](https://github.com/Yoonit-Labs/vue-yoonit-components/tree/development/src/components/atoms/Switch)
+### [Molecules](#molecules)
+* [YooButtonToggle](https://github.com/Yoonit-Labs/vue-yoonit-components/tree/development/src/components/molecules/ButtonToggle)
+* [YooCard](https://github.com/Yoonit-Labs/vue-yoonit-components/tree/development/src/components/molecules/Card)
+* [YooFormGroup](https://github.com/Yoonit-Labs/vue-yoonit-components/tree/development/src/components/molecules/FormGroup)
+* [YooHeader](https://github.com/Yoonit-Labs/vue-yoonit-components/tree/development/src/components/molecules/Header)
+* [YooModal](https://github.com/Yoonit-Labs/vue-yoonit-components/tree/development/src/components/molecules/Modal)
+* [YooNotify](https://github.com/Yoonit-Labs/vue-yoonit-components/tree/development/src/components/molecules/Notify)
+* [YooPagination](https://github.com/Yoonit-Labs/vue-yoonit-components/tree/development/src/components/molecules/Pagination)
+* [YooPostCard](https://github.com/Yoonit-Labs/vue-yoonit-components/tree/development/src/components/molecules/PostCard)
+* [YooQuizQuestion](https://github.com/Yoonit-Labs/vue-yoonit-components/tree/development/src/components/molecules/QuizQuestion)
+* [YooSegmentedBar](https://github.com/Yoonit-Labs/vue-yoonit-components/tree/development/src/components/molecules/SegmentedBar)
+* [YooSelectButton](https://github.com/Yoonit-Labs/vue-yoonit-components/tree/development/src/components/molecules/SelectButton)
+* [YooTableAttribute](https://github.com/Yoonit-Labs/vue-yoonit-components/tree/development/src/components/molecules/TableAttribute)
+* [YooTableCard](https://github.com/Yoonit-Labs/vue-yoonit-components/tree/development/src/components/molecules/TableCard)
+### [Bosons](#bosons)
+* [YooFlexLayout](https://github.com/Yoonit-Labs/vue-yoonit-components/tree/development/src/components/bosons/FlexLayout)
+* [YooGridLayout](https://github.com/Yoonit-Labs/vue-yoonit-components/tree/development/src/components/bosons/GridLayout)
+* [YooScrollView](https://github.com/Yoonit-Labs/vue-yoonit-components/tree/development/src/components/bosons/ScrollView)
+### [Quarks](#quarks)
+* [YooIndicator](https://github.com/Yoonit-Labs/vue-yoonit-components/tree/development/src/components/quarks/Indicator)
+
+
 A Vue lib to provide:
-- 28 Vue Components to create interfaces
+- 26 Vue Components to create interfaces
 - Unit tests with 100% coverage
 - Standardized code
 - Consistency between interfaces
@@ -22,13 +58,10 @@ npm i -s @yoonit/vue-components
 
 ## Usage
 
-To see and interact with all components, see the project storybook
-
-```javascript
-npm run storybook
-```
-
 #### VueJS Plugin
+
+To use the components, import the library into your project's main.js file.
+
 `main.js`
 ```javascript
 import Vue from 'vue'
@@ -37,7 +70,7 @@ import YoonitVueComponents from '@yoonit/vue-components'
 Vue.use(YoonitVueComponents)
 ```
 
-After that, you can access each component by calling it in the html template
+After that, you can access each component by calling it in the html template.
 
 #### YooButton Component Example
 `App.vue`
@@ -73,6 +106,17 @@ After that, you can access each component by calling it in the html template
 </template>
 ```
 <img src="https://github.com/Yoonit-Labs/vue-yoonit-components/blob/development/public/readme-img/button-example.png" width="400">
+
+## StoryBook
+
+To see all the components, run the Storybook available in this project. 
+
+```javascript
+npm run storybook
+```
+After running the command above, an address will be available for you to access the component library. There you will be able to meet, interact and copy the code ready to put in your project.
+
+[<img src="https://github.com/Yoonit-Labs/vue-yoonit-components/blob/feature/readme/public/readme-img/StorybookButton.png" width="960">](https://cyberlabs.ai/)
 
 
 ## To contribute and make it better

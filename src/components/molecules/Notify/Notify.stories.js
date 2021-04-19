@@ -34,7 +34,7 @@ export default {
         type: 'boolean'
       }
     },
-    showButton: {
+    closeButton: {
       control: {
         type: 'boolean'
       }
@@ -55,6 +55,15 @@ export default {
         type: 'select',
         options: PropsConfig.iconColor.options
       }
+    },
+    iconStyle: {
+      control: {
+        type: 'select',
+        options: PropsConfig.iconStyle.options
+      }
+    },
+    buttonColor: {
+      control: 'color'
     }
   }
 }
@@ -74,6 +83,9 @@ Primary.args = { text: 'Yoo Notify', fill: 'primary' }
 
 export const Danger = Template.bind({})
 Danger.args = { text: 'Yoo Notify', fill: 'danger' }
+
+export const Light = Template.bind({})
+Light.args = { notifyText: 'Yoo Notify', notifyFill: 'light' }
 
 export const Dark = Template.bind({})
 Dark.args = { text: 'Yoo Notify', fill: 'dark' }
