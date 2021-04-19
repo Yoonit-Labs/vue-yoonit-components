@@ -58,7 +58,7 @@ YooFlexLayout.yoo-table-attribute(
         @onClick="$emit('response')"
         :textSize="buttonTextSize"
         :iconSize="iconButtonSize"
-        textWeight="medium"
+        :textWeight="buttonTextWeight"
       )
       YooCheckButton.yoo-table-attribute__detail.yoo-table-attribute__actionable.m__l--s(
         v-else-if="actionable && actionableType === 'check'"
@@ -136,6 +136,11 @@ export default {
       type: String,
       default: 'sm',
       validator: value => PropsConfig.buttonTextSize.options.includes(value)
+    },
+    buttonTextWeight: {
+      type: String,
+      default: 'medium',
+      validator: value => PropsConfig.buttonTextWeight.options.includes(value)
     },
     actionable: {
       type: Boolean,

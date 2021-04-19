@@ -161,7 +161,19 @@ describe('YooTableAttribute Component', () => {
         expect(wrapper.find(`.${classBlock}--separated`).exists()).toBe(false)
       })
     })
-
+    describe('buttonTextWeight', () => {
+      it('Has a valid default value', () => {
+        expect(PropsConfig.buttonTextWeight.options.includes(YooTableAttribute.props.buttonTextWeight.default)).toBe(true)
+      })
+      it('Has a button weight semi-bold', async () => {
+        await wrapper.setProps({ actionable: true, actionableType: 'button', buttonTextWeight: 'semi-bold' })
+        expect(wrapper.find('.yoo-btn__text--weight-semi-bold').exists()).toBe(true)
+      })
+      it('Has a button weight medium', async () => {
+        await wrapper.setProps({ actionable: true, actionableType: 'button', buttonTextWeight: 'medium' })
+        expect(wrapper.find('.yoo-btn__text--weight-medium').exists()).toBe(true)
+      })
+    })
     describe('actionableDisable', () => {
       it('Has a valid default value', () => {
         expect(YooTableAttribute.props.actionableDisable.default).toBe(false)

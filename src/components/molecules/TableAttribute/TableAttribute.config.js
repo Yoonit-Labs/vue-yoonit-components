@@ -75,6 +75,12 @@ module.exports = {
       'xl'
     ]
   },
+  buttonTextWeight: {
+    options: [
+      'medium',
+      'semi-bold'
+    ]
+  },
   iconButtonSize: {
     options: [
       'small',

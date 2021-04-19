@@ -69,6 +69,12 @@ export default {
         options: PropsConfig.buttonTextSize.options
       }
     },
+    buttonTextWeight: {
+      control: {
+        type: 'select',
+        options: PropsConfig.buttonTextWeight.options
+      }
+    },
     iconButtonSize: {
       control: {
         type: 'select',
