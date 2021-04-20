@@ -32,7 +32,8 @@
       p.yoo-notify__text.m__r--l.m__l--s(
         :class="[takeTextColor, takeTextSize]"
         alignItems="center"
-      ) {{ text }}
+        v-html="text"
+      )
 
     YooFlexLayout(
       justifyContent="space-between"
