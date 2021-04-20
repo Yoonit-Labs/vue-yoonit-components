@@ -33,7 +33,7 @@ echo '---------------------'
 echo '| Yoonit Components |'
 echo '---------------------'
 echo 'Updating repository...'
-git checkout development
+# git checkout development
 git pull
 wait
 echo ''
