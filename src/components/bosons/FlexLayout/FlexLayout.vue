@@ -1,6 +1,7 @@
  <template lang="pug">
   .yoo-flex-layout(
     :style="[...takeFlexDirection, takeFlexWrap, takeJustifyContent, takeAlignItems, takeAlignContent, takeGap]"
+    v-on="$listeners"
   )
     slot
 </template>
