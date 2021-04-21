@@ -2,14 +2,14 @@
 
 exports[`YooTableAttribute Component Matches Snapshot 1`] = `
 <div class="yoo-flex-layout yoo-table-attribute" style="flex-direction: row; flex-wrap: nowrap; justify-content: space-between; align-items: center; align-content: stretch;" width="100%">
-  <div class="yoo-flex-layout" style="flex-direction: row; flex-wrap: nowrap; justify-content: center; align-items: center; align-content: stretch;">
-    <div class="yoo-flex-layout" style="flex-direction: row; flex-wrap: nowrap; justify-content: center; align-items: center; align-content: stretch;">
+  <div class="yoo-flex-layout" style="flex-direction: row; flex-wrap: nowrap; justify-content: flex-start; align-items: center; align-content: stretch; width: 100%;" width="100%">
+    <div class="yoo-flex-layout" style="flex-direction: row; flex-wrap: nowrap; justify-content: flex-start; align-items: center; align-content: stretch;">
       <!---->
       <p class="yoo-table-attribute__title m__t--none m__b--none yoo-table-attribute__title--dark yoo-table-attribute__title--medium yoo-table-attribute__title--md">Title</p>
     </div>
     <!---->
   </div>
-  <div class="yoo-flex-layout" style="flex-direction: row; flex-wrap: nowrap; justify-content: center; align-items: center; align-content: stretch;">
+  <div class="yoo-flex-layout" style="flex-direction: row; flex-wrap: nowrap; justify-content: flex-end; align-items: center; align-content: stretch; min-width: max-content;">
     <p class="yoo-table-attribute__detail yoo-table-attribute__detail--light"></p>
     <!---->
   </div>

@@ -9,9 +9,12 @@ YooFlexLayout.yoo-table-attribute(
     YooFlexLayout(
       :alignItems="flexAlignItems"
       :flexDirection="flexDirection"
+      justifyContent="flex-start"
+      width="100%"
+      @click="doClickRow"
     )
       YooFlexLayout(
-        justifyContent="center"
+        justifyContent="flex-start"
         alignItems="center"
         flexDirection="row"
       )
@@ -35,13 +38,15 @@ YooFlexLayout.yoo-table-attribute(
         | {{ detail }}
 
     YooFlexLayout(
-      justifyContent="center"
+      justifyContent="flex-end"
       alignItems="center"
       flexDirection="row"
+      style="min-width: max-content;"
     )
       p.yoo-table-attribute__detail(
         v-if="!wrap && !actionable || actionableType !== 'button'"
         :class="[...takeDetailFillModifier]"
+        @click="doClickRow"
       )
         | {{ detail }}
 
@@ -64,16 +69,16 @@ YooFlexLayout.yoo-table-attribute(
         v-else-if="actionable && actionableType === 'check'"
         size="small"
         :class="[...takeDetailFillModifier]"
-        :checked="actionableActive"
-        @response="$emit('response', $event)"
+        :checked="isChecked"
+        @response="doClickRow"
       )
 
       YooSwitch.yoo-table-attribute__detail.yoo-table-attribute_actionable.m__l--m(
         v-else-if="actionable && actionableType === 'switch'"
         size="small"
         :disabled="actionableDisable"
-        :initialValue="actionableActive"
-        @response="$emit('response', $event)"
+        :initialValue="isChecked"
+        @response="doClickRow"
       )
 
 </template>
@@ -191,9 +196,11 @@ export default {
   },
   data: () => ({
     flexAlignItems: 'center',
-    flexDirection: 'row'
+    flexDirection: 'row',
+    isChecked: false
   }),
   created () {
+    this.isChecked = this.actionableActive
     if (this.wrap) {
       this.flexAlignItems = 'flex-start'
       this.flexDirection = 'column'
@@ -271,6 +278,21 @@ export default {
     */
     takeIconFillModifier () {
       return this.iconFill
+    }
+  },
+  methods: {
+    doClickRow () {
+      if (this.actionable && !this.actionableDisable) {
+        if (this.actionableType !== 'button') {
+          this.isChecked = !this.isChecked
+        }
+        this.$emit('response', this.isChecked)
+      }
+    }
+  },
+  watch: {
+    actionableActive (value) {
+      this.isChecked = value
     }
   }
 }

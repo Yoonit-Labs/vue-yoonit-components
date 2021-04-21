@@ -11,6 +11,7 @@
       justifyContent="flex-start"
       alignItems="center"
       flexWrap="wrap"
+      @click="doClickRow"
     )
       YooFlexLayout.yoo-list-item__item(
         justifyContent="flex-start"
@@ -61,7 +62,7 @@
       YooCheckButton(
         v-else-if="actionable && actionableType === 'check'"
         size="small"
-        :checked="actionableActive"
+        :checked="isChecked"
         :disabled="buttonDisable"
         :locked="checkButtonLocked"
         @response="doGetValue"
@@ -136,6 +137,12 @@ export default {
     YooButton,
     YooCheckButton
   },
+  data: () => ({
+    isChecked: false
+  }),
+  created () {
+    this.isChecked = this.actionableActive
+  },
   computed: {
     /**
     * @description Print classes based on the chosen props
@@ -194,6 +201,19 @@ export default {
     */
     doGetValue (e) {
       this.$emit('response', e)
+    },
+    doClickRow () {
+      if (this.actionable && !this.actionableDisable) {
+        if (this.actionableType !== 'button') {
+          this.isChecked = !this.isChecked
+        }
+        this.$emit('response', this.isChecked)
+      }
+    }
+  },
+  watch: {
+    actionableActive (value) {
+      this.isChecked = value
     }
   }
 }
