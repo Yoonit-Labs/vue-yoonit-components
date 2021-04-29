@@ -1,7 +1,5 @@
 [<img src="https://raw.githubusercontent.com/Yoonit-Labs/nativescript-yoonit-camera/development/logo_cyberlabs.png" width="300">](https://cyberlabs.ai/)
 
-[<img src="https://github.com/Yoonit-Labs/vue-yoonit-components/blob/feature/readme/public/readme-img/sandbox.png" width="960">](https://cyberlabs.ai/)
-
 
 # Vue Yoonit Components
 
@@ -71,41 +69,6 @@ Vue.use(YoonitVueComponents)
 ```
 
 After that, you can access each component by calling it in the html template.
-
-#### YooButton Component Example
-`App.vue`
-```vue
-<template>
-  <yoo-button
-    variation="base"
-    buttonSize="normal"
-    fill="primary"
-    animation="none"
-    text="Button Base"
-  />
-  
-  <yoo-button
-    variation="outline"
-    buttonSize="normal"
-    fill="primary"
-    animation="none"
-    text="Button Outline"
-  />
-  
-  <yoo-button
-    variation="base"
-    buttonSize="normal"
-    fill="danger"
-    icon="check"
-    iconPosition="left"
-    iconSize="normal"
-    iconStyle="solid"
-    animation="none"
-    text="Button danger + icon check"
-  />
-</template>
-```
-<img src="https://github.com/Yoonit-Labs/vue-yoonit-components/blob/development/public/readme-img/button-example.png" width="400">
 
 ## StoryBook
 
