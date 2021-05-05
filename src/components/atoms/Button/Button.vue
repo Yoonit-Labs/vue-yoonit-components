@@ -46,6 +46,12 @@ export default {
       validator: value =>
         PropsConfig.fill.options.includes(value)
     },
+    borderRadius: {
+      type: String,
+      default: 'rounded',
+      validator: value =>
+        PropsConfig.borderRadius.options.includes(value)
+    },
     icon: {
       type: String,
       default: ''
@@ -143,6 +149,7 @@ export default {
       const classList = []
 
       classList.push(`${block}__fill--${this.fill}`)
+      classList.push(`${block}--${this.borderRadius}`)
       classList.push(`${block}--${this.variation}`)
       classList.push(`${block}--${this.buttonSize}`)
       classList.push(`${block}--animation-${this.animation}`)
