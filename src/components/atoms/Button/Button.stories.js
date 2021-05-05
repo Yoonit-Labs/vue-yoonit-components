@@ -17,6 +17,12 @@ export default {
         options: PropsConfig.buttonSize.options
       }
     },
+    borderRadius: {
+      control: {
+        type: 'select',
+        options: PropsConfig.borderRadius.options
+      }
+    },
     fill: {
       control: {
         type: 'select',

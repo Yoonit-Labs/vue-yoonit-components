@@ -56,9 +56,9 @@ describe('YooButton Component', () => {
         expect(PropsConfig.borderRadius.options.includes(YooButton.props.borderRadius.default)).toBe(true)
       })
       PropsConfig.borderRadius.options.forEach(borderRadius => {
-        it(`Includes borderRadius class: .${classBlock}--${borderRadius}`, async () => {
+        it(`Includes borderRadius class: .${classBlock}__border--${borderRadius}`, async () => {
           await wrapper.setProps({ borderRadius })
-          expect(wrapper.find(`.${classBlock}--${borderRadius}`).exists()).toBe(true)
+          expect(wrapper.find(`.${classBlock}__border--${borderRadius}`).exists()).toBe(true)
         })
       })
     })

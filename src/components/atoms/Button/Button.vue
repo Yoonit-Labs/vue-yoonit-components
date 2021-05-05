@@ -149,7 +149,7 @@ export default {
       const classList = []
 
       classList.push(`${block}__fill--${this.fill}`)
-      classList.push(`${block}--${this.borderRadius}`)
+      classList.push(`${block}__border--${this.borderRadius}`)
       classList.push(`${block}--${this.variation}`)
       classList.push(`${block}--${this.buttonSize}`)
       classList.push(`${block}--animation-${this.animation}`)
