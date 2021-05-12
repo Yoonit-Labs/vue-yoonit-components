@@ -22,6 +22,13 @@ module.exports = {
       'black'
     ]
   },
+  borderRadius: {
+    options: [
+      'none',
+      'medium',
+      'rounded'
+    ]
+  },
   iconPosition: {
     options: [
       'left',
