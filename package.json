@@ -1,9 +1,12 @@
 {
   "name": "@yoonit/vue-components",
   "version": "0.1.0",
-  "private": true,
+  "private": false,
   "main": "yoo.common.js",
   "unpkg": "yoo.min.js",
+  "files": [
+    "**/yoo.*.js"
+  ],
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "bash ./build.sh",
