@@ -4,9 +4,9 @@ exports[`YooSelectDate Component Matches Snapshot 1`] = `
 <div class="yoo-selectdate">
   <yooflexlayout-stub flexdirection="row" flexwrap="nowrap" justifycontent="center" alignitems="stretch" aligncontent="stretch" gap="32px">
     <yooflexlayout-stub flexdirection="column" flexwrap="nowrap" justifycontent="center" alignitems="center" aligncontent="stretch" gap="0" class="yoo-selectdate__container">
-      <div class="yoo-selectdate__item">04</div>
-      <div class="yoo-selectdate__item yoo-selectdate__item--active day">05</div>
-      <div class="yoo-selectdate__item">06</div>
+      <div class="yoo-selectdate__item">19</div>
+      <div class="yoo-selectdate__item yoo-selectdate__item--active day">20</div>
+      <div class="yoo-selectdate__item">21</div>
     </yooflexlayout-stub>
     <yooflexlayout-stub flexdirection="column" flexwrap="nowrap" justifycontent="center" alignitems="center" aligncontent="stretch" gap="0" class="yoo-selectdate__container">
       <div class="yoo-selectdate__item">abr</div>
