@@ -66,7 +66,7 @@ To use the component, simply invoke it in your template with the desired props
 
 The output of the above code will be:
 
-<img src="https://github.com/Yoonit-Labs/vue-yoonit-components/blob/feature/readme/public/readme-img/notify.png">
+<img src="../../../../public/readme-img/notify.png">
 
 ### Props
 
