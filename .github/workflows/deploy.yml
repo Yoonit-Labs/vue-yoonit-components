@@ -6,11 +6,14 @@ on:
 
 jobs:
   deploy:
+    if: ${{ contains(github.ref, 'refs/tags/release-') }}
     runs-on: ubuntu-latest
     steps:
-      # GET TAG VERSION IN $GITHUB_ENV
-      - name: Get TAG_VERSION
-        run: echo "TAG_VERSION=${GITHUB_REF#refs/*/}" >> $GITHUB_ENV
+      # GET TAG VERSION & RELEASE_VERSION IN $GITHUB_ENV
+      - name: Get TAG_VERSION & RELEASE_VERSION
+        run: |
+          echo "TAG_VERSION=${GITHUB_REF#refs/*/}" >> $GITHUB_ENV
+          echo "RELEASE_VERSION=${GITHUB_REF#refs/*/release-}" >> $GITHUB_ENV
       # CHECKOUT REPOSITORY
       - name: Checkout Repository
         uses: actions/checkout@v2
@@ -28,7 +31,7 @@ jobs:
           git config user.email gabriel.mule@cyberlabs.ai
       # RUN SCRIPTS
       - name: Update package version
-        run: node "./ci.js" ${{ env.TAG_VERSION }}
+        run: node -e "let pkg=require('./package.json'); pkg.version='${{ env.RELEASE_VERSION }}'; require('fs').writeFileSync('./package.json', JSON.stringify(pkg, null, 2));"
       - name: Build VueJS Package
         run: |
           npm install
@@ -47,10 +50,6 @@ jobs:
         run: |
           node -e "let pkg=require('./npm/package.json'); pkg.main='/vue/yoo.common.js'; require('fs').writeFileSync('./npm/package.json', JSON.stringify(pkg, null, 2));"
           node -e "let pkg=require('./npm/vue/package.json'); pkg.main='/yoo.common.js'; require('fs').writeFileSync('./npm/vue/package.json', JSON.stringify(pkg, null, 2));"
-      # PREPARE PUBLISH
-      - name: Enter prepared npm folder
-        run: |
-          cd npm
       # ADD & COMMIT CHANGES
       - name: Add & Commit Changes
         run: |
@@ -62,11 +61,6 @@ jobs:
         run: |
           git tag -a ${{ env.TAG_VERSION }} -m ${{ env.TAG_VERSION }} --force
           git push --tags --force
-      # ENTER VUE FOLDER
-      - name: Prepare VueJS Publish
-        run: |
-          cd npm
-          cd vue
       # PUBLISH VUE PACKAGE
       - name: Publish VueJS Package
         run: npm publish npm/vue/ --access public
@@ -77,7 +71,7 @@ jobs:
         uses: sarisia/actions-status-discord@v1
         with:
           webhook: ${{ secrets.WEBHOOK_URL }}
-          title: "Published ${{ env.TAG_VERSION }}"
+          title: "Published @yoonit/vue-components v${{ env.RELEASE_VERSION }}"
           description: |
             A new release has been published:
             [Click here to go to the release page](https://github.com/Yoonit-Labs/vue-yoonit-components/releases/tag/${{ env.TAG_VERSION }})
