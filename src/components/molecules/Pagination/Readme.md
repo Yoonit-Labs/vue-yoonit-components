@@ -48,9 +48,6 @@ To use the component, simply invoke it in your template with the desired props
   />
 </template>
 ```
-### Output
-
-The output of the above code will be:
 
 
 ### Props

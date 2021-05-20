@@ -26,11 +26,7 @@ To use the component, simply invoke by passing the information in your props, qu
 
 The output of the above code will be:
 
-<img src="../../../../public/readme-img/quiz-questions.png" alt="YooQuizQuestion" width="800">
-
-### Checkbox
-
-<img src="../../../../public/readme-img/quiz-questions-checkbox.png" alt="YooQuizQuestion" width="800">
+<img src="../../../../public/readme-img/quiz-questions.png" alt="YooQuizQuestion" width="500">
 
 ### Props
 

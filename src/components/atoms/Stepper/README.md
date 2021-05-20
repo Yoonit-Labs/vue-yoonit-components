@@ -19,17 +19,17 @@ To use the component, simply invoke it in your template with the desired props
     counterType="number"
     :totalSteps="5"
   />
-  <yoo-stepper
-    counterType="dot"
-    :totalSteps="5"
-  />
 </template>
 ```
 ### Output
 
 The output of the above code will be:
 
-<img src="../../../../public/readme-img/stepper.png" alt="Example for YooStepper">
+<img src="../../../../public/readme-img/stepper-number.gif" alt="Example for YooStepper Number">
+
+### Dots
+
+<img src="../../../../public/readme-img/stepper_dots.gif" alt="Example for YooStepper Dots">
 
 ### Props
 

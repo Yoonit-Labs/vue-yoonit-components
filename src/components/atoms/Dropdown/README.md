@@ -24,18 +24,15 @@ To use the component, simply invoke it in your template with the desired props
 
 The output of the above code will be:
 
-<img src="../../../../public/readme-img/dropdown-medium-closed.png">
-<img src="../../../../public/readme-img/dropdown-medium-opened.png">
+<img src="../../../../public/readme-img/dropdown_medium.gif">
 
 ### Small
 
-<img src="../../../../public/readme-img/dropdown-small-closed.png">
-<img src="../../../../public/readme-img/dropdown-small-opened.png">
+<img src="../../../../public/readme-img/dropdown_small.gif">
 
 ### Large
 
-<img src="../../../../public/readme-img/dropdown-large-closed.png">
-<img src="../../../../public/readme-img/dropdown-large-opened.png">
+<img src="../../../../public/readme-img/dropdown_large.gif">
 
 ### Props
 
