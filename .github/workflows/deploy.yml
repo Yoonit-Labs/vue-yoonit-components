@@ -70,7 +70,7 @@ jobs:
           cd vue
       # PUBLISH VUE PACKAGE
       - name: Publish VueJS Package
-        run: npm publish npm/vue/ --access public
+        run: npm publish npm/vue/ 
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
       # SUCCESS MESSAGE TO  DISCORD
