@@ -1,2 +1,6 @@
-# Convert to LF line endings on checkout.
-* text eol=crlf
+# Set the default behavior for all files.
+* text=auto
+
+# Binary files.
+*.png binary
+*.jpg binary
