@@ -1,9 +1,8 @@
 name: deploy
 
 on:
-  create:
-    tags:
-      - release-*
+  release:
+    types: [created]
 
 jobs:
   deploy:
