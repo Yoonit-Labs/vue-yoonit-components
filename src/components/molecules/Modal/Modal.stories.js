@@ -44,4 +44,4 @@ export const BorderSquare = Template.bind({})
 BorderSquare.args = { borderStyle: 'square' }
 
 export const BorderRadius = Template.bind({})
-BorderRadius.args = { borderStyle: 'radius' }
+BorderRadius.args = { borderStyle: 'rounded' }
