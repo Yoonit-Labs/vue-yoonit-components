@@ -9,7 +9,7 @@
   )
   label.yoo-checkbox__check.fas.fa-check(
     :for="timeId"
-    :class="[takeModifierSize, ...takeModifierCheck]"
+    :class="[takeModifierSize, takeModifierBorderStyle, ...takeModifierCheck]"
   )
     p.yoo-checkbox__text(
       :class="[takeModifierSize]"
@@ -56,6 +56,11 @@ export default {
       type: Boolean,
       required: false,
       default: false
+    },
+    borderStyle: {
+      type: String,
+      default: 'rounded',
+      validator: value => PropsConfig.borderStyle.options.includes(value)
     }
   },
   data: () => ({
@@ -129,6 +134,15 @@ export default {
         classList
           .push(`${block}__card--active`)
       }
+
+      return classList
+    },
+    takeModifierBorderStyle () {
+      const block = 'yoo-checkbox__check'
+      const classList = []
+
+      classList
+        .push(`${block}--${this.borderStyle}`)
 
       return classList
     }

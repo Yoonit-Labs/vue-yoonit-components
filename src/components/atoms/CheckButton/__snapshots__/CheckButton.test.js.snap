@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`YooCheckButton Component Matches Snapshot 1`] = `
-<div class="yoo-checkbox yoo-checkbox"><input type="checkbox" id="ycid-3456789"><label class="yoo-checkbox__check fas fa-check yoo-checkbox--medium yoo-checkbox__text--left" for="ycid-3456789">
+<div class="yoo-checkbox yoo-checkbox"><input type="checkbox" id="ycid-3456789"><label class="yoo-checkbox__check fas fa-check yoo-checkbox--medium yoo-checkbox__check--rounded yoo-checkbox__text--left" for="ycid-3456789">
     <!---->
   </label></div>
 `;

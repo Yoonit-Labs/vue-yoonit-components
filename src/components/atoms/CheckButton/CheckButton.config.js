@@ -11,5 +11,11 @@ module.exports = {
       'left',
       'right'
     ]
+  },
+  borderStyle: {
+    options: [
+      'square',
+      'rounded'
+    ]
   }
 }
