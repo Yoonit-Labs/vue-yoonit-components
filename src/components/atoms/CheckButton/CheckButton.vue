@@ -13,8 +13,11 @@
   )
     p.yoo-checkbox__text(
       :class="[takeModifierSize]"
-      v-if="text !== ''"
-      v-html="text"
+      v-if="text"
+    ) {{ text }}
+
+    slot.yoo-checkbox__slot(
+      v-else
     )
 
 </template>
