@@ -14,7 +14,8 @@
     p.yoo-checkbox__text(
       :class="[takeModifierSize]"
       v-if="text !== ''"
-    ) {{ text }}
+      v-html="text"
+    )
 
 </template>
 
