@@ -21,6 +21,12 @@ export default {
       control: {
         type: 'text'
       }
+    },
+    borderStyle: {
+      control: {
+        type: 'select',
+        options: PropsConfig.borderStyle.options
+      }
     }
   }
 }
@@ -40,3 +46,9 @@ Card.args = { text: 'Yoo Checkbox', card: true }
 
 export const Disabled = Template.bind({})
 Disabled.args = { text: 'Yoo Checkbox', disabled: true }
+
+export const Rounded = Template.bind({})
+Rounded.args = { text: 'Yoo Checkbox', borderStyle: 'rounded' }
+
+export const Square = Template.bind({})
+Square.args = { text: 'Yoo Checkbox', borderStyle: 'square' }

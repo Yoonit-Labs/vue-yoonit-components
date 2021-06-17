@@ -112,6 +112,20 @@ describe('YooCheckButton Component', () => {
         expect(wrapper.find(`.${classBlock}__card--active`).exists()).toBe(true)
       })
     })
+
+    describe('borderStyle', () => {
+      it('Has a valid default value', () => {
+        expect(YooCheckButton.props.borderStyle.default).toBe('rounded')
+      })
+      it(`Includes borderStyle square active class: ${classBlock}__check--square`, async () => {
+        await wrapper.setProps({ borderStyle: 'square' })
+        expect(wrapper.find(`.${classBlock}__check--square`).exists()).toBe(true)
+      })
+      it(`Includes borderStyle rounded active class: ${classBlock}__check--rounded`, async () => {
+        await wrapper.setProps({ borderStyle: 'rounded' })
+        expect(wrapper.find(`.${classBlock}__check--rounded`).exists()).toBe(true)
+      })
+    })
   }) // describe Props
 
   describe('Events', () => {

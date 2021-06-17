@@ -5,13 +5,13 @@ exports[`YooQuizQuestion Component Matches Snapshot 1`] = `
   <p row="1" col="1" class="yoo-quiz__question" style="grid-row: 1; grid-column: 1;">
     <!---->
   </p>
-  <div class="yoo-checkbox yoo-quiz__card yoo-checkbox__card" row="2" col="1" style="grid-row: 2; grid-column: 1;"><input type="checkbox" id="ycid-3456789"><label class="yoo-checkbox__check fas fa-check yoo-checkbox--medium p__t--l p__r--l p__b--l p__l--l yoo-checkbox__text--left" for="ycid-3456789">
+  <div class="yoo-checkbox yoo-quiz__card yoo-checkbox__card" row="2" col="1" style="grid-row: 2; grid-column: 1;"><input type="checkbox" id="ycid-3456789"><label class="yoo-checkbox__check fas fa-check yoo-checkbox--medium yoo-checkbox__check--rounded p__t--l p__r--l p__b--l p__l--l yoo-checkbox__text--left" for="ycid-3456789">
       <p class="yoo-checkbox__text yoo-checkbox--medium">Yes</p>
     </label></div>
-  <div class="yoo-checkbox yoo-quiz__card yoo-checkbox__card yoo-checkbox__card--active" row="3" col="1" style="grid-row: 3; grid-column: 1;"><input type="checkbox" id="ycid-3456789"><label class="yoo-checkbox__check fas fa-check yoo-checkbox--medium p__t--l p__r--l p__b--l p__l--l yoo-checkbox__check--card-active yoo-checkbox__text--left" for="ycid-3456789">
+  <div class="yoo-checkbox yoo-quiz__card yoo-checkbox__card yoo-checkbox__card--active" row="3" col="1" style="grid-row: 3; grid-column: 1;"><input type="checkbox" id="ycid-3456789"><label class="yoo-checkbox__check fas fa-check yoo-checkbox--medium yoo-checkbox__check--rounded p__t--l p__r--l p__b--l p__l--l yoo-checkbox__check--card-active yoo-checkbox__text--left" for="ycid-3456789">
       <p class="yoo-checkbox__text yoo-checkbox--medium">No</p>
     </label></div>
-  <div class="yoo-checkbox yoo-quiz__card yoo-checkbox__card yoo-checkbox__card--active" row="4" col="1" style="grid-row: 4; grid-column: 1;"><input type="checkbox" id="ycid-3456789"><label class="yoo-checkbox__check fas fa-check yoo-checkbox--medium p__t--l p__r--l p__b--l p__l--l yoo-checkbox__check--card-active yoo-checkbox__text--left" for="ycid-3456789">
+  <div class="yoo-checkbox yoo-quiz__card yoo-checkbox__card yoo-checkbox__card--active" row="4" col="1" style="grid-row: 4; grid-column: 1;"><input type="checkbox" id="ycid-3456789"><label class="yoo-checkbox__check fas fa-check yoo-checkbox--medium yoo-checkbox__check--rounded p__t--l p__r--l p__b--l p__l--l yoo-checkbox__check--card-active yoo-checkbox__text--left" for="ycid-3456789">
       <p class="yoo-checkbox__text yoo-checkbox--medium">Maybe</p>
     </label></div>
 </div>
