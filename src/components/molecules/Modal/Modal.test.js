@@ -1,5 +1,8 @@
 import { shallowMount } from '@vue/test-utils'
 import YooModal from '@/components/molecules/Modal/Modal.vue'
+import PropsConfig from '@/components/molecules/Modal/Modal.config'
+
+const classBlock = 'yoo-modal'
 
 const mountYooModal = () => {
   return shallowMount(YooModal)
@@ -18,6 +21,32 @@ describe('YooModal Component', () => {
   it('Loads the component HTML', () => {
     expect(wrapper.find('.backdrop').exists()).toBe(true)
     expect(wrapper.find('.yoo-modal').exists()).toBe(true)
+  })
+
+  describe('Props', () => {
+    describe('fill', () => {
+      it('Has a valid default value', () => {
+        expect(PropsConfig.fill.options.includes(YooModal.props.fill.default)).toBe(true)
+      })
+      PropsConfig.fill.options.forEach(fill => {
+        it(`Includes fill class: .${classBlock}__fill--${fill}`, async () => {
+          await wrapper.setProps({ fill })
+          expect(wrapper.find(`.${classBlock}__fill--${fill}`).exists()).toBe(true)
+        })
+      })
+    })
+
+    describe('borderStyle', () => {
+      it('Has a valid default value', () => {
+        expect(PropsConfig.borderStyle.options.includes(YooModal.props.borderStyle.default)).toBe(true)
+      })
+      PropsConfig.borderStyle.options.forEach(borderStyle => {
+        it(`Includes borderStyle class: .${classBlock}__border--${borderStyle}`, async () => {
+          await wrapper.setProps({ borderStyle })
+          expect(wrapper.find(`.${classBlock}__border--${borderStyle}`).exists()).toBe(true)
+        })
+      })
+    })
   })
 
   describe('Events', () => {
