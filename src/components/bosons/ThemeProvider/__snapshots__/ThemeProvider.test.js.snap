@@ -1,0 +1,3 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ThemeProvider Component Matches Snapshot 1`] = `<div data-composition="default" data-theme="default" class="theme-provider">Default Slot Text</div>`;

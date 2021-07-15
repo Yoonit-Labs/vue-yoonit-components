@@ -23,6 +23,11 @@ module.exports = {
         ]
       }
     );
+    config.module.rules.push({
+      test: /\.scss$/,
+      use: ['style-loader', 'css-loader', 'sass-loader'],
+      include: path.resolve(__dirname, 'node_modules/@yoonit/style/quarks/index.sass'),
+    });
 
     config.resolve.alias = {
       ...config.resolve.alias,

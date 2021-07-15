@@ -1,17 +1,21 @@
 <template lang="pug">
-  .yoo-avatar(
-    :class="[...takeModifier, ...takeFill]"
-    :style="image ? `background: url('${image}')no-repeat center center / cover` : ''"
+  ThemeProvider(
+    composition="default"
   )
-    p.yoo-avatar__text(
-      :class="[...takeTextColor]"
-      v-if="takeInitials && !image"
-    ) {{ takeInitials }}
+    .yoo-avatar(
+      :class="[...takeModifier, ...takeFill]"
+      :style="image ? `background: url('${image}')no-repeat center center / cover` : ''"
+    )
+      p.yoo-avatar__text(
+        :class="[...takeTextColor]"
+        v-if="takeInitials && !image"
+      ) {{ takeInitials }}
 </template>
 
 <script>
 import PropsConfig from './Avatar.config'
 import { StringParser } from '@/components/bosons'
+import ThemeProvider from '@/components/bosons/ThemeProvider/ThemeProvider.vue'
 
 export default {
   name: 'YooAvatar',
@@ -42,6 +46,9 @@ export default {
       type: String,
       required: false
     }
+  },
+  components: {
+    ThemeProvider
   },
   computed: {
     /**
