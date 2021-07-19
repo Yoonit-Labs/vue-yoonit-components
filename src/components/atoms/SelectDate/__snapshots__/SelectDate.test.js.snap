@@ -9,9 +9,9 @@ exports[`YooSelectDate Component Matches Snapshot 1`] = `
       <div class="yoo-selectdate__item">16</div>
     </yooflexlayout-stub>
     <yooflexlayout-stub flexdirection="column" flexwrap="nowrap" justifycontent="center" alignitems="center" aligncontent="stretch" gap="0" class="yoo-selectdate__container">
-      <div class="yoo-selectdate__item">mai</div>
-      <div class="yoo-selectdate__item yoo-selectdate__item--active month">jun</div>
-      <div class="yoo-selectdate__item">jul</div>
+      <div class="yoo-selectdate__item">jun</div>
+      <div class="yoo-selectdate__item yoo-selectdate__item--active month">jul</div>
+      <div class="yoo-selectdate__item">ago</div>
     </yooflexlayout-stub>
     <yooflexlayout-stub flexdirection="column" flexwrap="nowrap" justifycontent="center" alignitems="center" aligncontent="stretch" gap="0" class="yoo-selectdate__container">
       <div class="yoo-selectdate__item">2020</div>
