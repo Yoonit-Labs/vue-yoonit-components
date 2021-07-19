@@ -9,6 +9,11 @@ module.exports = {
   css: {
     extract: false
   },
+  configureWebpack: {
+    externals: {
+      '@yoonit/style': '@yoonit/style'
+    }
+  },
 
   chainWebpack: config => {
     const imageRule = config.module.rule('images')
