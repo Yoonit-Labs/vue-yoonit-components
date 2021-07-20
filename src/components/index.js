@@ -24,6 +24,7 @@ import YooFlexLayout from './bosons/FlexLayout/FlexLayout.vue'
 import YooGridLayout from './bosons/GridLayout/GridLayout.vue'
 import YooScrollView from './bosons/ScrollView/ScrollView.vue'
 import YooInfiniteScroll from './bosons/InfiniteScroll/InfiniteScroll.vue'
+import ThemeProvider from './bosons/ThemeProvider/ThemeProvider.vue'
 
 import YooIndicator from './quarks/Indicator/Indicator.vue'
 
@@ -52,7 +53,8 @@ const yooComponents = {
   YooGridLayout,
   YooIndicator,
   YooScrollView,
-  YooInfiniteScroll
+  YooInfiniteScroll,
+  ThemeProvider
 }
 
 export default yooComponents
