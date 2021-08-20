@@ -1,60 +1,30 @@
-import YooAnimation from './atoms/Animation/Animation.vue'
-import YooAvatar from './atoms/Avatar/Avatar.vue'
-import YooButton from './atoms/Button/Button.vue'
-import YooCheckButton from './atoms/CheckButton/CheckButton.vue'
-import YooIcon from './atoms/Icon/Icon.vue'
-import YooSelectDate from './atoms/SelectDate/SelectDate.vue'
-import YooStepper from './atoms/Stepper/Stepper.vue'
-import YooSwitch from './atoms/Switch/Switch.vue'
-
-import YooButtonToggle from './molecules/ButtonToggle/ButtonToggle.vue'
-import YooListItem from './molecules/ListItem/ListItem.vue'
-import YooFormGroup from './molecules/FormGroup/FormGroup.vue'
-import YooHeader from './molecules/Header/Header.vue'
-import YooModal from './molecules/Modal/Modal.vue'
-import YooNotify from './molecules/Notify/Notify.vue'
-import YooPagination from './molecules/Pagination/Pagination.vue'
-import YooCard from './molecules/Card/Card.vue'
-import YooQuizQuestion from './molecules/QuizQuestion/QuizQuestion.vue'
-import YooSelectButton from './molecules/SelectButton/SelectButton.vue'
-import YooSegmentedBar from './molecules/SegmentedBar/SegmentedBar.vue'
-import YooTableAttribute from './molecules/TableAttribute/TableAttribute.vue'
-
-import YooFlexLayout from './bosons/FlexLayout/FlexLayout.vue'
-import YooGridLayout from './bosons/GridLayout/GridLayout.vue'
-import YooScrollView from './bosons/ScrollView/ScrollView.vue'
-import YooInfiniteScroll from './bosons/InfiniteScroll/InfiniteScroll.vue'
-import ThemeProvider from './bosons/ThemeProvider/ThemeProvider.vue'
-
-import YooIndicator from './quarks/Indicator/Indicator.vue'
-
 const yooComponents = {
-  YooAnimation,
-  YooAvatar,
-  YooButton,
-  YooCheckButton,
-  YooIcon,
-  YooSelectDate,
-  YooStepper,
-  YooButtonToggle,
-  YooListItem,
-  YooFormGroup,
-  YooHeader,
-  YooModal,
-  YooNotify,
-  YooPagination,
-  YooCard,
-  YooQuizQuestion,
-  YooSelectButton,
-  YooSegmentedBar,
-  YooSwitch,
-  YooTableAttribute,
-  YooFlexLayout,
-  YooGridLayout,
-  YooIndicator,
-  YooScrollView,
-  YooInfiniteScroll,
-  ThemeProvider
+  YooAnimation: () => import('./atoms/Animation/Animation.vue'),
+  YooAvatar: () => import('./atoms/Avatar/Avatar.vue'),
+  YooButton: () => import('./atoms/Button/Button.vue'),
+  YooButtonToggle: () => import('./molecules/ButtonToggle/ButtonToggle.vue'),
+  YooCheckButton: () => import('./atoms/CheckButton/CheckButton.vue'),
+  YooIcon: () => import('./atoms/Icon/Icon.vue'),
+  YooSelectDate: () => import('./atoms/SelectDate/SelectDate.vue'),
+  YooStepper: () => import('./atoms/Stepper/Stepper.vue'),
+  YooSwitch: () => import('./atoms/Switch/Switch.vue'),
+  YooListItem: () => import('./molecules/ListItem/ListItem.vue'),
+  YooFormGroup: () => import('./molecules/FormGroup/FormGroup.vue'),
+  YooHeader: () => import('./molecules/Header/Header.vue'),
+  YooModal: () => import('./molecules/Modal/Modal.vue'),
+  YooNotify: () => import('./molecules/Notify/Notify.vue'),
+  YooPagination: () => import('./molecules/Pagination/Pagination.vue'),
+  YooCard: () => import('./molecules/Card/Card.vue'),
+  YooQuizQuestion: () => import('./molecules/QuizQuestion/QuizQuestion.vue'),
+  YooSelectButton: () => import('./molecules/SelectButton/SelectButton.vue'),
+  YooSegmentedBar: () => import('./molecules/SegmentedBar/SegmentedBar.vue'),
+  YooTableAttribute: () => import('./molecules/TableAttribute/TableAttribute.vue'),
+  YooFlexLayout: () => import('./bosons/FlexLayout/FlexLayout.vue'),
+  YooGridLayout: () => import('./bosons/GridLayout/GridLayout.vue'),
+  YooIndicator: () => import('./quarks/Indicator/Indicator.vue'),
+  YooScrollView: () => import('./bosons/ScrollView/ScrollView.vue'),
+  YooInfiniteScroll: () => import('./bosons/InfiniteScroll/InfiniteScroll.vue'),
+  ThemeProvider: () => import('./bosons/ThemeProvider/ThemeProvider.vue')
 }
 
 export default yooComponents
