@@ -72,5 +72,3 @@ export default {
   }
 }
 </script>
-
-<style src="./Icon.sass" lang="sass" scoped></style>
