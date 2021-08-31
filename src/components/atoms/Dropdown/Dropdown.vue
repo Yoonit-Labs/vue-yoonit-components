@@ -117,7 +117,3 @@ export default {
   }
 }
 </script>
-
-<style src="./Dropdown.sass" scoped lang="sass">
-
-</style>
