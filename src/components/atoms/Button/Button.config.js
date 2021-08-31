@@ -24,8 +24,7 @@ module.exports = {
   },
   borderRadius: {
     options: [
-      'none',
-      'medium',
+      'square',
       'rounded'
     ]
   },
@@ -68,8 +67,12 @@ module.exports = {
   },
   textWeight: {
     options: [
+      'thin',
+      'regular',
       'medium',
-      'semi-bold'
+      'semi-bold',
+      'bold',
+      'extra-bold'
     ]
   }
 }

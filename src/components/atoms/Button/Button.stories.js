@@ -63,6 +63,12 @@ export default {
         type: 'select',
         options: PropsConfig.textSize.options
       }
+    },
+    textWeight: {
+      control: {
+        type: 'select',
+        options: PropsConfig.textWeight.options
+      }
     }
   }
 }
