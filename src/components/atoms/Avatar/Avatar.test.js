@@ -30,10 +30,13 @@ describe('YooAvatar Component', () => {
       it('Has a valid default value', () => {
         expect(PropsConfig.size.options.includes(YooAvatar.props.size.default)).toBe(true)
       })
-      PropsConfig.size.options.forEach(size => {
-        it(`Includes variation class: .${classBlock}--${size}`, async () => {
+
+      const sizeConvert = ['sm', 'md', 'lg', 'xl', 'hg']
+
+      PropsConfig.size.options.forEach((size, index) => {
+        it(`Includes variation class: .${classBlock}--${sizeConvert[index]}`, async () => {
           await wrapper.setProps({ size })
-          expect(wrapper.find(`.${classBlock}--${size}`).exists()).toBe(true)
+          expect(wrapper.find(`.${classBlock}--${sizeConvert[index]}`).exists()).toBe(true)
         })
       })
     })

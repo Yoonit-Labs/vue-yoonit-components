@@ -20,7 +20,7 @@ export default {
     size: {
       type: String,
       required: false,
-      default: 'normal',
+      default: 'large',
       validator: value => PropsConfig.size.options.includes(value)
     },
     animation: {
@@ -47,5 +47,3 @@ export default {
   }
 }
 </script>
-
-<style src="./Indicator.sass" lang="sass" scoped></style>

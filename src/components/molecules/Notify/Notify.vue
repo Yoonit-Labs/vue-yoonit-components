@@ -89,7 +89,7 @@ export default {
     },
     indicatorSize: {
       type: String,
-      default: 'normal',
+      default: 'large',
       validator: value => PropsConfig.indicatorSize.options.includes(value)
     },
     indicatorFill: {

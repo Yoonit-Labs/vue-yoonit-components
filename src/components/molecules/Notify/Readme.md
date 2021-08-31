@@ -78,7 +78,7 @@ The output of the above code will be:
 | `notifyTextSize`     | String  | **md**      | <ul><li>tn</li><li>xs</li><li>sm</li><li>md</li><li>lg</li><li>xl</li><li>hg</li></ul>  | Set a size for the component text     | false    |
 | `notifyFill`         | String  | **light**   | <ul><li>light</li><li>primary</li><li>danger</li></ul>                    | Set a background color                         | false    |
 | `showIndicator`      | Boolean | **true**    | true/false                                | Shows the indicator component                  | true     |
-| `indicatorSize`      | String  | **normal**  | <ul><li>small</li>, <li>medium</li> <li>normal</li> <li>large</li>              | Set a size for the indicator                   | false    |
+| `indicatorSize`      | String  | **large**  | <ul><li>small</li>, <li>medium</li> <li>large</li> <li>extra-large</li>              | Set a size for the indicator                   | false    |
 | `indicatorFill`      | String  | **danger**  | <ul><li>primary</li>, <li>danger</li> <li>light</li> <li>dark</li> <li>neutral</li>     | Set a color for the indicator                  | false    |
 | `showIcon`           | Boolean |  **false**  | true/false                                | When there is no indicator, enable the icon    | false    |
 | `icon`               | String  |   **''**    | Any icon related to fontawesome           | Sets an icon on the button based on fontawesome| false    |
