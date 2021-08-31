@@ -56,22 +56,27 @@ export default {
       switch (this.size) {
       case 'small':
         classList
-          .push(`${block}--${this.size}`)
+          .push(`${block}--sm`)
         break
 
       case 'medium':
         classList
-          .push(`${block}--${this.size}`)
+          .push(`${block}--md`)
         break
 
       case 'large':
         classList
-          .push(`${block}--${this.size}`)
+          .push(`${block}--lg`)
         break
 
       case 'xlarge':
         classList
-          .push(`${block}--${this.size}`)
+          .push(`${block}--xl`)
+        break
+
+      case 'hg':
+        classList
+          .push(`${block}--hg`)
         break
       }
 
@@ -104,5 +109,3 @@ export default {
   }
 }
 </script>
-
-<style src="./Avatar.sass" lang="sass" scoped></style>

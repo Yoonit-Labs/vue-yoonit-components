@@ -4,7 +4,8 @@ module.exports = {
       'small',
       'medium',
       'large',
-      'xlarge'
+      'xlarge',
+      'hg'
     ]
   },
   fill: {
