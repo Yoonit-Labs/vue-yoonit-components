@@ -218,5 +218,3 @@ export default {
   }
 }
 </script>
-
-<style src="./ListItem.sass" lang="sass" scoped></style>
