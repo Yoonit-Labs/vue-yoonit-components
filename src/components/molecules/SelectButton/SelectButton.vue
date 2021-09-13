@@ -77,5 +77,3 @@ export default {
   }
 }
 </script>
-
-<style src="./SelectButton.sass" lang="sass" scoped></style>

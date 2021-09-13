@@ -222,5 +222,3 @@ export default {
   }
 }
 </script>
-
-<style src="./Notify.sass" lang="sass" scoped></style>

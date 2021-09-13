@@ -63,5 +63,3 @@ export default {
   }
 }
 </script>
-
-<style src="./SegmentedBar.sass" lang="sass" scoped></style>
