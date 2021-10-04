@@ -173,5 +173,3 @@ export default {
   }
 }
 </script>
-
-<style src="./CheckButton.sass" lang="sass" scoped></style>

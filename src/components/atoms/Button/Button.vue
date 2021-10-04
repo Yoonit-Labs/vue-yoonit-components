@@ -210,5 +210,3 @@ export default {
   }
 }
 </script>
-
-<style src="./Button.sass" lang="sass" scoped></style>

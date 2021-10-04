@@ -252,5 +252,3 @@ export default {
   }
 }
 </script>
-
-<style src="./SelectDate.sass" lang="sass" scoped></style>

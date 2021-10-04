@@ -1,10 +1,11 @@
 module.exports = {
   size: {
     options: [
-      'small',
-      'medium',
-      'large',
-      'xlarge'
+      'sm',
+      'md',
+      'lg',
+      'xl',
+      'hg'
     ]
   },
   fill: {

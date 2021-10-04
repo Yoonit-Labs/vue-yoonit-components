@@ -84,5 +84,3 @@ export default {
   }
 }
 </script>
-
-<style src="./Switch.sass" lang="sass" scoped></style>

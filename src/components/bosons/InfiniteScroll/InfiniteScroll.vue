@@ -81,4 +81,3 @@ export default {
   }
 }
 </script>
-<style src="./InfiniteScroll.sass" lang="sass" scoped></style>

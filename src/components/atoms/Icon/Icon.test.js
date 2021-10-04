@@ -39,7 +39,7 @@ describe('YooIcon Component', () => {
       it('Has a valid default value', () => {
         expect(PropsConfig.iconStyle.options.includes(YooIcon.props.iconStyle.default)).toBe(true)
       })
-      PropsConfig.size.options.forEach(iconStyle => {
+      PropsConfig.iconStyle.options.forEach(iconStyle => {
         it(`Includes iconStyle class: .${iconStyle === 'solid' ? 'fas' : 'far'}`, async () => {
           await wrapper.setProps({ icon: 'icon-value', iconStyle })
           expect(wrapper.find('.yoo-icon').classes().includes(`${iconStyle === 'solid' ? 'fas' : 'far'}`)).toBe(true)

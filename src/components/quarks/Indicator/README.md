@@ -15,18 +15,18 @@ To use the component, simply invoke it in your template with the desired props
 <template>
   <yoo-indicator 
     fill="danger" 
-    size="normal" 
+    size="large" 
     :animation="true"
   />
   <yoo-indicator 
     fill="primary" 
-    size="normal" 
+    size="large" 
     :animation="true"
     text="10"
   />
   <yoo-indicator 
     fill="dark" 
-    size="normal" 
+    size="large" 
     :animation="true"
     text="20"
   />
@@ -44,7 +44,7 @@ The output of the above code will be:
 |---------------|---------|----------|-------------------------------------------|------------------------------------------------|----------|
 | `fill`        | String  | **danger**   | <ul><li>primary</li><li>danger</li><li>dark</li><li>light</li><li>neutral</li></ul> | 
 Sets a color for the component  | false    |
-| `size`        | String  | **dark** | <ul><li>small</li><li>medium</li><li>normal</li><li>large</li></ul>  | Sets a size for the component | false    |
+| `size`        | String  | **dark** | <ul><li>small</li><li>medium</li><li>large</li><li>extra-large</li></ul>  | Sets a size for the component | false    |
 | `text`        | String  | **''** | Any String   | Set text for the component | false    |
 | `animation`   | Boolean | **true** | true/false  | Sets an animation for the component   | false     |
 

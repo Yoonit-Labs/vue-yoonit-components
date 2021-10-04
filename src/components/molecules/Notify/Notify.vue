@@ -89,7 +89,7 @@ export default {
     },
     indicatorSize: {
       type: String,
-      default: 'normal',
+      default: 'large',
       validator: value => PropsConfig.indicatorSize.options.includes(value)
     },
     indicatorFill: {
@@ -222,5 +222,3 @@ export default {
   }
 }
 </script>
-
-<style src="./Notify.sass" lang="sass" scoped></style>

@@ -120,4 +120,3 @@ export default {
   }
 }
 </script>
-<style src="./FormGroup.sass" lang="sass" scoped></style>

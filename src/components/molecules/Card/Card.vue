@@ -108,5 +108,3 @@ export default {
   }
 }
 </script>
-
-<style src="./Card.sass" lang="sass" scoped></style>

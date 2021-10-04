@@ -86,5 +86,3 @@ export default {
   }
 }
 </script>
-
-<style src="./QuizQuestion.sass" lang="sass" scoped></style>

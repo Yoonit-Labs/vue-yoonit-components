@@ -297,5 +297,3 @@ export default {
   }
 }
 </script>
-
-<style src="./TableAttribute.sass" lang="sass" scoped></style>

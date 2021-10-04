@@ -12,8 +12,8 @@ module.exports = {
     options: [
       'small',
       'medium',
-      'normal',
-      'large'
+      'large',
+      'extra-large'
     ]
   }
 }
