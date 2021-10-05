@@ -3,7 +3,7 @@
 exports[`YooNotify Component Matches Snapshot 1`] = `
 <div class="yoo-grid-layout yoo-notify p__t--xs p__b--xs p__r--s p__l--s yoo-grid-layout--h-space-between yoo-grid-layout--v-center yoo-notify--light" style="grid-template-columns: auto 1fr; grid-template-rows: auto; width: 100%; height: auto;">
   <div class="yoo-flex-layout" style="flex-direction: row; flex-wrap: nowrap; justify-content: space-between; align-items: center; align-content: stretch; grid-row: 1; grid-column: 1;" col="1" row="1">
-    <div class="yoo-indicator yoo-indicator--normal yoo-indicator--danger yoo-indicator--pulse"></div>
+    <div class="yoo-indicator yoo-indicator--large yoo-indicator--danger yoo-indicator--pulse"></div>
     <!---->
   </div>
   <div class="yoo-flex-layout" style="flex-direction: row; flex-wrap: nowrap; justify-content: space-between; align-items: center; align-content: stretch; grid-row: 1; grid-column: 2;" col="2" row="1">

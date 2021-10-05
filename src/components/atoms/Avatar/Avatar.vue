@@ -18,7 +18,7 @@ export default {
   props: {
     size: {
       type: String,
-      default: 'medium',
+      default: 'md',
       validator: value =>
         PropsConfig.size.options.includes(value)
     },
@@ -54,24 +54,29 @@ export default {
       const classList = []
 
       switch (this.size) {
-      case 'small':
+      case 'sm':
         classList
-          .push(`${block}--${this.size}`)
+          .push(`${block}--sm`)
         break
 
-      case 'medium':
+      case 'md':
         classList
-          .push(`${block}--${this.size}`)
+          .push(`${block}--md`)
         break
 
-      case 'large':
+      case 'lg':
         classList
-          .push(`${block}--${this.size}`)
+          .push(`${block}--lg`)
         break
 
-      case 'xlarge':
+      case 'xl':
         classList
-          .push(`${block}--${this.size}`)
+          .push(`${block}--xl`)
+        break
+
+      case 'hg':
+        classList
+          .push(`${block}--hg`)
         break
       }
 
@@ -104,5 +109,3 @@ export default {
   }
 }
 </script>
-
-<style src="./Avatar.sass" lang="sass" scoped></style>

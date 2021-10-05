@@ -59,5 +59,3 @@ export default {
 }
 
 </script>
-
-<style src="./Animation.sass" lang="sass" scoped></style>

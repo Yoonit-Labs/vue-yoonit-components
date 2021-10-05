@@ -29,5 +29,3 @@ export default {
   }
 }
 </script>
-
-<style src="./Header.sass" lang="sass" scoped></style>

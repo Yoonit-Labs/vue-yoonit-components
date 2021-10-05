@@ -56,5 +56,3 @@ export default {
   }
 }
 </script>
-
-<style src="./ButtonToggle.sass" lang="sass" scoped></style>

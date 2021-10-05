@@ -51,5 +51,3 @@ export default {
   }
 }
 </script>
-
-<style src="./Tag.sass" lang="sass" scoped></style>
