@@ -44,9 +44,7 @@ The output of the above code will be:
 #
 
  #### :arrow_forward: [**Next component**](../Avatar/Readme.md)
-
 #
-
 ## To contribute and make it better
 
 Clone the repo, change what you want and send PR.
