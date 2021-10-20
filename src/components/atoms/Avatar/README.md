@@ -61,7 +61,7 @@ The output of the above code will be:
 
 #
 
- #### :arrow_forward: [**Next component**](../Button/Readme.md)
+ #### :arrow_forward: [**Next component**](../Button/README.md)
 #
 ## To contribute and make it better
 

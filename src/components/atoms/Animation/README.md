@@ -43,7 +43,7 @@ The output of the above code will be:
 
 #
 
- #### :arrow_forward: [**Next component**](../Avatar/Readme.md)
+ #### :arrow_forward: [**Next component**](../Avatar/README.md)
 #
 ## To contribute and make it better
 

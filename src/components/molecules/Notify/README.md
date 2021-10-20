@@ -90,7 +90,7 @@ The output of the above code will be:
 | `buttonColor`        | String  |   **''**    | Any color i.e #00000                      | Set a color to the close button                | false    |
 #
 
- #### [**Next component**](../Modal/Modal.readme.md) :arrow_forward:
+ #### [**Next component**](../Modal/README.md) :arrow_forward:
 
  #### :arrow_backward: [**Previous component**](../Pagination/Pagination.readme.md)
 #

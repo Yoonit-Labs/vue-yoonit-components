@@ -66,7 +66,7 @@ To use the component, simply invoke it in your template with the desired props
 
 #
 
- #### [**Next component**](../Notify/Notify.readme.md) :arrow_forward:
+ #### [**Next component**](../Notify/README.md) :arrow_forward:
 
  #### :arrow_backward: [**Previous component**](../PostCard/PostCard.readme.md)
 #
