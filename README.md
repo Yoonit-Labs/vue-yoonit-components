@@ -25,7 +25,7 @@
                     <p>◻ Fully customizable with themes provided by <a src="https://github.com/Yoonit-Labs/sass-yoonit-style">@yoonit/style</a></p>
 				</td>
 				<td align="center" valign="middle">
-					<img src="https://raw.githubusercontent.com/Yoonit-Labs/vue-yoonit-components/feature/improving-descriptions/yoonit.png" width="300" />
+					<img src="./yoonit.png" width="300" />
 				</td>
 			</tr>
 		<tbody>
@@ -43,7 +43,7 @@
 			</tr>
 			<tr>
 				<td align="center" valign="middle">
-					<a href="https://cyberlabs.ai"><img src="https://raw.githubusercontent.com/Yoonit-Labs/vue-yoonit-components/development/sponsor_cyberlabs.png" width="300" /></a>
+					<a href="https://cyberlabs.ai"><img src="./sponsor_cyberlabs.png" width="300" /></a>
 				</td>
 			</tr>
 		</tbody>
