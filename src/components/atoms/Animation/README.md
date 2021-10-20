@@ -1,4 +1,4 @@
-[<img src="../../../../assets/yoonit-icon.jpg" width="200">](https://yoonit.dev/)
+[<img src="../../../assets/yoonit-icon.jpg" width="200">](https://yoonit.dev/)
 
 ## Animation
 
