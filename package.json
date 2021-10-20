@@ -2,11 +2,16 @@
   "name": "@yoonit/vue-components",
   "version": "0.2.3",
   "private": false,
+  "description": "VueJS Atomic Design System framework",
   "main": "yoo.common.js",
   "unpkg": "yoo.min.js",
   "files": [
     "**/yoo.*.js"
   ],
+  "author": {
+    "email": "about@yoonit.dev",
+    "name": "Vitória Costa, Tiago Brito, Fernando Junior, Sabrina Sampaio, Gabriel Mule, Gabriel Moraes, Gabriel Rizzo & Luigui Delyer @ 2020-2021"
+  },
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "bash ./build.sh",

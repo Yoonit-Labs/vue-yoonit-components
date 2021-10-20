@@ -1,6 +1,6 @@
 import YooAvatar from '@/components/atoms/Avatar/Avatar.vue'
 import PropsConfig from '@/components/atoms/Avatar/Avatar.config'
-import logo from '@/assets/yoonit-logo.jpg'
+import logo from '@/assets/yoonit-icon.jpg'
 
 export default {
   title: 'Yoonit/YooAvatar',
