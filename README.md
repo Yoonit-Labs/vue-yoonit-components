@@ -112,7 +112,7 @@ npm run storybook
 ```
 After running the command above, an address will be available for you to access the component library. There you will be able to meet, interact and copy the code ready to put in your project.
 
-[<img src="https://raw.githubusercontent.com/Yoonit-Labs/vue-yoonit-components/development/public/readme-img/StorybookButton.png?token=AD6MQQTP45PQWZLPEVBKBUDBOBFNG" width="960">](https://cyberlabs.ai/)
+<img src="./public/readme-img/StorybookButton.png" width="960">
 
 ## To contribute and make it better
 
