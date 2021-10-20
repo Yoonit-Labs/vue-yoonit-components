@@ -1,3 +1,19 @@
+/**
+ * ██╗   ██╗ ██████╗  ██████╗ ███╗   ██╗██╗████████╗
+ * ╚██╗ ██╔╝██╔═══██╗██╔═══██╗████╗  ██║██║╚══██╔══╝
+ *  ╚████╔╝ ██║   ██║██║   ██║██╔██╗ ██║██║   ██║
+ *   ╚██╔╝  ██║   ██║██║   ██║██║╚██╗██║██║   ██║
+ *    ██║   ╚██████╔╝╚██████╔╝██║ ╚████║██║   ██║
+ *    ╚═╝    ╚═════╝  ╚═════╝ ╚═╝  ╚═══╝╚═╝   ╚═╝
+ *
+ * https://yoonit.dev - about@yoonit.dev
+ *
+ * Vue Yoonit Components
+ * VueJS Atomic Design System framework
+ *
+ * Vitória Costa, Tiago Brito, Fernando Junior, Sabrina Sampaio, Gabriel Mule, Gabriel Moraes, Gabriel Rizzo & Luigui Delyer @ 2020-2021
+ */
+
 import yooIndicator from '@/components/quarks/Indicator/Indicator.vue'
 import yooIcon from '@/components/atoms/Icon/Icon.vue'
 import yooButton from '@/components/atoms/Button/Button.vue'

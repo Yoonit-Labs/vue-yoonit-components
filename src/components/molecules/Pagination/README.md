@@ -66,18 +66,21 @@ To use the component, simply invoke it in your template with the desired props
 
 #
 
- #### [**Next component**](../Notify/Notify.readme.md) :arrow_forward:
+ #### [**Next component**](../Notify/README.md) :arrow_forward:
 
  #### :arrow_backward: [**Previous component**](../PostCard/PostCard.readme.md)
-
 #
-
 ## To contribute and make it better
 
 Clone the repo, change what you want and send PR.
+For commit messages we use <a href="https://www.conventionalcommits.org/">Conventional Commits</a>.
 
 Contributions are always welcome!
 
----
+<a href="https://github.com/Yoonit-Labs/vue-yoonit-components/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=Yoonit-Labs/vue-yoonit-components" />
+</a>
+  
+---  
 
-Code with ❤ by the [**Cyberlabs AI**](https://cyberlabs.ai/) Front-End Team
+Code with ❤ by the [**Yoonit**](https://yoonit.dev/) Team

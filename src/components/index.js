@@ -1,3 +1,19 @@
+/**
+ * ██╗   ██╗ ██████╗  ██████╗ ███╗   ██╗██╗████████╗
+ * ╚██╗ ██╔╝██╔═══██╗██╔═══██╗████╗  ██║██║╚══██╔══╝
+ *  ╚████╔╝ ██║   ██║██║   ██║██╔██╗ ██║██║   ██║
+ *   ╚██╔╝  ██║   ██║██║   ██║██║╚██╗██║██║   ██║
+ *    ██║   ╚██████╔╝╚██████╔╝██║ ╚████║██║   ██║
+ *    ╚═╝    ╚═════╝  ╚═════╝ ╚═╝  ╚═══╝╚═╝   ╚═╝
+ *
+ * https://yoonit.dev - about@yoonit.dev
+ *
+ * Vue Yoonit Components
+ * VueJS Atomic Design System framework
+ *
+ * Vitória Costa, Tiago Brito, Fernando Junior, Sabrina Sampaio, Gabriel Mule, Gabriel Moraes, Gabriel Rizzo & Luigui Delyer @ 2020-2021
+ */
+
 import YooAnimation from './atoms/Animation/Animation.vue'
 import YooAvatar from './atoms/Avatar/Avatar.vue'
 import YooButton from './atoms/Button/Button.vue'

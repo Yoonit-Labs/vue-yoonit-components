@@ -1,6 +1,8 @@
-# Yoonit Components
+[<img src="../../../assets/yoonit-icon.jpg" width="150">](https://github.com/Yoonit-Labs/vue-yoonit-components)
 
-[Home](https://github.com/Yoonit-Labs/vue-yoonit-components/blob/development/README.md) | [Atoms](https://github.com/Yoonit-Labs/vue-yoonit-components/blob/development/README.md#atoms) | [Molecules](https://github.com/Yoonit-Labs/vue-yoonit-components/blob/development/README.md#molecules) | [Bosons](https://github.com/Yoonit-Labs/vue-yoonit-components/blob/development/README.md#bosons) | [Quarks](https://github.com/Yoonit-Labs/vue-yoonit-components/blob/development/README.md#quarks)
+# Vue Yoonit Components
+
+[Home](https://github.com/Yoonit-Labs/vue-yoonit-components) | [Atoms](https://github.com/Yoonit-Labs/vue-yoonit-components/blob/feature/readme/README.md#atoms) | [Molecules](https://github.com/Yoonit-Labs/vue-yoonit-components/blob/feature/readme/README.md#molecules) | [Bosons](https://github.com/Yoonit-Labs/vue-yoonit-components/blob/feature/readme/README.md#bosons) | [Quarks](https://github.com/Yoonit-Labs/vue-yoonit-components/blob/feature/readme/README.md#quarks)
 
 ## YooButton
 
@@ -35,12 +37,18 @@ The output of the above code will be:
 | **`current`** | Number | `0` | Any Number | Arrow which button is active. | false |
 
 #### [**Next component**](../Card/README.md) :arrow_forward:
+#
 ## To contribute and make it better
 
 Clone the repo, change what you want and send PR.
+For commit messages we use <a href="https://www.conventionalcommits.org/">Conventional Commits</a>.
 
 Contributions are always welcome!
 
----
+<a href="https://github.com/Yoonit-Labs/vue-yoonit-components/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=Yoonit-Labs/vue-yoonit-components" />
+</a>
+  
+---  
 
-Code with ❤ by the [**Cyberlabs AI**](https://cyberlabs.ai/) Front-End Team
+Code with ❤ by the [**Yoonit**](https://yoonit.dev/) Team

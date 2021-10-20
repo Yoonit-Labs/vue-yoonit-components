@@ -1,7 +1,10 @@
-[<img src="https://raw.githubusercontent.com/Yoonit-Labs/nativescript-yoonit-camera/development/logo_cyberlabs.png" width="300">](https://cyberlabs.ai/)
+[<img src="../../../assets/yoonit-icon.jpg" width="150">](https://github.com/Yoonit-Labs/vue-yoonit-components)
+
+# Vue Yoonit Components
+
+[Home](https://github.com/Yoonit-Labs/vue-yoonit-components) | [Atoms](https://github.com/Yoonit-Labs/vue-yoonit-components/blob/feature/readme/README.md#atoms) | [Molecules](https://github.com/Yoonit-Labs/vue-yoonit-components/blob/feature/readme/README.md#molecules) | [Bosons](https://github.com/Yoonit-Labs/vue-yoonit-components/blob/feature/readme/README.md#bosons) | [Quarks](https://github.com/Yoonit-Labs/vue-yoonit-components/blob/feature/readme/README.md#quarks)
 
 ## Animation
-
 
 Component to make an animation using a json generated on the [**LottieFiles**](https://lottiefiles.com/) website
 
@@ -40,16 +43,19 @@ The output of the above code will be:
 
 #
 
- #### :arrow_forward: [**Next component**](../Avatar/Readme.md)
-
+ #### :arrow_forward: [**Next component**](../Avatar/README.md)
 #
-
 ## To contribute and make it better
 
 Clone the repo, change what you want and send PR.
+For commit messages we use <a href="https://www.conventionalcommits.org/">Conventional Commits</a>.
 
 Contributions are always welcome!
 
----
+<a href="https://github.com/Yoonit-Labs/vue-yoonit-components/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=Yoonit-Labs/vue-yoonit-components" />
+</a>
+  
+---  
 
-Code with ❤ by the [**Cyberlabs AI**](https://cyberlabs.ai/) Front-End Team
+Code with ❤ by the [**Yoonit**](https://yoonit.dev/) Team
