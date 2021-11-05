@@ -85,5 +85,3 @@ export default {
   }
 }
 </script>
-
-<style src="./Stepper.sass" lang="sass" scoped></style>
