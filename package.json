@@ -27,7 +27,7 @@
     "storybook": "start-storybook -p 6006"
   },
   "dependencies": {
-    "@yoonit/style": "^2.1.4",
+    "@yoonit/style": "^2.1.5",
     "core-js": "^3.6.5",
     "lottie-web": "^5.7.4",
     "vue": "^2.6.11"
