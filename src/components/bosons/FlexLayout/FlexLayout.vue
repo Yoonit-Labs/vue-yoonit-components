@@ -133,5 +133,3 @@ export default {
   }
 }
 </script>
-
-<style src="./FlexLayout.sass" lang="sass" scoped></style>

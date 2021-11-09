@@ -42,4 +42,3 @@ export default {
   }
 }
 </script>
-<style src="./ScrollView.sass" lang="sass" scoped></style>
