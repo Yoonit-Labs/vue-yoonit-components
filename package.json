@@ -61,7 +61,7 @@
     "jest-canvas-mock": "^2.3.0",
     "jest-coverage-badges": "^1.1.2",
     "json": "^10.0.0",
-    "node-sass": "^4.12.0",
+    "node-sass": "^7.0.0",
     "pug": "^3.0.2",
     "pug-jest": "^1.0.1",
     "pug-plain-loader": "^1.1.0",
