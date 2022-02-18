@@ -2,11 +2,16 @@
   "name": "@yoonit/vue-components",
   "version": "0.2.3",
   "private": false,
+  "description": "VueJS Atomic Design System framework",
   "main": "yoo.common.js",
   "unpkg": "yoo.min.js",
   "files": [
     "**/yoo.*.js"
   ],
+  "author": {
+    "email": "about@yoonit.dev",
+    "name": "Vitória Costa, Tiago Brito, Fernando Junior, Sabrina Sampaio, Gabriel Mule, Gabriel Moraes, Gabriel Rizzo & Luigui Delyer @ 2020-2021"
+  },
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "bash ./build.sh",
@@ -22,7 +27,7 @@
     "storybook": "start-storybook -p 6006"
   },
   "dependencies": {
-    "@yoonit/style": "^2.0.2",
+    "@yoonit/style": "^2.1.5",
     "core-js": "^3.6.5",
     "lottie-web": "^5.7.4",
     "vue": "^2.6.11"
@@ -30,10 +35,10 @@
   "devDependencies": {
     "@babel/core": "^7.12.9",
     "@storybook/addon-actions": "^6.3.9",
-    "@storybook/addon-essentials": "^6.3.9",
+    "@storybook/addon-essentials": "^6.4.19",
     "@storybook/addon-links": "^6.3.9",
     "@storybook/preset-scss": "^1.0.3",
-    "@storybook/vue": "^6.3.9",
+    "@storybook/vue": "^6.4.19",
     "@vue/cli-plugin-babel": "~4.5.0",
     "@vue/cli-plugin-e2e-nightwatch": "~4.5.0",
     "@vue/cli-plugin-eslint": "~4.5.0",

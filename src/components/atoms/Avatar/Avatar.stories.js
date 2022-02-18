@@ -1,6 +1,22 @@
+/**
+ * ██╗   ██╗ ██████╗  ██████╗ ███╗   ██╗██╗████████╗
+ * ╚██╗ ██╔╝██╔═══██╗██╔═══██╗████╗  ██║██║╚══██╔══╝
+ *  ╚████╔╝ ██║   ██║██║   ██║██╔██╗ ██║██║   ██║
+ *   ╚██╔╝  ██║   ██║██║   ██║██║╚██╗██║██║   ██║
+ *    ██║   ╚██████╔╝╚██████╔╝██║ ╚████║██║   ██║
+ *    ╚═╝    ╚═════╝  ╚═════╝ ╚═╝  ╚═══╝╚═╝   ╚═╝
+ *
+ * https://yoonit.dev - about@yoonit.dev
+ *
+ * Vue Yoonit Components
+ * VueJS Atomic Design System framework
+ *
+ * Vitória Costa, Tiago Brito, Fernando Junior, Sabrina Sampaio, Gabriel Mule, Gabriel Moraes, Gabriel Rizzo & Luigui Delyer @ 2020-2021
+ */
+
 import YooAvatar from '@/components/atoms/Avatar/Avatar.vue'
 import PropsConfig from '@/components/atoms/Avatar/Avatar.config'
-import logo from '@/assets/yoonit-logo.jpg'
+import logo from '@/assets/yoonit-icon.jpg'
 
 export default {
   title: 'Yoonit/YooAvatar',

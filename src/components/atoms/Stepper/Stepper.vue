@@ -18,6 +18,21 @@ YooFlexLayout.yoo-stepper(
 </template>
 
 <script>
+/**
+ * ██╗   ██╗ ██████╗  ██████╗ ███╗   ██╗██╗████████╗
+ * ╚██╗ ██╔╝██╔═══██╗██╔═══██╗████╗  ██║██║╚══██╔══╝
+ *  ╚████╔╝ ██║   ██║██║   ██║██╔██╗ ██║██║   ██║
+ *   ╚██╔╝  ██║   ██║██║   ██║██║╚██╗██║██║   ██║
+ *    ██║   ╚██████╔╝╚██████╔╝██║ ╚████║██║   ██║
+ *    ╚═╝    ╚═════╝  ╚═════╝ ╚═╝  ╚═══╝╚═╝   ╚═╝
+ *
+ * https://yoonit.dev - about@yoonit.dev
+ *
+ * Vue Yoonit Components
+ * VueJS Atomic Design System framework
+ *
+ * Vitória Costa, Tiago Brito, Fernando Junior, Sabrina Sampaio, Gabriel Mule, Gabriel Moraes, Gabriel Rizzo & Luigui Delyer @ 2020-2021
+ */
 
 import YooFlexLayout from '@/components/bosons/FlexLayout/FlexLayout.vue'
 import PropsConfig from '@/components/atoms/Stepper/Stepper.config'
@@ -70,5 +85,3 @@ export default {
   }
 }
 </script>
-
-<style src="./Stepper.sass" lang="sass" scoped></style>

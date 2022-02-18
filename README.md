@@ -1,13 +1,55 @@
-[<img src="https://raw.githubusercontent.com/Yoonit-Labs/nativescript-yoonit-camera/development/logo_cyberlabs.png" width="300">](https://cyberlabs.ai/)
+<h1 align="center">Vue Yoonit Components</h1>
 
+<p align="center">
+    <img src="https://img.shields.io/badge/Vue.js-35495E?color=lightgrey&style=for-the-badge&logo=vue.js"/>
+    <img src="https://img.shields.io/badge/Storybook-35495E?color=lightgrey&style=for-the-badge&logo=storybook"/>
+	<img src="https://img.shields.io/npm/v/@yoonit/nativescript-camera?color=lightgrey&style=for-the-badge&logo=npm"/>
+	<img src="https://img.shields.io/npm/dm/@yoonit/nativescript-camera?color=lightgrey&logo=npm&style=for-the-badge"/>
+	<img src="https://img.shields.io/npm/l/@yoonit/nativescript-camera?color=lightgrey&style=for-the-badge"/>
+</p>
+<p align="center">The Atomic Design System framework</p>
 
-# Vue Yoonit Components
+<div align="center">
+	<table>
+		<tbody>
+			<tr>
+				<td align="left" valign="middle">
+                    <p>◻ 26 Vue Components to create modern UI's</p>
+                    <p>◻ Grid and Flex layout components</p>
+                    <p>◻ Unit tests with 100% coverage</p>
+                    <p>◻ All components documented with Storybook</p>
+                    <p>◻ Standardized code</p>
+                    <p>◻ Consistency between interfaces</p>
+                    <p>◻ The extended definition of Atomic Design including Bosons and Quarks</p>
+                    <p>◻ SASS with BEM</p>
+                    <p>◻ Fully customizable with themes provided by <a src="https://github.com/Yoonit-Labs/sass-yoonit-style">@yoonit/style</a></p>
+				</td>
+				<td align="center" valign="middle">
+					<img src="./yoonit.png" width="300" />
+				</td>
+			</tr>
+		<tbody>
+	</table>
+</div>
 
-![Version](https://img.shields.io/npm/v/@yoonit/nativescript-camera?color=lightgrey&style=for-the-badge&logo=npm)
-![Downloads](https://img.shields.io/npm/dm/@yoonit/nativescript-camera?color=lightgrey&logo=npm&style=for-the-badge)
-![Vue](https://img.shields.io/badge/Vue.js-35495E?color=lightgrey&style=for-the-badge&logo=vue.js)
-![Storybook](https://img.shields.io/badge/Storybook-35495E?color=lightgrey&style=for-the-badge&logo=storybook)
-![MIT license](https://img.shields.io/npm/l/@yoonit/nativescript-camera?color=lightgrey&style=for-the-badge)
+<div align="center">
+	<h3>Sponsors</h3>
+	<table align="center">
+		<tbody align="center">
+			<tr>
+				<td>
+					<b>Platinum</b>
+				</td>
+			</tr>
+			<tr>
+				<td align="center" valign="middle">
+					<a href="https://cyberlabs.ai"><img src="./sponsor_cyberlabs.png" width="300" /></a>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+	<h5><a href="mailto:about@yoonit.dev">Become a sponsor!</a></h5>
+</div>
 
 ### [Atoms](#atoms)
 * [YooAnimation](https://github.com/Yoonit-Labs/vue-yoonit-components/tree/development/src/components/atoms/Animation)
@@ -39,13 +81,6 @@
 ### [Quarks](#quarks)
 * [YooIndicator](https://github.com/Yoonit-Labs/vue-yoonit-components/tree/development/src/components/quarks/Indicator)
 
-
-A Vue lib to provide:
-- 26 Vue Components to create interfaces
-- Unit tests with 100% coverage
-- Standardized code
-- Consistency between interfaces
-
 ## Installation
 
 ```javascript
@@ -66,7 +101,7 @@ import YoonitVueComponents from '@yoonit/vue-components'
 Vue.use(YoonitVueComponents)
 ```
 
-After that, you can access each component by calling it in the html template.
+After that, you can access each component by calling it in the html template. It is not necessary to import manually each component in your template.
 
 ## StoryBook
 
@@ -77,15 +112,19 @@ npm run storybook
 ```
 After running the command above, an address will be available for you to access the component library. There you will be able to meet, interact and copy the code ready to put in your project.
 
-[<img src="https://github.com/Yoonit-Labs/vue-yoonit-components/blob/feature/readme/public/readme-img/StorybookButton.png" width="960">](https://cyberlabs.ai/)
-
+<img src="./public/readme-img/StorybookButton.png" width="960">
 
 ## To contribute and make it better
 
 Clone the repo, change what you want and send PR.
+For commit messages we use <a href="https://www.conventionalcommits.org/">Conventional Commits</a>.
 
 Contributions are always welcome!
 
----
+<a href="https://github.com/Yoonit-Labs/vue-yoonit-components/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=Yoonit-Labs/vue-yoonit-components" />
+</a>
+  
+---  
 
-Code with ❤ by the [**Cyberlabs AI**](https://cyberlabs.ai/) Front-End Team
+Code with ❤ by the [**Yoonit**](https://yoonit.dev/) Team

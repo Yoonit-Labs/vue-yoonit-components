@@ -1,7 +1,23 @@
+/**
+ * ██╗   ██╗ ██████╗  ██████╗ ███╗   ██╗██╗████████╗
+ * ╚██╗ ██╔╝██╔═══██╗██╔═══██╗████╗  ██║██║╚══██╔══╝
+ *  ╚████╔╝ ██║   ██║██║   ██║██╔██╗ ██║██║   ██║
+ *   ╚██╔╝  ██║   ██║██║   ██║██║╚██╗██║██║   ██║
+ *    ██║   ╚██████╔╝╚██████╔╝██║ ╚████║██║   ██║
+ *    ╚═╝    ╚═════╝  ╚═════╝ ╚═╝  ╚═══╝╚═╝   ╚═╝
+ *
+ * https://yoonit.dev - about@yoonit.dev
+ *
+ * Vue Yoonit Components
+ * VueJS Atomic Design System framework
+ *
+ * Vitória Costa, Tiago Brito, Fernando Junior, Sabrina Sampaio, Gabriel Mule, Gabriel Moraes, Gabriel Rizzo & Luigui Delyer @ 2020-2021
+ */
+
 import yooHeader from './Header.vue'
 import yooButton from '@/components/atoms/Button/Button.vue'
 import yooAvatar from '@/components/atoms/Avatar/Avatar.vue'
-import logo from '@/assets/yoonit-logo.jpg'
+import logo from '@/assets/yoonit-icon.jpg'
 
 export default {
   title: 'Yoonit/YooHeader',
