@@ -56,6 +56,7 @@ import YooCanvasCore from '@/components/atoms/CanvasCore/CanvasCore.vue'
 import YooGetUserMedia from '@/components/quarks/GetUserMedia/GetUserMedia.vue'
 import YooCanvasFrameCapture from '@/components/quarks/CanvasFrameCapture/CanvasFrameCapture.vue'
 import YooCanvasRenderFrame from '@/components/quarks/CanvasRenderFrame/CanvasRenderFrame.vue'
+import PropsConfig from '@/components/molecules/Camera/Camera.config'
 
 export default {
   name: 'YooCamera',
@@ -82,22 +83,13 @@ export default {
     },
     mode: {
       type: String,
-      validator: (mode) => {
-        return mode === 'face' || mode === 'document'
-      },
-      default: 'face'
+      validator: (mode) => PropsConfig.mode.options.includes(mode),
+      default: PropsConfig.mode.default
     },
     facingMode: {
       type: String,
-      validator: (facingMode) => {
-        const acceptedValues = [
-          'user',
-          'environment'
-        ]
-
-        return acceptedValues.includes(facingMode)
-      },
-      default: 'user'
+      validator: (facingMode) => PropsConfig.facingMode.options.includes(facingMode),
+      default: PropsConfig.facingMode.default
     },
     blob: {
       type: Boolean,

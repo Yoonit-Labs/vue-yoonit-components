@@ -1,0 +1,12 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Testing YooCamera Testing render & style Should match snapshot 1`] = `
+<div class="yoo-card yoo-card__fill--white" showcamera="true" roi="[object Object]" captureamount="3" mode="face" base64="true" facingmode="user">
+  <yooflexlayout-stub flexdirection="row" flexwrap="nowrap" justifycontent="space-between" alignitems="stretch" aligncontent="stretch" gap="0" row="1" col="1" width="100%">
+    <yooicon-stub icon="" iconstyle="solid" size="md" fill="neutral" class="yoo-card__icon"></yooicon-stub>
+    <!---->
+  </yooflexlayout-stub>
+  <h3 row="2" col="1" class="yoo-card__title"></h3>
+  <p row="3" col="1" class="yoo-card__subtitle"></p>
+</div>
+`;
