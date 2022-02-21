@@ -221,5 +221,3 @@ export default {
   }
 }
 </script>
-
-<style src="./GetUserMedia.sass" scoped lang="sass"></style>

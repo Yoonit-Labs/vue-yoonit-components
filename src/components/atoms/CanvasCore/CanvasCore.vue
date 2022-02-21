@@ -232,5 +232,3 @@ export default {
   }
 }
 </script>
-
-<style src="./CanvasCore.sass" lang="sass" scoped></style>

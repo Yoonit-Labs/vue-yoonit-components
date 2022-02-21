@@ -286,5 +286,3 @@ export default {
 }
 
 </script>
-
-<style src="./Camera.sass" lang="sass" scoped></style>

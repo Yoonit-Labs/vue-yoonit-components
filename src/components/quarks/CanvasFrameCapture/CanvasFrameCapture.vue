@@ -339,5 +339,3 @@ export default {
   }
 }
 </script>
-
-<style src="./CanvasFrameCapture.sass" lang="sass" scoped></style>

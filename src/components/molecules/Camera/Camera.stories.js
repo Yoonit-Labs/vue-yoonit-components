@@ -27,9 +27,9 @@ const Template = (args, { argTypes }) => ({
   components: { YooCamera },
   template: `
     <div style="width: 400px; height: 430px">
-      <yoo-camera v-bind="$props" @frame="emitFrame" @permissionDenied="permissionDenied"/>
+      <yoo-camera v-bind="$props" @frame="emitFrame" @permissionDenied="permissionDeniedHandler"/>
     </div>`,
-  methods: { emitFrame: action('Frame'), permissionDenied: action('Denied') }
+  methods: { emitFrame: action('Frame'), permissionDeniedHandler: action('Denied') }
 })
 
 export const Custom = Template.bind({})
