@@ -14,7 +14,7 @@
 </template>
 
 <script>
-import YooCanvasBind from '@/components/bosons/CanvasBind/CanvasBind.vue'
+import YooCanvasBind from '@/components/bosons/CanvasBind/CanvasBind'
 
 import YooCanvasGuide from '@/components/quarks/CanvasGuide/CanvasGuide.vue'
 
@@ -233,7 +233,4 @@ export default {
 }
 </script>
 
-<style lang="sass">
-#core
-  position: relative
-</style>
+<style src="./CanvasCore.sass" lang="sass" scoped></style>

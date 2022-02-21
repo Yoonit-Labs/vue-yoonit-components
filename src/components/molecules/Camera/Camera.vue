@@ -287,8 +287,4 @@ export default {
 
 </script>
 
-<style lang="sass" scoped>
-.app__container
-  width: 100%
-  height: 100%
-</style>
+<style src="./Camera.sass" lang="sass" scoped></style>

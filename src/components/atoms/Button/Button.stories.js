@@ -16,6 +16,7 @@
 
 import YooButton from './Button.vue'
 import PropsConfig from '@/components/atoms/Button/Button.config'
+import { action } from '@storybook/addon-actions'
 
 export default {
   title: 'Yoonit/YooButton',
@@ -92,8 +93,8 @@ export default {
 const Template = (args, { argTypes }) => ({
   props: Object.keys(argTypes),
   components: { YooButton },
-  template:
-    '<yoo-button v-bind="$props"></yoo-button>'
+  template: '<yoo-button v-bind="$props" @onClick="actionClick"></yoo-button>',
+  methods: { actionClick: action('clicked') }
 })
 
 export const Custom = Template.bind({})

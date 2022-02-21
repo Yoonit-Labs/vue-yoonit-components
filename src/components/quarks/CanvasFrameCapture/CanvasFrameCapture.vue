@@ -340,10 +340,4 @@ export default {
 }
 </script>
 
-<style lang="sass" scoped>
-#core__canvas--capture
-  position: absolute
-  right: 0
-  bottom: 0
-  z-index: 1
-</style>
+<style src="./CanvasFrameCapture.sass" lang="sass" scoped></style>

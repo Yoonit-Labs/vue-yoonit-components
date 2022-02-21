@@ -222,9 +222,4 @@ export default {
 }
 </script>
 
-<style scoped lang="sass">
-img,
-video
-  background-color: #000
-  object-fit: cover
-</style>
+<style src="./GetUserMedia.sass" scoped lang="sass"></style>
