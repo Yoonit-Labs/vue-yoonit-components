@@ -56,5 +56,23 @@ describe('Testing YooCamera', () => {
       await wrapper.vm.$nextTick()
       expect(wrapper.emitted().frame).toBeTruthy()
     })
+
+    it('Should emit finish event', async () => {
+      const wrapper = mountDefaultYooCamera(mount)
+
+      wrapper.vm.$nextTick('finish')
+
+      await wrapper.vm.$nextTick()
+      expect(wrapper.emitted().finish).toBeTruthy()
+    })
+
+    it('Should emit permissionDenied event', async () => {
+      const wrapper = mountDefaultYooCamera(mount)
+
+      wrapper.vm.$nextTick('permissionDenied')
+
+      await wrapper.vm.$nextTick()
+      expect(wrapper.emitted().permissionDenied).toBeTruthy()
+    })
   })
 })
