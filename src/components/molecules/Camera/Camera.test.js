@@ -15,8 +15,15 @@
  */
 
 import { mount, shallowMount } from '@vue/test-utils'
-import YooCamera from '@/components/molecules/Card/Card.vue'
+import YooCamera from '@/components/molecules/Camera/Camera.vue'
 import PropsConfig from './Camera.config'
+
+beforeAll(() => {
+  window.MediaStream = jest.fn().mockImplementation(() => ({
+    addTrack: jest.fn()
+  }))
+  window.HTMLMediaElement.prototype.play = jest.fn()
+})
 
 const mountDefaultYooCamera = (mountType) => {
   return mountType(YooCamera, {
@@ -60,7 +67,7 @@ describe('Testing YooCamera', () => {
     it('Should emit finish event', async () => {
       const wrapper = mountDefaultYooCamera(mount)
 
-      wrapper.vm.$nextTick('finish')
+      wrapper.vm.$emit('finish')
 
       await wrapper.vm.$nextTick()
       expect(wrapper.emitted().finish).toBeTruthy()
@@ -69,10 +76,16 @@ describe('Testing YooCamera', () => {
     it('Should emit permissionDenied event', async () => {
       const wrapper = mountDefaultYooCamera(mount)
 
-      wrapper.vm.$nextTick('permissionDenied')
+      wrapper.vm.$emit('permissionDenied')
 
       await wrapper.vm.$nextTick()
       expect(wrapper.emitted().permissionDenied).toBeTruthy()
+    })
+
+    it('Should return correct facing mode', () => {
+      const localThis = { facingMode: PropsConfig.facingMode.default }
+
+      expect(YooCamera.computed.takeStream.call(localThis).video.facingMode).toBe(PropsConfig.facingMode.default)
     })
   })
 })
