@@ -23,6 +23,8 @@ beforeAll(() => {
     addTrack: jest.fn()
   }))
   window.HTMLMediaElement.prototype.play = jest.fn()
+
+  window.getComputedStyle = jest.fn().mockImplementationOnce(() => { return { width: '200px', height: '200px' } })
 })
 
 const mountDefaultYooCamera = (mountType) => {
@@ -162,6 +164,28 @@ describe('Testing YooCamera', () => {
       }
 
       expect(YooCamera.computed.takeRoiConfig.call(localThis)).toStrictEqual({})
+    })
+
+    it('doGetVideoElm should set input element to data', () => {
+      const wrapper = mountDefaultYooCamera(mount)
+      const mockElement = {
+        videoWidth: 1920,
+        videoHeight: 1080
+      }
+
+      wrapper.vm.doGetVideoElm(mockElement)
+
+      expect(wrapper.vm.$data.userMediaElm).toStrictEqual(mockElement)
+      expect(wrapper.vm.$data.frameSize.width).toStrictEqual(mockElement.videoWidth)
+      expect(wrapper.vm.$data.frameSize.height).toStrictEqual(mockElement.videoHeight)
+    })
+
+    it('Checking canvas dimension output', () => {
+      const wrapper = mountDefaultYooCamera(mount)
+
+      wrapper.vm.doSetCanvasDimension()
+
+      expect(wrapper.vm.$data.canvasSize).toStrictEqual({ width: 200, height: 200 })
     })
   })
 })
