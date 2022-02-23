@@ -17,6 +17,7 @@
 import { mount, shallowMount } from '@vue/test-utils'
 import YooCamera from '@/components/molecules/Camera/Camera.vue'
 import PropsConfig from './Camera.config'
+import { dimensionRulesEnum } from '@/enums/CanvasSize'
 
 beforeAll(() => {
   window.MediaStream = jest.fn().mockImplementation(() => ({
@@ -24,7 +25,7 @@ beforeAll(() => {
   }))
   window.HTMLMediaElement.prototype.play = jest.fn()
 
-  window.getComputedStyle = jest.fn().mockImplementationOnce(() => { return { width: '200px', height: '200px' } })
+  window.getComputedStyle = jest.fn().mockImplementation(() => { return { width: '200px', height: '200px' } })
 })
 
 const mountDefaultYooCamera = (mountType) => {
@@ -186,6 +187,49 @@ describe('Testing YooCamera', () => {
       wrapper.vm.doSetCanvasDimension()
 
       expect(wrapper.vm.$data.canvasSize).toStrictEqual({ width: 200, height: 200 })
+    })
+
+    it('Should generate correct ROI to document', () => {
+      const wrapper = mountDefaultYooCamera(mount)
+      const { BIG_CANVAS, SMALL_CANVAS } = dimensionRulesEnum
+      const canvasSize = [BIG_CANVAS, SMALL_CANVAS]
+
+      canvasSize.forEach((size) => {
+        wrapper.setProps({
+          canvasSize: {
+            width: size,
+            height: size
+          },
+          mode: PropsConfig.mode.options.find(mode => mode === 'document')
+        })
+
+        wrapper.vm.doSetRenderCanvas()
+
+        expect(wrapper.vm.$data.roiWidth).toBeTruthy()
+        expect(wrapper.vm.$data.roiHeight).toBeTruthy()
+      })
+    })
+    it('Should generate correct ROI to document and face', () => {
+      const wrapper = mountDefaultYooCamera(mount)
+      const { BIG_CANVAS, SMALL_CANVAS } = dimensionRulesEnum
+      const canvasSize = [BIG_CANVAS, SMALL_CANVAS]
+
+      canvasSize.forEach((size) => {
+        PropsConfig.mode.options.forEach((mode) => {
+          wrapper.setProps({
+            canvasSize: {
+              width: size,
+              height: size
+            },
+            mode
+          })
+
+          wrapper.vm.doSetRenderCanvas()
+
+          expect(wrapper.vm.$data.roiWidth).toBeTruthy()
+          expect(wrapper.vm.$data.roiHeight).toBeTruthy()
+        })
+      })
     })
   })
 })
