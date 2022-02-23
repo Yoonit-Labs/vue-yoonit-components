@@ -28,5 +28,8 @@ module.exports = {
       'document'
     ],
     default: 'face'
+  },
+  roi: {
+    default: {}
   }
 }

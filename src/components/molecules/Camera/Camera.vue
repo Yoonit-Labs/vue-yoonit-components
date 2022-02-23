@@ -71,7 +71,7 @@ export default {
     },
     roi: {
       type: Object,
-      default: () => ({})
+      default: PropsConfig.roi.default
     },
     capture: {
       type: Boolean,

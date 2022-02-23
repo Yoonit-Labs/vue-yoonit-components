@@ -25,6 +25,21 @@ const mockVideoElement = {
   videoHeight: 1080
 }
 
+const roiSizeCases = () => ({
+  widthHigherThanHeight: {
+    width: 500,
+    height: 450
+  },
+  heightHigherThanWidth: {
+    width: 450,
+    height: 500
+  },
+  equalDimensions: {
+    width: 500,
+    height: 500
+  }
+})
+
 beforeAll(() => {
   window.MediaStream = jest.fn().mockImplementation(() => ({
     addTrack: jest.fn()
@@ -70,47 +85,30 @@ describe('Testing YooCamera', () => {
       expect(Object.keys(wrapper.vm.canvasSize)).toStrictEqual(['width', 'height'])
     })
 
-    it('Should return that input is valid', () => {
+    it('doVerifyOutputFrame Should return that input is valid', () => {
       const wrapper = mountDefaultYooCamera(mount)
       const base64Image = new String('image')
 
       console.log(wrapper.vm.doVerifyOutputFrame(base64Image))
     })
 
-    it('Should change value from props', async () => {
-      const wrapper = mountDefaultYooCamera(mount)
-
-      wrapper.setProps({
-        showCamera: false,
-        debug: false,
-        capture: false,
-        roi: {
-          areaRadius: 0,
-          areaStroke: 5,
-          areaColor: '#d1ff00'
-        },
-        captureAmount: 3,
-        mode: PropsConfig.mode.options[1],
-        base64: false,
-        blob: true,
-        facingMode: 'environment'
-      })
-
-      await wrapper.vm.$nextTick()
-      expect(wrapper).toBeTruthy()
-    })
-
-    it('Checking canvas dimension output', () => {
+    it('doSetCanvasDimension should return canvas dimension output correctly based on computedStyles mock function', () => {
       const wrapper = mountDefaultYooCamera(mount)
 
       wrapper.vm.doSetCanvasDimension()
 
-      expect(wrapper.vm.$data.canvasSize).toStrictEqual({ width: 200, height: 200 })
+      expect(wrapper.vm.$data.canvasSize).toStrictEqual({
+        width: 200,
+        height: 200
+      })
     })
 
-    it('Should generate correct ROI to document', () => {
+    it('doSetRenderCanvas Should generate correct ROI to document', () => {
       const wrapper = mountDefaultYooCamera(mount)
-      const { BIG_CANVAS, SMALL_CANVAS } = dimensionRulesEnum
+      const {
+        BIG_CANVAS,
+        SMALL_CANVAS
+      } = dimensionRulesEnum
       const canvasSize = [BIG_CANVAS, SMALL_CANVAS]
 
       canvasSize.forEach((size) => {
@@ -129,14 +127,22 @@ describe('Testing YooCamera', () => {
       })
     })
 
-    it('Should generate correct ROI to document and face', () => {
+    it('doSetRenderCanvas Should generate correct ROI to document and face', () => {
       const cornerCaseSize = 700
-      const { BIG_CANVAS, SMALL_CANVAS } = dimensionRulesEnum
+      const {
+        BIG_CANVAS,
+        SMALL_CANVAS
+      } = dimensionRulesEnum
       const canvasSize = [BIG_CANVAS, SMALL_CANVAS, cornerCaseSize]
 
       canvasSize.forEach((size) => {
         PropsConfig.mode.options.forEach((mode) => {
-          window.getComputedStyle = jest.fn().mockImplementation(() => { return { width: `${size}px`, height: `${size}px` } })
+          window.getComputedStyle = jest.fn().mockImplementation(() => {
+            return {
+              width: `${size}px`,
+              height: `${size}px`
+            }
+          })
           const wrapper = mount(YooCamera, {
             propsData: {
               showCamera: true,
@@ -161,6 +167,75 @@ describe('Testing YooCamera', () => {
           expect(wrapper.vm.$data.roiHeight).toBeTruthy()
         })
       })
+    })
+
+    it('generateFaceRoi should return roi width and height for different dimension inputs', () => {
+      const wrapper = mountDefaultYooCamera(mount)
+
+      Object.keys(roiSizeCases()).forEach((sizeVariation) => {
+        wrapper.vm.$data.canvasSize = { ...roiSizeCases()[sizeVariation] }
+        wrapper.vm.doGenerateFaceRoi(dimensionRulesEnum.face.SMALL_CANVAS_ADJUSTMENT)
+
+        expect(wrapper.vm.$data.roiWidth).toBeTruthy()
+        expect(wrapper.vm.$data.roiHeight).toBeTruthy()
+      })
+    })
+
+    it('generateDocumentRoi should return roi width and height for different dimension inputs', async () => {
+      const wrapper = mountDefaultYooCamera(mount)
+
+      wrapper.setProps({
+        mode: PropsConfig.mode.options.find(mode => mode === 'document')
+      })
+
+      await wrapper.vm.$nextTick()
+
+      Object.keys(roiSizeCases()).forEach((sizeVariation) => {
+        wrapper.vm.$data.canvasSize = { ...roiSizeCases()[sizeVariation] }
+        wrapper.vm.doGenerateFaceRoi(dimensionRulesEnum.document.SMALL_CANVAS_ADJUSTMENT)
+
+        expect(wrapper.vm.$data.roiWidth).toBeTruthy()
+        expect(wrapper.vm.$data.roiHeight).toBeTruthy()
+      })
+    })
+
+    // it('Should call doSetRenderCanvas on mounted hook', async () => {
+    //   const doSetRenderCanvas = jest.fn()
+    //
+    //   const { mounted } = YooCamera
+    //   const sampleComponent = {
+    //     $nextTick: () => { return new Promise(resolve => resolve) },
+    //     mounted,
+    //     doSetRenderCanvas
+    //   }
+    //   sampleComponent.mounted()
+    //
+    //   expect(doSetRenderCanvas).toBeCalled()
+    // })
+  })
+
+  describe('Component props', () => {
+    it('Should change value from props', async () => {
+      const wrapper = mountDefaultYooCamera(mount)
+
+      wrapper.setProps({
+        showCamera: false,
+        debug: false,
+        capture: false,
+        roi: {
+          areaRadius: 0,
+          areaStroke: 5,
+          areaColor: '#d1ff00'
+        },
+        captureAmount: 3,
+        mode: PropsConfig.mode.options[1],
+        base64: false,
+        blob: true,
+        facingMode: PropsConfig.facingMode.options[1]
+      })
+
+      await wrapper.vm.$nextTick()
+      expect(wrapper).toBeTruthy()
     })
   })
 
