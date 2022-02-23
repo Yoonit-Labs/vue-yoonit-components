@@ -20,6 +20,11 @@ import PropsConfig from './Camera.config'
 import { dimensionRulesEnum } from '@/enums/CanvasSize'
 import YooGetUserMedia from '@/components/quarks/GetUserMedia/GetUserMedia.vue'
 
+const mockVideoElement = {
+  videoWidth: 1920,
+  videoHeight: 1080
+}
+
 beforeAll(() => {
   window.MediaStream = jest.fn().mockImplementation(() => ({
     addTrack: jest.fn()
@@ -72,7 +77,7 @@ describe('Testing YooCamera', () => {
       console.log(wrapper.vm.doVerifyOutputFrame(base64Image))
     })
 
-    it('Should change value from props', () => {
+    it('Should change value from props', async () => {
       const wrapper = mountDefaultYooCamera(mount)
 
       wrapper.setProps({
@@ -88,24 +93,11 @@ describe('Testing YooCamera', () => {
         mode: PropsConfig.mode.options[1],
         base64: false,
         blob: true,
-        facingMode: PropsConfig.facingMode.options[1]
+        facingMode: 'environment'
       })
 
+      await wrapper.vm.$nextTick()
       expect(wrapper).toBeTruthy()
-    })
-
-    it('doGetVideoElm should set input element to data', () => {
-      const wrapper = mountDefaultYooCamera(mount)
-      const mockElement = {
-        videoWidth: 1920,
-        videoHeight: 1080
-      }
-
-      wrapper.vm.doGetVideoElm(mockElement)
-
-      expect(wrapper.vm.$data.userMediaElm).toStrictEqual(mockElement)
-      expect(wrapper.vm.$data.frameSize.width).toStrictEqual(mockElement.videoWidth)
-      expect(wrapper.vm.$data.frameSize.height).toStrictEqual(mockElement.videoHeight)
     })
 
     it('Checking canvas dimension output', () => {
@@ -136,19 +128,31 @@ describe('Testing YooCamera', () => {
         expect(wrapper.vm.$data.roiHeight).toBeTruthy()
       })
     })
+
     it('Should generate correct ROI to document and face', () => {
-      const wrapper = mountDefaultYooCamera(mount)
+      const cornerCaseSize = 700
       const { BIG_CANVAS, SMALL_CANVAS } = dimensionRulesEnum
-      const canvasSize = [BIG_CANVAS, SMALL_CANVAS]
+      const canvasSize = [BIG_CANVAS, SMALL_CANVAS, cornerCaseSize]
 
       canvasSize.forEach((size) => {
         PropsConfig.mode.options.forEach((mode) => {
-          wrapper.setProps({
-            canvasSize: {
-              width: size,
-              height: size
-            },
-            mode
+          window.getComputedStyle = jest.fn().mockImplementation(() => { return { width: `${size}px`, height: `${size}px` } })
+          const wrapper = mount(YooCamera, {
+            propsData: {
+              showCamera: true,
+              debug: false,
+              capture: true,
+              roi: {
+                areaRadius: 0,
+                areaStroke: 5,
+                areaColor: '#d1ff00'
+              },
+              captureAmount: 3,
+              mode,
+              base64: true,
+              blob: false,
+              facingMode: PropsConfig.facingMode.default
+            }
           })
 
           wrapper.vm.doSetRenderCanvas()
@@ -212,6 +216,18 @@ describe('Testing YooCamera', () => {
       expect(wrapper.emitted().permissionDenied).toBeTruthy()
     })
 
+    it('Should receive output event and set it to data', () => {
+      const wrapper = mountDefaultYooCamera(mount)
+
+      const getUserMedia = wrapper.findComponent(YooGetUserMedia)
+
+      getUserMedia.vm.$emit('output', mockVideoElement)
+
+      expect(wrapper.vm.$data.userMediaElm).toStrictEqual(mockVideoElement)
+      expect(wrapper.vm.$data.frameSize.width).toStrictEqual(mockVideoElement.videoWidth)
+      expect(wrapper.vm.$data.frameSize.height).toStrictEqual(mockVideoElement.videoHeight)
+    })
+
     it('Should emit capture event', async () => {
       const wrapper = mountDefaultYooCamera(mount)
 
@@ -239,11 +255,12 @@ describe('Testing YooCamera', () => {
       expect(wrapper.emitted().permissionDenied).toBeTruthy()
     })
 
-    it('Should emit finish when frame count is higher then total', () => {
+    it('Should emit finish when frame count is higher then total', async () => {
       const wrapper = mountDefaultYooCamera(mount)
 
       wrapper.vm.doGetFrame({ total: 3, count: 3 })
 
+      await wrapper.vm.$nextTick()
       expect(wrapper.emitted('finish')).toBeTruthy()
     })
   })
