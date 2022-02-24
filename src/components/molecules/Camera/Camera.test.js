@@ -78,7 +78,7 @@ describe('Testing YooCamera', () => {
     })
   })
 
-  describe('Component Logic', () => {
+  describe('Component methods', () => {
     it('Should set canvas size correctly', () => {
       const wrapper = mountDefaultYooCamera(mount)
 
@@ -89,7 +89,7 @@ describe('Testing YooCamera', () => {
       const wrapper = mountDefaultYooCamera(mount)
       const base64Image = new String('image')
 
-      console.log(wrapper.vm.doVerifyOutputFrame(base64Image))
+      expect(wrapper.vm.doVerifyOutputFrame(base64Image)).toBeTruthy()
     })
 
     it('doSetCanvasDimension should return canvas dimension output correctly based on computedStyles mock function', () => {
@@ -352,7 +352,7 @@ describe('Testing YooCamera', () => {
       expect(wrapper.emitted().permissionDenied).toBeTruthy()
     })
 
-    it('Should emit finish when frame count is equal then total', async () => {
+    it('Should emit finish when frame count is equal to total', async () => {
       const wrapper = mountDefaultYooCamera(mount)
 
       wrapper.vm.doGetFrame({ total: 3, count: 3 })
