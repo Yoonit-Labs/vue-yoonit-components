@@ -1,4 +1,20 @@
-const unsupportedError = 'Browser API navigator.mediaDevices.getUserMedia not available. Try again using Firefox, Chrome or Safari.'
+/**
+ * ██╗   ██╗ ██████╗  ██████╗ ███╗   ██╗██╗████████╗
+ * ╚██╗ ██╔╝██╔═══██╗██╔═══██╗████╗  ██║██║╚══██╔══╝
+ *  ╚████╔╝ ██║   ██║██║   ██║██╔██╗ ██║██║   ██║
+ *   ╚██╔╝  ██║   ██║██║   ██║██║╚██╗██║██║   ██║
+ *    ██║   ╚██████╔╝╚██████╔╝██║ ╚████║██║   ██║
+ *    ╚═╝    ╚═════╝  ╚═════╝ ╚═╝  ╚═══╝╚═╝   ╚═╝
+ *
+ * https://yoonit.dev - about@yoonit.dev
+ *
+ * Vue Yoonit Components
+ * VueJS Atomic Design System framework
+ *
+ * Vitória Costa, Tiago Brito, Fernando Junior, Sabrina Sampaio, Gabriel Mule, Gabriel Moraes, Gabriel Rizzo & Luigui Delyer @ 2020-2021
+ */
+
+import PropsConfig from './GetUserCamera.config'
 
 const GetUserCamera = async ({
   element = undefined,
@@ -11,7 +27,7 @@ const GetUserCamera = async ({
 
   if (!navigator.mediaDevices ||
     !navigator.mediaDevices.getUserMedia) {
-    return unsupportedError
+    return PropsConfig.unsupportedError
   }
 
   if (options.video &&
