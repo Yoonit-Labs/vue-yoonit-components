@@ -199,19 +199,22 @@ describe('Testing YooCamera', () => {
       })
     })
 
-    // it('Should call doSetRenderCanvas on mounted hook', async () => {
-    //   const doSetRenderCanvas = jest.fn()
-    //
-    //   const { mounted } = YooCamera
-    //   const sampleComponent = {
-    //     $nextTick: () => { return new Promise(resolve => resolve) },
-    //     mounted,
-    //     doSetRenderCanvas
-    //   }
-    //   sampleComponent.mounted()
-    //
-    //   expect(doSetRenderCanvas).toBeCalled()
-    // })
+    it('Should call doSetRenderCanvas on mounted hook', async () => {
+      const doSetRenderCanvas = jest.fn()
+
+      const { mounted } = YooCamera
+      const sampleComponent = {
+        $nextTick: () => { return new Promise(resolve => resolve) },
+        mounted,
+        doSetRenderCanvas
+      }
+      sampleComponent.mounted()
+
+      await new Promise((resolve) => [
+        setTimeout(() => resolve(), 1000)
+      ])
+      expect(doSetRenderCanvas).toBeCalled()
+    })
   })
 
   describe('Component props', () => {
@@ -278,6 +281,25 @@ describe('Testing YooCamera', () => {
 
       expect(YooCamera.computed.takeRoiConfig.call(localThis)).toStrictEqual({})
     })
+
+    it('Should set default value to roi key prop', () => {
+      const localThis = {
+        canvasSize: { width: 200, height: 200 },
+        roiWidth: 200,
+        roiHeight: 200,
+        roi: PropsConfig.roi.default
+      }
+
+      expect(YooCamera.computed.takeRoiConfig.call(localThis)).toStrictEqual({
+        x: 0,
+        y: 0,
+        width: 200,
+        height: 200,
+        areaColor: '#00FF00',
+        areaRadius: 0,
+        areaStroke: 10
+      })
+    })
   })
 
   describe('Component Event Emition', () => {
@@ -330,13 +352,34 @@ describe('Testing YooCamera', () => {
       expect(wrapper.emitted().permissionDenied).toBeTruthy()
     })
 
-    it('Should emit finish when frame count is higher then total', async () => {
+    it('Should emit finish when frame count is equal then total', async () => {
       const wrapper = mountDefaultYooCamera(mount)
 
       wrapper.vm.doGetFrame({ total: 3, count: 3 })
 
       await wrapper.vm.$nextTick()
+
       expect(wrapper.emitted('finish')).toBeTruthy()
+    })
+
+    it('Should emit finish when frame count is higher then total', async () => {
+      const wrapper = mountDefaultYooCamera(mount)
+
+      wrapper.vm.doGetFrame({ total: 3, count: 4 })
+
+      await wrapper.vm.$nextTick()
+
+      expect(wrapper.emitted('finish')).toBeTruthy()
+    })
+
+    it('Should not emit finish when frame count is lower then total', async () => {
+      const wrapper = mountDefaultYooCamera(mount)
+
+      wrapper.vm.doGetFrame({ total: 3, count: 2 })
+
+      await wrapper.vm.$nextTick()
+
+      expect(wrapper.emitted('finish')).toBeFalsy()
     })
   })
 })
