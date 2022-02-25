@@ -1,5 +1,5 @@
 import CanvasMixing from './CanvasMixin'
-import { mount, shallowMount } from '@vue/test-utils'
+import { shallowMount } from '@vue/test-utils'
 
 const mountFakeComponent = (mountStrategy, options = {}) => {
   const Component = {
