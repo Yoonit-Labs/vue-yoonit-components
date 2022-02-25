@@ -1,14 +1,11 @@
+import PropsConfig from './CanvasMixin.config'
+
 export default {
   name: 'CanvasMixin',
   mounted () {},
   methods: {
     doCanvasState (state, value) {
-      const states = [
-        'saveBeforeRender',
-        'restoreAfterRender'
-      ]
-
-      if (!states.includes(state)) {
+      if (!PropsConfig.states.options.includes(state)) {
         return
       }
 
