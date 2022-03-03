@@ -98,35 +98,35 @@ export default {
       const image = this.$refs.imageElm
 
       switch (this.from) {
-        case 'camera': {
-          this.localStream = await this.doGetCamera(
-            video,
-            this.stream,
-            this.width,
-            this.height
-          )
+      case 'camera': {
+        this.localStream = await this.doGetCamera(
+          video,
+          this.stream,
+          this.width,
+          this.height
+        )
 
-          return
-        }
+        return
+      }
 
-        case 'video': {
-          return this.doGetVideo(
-            video,
-            this.src,
-            this.width,
-            this.height,
-            this.player
-          )
-        }
+      case 'video': {
+        return this.doGetVideo(
+          video,
+          this.src,
+          this.width,
+          this.height,
+          this.player
+        )
+      }
 
-        case 'image': {
-          return this.doGetImage(
-            image,
-            this.src,
-            this.width,
-            this.height
-          )
-        }
+      case 'image': {
+        return this.doGetImage(
+          image,
+          this.src,
+          this.width,
+          this.height
+        )
+      }
       }
     },
     async doGetCamera (source, options, width, height) {
