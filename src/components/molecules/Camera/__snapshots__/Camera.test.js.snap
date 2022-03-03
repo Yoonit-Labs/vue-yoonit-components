@@ -1,0 +1,8 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Testing YooCamera Testing render & style Should match snapshot 1`] = `
+<div class="app__container">
+  <yoogetusermedia-stub from="camera" src="" player="[object Object]" width="720px" height="480px" stream="[object Object]"></yoogetusermedia-stub>
+  <!---->
+</div>
+`;

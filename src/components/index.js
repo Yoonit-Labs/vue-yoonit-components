@@ -22,6 +22,7 @@ import YooIcon from './atoms/Icon/Icon.vue'
 import YooSelectDate from './atoms/SelectDate/SelectDate.vue'
 import YooStepper from './atoms/Stepper/Stepper.vue'
 import YooSwitch from './atoms/Switch/Switch.vue'
+import YooCanvasCore from './atoms/CanvasCore/CanvasCore.vue'
 
 import YooButtonToggle from './molecules/ButtonToggle/ButtonToggle.vue'
 import YooListItem from './molecules/ListItem/ListItem.vue'
@@ -35,14 +36,22 @@ import YooQuizQuestion from './molecules/QuizQuestion/QuizQuestion.vue'
 import YooSelectButton from './molecules/SelectButton/SelectButton.vue'
 import YooSegmentedBar from './molecules/SegmentedBar/SegmentedBar.vue'
 import YooTableAttribute from './molecules/TableAttribute/TableAttribute.vue'
+import YooCamera from './molecules/Camera/Camera.vue'
 
 import YooFlexLayout from './bosons/FlexLayout/FlexLayout.vue'
 import YooGridLayout from './bosons/GridLayout/GridLayout.vue'
 import YooScrollView from './bosons/ScrollView/ScrollView.vue'
 import YooInfiniteScroll from './bosons/InfiniteScroll/InfiniteScroll.vue'
 import ThemeProvider from './bosons/ThemeProvider/ThemeProvider.vue'
+import YooCanvasBind from './bosons/CanvasBind/CanvasBind'
+import YooCanvasMixin from './bosons/CanvasMixin/CanvasMixin'
+import YooGetUserCamera from './bosons/GetUserCamera/GetUserCamera'
 
 import YooIndicator from './quarks/Indicator/Indicator.vue'
+import YooCanvasFrameCapture from './quarks/CanvasFrameCapture/CanvasFrameCapture.vue'
+import YooCanvasGuide from './quarks/CanvasGuide/CanvasGuide.vue'
+import YooCanvasRenderFrame from './quarks/CanvasRenderFrame/CanvasRenderFrame'
+import YooGetUserMedia from './quarks/GetUserMedia/GetUserMedia'
 
 const yooComponents = {
   YooAnimation,
@@ -70,7 +79,16 @@ const yooComponents = {
   YooIndicator,
   YooScrollView,
   YooInfiniteScroll,
-  ThemeProvider
+  ThemeProvider,
+  YooCanvasCore,
+  YooCamera,
+  YooCanvasBind,
+  YooCanvasMixin,
+  YooGetUserCamera,
+  YooCanvasFrameCapture,
+  YooCanvasGuide,
+  YooCanvasRenderFrame,
+  YooGetUserMedia
 }
 
 export default yooComponents
