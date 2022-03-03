@@ -87,6 +87,7 @@ describe('Testing YooCamera', () => {
 
     it('doVerifyOutputFrame Should return that input is valid', () => {
       const wrapper = mountDefaultYooCamera(mount)
+      // eslint-disable-next-line
       const base64Image = new String('image')
 
       expect(wrapper.vm.doVerifyOutputFrame(base64Image)).toBeTruthy()
