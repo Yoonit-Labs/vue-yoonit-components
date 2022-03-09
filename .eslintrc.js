@@ -16,6 +16,7 @@ module.exports = {
     'no-debugger': 'off',
     'vue/require-valid-default-prop': 'off',
     'vue/require-default-prop': 'off',
+    'vue/valid-template-root': 'off',
     indent: [
       'error',
       2
