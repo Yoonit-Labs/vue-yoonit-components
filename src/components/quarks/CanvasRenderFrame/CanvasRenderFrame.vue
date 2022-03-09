@@ -1,3 +1,5 @@
+<template />
+
 <script>
 import YooCanvasBind from '@/components/bosons/CanvasBind/CanvasBind'
 import YooCanvasMixin from '@/components/bosons/CanvasMixin/CanvasMixin'
