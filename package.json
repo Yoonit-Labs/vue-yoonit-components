@@ -1,6 +1,6 @@
 {
   "name": "@yoonit/vue-components",
-  "version": "0.2.3",
+  "version": "0.2.7",
   "private": false,
   "description": "VueJS Atomic Design System framework",
   "main": "yoo.common.js",
