@@ -16,6 +16,8 @@
 
 import Components from './components/index'
 
+export * from './components/index'
+
 const $yoo = {
   install: Vue =>
     // Auto-register lib components
