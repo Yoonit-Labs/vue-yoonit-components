@@ -53,7 +53,7 @@ import YooCanvasGuide from './quarks/CanvasGuide/CanvasGuide.vue'
 import YooCanvasRenderFrame from './quarks/CanvasRenderFrame/CanvasRenderFrame'
 import YooGetUserMedia from './quarks/GetUserMedia/GetUserMedia'
 
-export const yooComponents = {
+export {
   YooAnimation,
   YooAvatar,
   YooButton,
@@ -90,5 +90,3 @@ export const yooComponents = {
   YooCanvasRenderFrame,
   YooGetUserMedia
 }
-
-export default yooComponents

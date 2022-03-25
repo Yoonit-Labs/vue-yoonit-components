@@ -14,9 +14,9 @@
  * Vitória Costa, Tiago Brito, Fernando Junior, Sabrina Sampaio, Gabriel Mule, Gabriel Moraes, Gabriel Rizzo & Luigui Delyer @ 2020-2021
  */
 
-import Components from './components/index'
+import * as Components from './components/index'
 
-export * from './components/index'
+export { Components }
 
 const $yoo = {
   install: Vue =>
