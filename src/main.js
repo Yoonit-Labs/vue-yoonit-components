@@ -16,7 +16,7 @@
 
 import * as Components from './components/index'
 
-export { Components }
+export * from './components/index'
 
 const $yoo = {
   install: Vue =>
