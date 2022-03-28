@@ -50,7 +50,7 @@ jobs:
       - name: Prepare "package.json" Files
         run: |
           node -e "let pkg=require('./npm/package.json'); pkg.main='/vue/yoo.common.js'; require('fs').writeFileSync('./npm/package.json', JSON.stringify(pkg, null, 2));"
-          node -e "let pkg=require('./npm/vue/package.json'); pkg.main='/yoo.common.js'; require('fs').writeFileSync('./npm/vue/package.json', JSON.stringify(pkg, null, 2));"
+          node -e "let pkg=require('./npm/vue/package.json'); pkg.main='./yoo.common.js'; require('fs').writeFileSync('./npm/vue/package.json', JSON.stringify(pkg, null, 2));"
       # ADD & COMMIT CHANGES
       - name: Add & Commit Changes
         run: |
